@@ -6,8 +6,10 @@ export interface Saint {
         milagres?: string;
         reliquias?: string;
         devocao?: string;
+
     };
     isDisplayed?: boolean;
+    data_devocao?: string;
 }
 
 export const saints: Saint[] = [
@@ -63,7 +65,8 @@ export const saints: Saint[] = [
 
                 São Paulo é invocado como intercessor para aqueles que buscam uma vida de simplicidade, solidão contemplativa e proteção contra perseguições.
             `
-        }
+        },
+        data_devocao: "10 de janeiro"
     },
     {
         name: "São Remígio",
@@ -119,15 +122,17 @@ export const saints: Saint[] = [
 
                 A devoção a São Remígio é particularmente forte na cidade de Reims e em toda a região de Champagne, na França, onde muitas igrejas, capelas e instituições levam seu nome.
             `
-        }
+        },
+        data_devocao: "14 de janeiro"
     },
     {
         name: "São Sebastião",
         description: "Soldado romano que sobreviveu a flechadas e foi martirizado por defender os cristãos.",
         isDisplayed: true,
+        data_devocao: "20 de janeiro",
         additionalInfo: {
             biografia: `
-                São Sebastião nasceu em Narbona, na França, por volta do ano 256, mas foi criado em Milão, na Itália, cidade de origem de sua mãe. Recebeu educação cristã, embora tenha optado pela carreira militar, seguindo os passos de seu pai.
+                São Sebastião nasceu em Narbona, França, por volta do ano 256, mas foi criado em Milão, na Itália, cidade de origem de sua mãe. Recebeu educação cristã, embora tenha optado pela carreira militar, seguindo os passos de seu pai.
 
                 Mudou-se para Roma e alistou-se no exército imperial, onde rapidamente se destacou por sua coragem e lealdade. Conquistou a confiança do imperador Diocleciano, que o nomeou capitão da Guarda Pretoriana, uma posição de grande prestígio responsável pela segurança da família imperial.
 
@@ -216,6 +221,7 @@ export const saints: Saint[] = [
         name: "São Hilário",
         description: "Bispo de Poitiers, combateu o arianismo e ressuscitou uma criança, conhecido por sua piedade.",
         isDisplayed: true,
+        data_devocao: "14 de janeiro",
         additionalInfo: {
             biografia: `
                 São Hilário nasceu em Poitiers, França, por volta do ano 315, em uma família rica e pagã. Recebeu uma excelente educação e buscava na filosofia respostas para sua busca sobre a verdade. Após estudar as Sagradas Escrituras, encontrou no Evangelho as respostas que procurava, o que o levou à conversão ao cristianismo.
@@ -279,6 +285,7 @@ export const saints: Saint[] = [
         name: "São Firmino",
         description: "Bispo e mártir, pregou na Gália e foi martirizado por sua fé.",
         isDisplayed: true,
+        data_devocao: "7 de julho",
         additionalInfo: {
             biografia: `
                 São Firmino (também conhecido como Fermin ou Firmin) nasceu em Pamplona, Espanha, por volta do ano 272, em uma família nobre. Seus pais, Fermo e Eugênia, eram inicialmente pagãos, mas posteriormente se converteram ao cristianismo. Firmino foi confiado aos cuidados do padre Honesto, que o batizou e o instruiu na fé cristã.
@@ -320,26 +327,7 @@ export const saints: Saint[] = [
                 6. Atualmente, as relíquias de São Firmino estão distribuídas em várias igrejas da França e da Espanha, sendo veneradas em ambos os países.
             `,
             devocao: `
-                São Firmino é venerado como um importante santo missionário e mártir, especialmente na França e na Espanha. Sua festa litúrgica é celebrada em:
-
-                - 25 de setembro na Igreja Católica em geral (data de seu martírio)
-                - 7 de julho em Pamplona, Espanha (data das festividades locais)
-
-                É invocado como protetor contra:
-                - Erisipela (uma infecção cutânea)
-                - Doenças em geral
-                - Perigos nas viagens
-
-                São Firmino é padroeiro de:
-                - Cidade e diocese de Amiens, França
-                - Pamplona e Navarra, Espanha
-                - Tanoeiros (fabricantes de barris)
-                - Comerciantes de vinho
-                - Padeiros
-
-                Na iconografia cristã, São Firmino é geralmente representado como um bispo com vestes episcopais. Por ter sido decapitado, em algumas obras ele é retratado segurando sua própria cabeça nas mãos ou olhando para sua cabeça decepada no chão.
-
-                A devoção a São Firmino é particularmente forte em Pamplona, Espanha, onde é celebrado com as famosas festas de San Fermín, que incluem a mundialmente conhecida "corrida dos touros" (encierro). Estas festividades, realizadas anualmente de 6 a 14 de julho, atraem milhares de turistas de todo o mundo.
+                São Firmino é especialmente venerado em Pamplona, Espanha, onde é celebrado com as famosas festas de San Fermín, que incluem a mundialmente conhecida "corrida dos touros" (encierro). Estas festividades, realizadas anualmente de 6 a 14 de julho, atraem milhares de turistas de todo o mundo.
             `
         }
     },
@@ -417,7 +405,8 @@ export const saints: Saint[] = [
 
                 Uma das características mais marcantes de sua devoção é a ênfase na humildade. Mesmo sendo o pai espiritual de milhares de monges, São Macário dizia: "Ainda não me tornei monge, mas vi monges", demonstrando sua constante busca pela perfeição espiritual.
             `
-        }
+        },
+        data_devocao: "15 de janeiro"
     },
     {
         name: "São Félix",
@@ -482,7 +471,8 @@ export const saints: Saint[] = [
 
                 Paulino adotou Félix como seu santo patrono, não apenas como um intercessor no céu, mas como um companheiro espiritual que o acompanhava como encorajador, guia e protetor em suas jornadas.
             `
-        }
+        },
+        data_devocao: "14 de janeiro"
     },
     {
         name: "São Marcel",
@@ -523,30 +513,41 @@ export const saints: Saint[] = [
                 5. A igreja de Saint-Marcel em Paris, embora reconstruída várias vezes ao longo da história (a atual data de 1966), continua sendo um local de veneração ao santo.
             `,
             devocao: `
-                São Marcel é venerado como um importante bispo e confessor da fé. Sua festa litúrgica é celebrada em:
+                A devoção a São Marcel é significativa, especialmente em Paris:
 
+                Festa litúrgica:
                 - 1º de novembro no Martirológio Romano
-                - 3 de novembro na tradição galicana (França)
+                - 3 de novembro nas igrejas da França
 
-                É invocado como protetor contra:
-                - Epidemias e doenças contagiosas
-                - Invasões e perigos externos
-                - Possessões demoníacas
+                É invocado como:
+                - Patrono da cidade de Paris
+                - Protetor contra inundações e epidemias
+                - Intercessor contra picadas de serpentes e animais venenosos
+                - Padroeiro dos vinicultores (devido ao milagre da transformação da água em vinho)
 
-                São Marcel é padroeiro de:
-                - Cidade de Paris, especialmente do bairro que leva seu nome
-                - Contra dragões e serpentes (simbolizando o mal e as tentações)
+                Tradições e costumes:
+                - Procissão do Dragão: Durante a Idade Média, nas procissões de Rogações em Paris, carregava-se uma efígie de vime em forma de dragão, simbolizando o monstro derrotado por São Marcel.
+                - Oferendas de pão e vinho eram feitas em seu túmulo para obter proteção contra doenças.
+                - Sua festa era celebrada com grande solenidade em Paris até a Revolução Francesa.
 
-                Na iconografia cristã, São Marcel é geralmente representado como um bispo com vestes episcopais, mitra e báculo. Frequentemente é retratado enfrentando um dragão ou serpente, que ele subjuga com sua cruz ou báculo episcopal.
+                Iconografia:
+                - Representado como bispo com vestes pontificais
+                - Frequentemente retratado dominando um dragão com seu báculo ou estola
+                - Às vezes representado com uma fonte ou poço, simbolizando o milagre da água transformada em vinho
 
-                Durante a Idade Média, nas procissões de Rogações em Paris, era costume carregar uma efígie de dragão feita de vime, com grandes mandíbulas e uma garganta, na qual os parisienses jogavam frutas e bolos enquanto o dragão era conduzido pela rota da procissão. Esta tradição, que também ocorria em outras cidades francesas, pode ter sido uma forma de coletar esmolas para os pobres ou um presente para os participantes da procissão.
+                Locais de devoção:
+                - Igreja de Saint-Marcel em Paris
+                - Catedral de Notre-Dame de Paris
+                - Fonte de Saint-Marcel, considerada milagrosa durante a Idade Média
             `
-        }
+        },
+        data_devocao: "16 de janeiro"
     },
     {
         name: "Santo Antão do Egito",
         description: "Pai do monaquismo cristão, viveu 105 anos no deserto enfrentando tentações demoníacas.",
         isDisplayed: true,
+        data_devocao: "17 de janeiro",
         additionalInfo: {
             biografia: `
                 Santo Antão, também conhecido como Santo Antão do Egito, Santo Antão o Grande, ou o Pai de Todos os Monges, nasceu em Conam, no Alto Egito (Tebaida), no ano 251, em uma família cristã de camponeses. Quando tinha aproximadamente 20 anos, seus pais faleceram, deixando-o responsável por sua irmã e por uma considerável herança.
@@ -1169,7 +1170,8 @@ export const saints: Saint[] = [
     {
         name: "Santa Anastácia",
         description: "Mártir que curou doentes e confortou cristãos presos.",
-        isDisplayed: true
+        isDisplayed: true,
+        data_devocao: "25 de dezembro"
     },
     {
         name: "Santa Eugênia",
@@ -1264,7 +1266,6 @@ export const saints: Saint[] = [
                 Santo Estêvão (em grego, Stephanos, que significa "coroa") foi um dos sete primeiros diáconos escolhidos pelos apóstolos para ajudar no serviço da Igreja primitiva em Jerusalém, conforme relatado no livro dos Atos dos Apóstolos. Era um judeu helenista, ou seja, de cultura grega, conhecido por sua profunda fé e sabedoria.
 
                 Como diácono, além de servir às mesas e cuidar das viúvas, Estêvão destacou-se pela pregação eloquente do Evangelho. O livro dos Atos relata que ele era "cheio de graça e poder, realizava grandes prodígios e sinais entre o povo" (At 6,8).
-
                 Sua pregação provocou forte oposição entre alguns grupos judeus, especialmente os membros da sinagoga dos Libertos. Não conseguindo vencê-lo em debates, pois "não podiam resistir à sabedoria e ao Espírito com que falava" (At 6,10), seus opositores subornaram falsas testemunhas para acusá-lo de blasfêmia contra Moisés e contra Deus.
 
                 Levado ao Sinédrio (tribunal judaico), Estêvão fez um longo discurso recontando a história da salvação e denunciando a infidelidade dos líderes judeus. Durante seu discurso, teve uma visão de Jesus à direita de Deus. Ao declarar esta visão, seus opositores, enfurecidos, o arrastaram para fora da cidade e o apedrejaram.
@@ -1349,117 +1350,32 @@ export const saints: Saint[] = [
     {
         name: "São João Evangelista",
         description: "Apóstolo amado, escreveu o Evangelho e sobreviveu a um caldeirão de óleo.",
-        isDisplayed: true
+        isDisplayed: true,
+        data_devocao: "27 de dezembro"
     },
     {
         name: "Santos Inocentes",
         description: "Crianças massacradas por Herodes na tentativa de matar Jesus.",
-        isDisplayed: true
+        isDisplayed: true,
+        data_devocao: "28 de dezembro"
     },
     {
         name: "São Tomé de Cantuária",
         description: "Arcebispo assassinado na catedral por defender a Igreja.",
-        isDisplayed: true
+        isDisplayed: true,
+        data_devocao: "29 de dezembro"
     },
     {
         name: "São Silvestre",
         description: "Papa que batizou Constantino e consolidou a Igreja no Império Romano.",
         isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Silvestre I nasceu em Roma por volta do ano 270, filho de Rufino e Justa, uma família romana cristã. Recebeu uma educação esmerada, tanto nas letras quanto na fé cristã, sob a orientação do sacerdote Cirino.
-
-                Viveu durante o período das grandes perseguições aos cristãos, especialmente a de Diocleciano (303-305), uma das mais violentas da história. Durante este tempo difícil, Silvestre destacou-se por sua coragem em ajudar os cristãos perseguidos, visitando-os nas prisões e catacumbas, e dando sepultura digna aos mártires.
-
-                Foi ordenado sacerdote pelo Papa Marcelino e, após a morte do Papa Melquíades, foi eleito como seu sucessor em 31 de janeiro de 314, tornando-se o 33º Papa da Igreja Católica. Seu pontificado, que durou 21 anos (314-335), foi um dos mais longos e significativos da história da Igreja primitiva.
-
-                O pontificado de São Silvestre coincidiu com um período crucial para o cristianismo: a conversão do Imperador Constantino e o fim das perseguições. Em 313, pouco antes de Silvestre se tornar Papa, Constantino havia promulgado o Édito de Milão, que concedia liberdade religiosa aos cristãos no Império Romano.
-
-                Segundo a tradição (embora contestada por historiadores modernos), São Silvestre teria batizado o Imperador Constantino após curá-lo milagrosamente da lepra. Em gratidão, o imperador teria feito a famosa "Doação de Constantino", concedendo ao Papa autoridade sobre Roma e as províncias ocidentais do Império - documento posteriormente considerado uma falsificação medieval.
-
-                Durante seu pontificado, São Silvestre enviou legados ao Concílio de Niceia (325), que condenou o arianismo e formulou o Credo Niceno. Também supervisionou a construção das primeiras grandes basílicas cristãs em Roma, incluindo a antiga Basílica de São Pedro e a Basílica de São João de Latrão.
-
-                São Silvestre faleceu pacificamente em 31 de dezembro de 335, após um longo e frutífero pontificado. Foi sepultado no Cemitério de Priscila, na Via Salária, em Roma.
-            `,
-            milagres: `
-                São Silvestre é associado a diversos milagres, embora muitos deles sejam baseados em tradições posteriores:
-
-                1. Cura da lepra de Constantino: Segundo a lenda medieval, o Imperador Constantino sofria de lepra e, após uma visão dos apóstolos Pedro e Paulo, procurou São Silvestre. O Papa o batizou e, ao emergir da água batismal, o imperador foi completamente curado da doença.
-
-                2. Domínio sobre o dragão: Uma das lendas mais famosas conta que São Silvestre domou um terrível dragão que vivia no Fórum Romano e matava pessoas com seu hálito venenoso. O santo desceu às profundezas onde o monstro habitava, fez o sinal da cruz e amarrou a boca do dragão com um fio, libertando a cidade do terror.
-
-                3. Ressurreição de um touro: Durante um debate com rabinos judeus, um deles matou um touro apenas pronunciando o nome de Deus ao seu ouvido. São Silvestre, para demonstrar o poder de Cristo, ressuscitou o animal, convertendo muitos dos presentes.
-
-                4. Silenciamento de pagãos: Conta-se que, durante um debate público com sacerdotes pagãos, estes invocaram seus deuses sem resultado. Quando São Silvestre invocou o nome de Jesus, um demônio que habitava uma estátua pagã fugiu, e a estátua desmoronou.
-
-                5. Visões e profecias: Atribuem-se a São Silvestre diversas visões e profecias, incluindo a previsão da conversão de Roma ao cristianismo e o fim das perseguições.
-
-                6. Curas milagrosas: Diversos relatos mencionam curas realizadas por São Silvestre, especialmente de cegos e paralíticos.
-
-                7. Exorcismos: Era conhecido por sua capacidade de expulsar demônios, libertando muitas pessoas possuídas durante seu pontificado.
-            `,
-            reliquias: `
-                As relíquias de São Silvestre têm uma história interessante:
-
-                1. Sepultamento original: São Silvestre foi inicialmente sepultado no Cemitério de Priscila, na Via Salária, em Roma, onde permaneceu por vários séculos.
-
-                2. Translação para São Silvestre in Capite: No século VIII, o Papa Paulo I (757-767) transferiu os restos mortais de São Silvestre para a igreja construída em sua honra, San Silvestro in Capite, em Roma. O nome "in Capite" (da cabeça) deve-se ao fato de que a igreja também abrigava uma relíquia da cabeça de São João Batista.
-
-                3. Relíquias em Nonantola: Uma parte significativa das relíquias foi transferida para a Abadia de Nonantola, perto de Módena, na Itália, no século VIII, por ordem do rei lombardo Astolfo. A abadia tornou-se um importante centro de peregrinação dedicado ao santo.
-
-                4. Relíquias atuais: Atualmente, as principais relíquias de São Silvestre encontram-se:
-                   - Na Abadia de Nonantola, onde são veneradas em um relicário de prata
-                   - Na igreja de San Silvestro in Capite, em Roma
-                   - Na Basílica de São João de Latrão, que guarda fragmentos menores
-
-                5. Outras relíquias: Pequenos fragmentos de suas relíquias estão distribuídos em várias igrejas pela Europa, incluindo:
-                   - A Catedral de Notre-Dame de Paris
-                   - A igreja de São Silvestre em Tivoli, Itália
-                   - A Catedral de São Estêvão em Viena, Áustria
-
-                6. Objetos associados: Além dos restos mortais, são venerados como relíquias alguns objetos associados a São Silvestre:
-                   - Fragmentos de suas vestes pontificais
-                   - Um anel papal atribuído a ele
-                   - Uma antiga cruz peitoral que teria lhe pertencido
-            `,
-            devocao: `
-                A devoção a São Silvestre é significativa, especialmente por sua associação com o fim do ano:
-
-                Festa litúrgica:
-                - 31 de dezembro na Igreja Católica e na Igreja Ortodoxa
-
-                É invocado como patrono de:
-                - Criadores de animais domésticos
-                - Pedreiros e construtores
-                - Contra a peste e epidemias
-                - Para uma boa colheita
-                - Para a conversão de não-cristãos
-
-                Iconografia:
-                - Representado com vestes papais e tiara (coroa papal)
-                - Frequentemente com um touro ou boi a seus pés (referência ao milagre da ressurreição do touro)
-                - Às vezes, com um dragão acorrentado ou amarrado
-                - Segurando uma maquete de igreja (simbolizando a construção das primeiras basílicas)
-                - Em cenas do batismo do Imperador Constantino
-
-                Tradições populares:
-                - A "Noite de São Silvestre" é como se denomina a véspera do Ano Novo em muitos países europeus
-                - Em algumas regiões da Itália, Áustria e Alemanha, realizam-se procissões e bênçãos especiais no último dia do ano
-                - Na Europa Central, é tradição comer lentilhas no dia de São Silvestre para garantir prosperidade no ano novo
-                - Em algumas áreas rurais, os agricultores pedem sua bênção para as colheitas do ano seguinte
-
-                Locais de devoção:
-                - Abadia de Nonantola (Itália), principal centro de peregrinação dedicado ao santo
-                - Igreja de San Silvestro in Capite, em Roma
-                - Basílica de São João de Latrão, em Roma
-                - Diversas igrejas dedicadas a ele em toda a Europa, especialmente na Itália
-            `
-        }
+        data_devocao: "31 de dezembro"
     },
     {
         name: "São João Batista",
         description: "Precursor de Jesus Cristo, batizou o Messias e foi martirizado por Herodes.",
-        isDisplayed: true
+        isDisplayed: true,
+        data_devocao: "24 de junho"
     },
     {
         name: "Santos Inocentes",
@@ -1830,37 +1746,44 @@ export const saints: Saint[] = [
     {
         name: "Santo Ambrósio",
         description: "Doutor da Igreja e Bispo de Milão",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "4 de abril"
     },
     {
         name: "Santo André",
         description: "Apóstolo, irmão de Pedro, martirizado em cruz em X",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "30 de novembro"
     },
     {
         name: "Santo Apolinário",
         description: "Primeiro bispo de Ravena e mártir",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: ""
     },
     {
         name: "Santa Apolônia",
         description: "Virgem e mártir que teve os dentes arrancados",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "9 de fevereiro"
     },
     {
         name: "Santo Aquileu",
         description: "Mártir romano, soldado convertido",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: ""
     },
     {
         name: "Santo Arsênio",
         description: "Eremita e padre do deserto",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: ""
     },
     {
         name: "São Barnabé",
         description: "Apóstolo que acompanhou Paulo em suas viagens",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "11 de junho"
     },
     {
         name: "São Bartolomeu",
@@ -1880,7 +1803,8 @@ export const saints: Saint[] = [
     {
         name: "São Brás",
         description: "Bispo e mártir, protetor contra doenças da garganta",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "3 de fevereiro"
     },
     {
         name: "São Brício",
@@ -2015,7 +1939,8 @@ export const saints: Saint[] = [
     {
         name: "São Feliciano",
         description: "Bispo e mártir de Foligno",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "9 de junho"
     },
     {
         name: "Santa Felicidade",
@@ -2025,32 +1950,38 @@ export const saints: Saint[] = [
     {
         name: "São Filipe",
         description: "Apóstolo que pregou na Frígia",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "1 de maio"
     },
     {
         name: "São Forseu",
         description: "Monge irlandês que teve visões do purgatório",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "29 de setembro"
     },
     {
         name: "São Francisco",
         description: "Fundador da Ordem Franciscana",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "4 de outubro"
     },
     {
         name: "São Germano",
         description: "Bispo de Auxerre que combateu heresias",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "31 de julho"
     },
     {
         name: "São Gervásio",
         description: "Mártir, irmão gêmeo de São Protásio",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "19 de junho"
     },
     {
         name: "São Gordiano",
         description: "Mártir romano do século IV",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "10 de maio"
     },
     {
         name: "São Gorgônio",
@@ -2060,7 +1991,8 @@ export const saints: Saint[] = [
     {
         name: "São Gregório",
         description: "Papa Magno, doutor da Igreja",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "12 de março"
     },
     {
         name: "Santo Hipólito",
@@ -2069,8 +2001,9 @@ export const saints: Saint[] = [
     },
     {
         name: "Santo Inácio",
-        description: "Bispo de Antioquia e mártir",
-        isDisplayed: false
+        description: "Bispo de Antioquia e mártir, discípulo dos apóstolos",
+        isDisplayed: false,
+        data_devocao: "1 de fevereiro"
     },
     {
         name: "Santa Inês",
@@ -2095,7 +2028,8 @@ export const saints: Saint[] = [
     {
         name: "São João Batista",
         description: "Precursor de Jesus Cristo",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "24 de junho"
     },
     {
         name: "São João Crisóstomo",
@@ -2125,7 +2059,8 @@ export const saints: Saint[] = [
     {
         name: "Santa Julita",
         description: "Mártir que sofreu com seu filho Quirico",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "15 de junho"
     },
     {
         name: "Santa Justina",
@@ -2140,7 +2075,8 @@ export const saints: Saint[] = [
     {
         name: "São Leão",
         description: "Papa Magno que enfrentou Átila",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "28 de junho"
     },
     {
         name: "São Leodegário",
@@ -2155,7 +2091,8 @@ export const saints: Saint[] = [
     {
         name: "São Longino",
         description: "Soldado que perfurou o lado de Cristo",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "15 de março"
     },
     {
         name: "São Lourenço",
@@ -2170,7 +2107,8 @@ export const saints: Saint[] = [
     {
         name: "São Lupo",
         description: "Bispo de Troyes que enfrentou Átila",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "1 de setembro"
     },
     {
         name: "Santos Macabeus",
@@ -2180,17 +2118,20 @@ export const saints: Saint[] = [
     {
         name: "São Mamertino",
         description: "Abade convertido por São Germano",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "30 de março"
     },
     {
         name: "São Marcelino",
         description: "Papa e mártir durante a perseguição de Diocleciano",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "26 de abril"
     },
     {
         name: "São Marcos",
         description: "Evangelista e fundador da Igreja de Alexandria",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "25 de abril"
     },
     {
         name: "Santa Margarida",
@@ -2200,7 +2141,8 @@ export const saints: Saint[] = [
     {
         name: "Santa Maria Egipcíaca",
         description: "Penitente que viveu no deserto",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "2 de abril"
     },
     {
         name: "Santa Maria Madalena",
@@ -2210,7 +2152,8 @@ export const saints: Saint[] = [
     {
         name: "Santa Marina",
         description: "Virgem que viveu disfarçada como monge",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "18 de junho"
     },
     {
         name: "Santa Marta",
@@ -2220,7 +2163,8 @@ export const saints: Saint[] = [
     {
         name: "São Martinho",
         description: "Bispo de Tours que dividiu sua capa com um mendigo",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "22 de janeiro"
     },
     {
         name: "São Mateus",
@@ -2230,7 +2174,8 @@ export const saints: Saint[] = [
     {
         name: "São Matias",
         description: "Apóstolo escolhido para substituir Judas",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "24 de fevereiro"
     },
     {
         name: "São Maurício",
@@ -2245,7 +2190,8 @@ export const saints: Saint[] = [
     {
         name: "São Modesto",
         description: "Mártir que sofreu com São Vito",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "15 de junho"
     },
     {
         name: "São Moisés",
@@ -2260,17 +2206,20 @@ export const saints: Saint[] = [
     {
         name: "São Nereu",
         description: "Mártir romano, servo convertido",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "12 de maio"
     },
     {
         name: "São Nicolau",
         description: "Bispo de Mira, conhecido por sua generosidade",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "6 de dezembro"
     },
     {
         name: "São Pancrácio",
         description: "Jovem mártir romano",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "12 de maio"
     },
     {
         name: "São Pastor",
@@ -2280,7 +2229,8 @@ export const saints: Saint[] = [
     {
         name: "São Patrício",
         description: "Apóstolo da Irlanda",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "17 de março"
     },
     {
         name: "Santa Paula",
@@ -2290,17 +2240,20 @@ export const saints: Saint[] = [
     {
         name: "São Paulo Apóstolo",
         description: "Apóstolo dos gentios, convertido a caminho de Damasco",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "30 de junho"
     },
     {
         name: "São Pedro Apóstolo",
         description: "Primeiro Papa da Igreja",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "29 de junho"
     },
     {
         name: "São Pedro Mártir",
         description: "Dominicano martirizado por hereges",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "29 de abril"
     },
     {
         name: "Santa Pelágia",
@@ -2320,7 +2273,8 @@ export const saints: Saint[] = [
     {
         name: "Santa Petronela",
         description: "Virgem romana, filha espiritual de São Pedro",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "31 de maio"
     },
     {
         name: "Santa Práxedes",
@@ -2330,12 +2284,14 @@ export const saints: Saint[] = [
     {
         name: "São Primo",
         description: "Mártir que sofreu com São Feliciano",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "9 de junho"
     },
     {
         name: "São Protásio",
         description: "Mártir, irmão gêmeo de São Gervásio",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "19 de junho"
     },
     {
         name: "São Proto",
@@ -2350,7 +2306,8 @@ export const saints: Saint[] = [
     {
         name: "São Quirce",
         description: "Menino mártir, filho de Santa Julita",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "15 de junho"
     },
     {
         name: "São Rústico",
@@ -2375,7 +2332,8 @@ export const saints: Saint[] = [
     {
         name: "São Segundo",
         description: "Mártir da Legião Tebana",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "30 de março"
     },
     {
         name: "São Senen",
@@ -2425,7 +2383,8 @@ export const saints: Saint[] = [
     {
         name: "São Tiago Menor",
         description: "Apóstolo, primeiro bispo de Jerusalém",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "1 de maio"
     },
     {
         name: "São Timóteo",
@@ -2440,82 +2399,98 @@ export const saints: Saint[] = [
     {
         name: "São Valentim",
         description: "Sacerdote e mártir romano",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "14 de fevereiro"
     },
     {
         name: "São Vedasto",
         description: "Bispo de Arras e evangelizador",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "6 de fevereiro"
     },
     {
         name: "São Vidal",
         description: "Mártir de Ravena, pai de Gervásio e Protásio",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "28 de abril"
     },
     {
         name: "São Vito",
         description: "Jovem mártir da Sicília",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "15 de junho"
     },
     {
         name: "São João e São Paulo",
         description: "Mártires romanos que sofreram juntos",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "26 de junho"
     },
     {
         name: "São João na Porta Latina",
         description: "Celebração do martírio frustrado de São João Evangelista",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "6 de maio"
     },
     {
         name: "São João Batista (Decapitação)",
         description: "Comemoração do martírio de São João Batista",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "29 de agosto"
     },
     {
         name: "São João Batista (Natividade)",
         description: "Celebração do nascimento de São João Batista",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "24 de junho"
     },
     {
         name: "São Paulo (Conversão)",
         description: "Celebração da conversão de São Paulo a caminho de Damasco",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "25 de janeiro"
     },
     {
         name: "São Pedro Acorrentado",
         description: "Celebração da libertação milagrosa de São Pedro da prisão",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "1 de agosto"
     },
     {
         name: "São Pedro (Cátedra)",
         description: "Celebração da autoridade de São Pedro como primeiro Papa",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "22 de fevereiro"
     },
     {
         name: "São Pedro Exorcista",
         description: "Mártir romano que expulsava demônios",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "2 de junho"
     },
     {
         name: "São Tiago, o Cortado",
         description: "Mártir persa que foi cortado em pedaços por sua fé",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "27 de novembro"
     },
     {
         name: "Virgem Maria (Assunção)",
         description: "Celebração da assunção de Maria aos céus",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "15 de agosto"
     },
     {
         name: "Virgem Maria (Natividade)",
         description: "Celebração do nascimento da Virgem Maria",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "8 de setembro"
     },
     {
         name: "Virgem Maria (Purificação)",
         description: "Celebração da apresentação de Jesus no templo",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "2 de fevereiro"
     },
     {
         name: "São Barlaão",
@@ -2525,6 +2500,830 @@ export const saints: Saint[] = [
     {
         name: "São Félix (Papa)",
         description: "Papa e mártir da Igreja primitiva",
-        isDisplayed: false
+        isDisplayed: false,
+        data_devocao: "29 de julho"
+    },
+    {
+        name: "A Circuncisão do Senhor",
+        description: "Celebração da circuncisão de Jesus, conforme a lei judaica",
+        isDisplayed: false,
+        data_devocao: "1 de janeiro"
+    },
+    {
+        name: "Epifania",
+        description: "Celebração da manifestação de Jesus aos Magos vindos do Oriente",
+        isDisplayed: false,
+        data_devocao: "6 de janeiro"
+    },
+    {
+        name: "Santo Hilário",
+        description: "Bispo de Poitiers, famoso por seus escritos contra o arianismo",
+        isDisplayed: false,
+        data_devocao: "14 de janeiro"
+    },
+    {
+        name: "São Félix",
+        description: "Sacerdote que confessou sua fé durante as perseguições",
+        isDisplayed: false,
+        data_devocao: "9 de junho"
+    },
+    {
+        name: "São Macário",
+        description: "Eremita do deserto egípcio, conhecido por sua sabedoria",
+        isDisplayed: false,
+        data_devocao: "15 de janeiro"
+    },
+    {
+        name: "São Marcelo",
+        description: "Papa que sofreu durante a perseguição de Diocleciano",
+        isDisplayed: false,
+        data_devocao: "16 de janeiro"
+    },
+    {
+        name: "Santo Antônio",
+        description: "Abade, pai do monaquismo, viveu no deserto egípcio enfrentando tentações",
+        isDisplayed: false,
+        data_devocao: "17 de janeiro"
+    },
+    {
+        name: "São Fabiano",
+        description: "Papa e mártir escolhido após uma pomba pousar em sua cabeça",
+        isDisplayed: false,
+        data_devocao: "20 de janeiro"
+    },
+    {
+        name: "São Sebastião",
+        description: "Soldado romano martirizado com flechas por sua fé cristã",
+        isDisplayed: false,
+        data_devocao: "20 de janeiro"
+    },
+    {
+        name: "Santa Inês",
+        description: "Jovem virgem e mártir romana que recusou casamento",
+        isDisplayed: false,
+        data_devocao: "21 de janeiro"
+    },
+    {
+        name: "São Vicente",
+        description: "Diácono e mártir de Saragoça que sofreu terríveis torturas",
+        isDisplayed: false,
+        data_devocao: "22 de janeiro"
+    },
+    {
+        name: "São João Esmoler",
+        description: "Patriarca de Alexandria conhecido por sua extraordinária caridade",
+        isDisplayed: false,
+        data_devocao: "23 de janeiro"
+    },
+    {
+        name: "A Conversão de São Paulo",
+        description: "Celebração da conversão de Saulo a caminho de Damasco",
+        isDisplayed: false,
+        data_devocao: "25 de janeiro"
+    },
+    {
+        name: "Santa Paula",
+        description: "Nobre romana que seguiu São Jerônimo e fundou mosteiros",
+        isDisplayed: false,
+        data_devocao: "26 de janeiro"
+    },
+    {
+        name: "São Juliano",
+        description: "Bispo de Le Mans, evangelizador da Gália",
+        isDisplayed: false,
+        data_devocao: "26 de janeiro"
+    },
+    {
+        name: "São Sabiniano",
+        description: "Mártir que sofreu com Santo Inácio",
+        isDisplayed: false,
+        data_devocao: "1 de fevereiro"
+    },
+    {
+        name: "A Purificação da Virgem",
+        description: "Celebração da apresentação de Jesus no Templo",
+        isDisplayed: false,
+        data_devocao: "2 de fevereiro"
+    },
+    {
+        name: "São Brás",
+        description: "Bispo e mártir, protetor contra doenças da garganta",
+        isDisplayed: false,
+        data_devocao: "3 de fevereiro"
+    },
+    {
+        name: "Santa Ágata",
+        description: "Virgem e mártir siciliana que sofreu terríveis torturas",
+        isDisplayed: false,
+        data_devocao: "5 de fevereiro"
+    },
+    {
+        name: "São Vedasto",
+        description: "Bispo de Arras e evangelizador",
+        isDisplayed: false,
+        data_devocao: "6 de fevereiro"
+    },
+    {
+        name: "Santo Amando",
+        description: "Bispo missionário na Gália e Flandres",
+        isDisplayed: false,
+        data_devocao: "6 de fevereiro"
+    },
+    {
+        name: "São Valentim",
+        description: "Sacerdote e mártir romano",
+        isDisplayed: false,
+        data_devocao: "14 de fevereiro"
+    },
+    {
+        name: "Santa Juliana",
+        description: "Virgem e mártir de Nicomédia",
+        isDisplayed: false,
+        data_devocao: "16 de fevereiro"
+    },
+    {
+        name: "A Cátedra de São Pedro",
+        description: "Celebração da autoridade de São Pedro como primeiro Papa",
+        isDisplayed: false,
+        data_devocao: "22 de fevereiro"
+    },
+    {
+        name: "São Matias",
+        description: "Apóstolo escolhido para substituir Judas",
+        isDisplayed: false,
+        data_devocao: "24 de fevereiro"
+    },
+    {
+        name: "A Descoberta da Santa Cruz",
+        description: "Celebração do encontro da cruz de Cristo por Santa Helena",
+        isDisplayed: false,
+        data_devocao: "3 de maio"
+    },
+    {
+        name: "Os Sete Filhos de Santa Felicidade",
+        description: "Sete irmãos martirizados com sua mãe em Roma",
+        isDisplayed: false,
+        data_devocao: "10 de julho"
+    },
+    {
+        name: "Santo Aleixo",
+        description: "Nobre romano que viveu como mendigo",
+        isDisplayed: false,
+        data_devocao: "17 de julho"
+    },
+    {
+        name: "Santa Margarida",
+        description: "Virgem e mártir de Antioquia",
+        isDisplayed: false,
+        data_devocao: "20 de julho"
+    },
+    {
+        name: "Santa Praxedes",
+        description: "Virgem romana que cuidava dos mártires",
+        isDisplayed: false,
+        data_devocao: "21 de julho"
+    },
+    {
+        name: "Santa Maria Madalena",
+        description: "Discípula de Jesus e primeira testemunha da Ressurreição",
+        isDisplayed: false,
+        data_devocao: "22 de julho"
+    },
+    {
+        name: "Santo Apolinário",
+        description: "Primeiro bispo de Ravena e mártir",
+        isDisplayed: false,
+        data_devocao: "23 de julho"
+    },
+    {
+        name: "Santa Cristina",
+        description: "Virgem e mártir que destruiu ídolos pagãos",
+        isDisplayed: false,
+        data_devocao: "24 de julho"
+    },
+    {
+        name: "São Tiago Maior",
+        description: "Apóstolo, primeiro mártir entre os Doze",
+        isDisplayed: false,
+        data_devocao: "25 de julho"
+    },
+    {
+        name: "São Cristóvão",
+        description: "Mártir que carregou o menino Jesus",
+        isDisplayed: false,
+        data_devocao: "28 de julho"
+    },
+    {
+        name: "Os Sete Dormentes",
+        description: "Jovens que dormiram milagrosamente por séculos",
+        isDisplayed: false,
+        data_devocao: "28 de julho"
+    },
+    {
+        name: "São Nazário",
+        description: "Mártir que evangelizou com São Celso",
+        isDisplayed: false,
+        data_devocao: "28 de julho"
+    },
+    {
+        name: "São Celso",
+        description: "Jovem mártir que morreu com São Nazário",
+        isDisplayed: false,
+        data_devocao: "28 de julho"
+    },
+    {
+        name: "São Félix (Papa)",
+        description: "Papa e mártir da Igreja primitiva",
+        isDisplayed: false,
+        data_devocao: "29 de julho"
+    },
+    {
+        name: "São Simplício",
+        description: "Mártir que sofreu com São Faustino",
+        isDisplayed: false,
+        data_devocao: "29 de julho"
+    },
+    {
+        name: "São Faustino",
+        description: "Mártir que sofreu com São Simplício",
+        isDisplayed: false,
+        data_devocao: "29 de julho"
+    },
+    {
+        name: "Santa Marta",
+        description: "Irmã de Lázaro e Maria, hospedeira de Jesus",
+        isDisplayed: false,
+        data_devocao: "29 de julho"
+    },
+    {
+        name: "Santo Abdão",
+        description: "Mártir persa que sofreu em Roma",
+        isDisplayed: false,
+        data_devocao: "30 de julho"
+    },
+    {
+        name: "São Senen",
+        description: "Mártir persa que sofreu com Santo Abdão",
+        isDisplayed: false,
+        data_devocao: "30 de julho"
+    },
+    {
+        name: "São Germano",
+        description: "Bispo de Auxerre que combateu heresias",
+        isDisplayed: false,
+        data_devocao: "31 de julho"
+    },
+    {
+        name: "Santo Eusébio",
+        description: "Bispo que lutou contra o arianismo",
+        isDisplayed: false,
+        data_devocao: "1 de agosto"
+    },
+    {
+        name: "Os Santos Macabeus",
+        description: "Sete irmãos mártires do Antigo Testamento",
+        isDisplayed: false,
+        data_devocao: "1 de agosto"
+    },
+    {
+        name: "São Pedro Acorrentado",
+        description: "Celebração da libertação milagrosa de São Pedro da prisão",
+        isDisplayed: false,
+        data_devocao: "1 de agosto"
+    },
+    {
+        name: "Santo Estêvão (Papa)",
+        description: "Papa e mártir da Igreja primitiva",
+        isDisplayed: false,
+        data_devocao: "2 de agosto"
+    },
+    {
+        name: "A Descoberta do Corpo de Santo Estêvão",
+        description: "Celebração do encontro das relíquias do primeiro mártir",
+        isDisplayed: false,
+        data_devocao: "3 de agosto"
+    },
+    {
+        name: "São Domingos",
+        description: "Fundador da Ordem dos Pregadores",
+        isDisplayed: false,
+        data_devocao: "4 de agosto"
+    },
+    {
+        name: "São Sisto",
+        description: "Papa e mártir, mestre de São Lourenço",
+        isDisplayed: false,
+        data_devocao: "6 de agosto"
+    },
+    {
+        name: "São Donato",
+        description: "Bispo e mártir de Arezzo",
+        isDisplayed: false,
+        data_devocao: "7 de agosto"
+    },
+    {
+        name: "São Ciríaco",
+        description: "Diácono e mártir",
+        isDisplayed: false,
+        data_devocao: "8 de agosto"
+    },
+    {
+        name: "São Lourenço",
+        description: "Diácono e mártir de Roma",
+        isDisplayed: false,
+        data_devocao: "10 de agosto"
+    },
+    {
+        name: "Santo Hipólito",
+        description: "Teólogo e mártir romano",
+        isDisplayed: false,
+        data_devocao: "13 de agosto"
+    },
+    {
+        name: "A Assunção da Virgem",
+        description: "Celebração da elevação de Maria aos céus",
+        isDisplayed: false,
+        data_devocao: "15 de agosto"
+    },
+    {
+        name: "São Bernardo",
+        description: "Doutor da Igreja e reformador de Cister",
+        isDisplayed: false,
+        data_devocao: "21 de agosto"
+    },
+    {
+        name: "São Timóteo",
+        description: "Discípulo de São Paulo",
+        isDisplayed: false,
+        data_devocao: "22 de agosto"
+    },
+    {
+        name: "São Sinforiano",
+        description: "Jovem mártir de Autun",
+        isDisplayed: false,
+        data_devocao: "22 de agosto"
+    },
+    {
+        name: "São Bartolomeu",
+        description: "Apóstolo que pregou na Índia",
+        isDisplayed: false,
+        data_devocao: "24 de agosto"
+    },
+    {
+        name: "Santo Agostinho",
+        description: "Doutor da Igreja, bispo de Hipona e filósofo",
+        isDisplayed: false,
+        data_devocao: "28 de agosto"
+    },
+    {
+        name: "A Decapitação de São João Batista",
+        description: "Comemoração do martírio de São João Batista",
+        isDisplayed: false,
+        data_devocao: "29 de agosto"
+    },
+    {
+        name: "Santa Sabina",
+        description: "Mártir romana convertida por sua escrava",
+        isDisplayed: false,
+        data_devocao: "29 de agosto"
+    },
+    {
+        name: "São Félix e São Adauto",
+        description: "Mártires romanos que sofreram juntos",
+        isDisplayed: false,
+        data_devocao: "30 de agosto"
+    },
+    {
+        name: "Santo Egídio",
+        description: "Abade e eremita na França",
+        isDisplayed: false,
+        data_devocao: "1 de setembro"
+    },
+    {
+        name: "A Natividade da Virgem",
+        description: "Celebração do nascimento da Virgem Maria",
+        isDisplayed: false,
+        data_devocao: "8 de setembro"
+    },
+    {
+        name: "Santo Adriano",
+        description: "Oficial romano convertido e martirizado",
+        isDisplayed: false,
+        data_devocao: "9 de setembro"
+    },
+    {
+        name: "São Gorgônio",
+        description: "Mártir da corte de Diocleciano",
+        isDisplayed: false,
+        data_devocao: "9 de setembro"
+    },
+    {
+        name: "Santa Dorotéia",
+        description: "Virgem e mártir de Cesareia",
+        isDisplayed: false,
+        data_devocao: "9 de setembro"
+    },
+    {
+        name: "São Proto",
+        description: "Mártir que sofreu com São Jacinto",
+        isDisplayed: false,
+        data_devocao: "11 de setembro"
+    },
+    {
+        name: "São Jacinto",
+        description: "Mártir romano que sofreu com São Proto",
+        isDisplayed: false,
+        data_devocao: "11 de setembro"
+    },
+    {
+        name: "São João Crisóstomo",
+        description: "Bispo e doutor da Igreja, conhecido por sua eloquência",
+        isDisplayed: false,
+        data_devocao: "13 de setembro"
+    },
+    {
+        name: "A Exaltação da Santa Cruz",
+        description: "Celebração da recuperação da cruz de Cristo pelos cristãos",
+        isDisplayed: false,
+        data_devocao: "14 de setembro"
+    },
+    {
+        name: "Santa Eufêmia",
+        description: "Virgem e mártir de Calcedônia",
+        isDisplayed: false,
+        data_devocao: "16 de setembro"
+    },
+    {
+        name: "São Lamberto",
+        description: "Bispo e mártir de Maastricht",
+        isDisplayed: false,
+        data_devocao: "17 de setembro"
+    },
+    {
+        name: "São Cornélio",
+        description: "Papa que enfrentou o cisma de Novaciano",
+        isDisplayed: false,
+        data_devocao: "18 de setembro"
+    },
+    {
+        name: "São Cipriano",
+        description: "Bispo de Cartago e mártir",
+        isDisplayed: false,
+        data_devocao: "18 de setembro"
+    },
+    {
+        name: "Santo Eustáquio",
+        description: "General romano convertido após ver um cervo com cruz",
+        isDisplayed: false,
+        data_devocao: "20 de setembro"
+    },
+    {
+        name: "São Mateus",
+        description: "Apóstolo e evangelista, ex-cobrador de impostos",
+        isDisplayed: false,
+        data_devocao: "21 de setembro"
+    },
+    {
+        name: "São Maurício",
+        description: "Comandante da Legião Tebana, mártir",
+        isDisplayed: false,
+        data_devocao: "22 de setembro"
+    },
+    {
+        name: "Santa Justina",
+        description: "Virgem e mártir de Antioquia",
+        isDisplayed: false,
+        data_devocao: "26 de setembro"
+    },
+    {
+        name: "São Cosme",
+        description: "Médico e mártir, irmão de São Damião",
+        isDisplayed: false,
+        data_devocao: "27 de setembro"
+    },
+    {
+        name: "São Damião",
+        description: "Médico e mártir, irmão de São Cosme",
+        isDisplayed: false,
+        data_devocao: "27 de setembro"
+    },
+    {
+        name: "São Forseu",
+        description: "Monge irlandês que teve visões do purgatório",
+        isDisplayed: false,
+        data_devocao: "29 de setembro"
+    },
+    {
+        name: "São Miguel",
+        description: "Arcanjo, príncipe das milícias celestiais",
+        isDisplayed: false,
+        data_devocao: "29 de setembro"
+    },
+    {
+        name: "São Jerônimo",
+        description: "Doutor da Igreja, tradutor da Bíblia",
+        isDisplayed: false,
+        data_devocao: "30 de setembro"
+    },
+    {
+        name: "A Translação de São Remígio",
+        description: "Celebração da transferência das relíquias de São Remígio",
+        isDisplayed: false,
+        data_devocao: "1 de outubro"
+    },
+    {
+        name: "São Leodegário",
+        description: "Bispo e mártir de Autun",
+        isDisplayed: false,
+        data_devocao: "2 de outubro"
+    },
+    {
+        name: "São Francisco",
+        description: "Fundador da Ordem Franciscana",
+        isDisplayed: false,
+        data_devocao: "4 de outubro"
+    },
+    {
+        name: "Santa Pelágia",
+        description: "Penitente de Antioquia",
+        isDisplayed: false,
+        data_devocao: "8 de outubro"
+    },
+    {
+        name: "Santa Margarida",
+        description: "Virgem e mártir de Antioquia",
+        isDisplayed: false,
+        data_devocao: "8 de outubro"
+    },
+    {
+        name: "Santa Taís",
+        description: "Penitente do Egito",
+        isDisplayed: false,
+        data_devocao: "8 de outubro"
+    },
+    {
+        name: "São Dionísio",
+        description: "Primeiro bispo de Paris e mártir",
+        isDisplayed: false,
+        data_devocao: "9 de outubro"
+    },
+    {
+        name: "São Rústico",
+        description: "Mártir que sofreu com São Dionísio",
+        isDisplayed: false,
+        data_devocao: "9 de outubro"
+    },
+    {
+        name: "Santo Eleutério",
+        description: "Bispo e mártir que sofreu com São Dionísio",
+        isDisplayed: false,
+        data_devocao: "9 de outubro"
+    },
+    {
+        name: "São Calisto",
+        description: "Papa e mártir que organizou as catacumbas",
+        isDisplayed: false,
+        data_devocao: "14 de outubro"
+    },
+    {
+        name: "São Leonardo",
+        description: "Eremita e libertador de prisioneiros",
+        isDisplayed: false,
+        data_devocao: "15 de outubro"
+    },
+    {
+        name: "São Lucas",
+        description: "Evangelista e médico",
+        isDisplayed: false,
+        data_devocao: "18 de outubro"
+    },
+    {
+        name: "As Onze Mil Virgens",
+        description: "Virgens mártires lideradas por Santa Úrsula",
+        isDisplayed: false,
+        data_devocao: "21 de outubro"
+    },
+    {
+        name: "São Crisanto",
+        description: "Mártir que converteu muitos em Roma",
+        isDisplayed: false,
+        data_devocao: "25 de outubro"
+    },
+    {
+        name: "Santa Dária",
+        description: "Mártir, esposa de São Crisanto",
+        isDisplayed: false,
+        data_devocao: "25 de outubro"
+    },
+    {
+        name: "São Simão",
+        description: "Apóstolo, também chamado Zelote",
+        isDisplayed: false,
+        data_devocao: "28 de outubro"
+    },
+    {
+        name: "São Judas",
+        description: "Apóstolo, também chamado Tadeu",
+        isDisplayed: false,
+        data_devocao: "28 de outubro"
+    },
+    {
+        name: "São Quintino",
+        description: "Mártir romano na Gália",
+        isDisplayed: false,
+        data_devocao: "31 de outubro"
+    },
+    {
+        name: "Todos os Santos",
+        description: "Celebração de todos os santos conhecidos e desconhecidos",
+        isDisplayed: false,
+        data_devocao: "1 de novembro"
+    },
+    {
+        name: "A Comemoração das Almas",
+        description: "Dia de oração pelos fiéis falecidos",
+        isDisplayed: false,
+        data_devocao: "2 de novembro"
+    },
+    {
+        name: "Os Quatro Coroados",
+        description: "Quatro mártires escultores que se recusaram a fazer ídolos",
+        isDisplayed: false,
+        data_devocao: "8 de novembro"
+    },
+    {
+        name: "São Teodoro",
+        description: "Soldado mártir que queimou um templo pagão",
+        isDisplayed: false,
+        data_devocao: "9 de novembro"
+    },
+    {
+        name: "São Martinho",
+        description: "Bispo de Tours que dividiu sua capa com um mendigo",
+        isDisplayed: false,
+        data_devocao: "11 de novembro"
+    },
+    {
+        name: "São Brício",
+        description: "Bispo de Tours, sucessor de São Martinho",
+        isDisplayed: false,
+        data_devocao: "13 de novembro"
+    },
+    {
+        name: "Santa Cecília",
+        description: "Virgem e mártir, padroeira da música",
+        isDisplayed: false,
+        data_devocao: "22 de novembro"
+    },
+    {
+        name: "São Clemente",
+        description: "Papa e mártir, discípulo dos apóstolos",
+        isDisplayed: false,
+        data_devocao: "23 de novembro"
+    },
+    {
+        name: "São Saturnino",
+        description: "Bispo e mártir de Toulouse",
+        isDisplayed: false,
+        data_devocao: "23 de novembro"
+    },
+    {
+        name: "Santa Perpétua",
+        description: "Mártir de Cartago com Santa Felicidade",
+        isDisplayed: false,
+        data_devocao: "23 de novembro"
+    },
+    {
+        name: "Santa Felicidade",
+        description: "Mártir romana que viu seus sete filhos martirizados",
+        isDisplayed: false,
+        data_devocao: "23 de novembro"
+    },
+    {
+        name: "São Crisógono",
+        description: "Mártir romano, mestre de Santa Anastácia",
+        isDisplayed: false,
+        data_devocao: "24 de novembro"
+    },
+    {
+        name: "Santa Catarina",
+        description: "Virgem e mártir de Alexandria",
+        isDisplayed: false,
+        data_devocao: "25 de novembro"
+    },
+    {
+        name: "São Tiago, o Cortado",
+        description: "Mártir persa que foi cortado em pedaços por sua fé",
+        isDisplayed: false,
+        data_devocao: "27 de novembro"
+    },
+    {
+        name: "São Barlaão",
+        description: "Eremita que converteu o príncipe Josafá",
+        isDisplayed: false,
+        data_devocao: "27 de novembro"
+    },
+    {
+        name: "São Josafá",
+        description: "Príncipe indiano convertido por Barlaam",
+        isDisplayed: false,
+        data_devocao: "27 de novembro"
+    },
+    {
+        name: "São Pastor",
+        description: "Abade do deserto egípcio",
+        isDisplayed: false,
+        data_devocao: "29 de novembro"
+    },
+    {
+        name: "São João Abade",
+        description: "Abade do deserto egípcio",
+        isDisplayed: false,
+        data_devocao: "29 de novembro"
+    },
+    {
+        name: "São Moisés",
+        description: "Abade etíope do deserto",
+        isDisplayed: false,
+        data_devocao: "29 de novembro"
+    },
+    {
+        name: "Santo Arsênio",
+        description: "Eremita e padre do deserto",
+        isDisplayed: false,
+        data_devocao: "29 de novembro"
+    },
+    {
+        name: "Santo Agatão",
+        description: "Abade do deserto egípcio",
+        isDisplayed: false,
+        data_devocao: "29 de novembro"
+    },
+    {
+        name: "São Pelágio",
+        description: "Jovem mártir de Córdoba",
+        isDisplayed: false,
+        data_devocao: "29 de novembro"
+    },
+    {
+        name: "Santo Agatão",
+        description: "Abade do deserto egípcio",
+        isDisplayed: false,
+        data_devocao: "29 de novembro" // Do list.md: 29 de novembro
+    },
+    {
+        name: "São Félix e São Adauto",
+        description: "Mártires romanos que sofreram juntos",
+        isDisplayed: false,
+        data_devocao: "30 de agosto" // Do list.md: 30 de agosto
+    },
+    {
+        name: "Santa Dorotéia",
+        description: "Virgem e mártir de Cesareia",
+        isDisplayed: false,
+        data_devocao: "9 de setembro" // Do list.md: 9 de setembro
+    },
+    {
+        name: "Virgem Maria (Assunção)",
+        description: "Celebração da assunção de Maria aos céus",
+        isDisplayed: false,
+        data_devocao: "15 de agosto" // Do list.md: 15 de agosto
+    },
+    {
+        name: "Virgem Maria (Natividade)",
+        description: "Celebração do nascimento da Virgem Maria",
+        isDisplayed: false,
+        data_devocao: "8 de setembro" // Do list.md: 8 de setembro
+    },
+    {
+        name: "Virgem Maria (Purificação)",
+        description: "Celebração da apresentação de Jesus no templo",
+        isDisplayed: false,
+        data_devocao: "2 de fevereiro" // Do list.md: 2 de fevereiro
+    },
+    {
+        name: "São João Batista (Decapitação)",
+        description: "Comemoração do martírio de São João Batista",
+        isDisplayed: false,
+        data_devocao: "29 de agosto" // Data tradicional da decapitação
+    },
+    {
+        name: "São Paulo (Conversão)",
+        description: "Celebração da conversão de São Paulo a caminho de Damasco",
+        isDisplayed: false,
+        data_devocao: "25 de janeiro" // Do list.md: 25 de janeiro
+    },
+    {
+        name: "São Pedro (Cátedra)",
+        description: "Celebração da autoridade de São Pedro como primeiro Papa",
+        isDisplayed: false,
+        data_devocao: "22 de fevereiro" // Do list.md: 22 de fevereiro
+    },
+    {
+        name: "São Tiago, o Cortado",
+        description: "Mártir persa que foi cortado em pedaços por sua fé",
+        isDisplayed: false,
+        data_devocao: "27 de novembro" // Do list.md: 27 de novembro
     }
 ];
+
