@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-
+import { ThemeSwitcher } from "./ThemeSwitcher"
 const navLinks = [
   { href: "/", label: "Início" },
   { href: "/santos", label: "Santos" },
@@ -26,24 +26,26 @@ export default function MobileNav() {
           <Menu className="h-6 w-6" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-full bg-amber-50 border-amber-100">
+      <SheetContent side="right" className="w-full bg-background border-border">
         <div className="flex flex-col space-y-2 mt-8">
-          <h2 className="text-amber-900 text-xl font-medium mb-4">Menu</h2>
+          <h2 className="text-primary text-xl font-medium mb-4">Menu</h2>
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "px-3 py-3 rounded-md transition-colors text-lg",
-                  pathname === link.href
-                    ? "font-medium text-amber-900 bg-amber-100"
-                    : "text-amber-700 hover:text-amber-900 hover:bg-amber-100"
-                )}
-              >
-                {link.label}
-              </Link>
+              <Button variant="ghost" asChild key={link.href}>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "px-3 py-3 rounded-md transition-colors text-lg",
+                    pathname === link.href
+                      ? "font-medium text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-primary hover:bg-primary/10"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              </Button>
             ))}
+            <div className="flex justify-center"><ThemeSwitcher /></div>
           </nav>
         </div>
       </SheetContent>

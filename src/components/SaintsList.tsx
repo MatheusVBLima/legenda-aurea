@@ -11,16 +11,16 @@ export function SaintsList({ saints }: SaintsListProps) {
 
   if (displayedSaints.length === 0) {
     return (
-      <div className="text-center py-16 bg-amber-50/50 rounded-lg border border-amber-100">
-        <BookOpen className="h-12 w-12 mx-auto text-amber-300 mb-4" />
-        <p className="text-amber-700 font-medium">Nenhum santo encontrado.</p>
+      <div className="text-center py-16 bg-accent/50 rounded-lg border border-border">
+        <BookOpen className="h-12 w-12 mx-auto text-primary/50 mb-4" />
+        <p className="text-primary-foreground font-medium">Nenhum santo encontrado.</p>
       </div>
     )
   }
 
   return (
     <div>
-      <div className="mb-6 text-sm font-medium inline-block px-4 py-2 rounded-full">
+      <div className="mb-6 text-sm font-medium inline-block px-4 py-2 rounded-full text-foreground/80">
         {displayedSaints.length === 1 ? "1 santo encontrado" : `${displayedSaints.length} santos encontrados`}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

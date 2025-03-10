@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function SantosPage() {
   return (
-    <main className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold text-amber-900 mb-8">Santos da Legenda Áurea</h1>
+    <main className="container mx-auto py-8 px-2">
+      <h1 className="text-3xl font-bold mb-8">Santos da Legenda Áurea</h1>
       <SantosListContainer />
     </main>
   )

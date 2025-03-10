@@ -7,12 +7,7 @@ interface SaintCardProps {
 }
 
 export function SaintCard({ saint }: SaintCardProps) {
-  // Função para gerar uma letra inicial decorativa
-  const getInitial = () => {
-    return saint.name.charAt(0)
-  }
 
-  // Criar um slug a partir do nome do santo
   const createSlug = (name: string) => {
     return name
       .toLowerCase()
@@ -27,17 +22,13 @@ export function SaintCard({ saint }: SaintCardProps) {
   return (
     <Link href={`/santos/${slug}`} className="block h-full">
       <Card className="h-full transition-all hover:shadow-lg overflow-hidden group">
-        <div className="absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-50 transition-opacity group-hover:opacity-80"></div>
         <CardHeader className="pb-3 relative">
           <div className="flex items-center gap-4">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full  flex items-center justify-center border  font-serif text-xl font-bold">
-              {getInitial()}
-            </div>
-            <CardTitle className="text-xl font-serif">{saint.name}</CardTitle>
+            <CardTitle className="text-xl font-serif text-foreground">{saint.name}</CardTitle>
           </div>
         </CardHeader>
         <CardContent className="pt-4 relative">
-          <CardDescription className="leading-relaxed">{saint.description}</CardDescription>
+          <CardDescription className="leading-relaxed text-foreground/80">{saint.description}</CardDescription>
         </CardContent>
       </Card>
     </Link>
