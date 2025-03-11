@@ -11,9 +11,7 @@ const navLinks = [
   { href: "/", label: "Início" },
   { href: "/santos", label: "Santos" },
   { href: "/santo-do-dia", label: "Santo do Dia" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/mapa", label: "Mapa" },
-  { href: "/conexoes", label: "Conexões" },
+ 
 ]
 
 export default function MobileNav() {
@@ -23,29 +21,29 @@ export default function MobileNav() {
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="ghost" className="md:hidden" aria-label="Menu de navegação">
-          <Menu className="h-6 w-6" />
+          <Menu className="w-6 h-6" />
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-full bg-background border-border">
-        <div className="flex flex-col space-y-2 mt-8">
-          <h2 className="text-primary text-xl font-medium mb-4">Menu</h2>
+        <div className="flex flex-col mt-8 space-y-2">
+          <h2 className="mb-4 text-xl font-medium text-center">Menu</h2>
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <Button variant="ghost" asChild key={link.href}>
+              <Button asChild key={link.href}>
                 <Link
                   href={link.href}
                   className={cn(
                     "px-3 py-3 rounded-md transition-colors text-lg",
                     pathname === link.href
-                      ? "font-medium text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/10"
+                      ? "font-medium "
+                      : ""
                   )}
                 >
                   {link.label}
                 </Link>
               </Button>
             ))}
-            <div className="flex justify-center"><ThemeSwitcher /></div>
+            <div className="flex w-full "><ThemeSwitcher /></div>
           </nav>
         </div>
       </SheetContent>

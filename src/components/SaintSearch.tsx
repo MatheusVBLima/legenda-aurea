@@ -20,17 +20,17 @@ export function SaintSearch({ onSearch }: SaintSearchProps) {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto mb-12">
+    <div className="w-full max-w-md mb-12">
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 " />
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <Search className="w-5 h-5 " />
         </div>
         <Input
           type="text"
           placeholder="Pesquisar santos..."
           value={searchTerm}
           onChange={handleSearch}
-          className="w-full pl-10 py-6 "
+          className="w-full py-6 pl-10 "
         />
       </div>
     </div>

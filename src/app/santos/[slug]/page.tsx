@@ -71,7 +71,7 @@ export default function SaintPage() {
       case "biografia":
         return (
           <>
-            <h2 className="text-2xl font-serif font-bold mb-4">Biografia</h2>
+            <h2 className="mb-4 font-serif text-2xl font-bold">Biografia</h2>
             <Separator className="mb-4" />
             <div className="prose max-w-none">
               {saint.additionalInfo?.biografia?.split('\n').map((paragraph, index) => (
@@ -83,7 +83,7 @@ export default function SaintPage() {
       case "milagres":
         return (
           <>
-            <h2 className="text-2xl font-serif font-bold mb-4">Milagres</h2>
+            <h2 className="mb-4 font-serif text-2xl font-bold">Milagres</h2>
             <Separator className="mb-4" />
             <div className="prose max-w-none">
               {saint.additionalInfo?.milagres?.split('\n').map((paragraph, index) => (
@@ -95,7 +95,7 @@ export default function SaintPage() {
       case "reliquias":
         return (
           <>
-            <h2 className="text-2xl font-serif font-bold mb-4">Relíquias</h2>
+            <h2 className="mb-4 font-serif text-2xl font-bold">Relíquias</h2>
             <Separator className="mb-4" />
             <div className="prose max-w-none">
               {saint.additionalInfo?.reliquias?.split('\n').map((paragraph, index) => (
@@ -107,7 +107,7 @@ export default function SaintPage() {
       case "devocao":
         return (
           <>
-            <h2 className="text-2xl font-serif font-bold mb-4">Devoção</h2>
+            <h2 className="mb-4 font-serif text-2xl font-bold">Devoção</h2>
             <Separator className="mb-4" />
             <div className="prose max-w-none">
               {saint.additionalInfo?.devocao?.split('\n').map((paragraph, index) => (
@@ -122,8 +122,8 @@ export default function SaintPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="container mx-auto p-2 flex-grow">
+    <div className="flex flex-col min-h-screen py-4">
+      <main className="container flex-grow p-2 mx-auto">
         <Breadcrumb className="mb-6">
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -139,57 +139,59 @@ export default function SaintPage() {
         </Breadcrumb>
 
         <div className="mb-8">
-          <h1 className="text-3xl font-serif font-bold mb-4">{saint.name}</h1>
+          <h1 className="mb-4 font-serif text-3xl font-bold">{saint.name}</h1>
           <p className="text-lg">{saint.description}</p>
         </div>
 
         {hasAdditionalInfo && (
           <>
-            {/* Select para telas menores */}
+            
             {isMobile ? (
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <BookOpen className="h-4 w-4 text-amber-600" />
+                  <BookOpen className="w-4 h-4 text-amber-600" />
                   <span className="text-sm font-medium">Selecione uma categoria:</span>
                 </div>
-                <Select value={activeTab} onValueChange={setActiveTab}>
-                  <SelectTrigger className="w-full bg-amber-50/50 border-amber-200">
-                    <SelectValue placeholder="Selecione uma categoria" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="biografia">Biografia</SelectItem>
-                    <SelectItem value="milagres">Milagres</SelectItem>
-                    <SelectItem value="reliquias">Relíquias</SelectItem>
-                    <SelectItem value="devocao">Devoção</SelectItem>
-                  </SelectContent>
-                </Select>
+                
+                  <Select value={activeTab} onValueChange={setActiveTab}>
+                    <SelectTrigger className="w-full bg-amber-50/50 border-amber-200">
+                      <SelectValue placeholder="Selecione uma categoria" />
+                    </SelectTrigger>
+                    <SelectContent position="popper" sideOffset={5}>
+                      <SelectItem value="biografia">Biografia</SelectItem>
+                      <SelectItem value="milagres">Milagres</SelectItem>
+                      <SelectItem value="reliquias">Relíquias</SelectItem>
+                      <SelectItem value="devocao">Devoção</SelectItem>
+                    </SelectContent>
+                  </Select>
+                
               </div>
             ) : (
               /* Tabs para telas maiores */
               <div className="mb-6">
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                  <TabsList className="w-full h-auto flex flex-wrap md:flex-nowrap p-1">
+                  <TabsList className="flex flex-wrap w-full h-auto p-1 md:flex-nowrap">
                     <TabsTrigger 
                       value="biografia" 
-                      className="flex-1 py-2 px-4 text-center"
+                      className="flex-1 px-4 py-2 text-center"
                     >
                       Biografia
                     </TabsTrigger>
                     <TabsTrigger 
                       value="milagres" 
-                      className="flex-1 py-2 px-4 text-center"
+                      className="flex-1 px-4 py-2 text-center"
                     >
                       Milagres
                     </TabsTrigger>
                     <TabsTrigger 
                       value="reliquias" 
-                      className="flex-1 py-2 px-4 text-center"
+                      className="flex-1 px-4 py-2 text-center"
                     >
                       Relíquias
                     </TabsTrigger>
                     <TabsTrigger 
                       value="devocao" 
-                      className="flex-1 py-2 px-4 text-center"
+                      className="flex-1 px-4 py-2 text-center"
                     >
                       Devoção
                     </TabsTrigger>
@@ -198,14 +200,14 @@ export default function SaintPage() {
               </div>
             )}
 
-            <div className="p-6 rounded-lg shadow-sm">
+            <div className="py-4 rounded-lg shadow-sm">
               {renderContent()}
             </div>
           </>
         )}
 
         {!hasAdditionalInfo && (
-          <div className="p-6 rounded-lg shadow-sm">
+          <div className="py-4 rounded-lg shadow-sm">
             <p className="text-center text-muted-foreground">
               Informações detalhadas sobre este santo ainda não estão disponíveis.
             </p>

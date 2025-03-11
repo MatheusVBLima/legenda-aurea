@@ -11,19 +11,19 @@ export function SaintsList({ saints }: SaintsListProps) {
 
   if (displayedSaints.length === 0) {
     return (
-      <div className="text-center py-16 bg-accent/50 rounded-lg border border-border">
-        <BookOpen className="h-12 w-12 mx-auto text-primary/50 mb-4" />
-        <p className="text-primary-foreground font-medium">Nenhum santo encontrado.</p>
+      <div className="py-16 text-center border rounded-lg bg-accent/50 border-border">
+        <BookOpen className="w-12 h-12 mx-auto mb-4 text-primary" />
+        <p className="font-medium ">Nenhum santo encontrado.</p>
       </div>
     )
   }
 
   return (
     <div>
-      <div className="mb-6 text-sm font-medium inline-block px-4 py-2 rounded-full text-foreground/80">
+      <div className="inline-block px-4 py-2 mb-6 text-sm font-medium rounded-full text-foreground/80">
         {displayedSaints.length === 1 ? "1 santo encontrado" : `${displayedSaints.length} santos encontrados`}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {displayedSaints.map((saint, index) => (
           <SaintCard key={index} saint={saint} />
         ))}

@@ -9,9 +9,7 @@ export function Navigation() {
     { href: "/", label: "Início" },
     { href: "/santos", label: "Santos" },
     { href: "/santo-do-dia", label: "Santo do Dia" },
-    { href: "/timeline", label: "Timeline" },
-    { href: "/mapa", label: "Mapa" },
-    { href: "/conexoes", label: "Conexões" },
+ 
   ]
 
   return (

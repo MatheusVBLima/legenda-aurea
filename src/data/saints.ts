@@ -1,4 +1,4 @@
-export interface Saint {
+export type Saint = {
     name: string;
     description: string;
     additionalInfo?: {
@@ -6,7 +6,6 @@ export interface Saint {
         milagres?: string;
         reliquias?: string;
         devocao?: string;
-
     };
     isDisplayed?: boolean;
     data_devocao?: string;
@@ -14,3316 +13,2055 @@ export interface Saint {
 
 export const saints: Saint[] = [
     {
-        name: "São Paulo, o Primeiro Eremita",
-        description: "Primeiro eremita cristão, viveu 113 anos no deserto, enterrado por leões enviados por Deus.",
+        name: "Santo André",
+        description: "Apóstolo de Jesus, primeiro chamado e mártir crucificado.",
         additionalInfo: {
-            biografia: `
-                São Paulo de Tebas, também conhecido como São Paulo, o Primeiro Eremita, nasceu na Tebaida, Egito, por volta do ano 228 e faleceu em 330, vivendo aproximadamente 113 anos. Ele é considerado o primeiro eremita cristão conhecido.
-
-                Durante a perseguição do imperador romano Décio, por volta do ano 250, Paulo fugiu para o deserto após ser denunciado por familiares que desejavam se apoderar de sua herança. Ele era de uma família rica e havia recebido excelente educação, sendo versado na cultura egípcia e no idioma grego.
-
-                Ao invés de retornar à cidade após o fim da perseguição, Paulo decidiu permanecer no deserto, onde viveu em completa solidão por quase 90 anos. Segundo a tradição, ele se alimentava do pão que era trazido diariamente por um corvo, enviado por Deus.
-            `,
-            milagres: `
-                Embora São Paulo tenha vivido em isolamento, vários milagres são atribuídos a ele:
-
-                1. O milagre do corvo: Durante toda sua vida no deserto, um corvo trazia diariamente metade de um pão para alimentá-lo, demonstrando o cuidado divino.
-
-                2. Quando Santo Antão do Deserto o visitou, o corvo trouxe um pão inteiro, suficiente para os dois.
-
-                3. Após sua morte, dois leões apareceram e cavaram sua sepultura, demonstrando como até os animais selvagens respeitavam sua santidade.
-
-                4. Sua túnica de folhas de palmeira, que Santo Antão herdou, foi usada em ocasiões solenes e teria realizado curas milagrosas.
-            `,
-            reliquias: `
-                As relíquias de São Paulo, o Primeiro Eremita, têm uma história interessante:
-
-                1. Inicialmente, seu corpo foi enterrado por Santo Antão no deserto.
-
-                2. No século XII, suas relíquias foram levadas para Constantinopla.
-
-                3. Durante o reinado de Luís I da Hungria, o relicário com seu corpo foi transferido clandestinamente de Veneza para a Hungria em 4 de outubro de 1381.
-
-                4. As relíquias foram veneradas primeiro na capela real do palácio da cidade de Buda e depois, em 14 de novembro, foram levadas ao mosteiro da Ordem Paulina de Budaszentlőric.
-
-                5. O relicário da cabeça de São Paulo estava no castelo de Karlstein na Boêmia até 1523, quando foi entregue ao rei Luís II da Hungria.
-
-                6. Após a invasão turco-otomana de 1521, o paradeiro exato dos restos de São Paulo é desconhecido, presumindo-se que foram destruídos.
-
-                7. Atualmente, existem algumas relíquias menores na igreja de Santa Maria in Porto, em Ravena, Itália.
-            `,
-            devocao: `
-                São Paulo, o Primeiro Eremita, é venerado como o patrono dos eremitas e monges. Sua festa litúrgica é celebrada em:
-
-                - 15 de janeiro na Igreja Católica
-                - 5 de janeiro na Igreja Ortodoxa
-                - 9 de fevereiro na Igreja Copta
-
-                Na iconografia cristã, ele é representado como um idoso vestido com uma túnica de folhas de palmeira, frequentemente acompanhado por um corvo trazendo pão e dois leões. Muitas vezes aparece junto a Santo Antão do Deserto.
-
-                A Ordem de São Paulo, o Primeiro Eremita (monges paulinos), foi fundada na Hungria no século XIII pelo beato Eusébio de Esztergom, inspirada na vida deste santo.
-
-                São Paulo é invocado como intercessor para aqueles que buscam uma vida de simplicidade, solidão contemplativa e proteção contra perseguições.
-            `
+            biografia: "Santo André, nascido em Betsaida, Galileia, no século I a.C., foi pescador e discípulo de João Batista antes de seguir Jesus como seu primeiro apóstolo (João 1:40-42). Pregou na Ásia Menor e Grécia, sendo crucificado em uma cruz em forma de X (Cruz de Santo André) em Patras, por volta de 60 d.C., aos cerca de 60 anos, por ordem do governador romano Égeas.",
+            milagres: "Converteu a esposa de Égeas com sua pregação, resistiu à crucificação por dias pregando, fez uma cruz brilhar para deter seus algozes, curou um possuído na Grécia e apareceu após a morte para guiar pescadores perdidos.",
+            reliquias: "Enterrado em Patras, suas relíquias foram trasladadas para Constantinopla e depois para Amalfi, Itália, na Catedral de Santo André. Seu crânio em Patras é venerado por proteção marítima e cura de males físicos.",
+            devocao: "Celebrado em 30 de novembro, André é padroeiro dos pescadores e da Escócia. Sua festa inclui bênçãos de redes e orações por vocações. Em arte, é mostrado com a cruz em X, e os fiéis o invocam por coragem e missão."
         },
-        data_devocao: "10 de janeiro"
+        isDisplayed: true,
+        data_devocao: "30 de novembro"
     },
     {
-        name: "São Remígio",
-        description: "Arcebispo de Reims, batizou Clodovius, rei dos francos, e realizou numerosos milagres.",
-        isDisplayed: true,
+        name: "São Nicolau",
+        description: "Bispo de Mira, conhecido por sua caridade e milagres.",
         additionalInfo: {
-            biografia: `
-                São Remígio nasceu em Laon, França, por volta do ano 437, em uma nobre família galo-romana. Desde jovem, destacou-se por sua inteligência e eloquência, o que lhe rendeu grande admiração. Sua fama se espalhou de tal forma que, em 459, com apenas 22 anos de idade, foi escolhido para ser Bispo de Reims após o falecimento do bispo anterior.
-
-                Apesar de sua juventude, Remígio demonstrou grande sabedoria e santidade em seu ministério episcopal. São Gregório de Tours o descreveu como "um Bispo de notável ciência, primeiro impregnado do estudo da retórica, mas que se distinguia também pela santidade, igualando-se a São Silvestre nos milagres".
-
-                Seu episcopado durou impressionantes 70 anos, durante os quais ele testemunhou a queda do Império Romano do Ocidente e o surgimento de uma nova era. Seu momento mais significativo foi o batismo do rei franco Clóvis I (Clodovius) em 496, evento que marcou o início da conversão dos francos ao cristianismo e lançou as bases para a formação da França cristã.
-
-                São Remígio faleceu em 13 de janeiro de 530, aos 93 anos de idade, após uma vida dedicada à evangelização e à consolidação da fé cristã na Gália.
-            `,
-            milagres: `
-                São Remígio realizou diversos milagres durante sua vida e após sua morte:
-
-                1. O milagre do crisma: Durante o batismo do rei Clóvis, conta-se que a pomba que trazia o óleo sagrado não conseguiu chegar a tempo. Milagrosamente, uma pomba branca desceu do céu trazendo uma ampola com o santo crisma para a cerimônia.
-
-                2. Ressurreição: Segundo relatos, São Remígio ressuscitou uma jovem que havia falecido, demonstrando seu poder sobre a morte.
-
-                3. Multiplicação de vinho: Em uma ocasião quando o vinho acabou durante uma refeição com convidados, São Remígio abençoou um barril vazio que imediatamente se encheu de vinho de excelente qualidade.
-
-                4. Cura de cegos: Diversos relatos mencionam que ele curou pessoas cegas através de suas orações e imposição de mãos.
-
-                5. Expulsão de demônios: São Remígio era conhecido por seu poder de exorcizar demônios, libertando muitas pessoas atormentadas.
-
-                6. Conversão milagrosa: A própria conversão do rei Clóvis é considerada milagrosa, pois ocorreu após o rei invocar o "Deus de Remígio" durante uma batalha que estava perdendo, e conseguir uma vitória improvável.
-            `,
-            reliquias: `
-                As relíquias de São Remígio têm uma história de grande veneração:
-
-                1. Inicialmente, seu corpo foi sepultado na igreja de São Cristóvão em Reims.
-
-                2. Posteriormente, seus restos mortais foram transferidos para a Basílica de São Remígio, construída especialmente para abrigar suas relíquias no século XI.
-
-                3. A ampola sagrada (Sainte Ampoule) que continha o óleo milagroso usado no batismo de Clóvis foi preservada e utilizada nas coroações dos reis da França por séculos, até ser parcialmente destruída durante a Revolução Francesa.
-
-                4. Atualmente, suas relíquias principais estão preservadas em uma urna ornamentada na Basílica de São Remígio em Reims, França, que se tornou um importante centro de peregrinação.
-
-                5. Fragmentos de suas relíquias foram distribuídos para várias igrejas na França e em outros países europeus ao longo dos séculos.
-            `,
-            devocao: `
-                São Remígio é venerado como um dos santos patronos da França e é considerado o "Apóstolo dos Francos". Sua festa litúrgica é celebrada em:
-
-                - 1º de outubro na Igreja Católica (data principal)
-                - 13 de janeiro (data de sua morte) em algumas regiões
-
-                Na iconografia cristã, São Remígio é geralmente representado como um bispo com vestes pontificais, frequentemente retratado no momento do batismo do rei Clóvis ou com uma pomba trazendo a ampola sagrada.
-
-                É invocado como protetor contra epidemias, doenças dos olhos e como intercessor para a conversão de pessoas afastadas da fé. Também é considerado patrono dos estudantes de retórica e oratória, devido à sua eloquência.
-
-                A devoção a São Remígio é particularmente forte na cidade de Reims e em toda a região de Champagne, na França, onde muitas igrejas, capelas e instituições levam seu nome.
-            `
+            biografia: "São Nicolau nasceu em Patara, Lícia (atual Turquia), por volta de 270 d.C. Tornou-se bispo de Mira, destacando-se por sua generosidade. Salvou marinheiros e crianças, morrendo em 6 de dezembro de 343 d.C., aos cerca de 73 anos, de causas naturais, sendo enterrado em Mira.",
+            milagres: "Salvou três moças da prostituição jogando ouro em sua casa, ressuscitou três crianças assassinadas, acalmou uma tempestade no mar, multiplicou trigo em uma fome e apareceu após a morte para libertar um prisioneiro injustiçado.",
+            reliquias: "Suas relíquias foram trasladadas para Bari, Itália, em 1087, na Basílica de São Nicolau. Fragmentos de ossos e 'manna de São Nicolau' (líquido exsudado) são venerados por proteção em viagens e cura de crianças.",
+            devocao: "Celebrado em 6 de dezembro, Nicolau é padroeiro dos marinheiros, crianças e comerciantes. Sua festa inclui troca de presentes e bênçãos náuticas. Em arte, é mostrado com três bolsas de ouro, e os fiéis o invocam por caridade e justiça."
         },
-        data_devocao: "14 de janeiro"
-    },
-    {
-        name: "São Sebastião",
-        description: "Soldado romano que sobreviveu a flechadas e foi martirizado por defender os cristãos.",
         isDisplayed: true,
-        data_devocao: "20 de janeiro",
-        additionalInfo: {
-            biografia: `
-                São Sebastião nasceu em Narbona, França, por volta do ano 256, mas foi criado em Milão, na Itália, cidade de origem de sua mãe. Recebeu educação cristã, embora tenha optado pela carreira militar, seguindo os passos de seu pai.
-
-                Mudou-se para Roma e alistou-se no exército imperial, onde rapidamente se destacou por sua coragem e lealdade. Conquistou a confiança do imperador Diocleciano, que o nomeou capitão da Guarda Pretoriana, uma posição de grande prestígio responsável pela segurança da família imperial.
-
-                Secretamente, Sebastião era cristão em uma época em que o cristianismo era perseguido. Aproveitando sua posição privilegiada, visitava os cristãos presos, levando-lhes conforto espiritual e fortalecendo sua fé. Muitos prisioneiros e até mesmo soldados se converteram ao cristianismo por influência de suas palavras.
-
-                Quando sua fé cristã foi descoberta, o imperador Diocleciano, sentindo-se traído, ordenou que Sebastião fosse amarrado a uma árvore e alvejado por flechas. Os arqueiros o deixaram por morto, mas uma cristã chamada Irene, ao recolher seu corpo para dar-lhe sepultura, descobriu que ele ainda vivia. Ela o levou para sua casa e cuidou de seus ferimentos até que se recuperasse.
-
-                Após sua recuperação, em vez de fugir, Sebastião apresentou-se novamente diante do imperador, repreendendo-o por suas perseguições aos cristãos. Furioso, Diocleciano ordenou que ele fosse espancado até a morte com porretes e seu corpo jogado no esgoto de Roma, para que os cristãos não pudessem venerá-lo. Era o ano 288.
-
-                Seu corpo foi resgatado por uma nobre cristã chamada Lucina, que o sepultou com honras nas catacumbas, próximo aos túmulos dos apóstolos Pedro e Paulo. São Sebastião é considerado um dos grandes mártires da Igreja primitiva.
-            `,
-            milagres: `
-                São Sebastião é associado a diversos milagres, tanto em vida quanto após sua morte:
-
-                1. Conversões milagrosas: Enquanto visitava os cristãos presos, converteu muitos pagãos, incluindo o prefeito de Roma, Cromácio, a quem teria curado de uma grave doença reumática.
-
-                2. Cura de Zoé: Segundo a tradição, a esposa de um carcereiro, chamada Zoé, que era muda há seis anos, recuperou a fala quando São Sebastião fez o sinal da cruz sobre ela.
-
-                3. Sobrevivência às flechas: Seu mais famoso milagre foi sobreviver ao suplício das flechas, quando foi deixado por morto e posteriormente se recuperou.
-
-                4. Fim da peste em Roma: Em 680, uma terrível epidemia assolava Roma. Quando as relíquias de São Sebastião foram levadas em procissão para a Basílica de São Pedro, a peste cessou imediatamente.
-
-                5. Proteção contra epidemias: Milagres semelhantes de cessação de epidemias ocorreram em Milão (1575) e Lisboa (1599) após procissões com suas relíquias.
-
-                6. Aparição no Rio de Janeiro: Em 20 de janeiro de 1567, durante uma batalha entre portugueses e franceses na Baía de Guanabara, soldados relataram ter visto um jovem guerreiro com armadura lutando ao lado dos portugueses, o que foi interpretado como uma aparição de São Sebastião, levando à sua escolha como padroeiro da cidade.
-
-                7. Proteção de pescadores: Numerosos relatos de pescadores salvos de tempestades após invocarem sua proteção contribuíram para sua devoção em cidades litorâneas.
-            `,
-            reliquias: `
-                As relíquias de São Sebastião têm uma história significativa:
-
-                1. Sepultamento original: Seu corpo foi inicialmente sepultado nas catacumbas de Roma, próximo aos túmulos dos apóstolos Pedro e Paulo, por uma nobre cristã chamada Lucina.
-
-                2. Basílica de São Sebastião: No século IV, o imperador Constantino mandou construir uma basílica sobre o local de seu sepultamento, junto à Via Ápia, que se tornou um importante centro de peregrinação.
-
-                3. Translado para São Pedro: No século VII, parte de suas relíquias foi transferida para a Basílica de São Pedro, no Vaticano, onde permanece até hoje.
-
-                4. Relíquias na França: No século IX, durante o reinado de Luís, o Piedoso, o Papa Eugênio II doou parte das relíquias ao abade Hilduin de Saint-Denis, que as levou para a França. Foram depositadas na igreja de Saint-Médard, em Soissons, em 826.
-
-                5. Dispersão durante as guerras religiosas: No século XVI, durante as guerras religiosas na França, o relicário foi profanado pelos calvinistas e os ossos foram jogados em um fosso com água. Posteriormente, foram recuperados, mas já não era possível distinguir os ossos de São Sebastião dos de outros santos.
-
-                6. Relíquias atuais: Atualmente, relíquias de São Sebastião podem ser encontradas em:
-                   - Basílica de São Sebastião Fora dos Muros, em Roma
-                   - Catedral de São Vítor, em Paris
-                   - Igrejas em Mântua, Málaga, Sevilha, Toulouse e Munique
-                   - Catedral de Tournai, na Bélgica
-                   - Igreja dos Jesuítas em Antuérpia
-                   - Capela da corte em Bruxelas
-                   - Catedral de São Sebastião, no Rio de Janeiro
-            `,
-            devocao: `
-                São Sebastião é um dos santos mais venerados no mundo católico:
-
-                Festa litúrgica:
-                - 20 de janeiro na Igreja Católica e na Igreja Ortodoxa
-
-                É invocado como patrono de:
-                - Soldados e policiais
-                - Arqueiros e atletas
-                - Cidade do Rio de Janeiro e outras cidades pelo mundo
-                - Protetor contra a peste, epidemias e doenças contagiosas
-                - Protetor contra a fome e a guerra
-                - Padroeiro dos prisioneiros
-
-                Iconografia:
-                - Geralmente representado como um jovem amarrado a uma árvore ou coluna
-                - Corpo atravessado por flechas
-                - Às vezes vestido como soldado romano
-                - Em algumas representações, aparece sendo cuidado por Santa Irene
-
-                Tradições populares:
-                - No Rio de Janeiro, sua festa é celebrada com grande procissão
-                - Em cidades litorâneas, pescadores realizam procissões marítimas em sua honra
-                - Em algumas regiões, realiza-se a "puxada do mastro", onde um mastro com sua imagem é carregado pelos devotos
-                - No sincretismo religioso afro-brasileiro, é identificado com o orixá Oxóssi
-
-                Devoção no Brasil:
-                - É padroeiro do Rio de Janeiro desde sua fundação
-                - Muitas cidades brasileiras levam seu nome
-                - Sua devoção foi trazida pelos portugueses durante a colonização
-                - É um dos santos mais populares no país, especialmente nas regiões litorâneas
-            `
-        }
-    },
-    {
-        name: "São Hilário",
-        description: "Bispo de Poitiers, combateu o arianismo e ressuscitou uma criança, conhecido por sua piedade.",
-        isDisplayed: true,
-        data_devocao: "14 de janeiro",
-        additionalInfo: {
-            biografia: `
-                São Hilário nasceu em Poitiers, França, por volta do ano 315, em uma família rica e pagã. Recebeu uma excelente educação e buscava na filosofia respostas para sua busca sobre a verdade. Após estudar as Sagradas Escrituras, encontrou no Evangelho as respostas que procurava, o que o levou à conversão ao cristianismo.
-
-                Foi batizado aos 30 anos de idade, junto com sua esposa e filha, Abrè. Mesmo sendo casado e tendo família, Hilário era conhecido por sua vida exemplar e seus conhecimentos espirituais e intelectuais, o que levou o clero a elegê-lo bispo de Poitiers em 353.
-
-                Como bispo, Hilário se destacou na luta contra o arianismo, uma heresia que negava a divindade de Jesus Cristo. Sua defesa fervorosa da fé cristã ortodoxa lhe rendeu o título de "Atanásio do Ocidente", em referência a Santo Atanásio, que combateu o arianismo no Oriente.
-
-                Por causa de sua defesa do Evangelho e oposição ao imperador Constâncio, que apoiava o arianismo, Hilário foi exilado para o Oriente por cinco anos. Durante esse período, aproveitou para estudar grego, conhecer as mais antigas comunidades cristãs e aprofundar seus conhecimentos teológicos.
-
-                Ao retornar do exílio em 360, reassumiu sua diocese e continuou seu trabalho de evangelização e combate às heresias. São Hilário faleceu em 367 e foi canonizado pelo Papa Pio IX, que também o honrou com o título de "Doutor da Igreja".
-            `,
-            milagres: `
-                São Hilário é conhecido por diversos milagres realizados durante sua vida e após sua morte:
-
-                1. Ressurreição de uma criança: Seu primeiro milagre registrado foi a ressurreição de um bebê que havia falecido sem receber o batismo.
-
-                2. Expulsão de serpentes: Há relatos de que São Hilário expulsou todas as serpentes de uma ilha no mar Tirreno, o que explica sua invocação contra picadas de cobra.
-
-                3. Curas milagrosas: Diversos relatos mencionam curas de enfermidades realizadas por sua intercessão, especialmente após sua morte.
-
-                4. Conversões: Embora não seja um milagre físico, a conversão de muitos pagãos e arianos através de seus escritos e pregações é considerada uma obra milagrosa de sua vida.
-
-                5. Proteção contra heresias: Após sua morte, muitas comunidades que invocavam sua proteção foram preservadas das heresias que assolavam a Igreja na época.
-            `,
-            reliquias: `
-                As relíquias de São Hilário têm uma história de veneração:
-
-                1. Inicialmente, seu corpo foi sepultado na igreja que mais tarde se tornaria a Basílica de São Hilário, o Grande (Saint-Hilaire-le-Grand), em Poitiers, França.
-
-                2. Durante as invasões normandas do século IX, suas relíquias foram transferidas para um local mais seguro para protegê-las da destruição.
-
-                3. Na Idade Média, partes de suas relíquias foram distribuídas para várias igrejas na França e em outros países europeus.
-
-                4. Atualmente, a maior parte de suas relíquias permanece na igreja de Saint-Hilaire-le-Grand em Poitiers, embora fragmentos estejam presentes em várias igrejas dedicadas a ele na França.
-
-                5. A igreja de São Hilário em Poitiers é um importante centro de peregrinação, especialmente no dia de sua festa.
-            `,
-            devocao: `
-                São Hilário é venerado como um dos grandes doutores da Igreja Ocidental. Sua festa litúrgica é celebrada em 13 de janeiro.
-
-                É invocado como protetor contra:
-                - Picadas de serpentes
-                - Heresias e falsas doutrinas
-                - Dificuldades de aprendizado em crianças
-
-                São Hilário é padroeiro de:
-                - Crianças com dificuldades de aprendizado
-                - Teólogos e estudiosos da fé
-                - Cidade de Poitiers, França
-
-                Na iconografia cristã, São Hilário é geralmente representado como um bispo com vestes episcopais, mitra e báculo. Frequentemente é retratado com um livro, simbolizando seus escritos teológicos, e às vezes com uma serpente sob seus pés, representando sua vitória sobre as heresias.
-
-                Seus escritos mais importantes incluem "Sobre a Trindade", "Comentários sobre os Salmos" e tratados contra o arianismo, que contribuíram significativamente para o desenvolvimento da teologia cristã ocidental.
-
-                Uma frase célebre atribuída a ele resume sua determinação: "Enganam-se os que acreditam que me farão calar. Falarei pelos escritos, e a palavra de Deus, que ninguém pode aprisionar, voará livre".
-            `
-        }
-    },
-    {
-        name: "São Firmino",
-        description: "Bispo e mártir, pregou na Gália e foi martirizado por sua fé.",
-        isDisplayed: true,
-        data_devocao: "7 de julho",
-        additionalInfo: {
-            biografia: `
-                São Firmino (também conhecido como Fermin ou Firmin) nasceu em Pamplona, Espanha, por volta do ano 272, em uma família nobre. Seus pais, Fermo e Eugênia, eram inicialmente pagãos, mas posteriormente se converteram ao cristianismo. Firmino foi confiado aos cuidados do padre Honesto, que o batizou e o instruiu na fé cristã.
-
-                Mais tarde, foi ordenado sacerdote pelo bispo de Toulouse, Honorato, e depois de alguns anos, foi consagrado bispo. São Firmino permaneceu inicialmente em sua cidade natal de Pamplona, onde uma tradição local o considera o primeiro bispo da cidade.
-
-                Posteriormente, dedicou-se à evangelização de várias regiões da França, incluindo Aquitânia, Auvergne, Anjou e outras áreas no nordeste. Apesar da forte oposição dos sacerdotes pagãos, seu trabalho missionário obteve resultados notáveis, convertendo muitas pessoas ao cristianismo.
-
-                Durante suas viagens missionárias, Firmino chegou a Amiens (antiga Samobriva Ambianorum), onde serviu como bispo por muitos anos com grande sucesso. Sabe-se que ele converteu muitos nobres, incluindo o senador Faustiniano.
-
-                São Firmino foi martirizado no início do século IV, durante as perseguições de Diocleciano. Após recusar-se a renunciar à sua fé, foi decapitado na prisão em 25 de setembro, entre os anos 290 e 303, por ordem dos magistrados Longulo e Sebastiano, que realizaram a execução secretamente para evitar uma reação popular.
-            `,
-            milagres: `
-                Embora os registros históricos sobre os milagres específicos de São Firmino sejam limitados, várias tradições e relatos atribuem a ele diversos feitos milagrosos:
-
-                1. Conversões em massa: Um dos maiores "milagres" atribuídos a São Firmino foi a conversão de milhares de pessoas ao cristianismo em regiões fortemente pagãs da Gália, especialmente em Amiens.
-
-                2. Curas milagrosas: Há relatos de que São Firmino realizou diversas curas de enfermos durante suas viagens missionárias, o que contribuiu para a expansão do cristianismo.
-
-                3. Proteção contra perseguições: Em algumas ocasiões, São Firmino teria sido miraculosamente protegido de seus perseguidores, conseguindo escapar de situações perigosas antes de seu martírio final.
-
-                4. Milagres póstumos: Após sua morte, diversos milagres foram relatados junto ao seu túmulo, incluindo curas de doenças e proteção contra epidemias.
-
-                5. Descoberta milagrosa de suas relíquias: No século VII, o bispo de Amiens, São Sálvio, descobriu o local de sepultamento de São Firmino através de uma visão milagrosa, quando o paradeiro de seu túmulo já havia sido esquecido.
-            `,
-            reliquias: `
-                As relíquias de São Firmino têm uma história de grande veneração:
-
-                1. Inicialmente, seu corpo foi sepultado em Amiens, mas o local exato foi perdido com o passar do tempo.
-
-                2. No século VII, o bispo de Amiens, São Sálvio, redescobriu o túmulo de São Firmino através de uma visão milagrosa e transferiu suas relíquias para um local de destaque na cidade.
-
-                3. Durante a procissão das relíquias pelas ruas de Amiens, conta a lenda que muitos doentes foram curados e árvores subitamente floresceram em pleno inverno apenas por estarem próximas aos restos mortais do santo.
-
-                4. Em 1186, o bispo Pedro II de Pamplona recebeu algumas relíquias de São Firmino, que foram levadas para sua cidade natal na Espanha.
-
-                5. Em 1196, ocorreu uma translação mais significativa de relíquias para Pamplona, fortalecendo o culto ao santo em sua terra natal.
-
-                6. Atualmente, as relíquias de São Firmino estão distribuídas em várias igrejas da França e da Espanha, sendo veneradas em ambos os países.
-            `,
-            devocao: `
-                São Firmino é especialmente venerado em Pamplona, Espanha, onde é celebrado com as famosas festas de San Fermín, que incluem a mundialmente conhecida "corrida dos touros" (encierro). Estas festividades, realizadas anualmente de 6 a 14 de julho, atraem milhares de turistas de todo o mundo.
-            `
-        }
-    },
-    {
-        name: "São Macário",
-        description: "Eremita egípcio, conhecido por sua vida ascética e milagres no deserto.",
-        additionalInfo: {
-            biografia: `
-                São Macário do Egito, também conhecido como Macário, o Grande, Macário, o Velho ou "Luz do Deserto", nasceu por volta do ano 300 d.C. em um vilarejo chamado Giber (atual Shabsheer) no Alto Egito. Era filho de um presbítero originário de Memphis.
-
-                Em sua juventude, Macário trabalhava como condutor de camelos, transportando natrão (um tipo de sal) no Vale de Nítria, região que mais tarde se tornaria um dos mais importantes centros monásticos do mundo. Durante uma dessas viagens, enquanto dormia, teve uma visão de um querubim que lhe prometeu aquela terra como herança espiritual.
-
-                Ainda jovem, foi forçado a se casar contra sua vontade. Quando retornou de uma viagem, descobriu que sua esposa havia falecido, e logo depois seus pais também morreram. Macário então distribuiu todos os seus bens entre os pobres. Admirando suas virtudes, o povo de sua vila o levou ao bispo de Ashmoun, que o ordenou sacerdote.
-
-                Posteriormente, uma mulher grávida o acusou falsamente de ser o pai de seu filho. Macário aceitou a acusação em silêncio, mas quando a mulher entrou em trabalho de parto, não conseguiu dar à luz até confessar que Macário era inocente. Após este episódio, ele fugiu para o deserto de Nítria (Wadi Natrum) para escapar da fama e viver em solidão.
-
-                No deserto, Macário foi visitado novamente pelo querubim, que "pesou seu coração" e deu à região o nome de "Escetes" (do copta "shihêt", que significa "escala do coração"). Ali, Macário viveu como eremita e, com o tempo, atraiu muitos discípulos que desejavam seguir seu exemplo de vida ascética.
-
-                São Macário visitou Santo Antão, o Grande, duas vezes (em 343 e 352), sendo considerado seu discípulo. Durante essas visitas, Santo Antão o instruiu sobre a vida monástica e lhe deu o hábito monástico e o báculo, conferindo-lhe simbolicamente a liderança do monasticismo após sua morte.
-
-                Durante a perseguição ariana, em 373, São Macário foi deportado junto com seu discípulo Macário de Alexandria para uma ilha no Delta do Nilo habitada apenas por pagãos. Lá, realizou um poderoso exorcismo na filha do sacerdote pagão local, o que resultou na conversão de toda a aldeia. Dois anos depois, em 375, conseguiu retornar a Escetes.
-
-                São Macário faleceu em 5 de abril de 390 (27 de Paramhat no calendário copta), aos 90 anos de idade. Foi sepultado na caverna onde havia vivido por mais de trinta anos, e seu corpo se tornou uma relíquia preciosa do mosteiro que leva seu nome.
-            `,
-            milagres: `
-                São Macário do Egito é conhecido por diversos milagres e dons espirituais:
-
-                1. Dom da profecia: Era conhecido como "pneumatophoros" (portador do Espírito), possuindo um espírito profético semelhante ao do profeta Elias. Abba Poemen testemunhou que Macário tinha conhecimento das palavras antes mesmo de serem pronunciadas.
-
-                2. Exorcismo poderoso: Durante seu exílio, realizou um exorcismo na filha de um sacerdote pagão, o que resultou na conversão de toda uma aldeia ao cristianismo.
-
-                3. Visões celestiais: Teve várias visões de querubins que o guiaram em sua vocação monástica e lhe revelaram a vontade divina.
-
-                4. Discernimento espiritual: Possuía um extraordinário dom de discernimento, sendo capaz de ver a condição espiritual das pessoas e oferecer conselhos adequados.
-
-                5. Curas milagrosas: Realizou diversas curas, incluindo a de um monge doente para quem viajou até Alexandria apenas para trazer um biscoito que ele desejava comer.
-
-                6. Vitória sobre demônios: Em um encontro com o diabo, este confessou que não conseguia vencer Macário devido à sua humildade, a única virtude que o demônio não podia imitar.
-
-                7. Ressurreição: Segundo algumas tradições, teria ressuscitado mortos através de suas orações.
-
-                8. Proteção divina: Durante suas viagens pelo deserto, foi miraculosamente protegido de perigos e recebeu orientação divina.
-            `,
-            reliquias: `
-                As relíquias de São Macário têm uma história interessante:
-
-                1. Inicialmente, seu corpo foi sepultado na caverna onde viveu por mais de trinta anos em Escetes, no deserto egípcio.
-
-                2. Após sua morte, os habitantes de sua aldeia natal, Shabsheer, roubaram seu corpo e o mantiveram em um martyrium (santuário) especialmente construído para ele, onde permaneceu por cerca de três séculos, de 480 a 793.
-
-                3. Em 793, durante o patriarcado de João IV (777-799), o corpo foi devolvido ao mosteiro fundado por São Macário.
-
-                4. Atualmente, os restos mortais de São Macário repousam no lado norte da igreja que leva seu nome, no Mosteiro de São Macário, o Grande, em Escetes (Wadi El Natrun), Egito.
-
-                5. Este mosteiro, fundado por São Macário no século IV, é um dos mais antigos mosteiros cristãos continuamente habitados no mundo e pertence à Igreja Ortodoxa Copta.
-
-                6. O mosteiro e as relíquias de São Macário são importantes destinos de peregrinação para cristãos de todo o mundo, especialmente para os coptas.
-            `,
-            devocao: `
-                São Macário é venerado como um dos mais importantes Padres do Deserto e pioneiro do monasticismo cristão. Sua festa litúrgica é celebrada em:
-
-                - 15 de janeiro na Igreja Católica Ocidental
-                - 19 de janeiro na Igreja Ortodoxa
-                - 4 de abril (27 de Paremhat) na Igreja Ortodoxa Copta
-
-                É invocado como:
-                - Patrono dos monges e eremitas
-                - Intercessor contra tentações demoníacas
-                - Protetor dos que buscam a vida contemplativa
-                - Guia espiritual para aqueles que lutam contra pensamentos impuros
-
-                Na iconografia cristã, São Macário é geralmente representado como um monge idoso com barba branca, vestindo o hábito monástico. Às vezes é retratado ao lado de um querubim, simbolizando suas visões celestiais, ou segurando um báculo em forma de T (conhecido como "cruz de Santo Antão" ou "pastoral de São Macário").
-
-                O deserto ao redor dos mosteiros históricos de Escetes é chamado de "Deserto de Macário" em sua homenagem. Sua influência espiritual se estende por todas as tradições monásticas cristãs, e seus ensinamentos sobre humildade, simplicidade e misericórdia continuam a inspirar monges e leigos até hoje.
-
-                Uma das características mais marcantes de sua devoção é a ênfase na humildade. Mesmo sendo o pai espiritual de milhares de monges, São Macário dizia: "Ainda não me tornei monge, mas vi monges", demonstrando sua constante busca pela perfeição espiritual.
-            `
-        },
-        data_devocao: "15 de janeiro"
-    },
-    {
-        name: "São Félix",
-        description: "Mártir romano, sofreu perseguição e morte por sua fé cristã.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Félix de Nola nasceu no século III em Nola, perto de Nápoles, na Itália. Era filho de um sírio chamado Hermias, que havia se estabelecido na Itália por questões de trabalho. Enquanto seu irmão Hermias seguiu a carreira militar como o pai, Félix decidiu dedicar-se ao serviço de Cristo.
-
-                Após distribuir grande parte de seus bens aos pobres, Félix foi ordenado sacerdote e tornou-se o braço direito do bispo Maximiano (ou Máximo) de Nola. Durante as perseguições aos cristãos decretadas pelo imperador Décio em 250, o bispo Maximiano, já idoso, refugiou-se em um local deserto, de onde continuava a governar a igreja em segurança.
-
-                Como os soldados não conseguiram encontrar o bispo, prenderam Félix em seu lugar. No cárcere, ele sofreu cruéis tormentos, sendo açoitado e acorrentado. Segundo a tradição, um anjo apareceu e o libertou milagrosamente, assim como aconteceu com São Pedro. O anjo então o guiou até o esconderijo do bispo Maximiano, que estava próximo da morte devido ao frio e à falta de alimentos. Félix cuidou do bispo e o carregou nos ombros até a casa de uma viúva piedosa, onde ambos se recuperaram.
-
-                Quando a perseguição diminuiu em 251, Félix e Maximiano puderam retornar a Nola. Após a morte do bispo, o povo quis nomear Félix como seu sucessor, mas ele recusou humildemente essa honra. Preferiu retirar-se para uma pequena propriedade, onde pelo resto de sua vida cultivou a terra para sustentar-se e ajudar os pobres. São Félix faleceu por volta do ano 260, sendo venerado como confessor da fé.
-            `,
-            milagres: `
-                São Félix é associado a diversos milagres, tanto durante sua vida quanto após sua morte:
-
-                1. Libertação milagrosa: Enquanto estava preso, um anjo teria aparecido a Félix, fazendo suas correntes caírem e as portas da prisão se abrirem, permitindo sua fuga.
-
-                2. O milagre da aranha: Quando os soldados o perseguiam, Félix escondeu-se em uma caverna ou poço. Uma aranha rapidamente teceu sua teia na entrada, fazendo os soldados acreditarem que ninguém havia entrado ali recentemente, salvando assim o santo.
-
-                3. Proteção contra ladrões: Certa noite, ladrões tentaram roubar sua horta, mas uma força misteriosa os fez trabalhar no campo durante toda a noite. Ao amanhecer, Félix os encontrou e agradeceu pelo trabalho realizado. Envergonhados, os ladrões confessaram suas intenções e foram perdoados pelo santo.
-
-                4. Cura do bispo Maximiano: Félix encontrou o bispo quase morto em seu esconderijo e conseguiu curá-lo e restaurar sua saúde.
-
-                5. Milagres póstumos: Após sua morte, seu túmulo tornou-se local de peregrinação e muitas curas foram atribuídas à sua intercessão.
-
-                6. Revelação da verdade: Seu túmulo era chamado de "Ara Veritatis" (Altar da Verdade), pois acreditava-se que tinha o poder de revelar se um testemunho era verdadeiro ou falso.
-            `,
-            reliquias: `
-                As relíquias de São Félix têm uma história de grande veneração:
-
-                1. Inicialmente, seu corpo foi sepultado na basílica paleocristã de Cimitile, próxima a Nola, na Itália.
-
-                2. Seu túmulo tornou-se um importante local de peregrinação, conhecido como "Ara Veritatis" (Altar da Verdade), onde os fiéis buscavam discernimento sobre a veracidade de testemunhos.
-
-                3. São Paulino de Nola (353-431), que se tornou bispo de Nola cerca de um século após a morte de Félix, tinha grande devoção ao santo e construiu uma basílica em sua honra.
-
-                4. Em Roma, uma basílica também foi consagrada a São Félix.
-
-                5. Atualmente, suas relíquias ainda são veneradas na região de Nola, embora partes delas possam ter sido distribuídas para outras igrejas ao longo dos séculos.
-
-                6. A basílica paleocristã de Cimitile, onde São Félix foi originalmente sepultado, ainda existe e é um importante sítio arqueológico e local de peregrinação.
-            `,
-            devocao: `
-                São Félix é venerado como um importante confessor da fé e quase-mártir. Sua festa litúrgica é celebrada em 14 de janeiro.
-
-                É invocado como protetor contra:
-                - O perjúrio (falso testemunho)
-                - Doenças dos olhos
-                - Perigos nas viagens
-
-                São Félix é padroeiro de:
-                - Cidade de Nola, Itália
-                - Agricultores
-                - Criadores de gado
-
-                Na iconografia cristã, São Félix é geralmente representado como um sacerdote com vestes clericais. Às vezes é retratado com correntes quebradas, simbolizando sua libertação milagrosa da prisão, ou com uma aranha e sua teia, referindo-se ao milagre que o salvou da perseguição.
-
-                São Paulino de Nola, que viveu cerca de um século depois de São Félix, teve papel fundamental na promoção de sua devoção. Todos os anos, Paulino escrevia um poema para celebrar a festa de São Félix, e em um deles forneceu uma das primeiras definições de "confessor" da fé: alguém que, embora não tenha derramado seu sangue como mártir, estava disposto a oferecer sua vida como sacrifício a Deus.
-
-                Paulino adotou Félix como seu santo patrono, não apenas como um intercessor no céu, mas como um companheiro espiritual que o acompanhava como encorajador, guia e protetor em suas jornadas.
-            `
-        },
-        data_devocao: "14 de janeiro"
-    },
-    {
-        name: "São Marcel",
-        description: "Bispo de Paris, famoso por derrotar um dragão com sua cruz.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Marcel (ou Marcelo) nasceu em Lutécia (atual Île de la Cité, Paris) no século IV, em uma família humilde. Desde jovem, destacou-se por sua pureza de coração, modéstia, mansidão, mortificação e caridade. Dedicou-se inteiramente à disciplina da virtude e da oração, vivendo de forma tão desprendida que, mesmo estando na carne, parecia desligado tanto do mundo quanto da carne.
-
-                A gravidade incomum de seus modos e seu progresso nos estudos sagrados o recomendaram fortemente ao bispo Prudêncio de Paris, que o ordenou leitor da igreja quando ainda era jovem. Posteriormente, foi promovido à dignidade do sacerdócio e, após a morte de Prudêncio, foi unanimemente escolhido como Bispo de Paris.
-
-                Como assumiu este cargo por compulsão e com temor, uma justa apreensão de suas obrigações o fez sempre humilde, vigilante e incansável em todas as suas funções. Seu episcopado durou até aproximadamente o ano 436, período durante o qual converteu muitos pagãos através de sua pregação e dos milagres que realizava.
-            `,
-            milagres: `
-                São Marcel é conhecido por diversos milagres realizados durante sua vida:
-
-                1. O milagre do dragão: O mais famoso relato sobre São Marcel conta que ele libertou a região de Paris de um grande dragão (ou serpente) que habitava o sepulcro de uma adúltera. Este dragão aterrorizava a população local, e São Marcel o enfrentou com sua cruz, expulsando-o da cidade. Esta história, embora tenha elementos lendários, é interpretada como uma representação simbólica da vitória do cristianismo sobre o paganismo ou sobre o mal.
-
-                2. Transformação de água em vinho: Relatos indicam que São Marcel tinha o poder de transformar água do rio Sena em vinho e bálsamo, o que contribuiu para sua fama.
-
-                3. Curas milagrosas: Diversos relatos atribuem a São Marcel a cura de enfermos através de suas orações e imposição de mãos.
-
-                4. Exorcismos: Era conhecido por libertar pessoas possuídas por demônios, demonstrando seu poder espiritual sobre as forças do mal.
-
-                5. Milagres póstumos: Após sua morte, muitos milagres foram relatados junto ao seu túmulo, especialmente curas de diversas enfermidades e libertação de prisioneiros.
-            `,
-            reliquias: `
-                As relíquias de São Marcel têm uma história de grande veneração:
-
-                1. Inicialmente, seu corpo foi sepultado a cerca de um quarto de légua de Paris, em uma vila que posteriormente se tornou parte da cidade, chamada de subúrbio de Saint-Marceau.
-
-                2. Com o passar do tempo, suas relíquias foram transferidas para a Catedral de Notre-Dame de Paris, onde são veneradas até hoje.
-
-                3. Um dos sinos da Catedral de Notre-Dame recebeu o nome de "Marcel" em sua homenagem, demonstrando a importância deste santo para a cidade de Paris.
-
-                4. Durante a Revolução Francesa, muitas relíquias foram profanadas, mas acredita-se que parte das relíquias de São Marcel tenha sido preservada.
-
-                5. A igreja de Saint-Marcel em Paris, embora reconstruída várias vezes ao longo da história (a atual data de 1966), continua sendo um local de veneração ao santo.
-            `,
-            devocao: `
-                A devoção a São Marcel é significativa, especialmente em Paris:
-
-                Festa litúrgica:
-                - 1º de novembro no Martirológio Romano
-                - 3 de novembro nas igrejas da França
-
-                É invocado como:
-                - Patrono da cidade de Paris
-                - Protetor contra inundações e epidemias
-                - Intercessor contra picadas de serpentes e animais venenosos
-                - Padroeiro dos vinicultores (devido ao milagre da transformação da água em vinho)
-
-                Tradições e costumes:
-                - Procissão do Dragão: Durante a Idade Média, nas procissões de Rogações em Paris, carregava-se uma efígie de vime em forma de dragão, simbolizando o monstro derrotado por São Marcel.
-                - Oferendas de pão e vinho eram feitas em seu túmulo para obter proteção contra doenças.
-                - Sua festa era celebrada com grande solenidade em Paris até a Revolução Francesa.
-
-                Iconografia:
-                - Representado como bispo com vestes pontificais
-                - Frequentemente retratado dominando um dragão com seu báculo ou estola
-                - Às vezes representado com uma fonte ou poço, simbolizando o milagre da água transformada em vinho
-
-                Locais de devoção:
-                - Igreja de Saint-Marcel em Paris
-                - Catedral de Notre-Dame de Paris
-                - Fonte de Saint-Marcel, considerada milagrosa durante a Idade Média
-            `
-        },
-        data_devocao: "16 de janeiro"
-    },
-    {
-        name: "Santo Antão do Egito",
-        description: "Pai do monaquismo cristão, viveu 105 anos no deserto enfrentando tentações demoníacas.",
-        isDisplayed: true,
-        data_devocao: "17 de janeiro",
-        additionalInfo: {
-            biografia: `
-                Santo Antão, também conhecido como Santo Antão do Egito, Santo Antão o Grande, ou o Pai de Todos os Monges, nasceu em Conam, no Alto Egito (Tebaida), no ano 251, em uma família cristã de camponeses. Quando tinha aproximadamente 20 anos, seus pais faleceram, deixando-o responsável por sua irmã e por uma considerável herança.
-
-                Sua vida mudou radicalmente ao ouvir, durante uma missa, a passagem do Evangelho em que Jesus diz ao jovem rico: "Se queres ser perfeito, vai, vende teus bens, dá aos pobres e terás um tesouro nos céus; depois, vem e segue-me" (Mateus 19,21). Tomando estas palavras literalmente, Antão vendeu todas as suas propriedades, distribuiu o dinheiro aos pobres, confiou sua irmã a uma comunidade de virgens consagradas e retirou-se para o deserto.
-
-                Inicialmente, estabeleceu-se próximo à sua aldeia, vivendo em uma caverna sob a orientação de um eremita idoso. Posteriormente, buscando maior solidão, mudou-se para uma fortaleza abandonada no deserto oriental do Egito, onde permaneceu em completo isolamento por cerca de 20 anos.
-
-                Apesar de sua busca pela solidão, sua fama de santidade atraiu numerosos discípulos que desejavam seguir seu exemplo. Por volta do ano 305, Antão saiu de seu isolamento para organizar e orientar os muitos eremitas que haviam se estabelecido ao seu redor, formando assim as primeiras comunidades monásticas cristãs, embora cada monge vivesse isoladamente em sua própria cela ou caverna.
-
-                Santo Antão deixou o deserto em raras ocasiões. Em 311, foi a Alexandria para confortar os cristãos perseguidos pelo imperador Maximino Daia. Retornou à cidade em 335 para defender a fé ortodoxa contra o arianismo, a convite de Santo Atanásio, que mais tarde escreveria sua biografia.
-
-                Viveu uma vida de extrema austeridade, dedicada à oração, ao trabalho manual e à luta contra as tentações. Faleceu serenamente em 17 de janeiro de 356, com a impressionante idade de 105 anos, cercado por seus discípulos. Antes de morrer, pediu que seu corpo fosse sepultado secretamente para evitar venerações excessivas.
-            `,
-            milagres: `
-                Santo Antão é conhecido por diversos milagres e feitos sobrenaturais:
-
-                1. Vitória sobre as tentações: O mais famoso aspecto de sua vida foram as intensas batalhas espirituais contra demônios que o tentavam com visões de riquezas, prazeres carnais e dúvidas. Estas tentações foram imortalizadas na arte por pintores como Hieronymus Bosch e Salvador Dalí.
-
-                2. Curas milagrosas: Realizou numerosas curas de enfermos que o procuravam no deserto, incluindo casos de possessão demoníaca, paralisia e cegueira.
-
-                3. O milagre da caverna: Certa vez, foi espancado por demônios em uma caverna até ser dado como morto. Seus discípulos o encontraram e lamentavam sua morte quando ele reviveu milagrosamente, exigindo ser levado de volta à caverna para enfrentar novamente os demônios. Quando os demônios retornaram, uma luz divina os afugentou.
-
-                4. Dom da profecia: Previu eventos futuros, incluindo a própria morte e calamidades que afetariam o Egito.
-
-                5. Visões celestiais: Relatou ter tido visões de anjos e de Cristo, que o fortaleciam em suas lutas espirituais.
-
-                6. Domínio sobre animais selvagens: Segundo relatos, animais selvagens do deserto o respeitavam e não o atacavam, mesmo quando se aproximava de suas tocas.
-
-                7. Fonte milagrosa: Em um momento de extrema sede, fez brotar água de uma rocha no deserto através de sua oração.
-            `,
-            reliquias: `
-                As relíquias de Santo Antão têm uma história notável:
-
-                1. Sepultamento original: Conforme seu pedido, foi sepultado secretamente por dois de seus discípulos em um local desconhecido no deserto egípcio.
-
-                2. Descoberta das relíquias: Por volta do ano 561, durante o reinado do imperador Justiniano, suas relíquias foram descobertas e transferidas para Alexandria.
-
-                3. Translação para Constantinopla: Posteriormente, foram levadas para Constantinopla.
-
-                4. Transferência para a França: No século XI, durante as Cruzadas, suas relíquias foram levadas para La Motte-aux-Bois (atual Saint-Antoine-l'Abbaye), na França, por Jocelin, um nobre francês. Este local tornou-se um importante centro de peregrinação.
-
-                5. Igreja de Santo Antônio de Viennois: Atualmente, a maior parte de suas relíquias está preservada nesta igreja na França.
-
-                6. Relíquias dispersas: Fragmentos de suas relíquias podem ser encontrados em várias igrejas pelo mundo, incluindo:
-                   - A Basílica de San Antonio Abate em Roma
-                   - O Mosteiro de Santo Antão no Egito
-                   - A Catedral de Colônia na Alemanha
-
-                7. O Fogo de Santo Antão: Durante a Idade Média, o contato com suas relíquias era considerado eficaz contra o "fogo de Santo Antão" (ergotismo), uma doença causada pelo consumo de centeio contaminado com um fungo.
-            `,
-            devocao: `
-                A devoção a Santo Antão é ampla e significativa:
-
-                Festa litúrgica:
-                - 17 de janeiro na Igreja Católica Romana e na maioria das Igrejas Orientais
-                - 30 de janeiro no antigo calendário da Igreja Ortodoxa e da Igreja Copta
-
-                É invocado como patrono de:
-                - Monges e eremitas
-                - Animais domésticos, especialmente porcos
-                - Cesteiros e escoveiros (por seu trabalho manual no deserto)
-                - Contra doenças de pele, especialmente o ergotismo
-                - Contra tentações e possessões demoníacas
-                - Contra incêndios
-
-                Tradições e costumes:
-                - Bênção dos animais: Em muitos países, especialmente na Espanha, Itália e América Latina, realiza-se a bênção de animais domésticos em sua festa
-                - Fogueiras de Santo Antão: Em algumas regiões, acendem-se fogueiras em sua honra
-                - Pães de Santo Antão: Distribuição de pães abençoados em sua festa
-
-                Iconografia:
-                - Representado como um ancião de barba branca
-                - Vestido com hábito monástico e capuz
-                - Frequentemente acompanhado por um porco ou javali
-                - Com um cajado em forma de T (Tau)
-                - Cercado por demônios que o tentam
-                - Com um sino e um livro
-
-                Ordens religiosas:
-                - Ordem dos Hospitalários de Santo Antão (Antonianos)
-                - Influenciou todas as ordens monásticas posteriores
-            `
-        }
-    },
-    {
-        name: "São Fabiano",
-        description: "Papa mártir, escolhido por uma pomba divina, morreu durante a perseguição de Décio.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Fabiano nasceu em Roma por volta do ano 200, em uma família nobre pertencente à proeminente família Fabius, que tinha grande influência na política e nas artes da cidade. Embora pouco se saiba sobre sua juventude, acredita-se que tenha recebido boa educação, como era comum entre as famílias nobres romanas.
-
-                Sua eleição como Papa ocorreu de maneira extraordinária. Em 236, após a morte do Papa Antero, que governou a Igreja por apenas alguns meses, Fabiano veio a Roma para acompanhar a eleição do novo pontífice, sendo apenas um observador sem pretensões ao cargo. Segundo relatos históricos, enquanto os bispos e fiéis deliberavam sobre quem deveria ser o novo Papa, uma pomba branca desceu do céu e pousou sobre a cabeça de Fabiano. Este evento foi interpretado como um sinal divino, semelhante à descida do Espírito Santo sobre Jesus no Jordão, e Fabiano foi unanimemente aclamado como o 20º Papa da Igreja.
-
-                Durante seu pontificado de 14 anos (236-250), Fabiano organizou a Igreja de Roma em sete distritos, cada um sob a supervisão de um diácono, estabelecendo uma estrutura administrativa que perdurou por séculos. Também enviou missionários para evangelizar a Gália (atual França) e trabalhou para recuperar os corpos dos mártires, incluindo os restos mortais do antipapa Hipólito e do Papa Ponciano, que haviam sido exilados.
-
-                Fabiano manteve boas relações com o imperador Filipe, o Árabe, que era tolerante com os cristãos. No entanto, quando Décio assumiu o trono imperial em 249, iniciou-se uma violenta perseguição contra a Igreja. Fabiano, como líder dos cristãos em Roma, foi um dos primeiros a ser preso. Após suportar torturas e um longo período de prisão, foi decapitado em 20 de janeiro de 250, tornando-se mártir da fé.
-            `,
-            milagres: `
-                Embora não existam muitos relatos específicos de milagres atribuídos a São Fabiano durante sua vida, sua eleição milagrosa como Papa é considerada um dos eventos sobrenaturais mais significativos associados a ele:
-
-                1. A pomba divina: O evento mais extraordinário relacionado a São Fabiano foi o milagre da pomba branca que desceu do céu e pousou sobre sua cabeça durante a assembleia que escolheria o novo Papa. Este sinal divino foi tão convincente que mesmo sendo um leigo e desconhecido para muitos presentes, foi imediatamente aclamado como o escolhido de Deus para liderar a Igreja.
-
-                2. Preservação da fé durante a perseguição: Durante seu pontificado, São Fabiano conseguiu manter a unidade e a força da Igreja em Roma, mesmo em tempos difíceis. Sua capacidade de organizar a Igreja e fortalecer a fé dos cristãos em meio às adversidades é considerada por muitos como uma graça especial concedida por Deus.
-
-                3. Milagres póstumos: Após seu martírio, diversos milagres foram relatados por fiéis que visitavam seu túmulo nas Catacumbas de São Calisto. Curas, conversões e graças espirituais foram atribuídas à sua intercessão, o que contribuiu para a rápida difusão de seu culto.
-
-                4. Incorruptibilidade: Segundo algumas tradições, quando seu corpo foi exumado anos após sua morte para ser transferido para uma basílica em Roma, foi encontrado em estado de preservação extraordinária, o que foi interpretado como um sinal de sua santidade.
-            `,
-            reliquias: `
-                As relíquias de São Fabiano têm uma história de grande veneração na Igreja:
-
-                1. Sepultamento inicial: Após seu martírio em 250, o corpo de São Fabiano foi reverentemente sepultado pelos cristãos nas Catacumbas de São Calisto, em Roma, onde havia uma cripta especial destinada aos Papas. Uma lápide com seu nome em grego ("ΦΑΒΙΑΝΟC ΕΠΙC ΜΡΤ" - "Fabiano, bispo, mártir") foi colocada sobre seu túmulo, sendo uma das mais antigas inscrições papais conhecidas.
-
-                2. Transferência para basílicas: No século IX, durante o pontificado do Papa Pascoal I, que se dedicou a transferir relíquias dos mártires das catacumbas para igrejas dentro da cidade de Roma, parte das relíquias de São Fabiano foi transferida para a Basílica de Santa Praxedes.
-
-                3. Localização atual: No século XVIII, o Papa Clemente XI ordenou que os restos mortais de São Fabiano fossem transferidos para a Basílica de São Sebastião Fora dos Muros (San Sebastiano fuori le mura), em Roma, onde são venerados até hoje. Uma parte de suas relíquias também se encontra na igreja de San Fabiano e Venanzio, em Roma.
-
-                4. Fragmentos pelo mundo: Como era comum na Idade Média, pequenos fragmentos de suas relíquias foram distribuídos para diversas igrejas pela Europa, especialmente aquelas dedicadas a São Fabiano ou que tinham uma devoção especial a este santo Papa mártir.
-
-                5. Catacumbas de São Calisto: Embora seu corpo tenha sido transferido, o local original de seu sepultamento nas Catacumbas de São Calisto ainda é visitado por peregrinos. A lápide original com seu nome, uma das mais antigas evidências epigráficas do culto aos mártires, é preservada no Museu das Catacumbas.
-            `,
-            devocao: `
-                São Fabiano é venerado como um dos grandes Papas mártires da Igreja primitiva:
-
-                1. Festa litúrgica: Sua memória é celebrada em 20 de janeiro no calendário litúrgico da Igreja Católica Romana, data de seu martírio. Na Igreja Ortodoxa, é comemorado em 5 de agosto, enquanto na Igreja Copta sua festa é celebrada em 7 e 11 de Amshir (correspondendo a fevereiro no calendário gregoriano).
-
-                2. Patronato: São Fabiano é invocado como:
-                   - Protetor contra epidemias e doenças infecciosas
-                   - Padroeiro dos oleiros e fabricantes de cerâmica
-                   - Intercessor para uma boa morte
-                   - Protetor dos perseguidos por sua fé
-
-                3. Iconografia: Na arte cristã, São Fabiano é geralmente representado com:
-                   - Vestes papais e tiara
-                   - Uma pomba branca pousada sobre sua cabeça ou voando acima dela
-                   - A palma do martírio
-                   - Às vezes, é retratado com a espada, instrumento de seu martírio
-
-                4. Igrejas e locais de culto: Diversas igrejas ao redor do mundo são dedicadas a São Fabiano, frequentemente em conjunto com São Sebastião, outro mártir da perseguição de Décio que é celebrado no mesmo dia. A mais notável é a igreja de San Fabiano e Venanzio em Roma.
-
-                5. Tradições populares: Em algumas regiões da Itália, especialmente em Roma, realizam-se procissões em sua honra no dia 20 de janeiro. Em certas localidades rurais, sua festa coincide com o início dos preparativos para o plantio da primavera, e ele é invocado para abençoar as sementes.
-
-                6. Orações e devoções: Uma oração tradicional a São Fabiano pede sua intercessão para obter firmeza na fé durante as perseguições e tribulações, refletindo seu próprio testemunho de fidelidade até a morte.
-            `
-        }
-    },
-    {
-        name: "Santa Ágata",
-        description: "Virgem e mártir, resistiu à perseguição e teve os seios cortados como tortura.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                Santa Ágata (em latim, Agatha) nasceu em Catânia, na Sicília, Itália, por volta do ano 231, em uma família nobre e cristã. Desde jovem, consagrou sua virgindade a Deus, dedicando-se a uma vida de oração e caridade.
-
-                Durante o reinado do imperador Décio (249-251), iniciou-se uma violenta perseguição contra os cristãos. Nessa época, Quinciano, governador da Sicília, conheceu Ágata e, impressionado com sua beleza e riqueza, desejou desposá-la. Ao saber que ela era cristã e havia consagrado sua virgindade a Deus, tentou persuadi-la a renunciar à sua fé e aceitar seu pedido de casamento.
-
-                Diante da recusa firme de Ágata, Quinciano ordenou que ela fosse entregue a uma mulher de má reputação chamada Afrodisia, que administrava uma casa de prostituição, na esperança de que o ambiente corrupto a fizesse mudar de ideia. No entanto, Ágata permaneceu inabalável em sua fé e pureza durante um mês naquele lugar.
-
-                Furioso com sua persistência, Quinciano a submeteu a um julgamento público, onde ela declarou corajosamente: "Minha liberdade está em Cristo". Como punição por sua recusa em renunciar ao cristianismo e ceder aos desejos do governador, Ágata foi submetida a terríveis torturas. A mais cruel delas foi ter seus seios cortados, um ato de brutalidade que se tornou parte central de sua iconografia.
-
-                Após essa mutilação, Ágata foi lançada em uma prisão escura, sem comida nem cuidados médicos. Durante a noite, conta a tradição que São Pedro apareceu a ela em uma visão, curando milagrosamente seus ferimentos. Quinciano, ao ver que ela havia sido curada, ordenou que fosse rolada sobre cacos de cerâmica e brasas ardentes. Durante este suplício final, ocorreu um terremoto em Catânia, e parte do palácio desabou, matando dois conselheiros do governador.
-
-                Temendo uma revolta popular, Quinciano ordenou que Ágata fosse devolvida à prisão, onde ela faleceu em oração no dia 5 de fevereiro de 251, entregando sua alma a Deus.
-            `,
-            milagres: `
-                Santa Ágata é conhecida por diversos milagres, tanto durante sua vida quanto após sua morte:
-
-                1. Cura milagrosa na prisão: O mais famoso milagre durante sua vida ocorreu quando, após ter seus seios cortados e ser lançada na prisão sem tratamento médico, São Pedro apareceu a ela em uma visão e curou completamente seus ferimentos. Quando os guardas a viram no dia seguinte, ficaram espantados ao encontrá-la perfeitamente curada.
-
-                2. Proteção de Catânia contra a erupção do Etna: Um ano após sua morte, o vulcão Etna entrou em erupção, ameaçando destruir a cidade de Catânia. Os habitantes, desesperados, pegaram o véu que cobria o túmulo de Santa Ágata e o colocaram diante da lava que avançava. Milagrosamente, o fluxo de lava parou imediatamente, salvando a cidade. Este milagre estabeleceu Santa Ágata como protetora contra incêndios, erupções vulcânicas e outros desastres naturais.
-
-                3. Proteção durante terremotos: Em 1693, um devastador terremoto atingiu a Sicília, destruindo grande parte de Catânia. As relíquias de Santa Ágata foram levadas em procissão, e muitos sobreviventes atribuíram sua salvação à intercessão da santa.
-
-                4. Curas de doenças mamárias: Ao longo dos séculos, inúmeras mulheres relataram curas de doenças nos seios após orarem a Santa Ágata, estabelecendo-a como padroeira das mulheres que sofrem de doenças mamárias.
-
-                5. Proteção dos bombeiros: Diversos relatos de bombeiros sendo salvos de situações perigosas são atribuídos à intercessão de Santa Ágata, reforçando seu patronato sobre esta profissão.
-
-                6. Milagre do maná: Desde o século XVI, relata-se que um líquido milagroso, chamado "maná", emana periodicamente do túmulo de Santa Ágata. Este líquido é coletado e distribuído aos fiéis, que relatam curas e graças recebidas após seu uso devocional.
-            `,
-            reliquias: `
-                As relíquias de Santa Ágata têm uma história de grande veneração e algumas peripécias ao longo dos séculos:
-
-                1. Sepultamento inicial: Após seu martírio em 251, o corpo de Santa Ágata foi reverentemente sepultado pelos cristãos de Catânia em um local chamado "Agatha vetere" (Ágata antiga).
-
-                2. Transferência para Constantinopla: Em 1040, o general bizantino Jorge Maniaces levou as relíquias de Santa Ágata para Constantinopla durante uma campanha militar na Sicília, onde permaneceram por cerca de 86 anos.
-
-                3. Retorno a Catânia: Em 1126, dois soldados chamados Gisliberto e Goselmo, possivelmente a mando do bispo de Catânia, conseguiram recuperar as relíquias e devolvê-las à cidade natal da santa. Este evento é comemorado anualmente em 17 de agosto.
-
-                4. Catedral de Catânia: Atualmente, a maior parte das relíquias de Santa Ágata está preservada na Catedral de Catânia, dedicada a ela. Seus restos mortais são guardados em um relicário de prata, que é levado em procissão durante sua festa em fevereiro.
-
-                5. Relicários específicos: Além do relicário principal, existem relicários separados para partes específicas, como o véu que teria detido a lava do Etna, guardado em um relicário de prata do século XVII.
-
-                6. Fragmentos pelo mundo: Como era comum na Idade Média, pequenos fragmentos de suas relíquias foram distribuídos para diversas igrejas pela Europa. Igrejas dedicadas a Santa Ágata em Roma, Malta e outras partes da Itália possuem fragmentos de suas relíquias.
-
-                7. Busto relicário: Um dos mais famosos tesouros associados a Santa Ágata é o busto-relicário de prata, criado no século XVII, que contém parte de seu crânio. Esta peça é ricamente adornada com joias doadas pelos fiéis ao longo dos séculos e é um dos símbolos mais importantes da devoção à santa.
-            `,
-            devocao: `
-                Santa Ágata é uma das santas mais veneradas do cristianismo, especialmente na tradição católica:
-
-                1. Festa litúrgica: Sua memória é celebrada em 5 de fevereiro no calendário litúrgico da Igreja Católica, data de seu martírio. Em Catânia, sua festa é celebrada com grande solenidade durante cinco dias (3 a 7 de fevereiro), atraindo milhares de peregrinos e turistas.
-
-                2. Patronato: Santa Ágata é invocada como padroeira de:
-                    - Catânia e da Sicília
-                    - Mulheres que sofrem de doenças mamárias
-                    - Enfermeiras e profissionais de saúde
-                    - Bombeiros e proteção contra incêndios
-                    - Fundidores de sinos (devido à lenda de que seus seios cortados se assemelhavam a sinos)
-                    - Proteção contra erupções vulcânicas e terremotos
-
-                3. Iconografia: Na arte cristã, Santa Ágata é geralmente representada como uma jovem segurando uma bandeja com seus seios cortados. Outros atributos incluem:
-                    - A palma do martírio
-                    - Pinças ou tenazes (instrumentos de seu martírio)
-                    - Um véu (referência ao milagre que deteve a lava do Etna)
-                    - Às vezes, é retratada com São Pedro curando seus ferimentos
-
-                4. Tradições populares: Em Catânia, durante sua festa, realiza-se uma grandiosa procissão com o busto-relicário e o relicário de prata contendo suas relíquias. A procissão percorre os locais associados ao seu martírio e é acompanhada por milhares de fiéis vestidos com a tradicional "saia branca" (sacco bianco).
-
-                5. Gastronomia: Em sua honra, são preparados doces tradicionais chamados "minne di Sant'Agata" (seios de Santa Ágata), pequenos bolos redondos cobertos com glacê branco e uma cereja no topo, simbolizando seus seios.
-
-                6. Orações e devoções: Diversas orações são dirigidas a Santa Ágata, especialmente por mulheres que sofrem de doenças mamárias ou que enfrentam cirurgias nos seios. Uma oração tradicional pede sua proteção contra incêndios e desastres naturais.
-
-                7. Igrejas e santuários: Numerosas igrejas ao redor do mundo são dedicadas a Santa Ágata, sendo a mais importante a Catedral de Catânia. Em Roma, existe a antiga igreja de Sant'Agata dei Goti, e em Malta, onde a devoção à santa também é muito forte, há diversas igrejas em sua honra.
-            `
-        }
-    },
-    {
-        name: "São Vicente",
-        description: "Diácono e mártir espanhol, sofreu torturas horríveis por sua fé.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Vicente nasceu em Huesca, próximo a Saragoça, Espanha, no final do século III. Filho de Eutríquio e Enola, recebeu uma excelente educação cristã em Saragoça, onde foi ordenado diácono pelo Bispo Valério.
-
-                Como o bispo sofria de um impedimento na fala, Vicente tornou-se seu porta-voz, pregando e ensinando em seu nome. Durante a perseguição de Diocleciano aos cristãos na Espanha, tanto Vicente quanto o Bispo Valério foram presos e levados acorrentados até Valência.
-
-                Enquanto o Bispo Valério foi exilado, Vicente foi submetido a terríveis torturas por ordem do governador Daciano. Foi esticado em uma roda, dilacerado com ganchos de metal e colocado sobre uma grade de ferro aquecida por brasas. Sal e banha foram esfregados em suas feridas para aumentar seu sofrimento.
-
-                Mesmo sob tortura extrema, Vicente manteve sua fé inabalável, com os olhos fixos no céu. Foi então lançado em uma masmorra solitária, cujo chão estava coberto de cacos pontiagudos que aumentavam a agonia de seu corpo já dilacerado.
-
-                Vicente declarou que os anjos do céu vieram confortá-lo. Sua cela, segundo ele, estava iluminada por uma luz celestial e perfumada como se estivesse cheia de rosas. Cantava hinos enquanto sofria, o que levou até mesmo seu carcereiro à conversão.
-
-                São Vicente morreu em 22 de janeiro de 304, sucumbindo aos ferimentos na prisão. É considerado o protomártir da Espanha.
-            `,
-            milagres: `
-                São Vicente é conhecido por diversos milagres, tanto durante seu martírio quanto após sua morte:
-
-                1. Conforto angelical: Durante seu encarceramento, anjos apareceram para confortá-lo, enchendo sua cela de luz celestial e fragrância de rosas.
-
-                2. Conversão do carcereiro: O testemunho de sua fé inabalável e seus cânticos durante o martírio levaram seu carcereiro à conversão ao cristianismo.
-
-                3. Preservação milagrosa: Após sua morte, seu corpo foi lançado em um pântano para ser devorado por animais selvagens, mas foi miraculosamente preservado por um corvo que afugentava qualquer animal que tentasse se aproximar.
-
-                4. Retorno do mar: Quando seu corpo foi costurado em um saco, amarrado a uma pedra e lançado ao mar, as ondas o trouxeram de volta à praia durante a noite.
-
-                5. Curas milagrosas: Diversos fiéis foram curados ao tocar suas vestes ensanguentadas durante seu martírio.
-
-                6. Milagres póstumos: Numerosas curas e graças foram relatadas junto ao seu túmulo após sua morte.
-            `,
-            reliquias: `
-                As relíquias de São Vicente têm uma história notável:
-
-                1. Inicialmente, após seu corpo ter sido trazido milagrosamente pelo mar, foi sepultado secretamente por cristãos devotos.
-
-                2. Quando a paz foi restaurada à Igreja, uma capela foi construída sobre seus restos mortais fora dos muros de Valência.
-
-                3. Suas relíquias foram posteriormente distribuídas por várias igrejas na Espanha e Portugal:
-                   - A principal parte está na Catedral de Valência
-                   - Fragmentos significativos estão em Saragoça
-                   - Algumas relíquias foram levadas para Lisboa, onde são veneradas na Sé Catedral
-
-                4. Durante as invasões muçulmanas na Península Ibérica, parte de suas relíquias foi transferida para o Cabo de São Vicente, no Algarve, Portugal, que recebeu seu nome.
-
-                5. Diversas igrejas na Europa possuem fragmentos de suas relíquias, testemunhando a ampla devoção ao santo.
-            `,
-            devocao: `
-                São Vicente é um dos santos mais venerados da Península Ibérica. Sua festa litúrgica é celebrada em 22 de janeiro.
-
-                É invocado como patrono de:
-                - Valência e Saragoça (Espanha)
-                - Portugal
-                - Padeiros
-                - Fabricantes de telhas e telhados
-                - Marinheiros
-                - Vinhateiros e vinicultores
-
-                Na iconografia cristã, São Vicente é geralmente representado:
-                - Como um jovem diácono com dalmática
-                - Com instrumentos de seu martírio (grelha, ganchos)
-                - Com um corvo protegendo seu corpo
-                - Às vezes, com um barco ou uma pedra de moinho
-
-                Sua devoção é particularmente forte em:
-                - Espanha, especialmente em Valência e Saragoça
-                - Portugal, onde o Cabo de São Vicente leva seu nome
-                - América Latina, onde diversas igrejas e localidades são dedicadas a ele
-
-                Tradições populares incluem procissões marítimas em sua honra e a bênção de vinhedos e padarias em seu dia festivo.
-            `
-        }
+        data_devocao: "6 de dezembro"
     },
     {
         name: "Santa Lúcia",
-        description: "Virgem e mártir, arrancou os próprios olhos para preservar sua castidade.",
-        isDisplayed: true,
+        description: "Virgem e mártir siciliana, protetora da visão.",
         additionalInfo: {
-            biografia: `
-                Santa Lúcia nasceu em Siracusa, Sicília, por volta do ano 283, em uma família nobre e cristã. Seu pai faleceu quando ela ainda era criança, sendo criada por sua mãe Eutíquia. Desde jovem, Lúcia consagrou secretamente sua virgindade a Cristo.
-
-                Sua mãe, sem saber deste voto, arranjou seu casamento com um jovem pagão. Nesta época, Eutíquia sofria de uma grave hemorragia. Lúcia convenceu sua mãe a visitar o túmulo de Santa Águeda em Catânia para pedir sua cura. Quando sua mãe foi miraculosamente curada, Lúcia revelou seu voto de virgindade e pediu permissão para dedicar sua vida a Cristo e aos pobres.
-
-                O pretendente rejeitado, enfurecido ao saber que Lúcia havia distribuído grande parte de seu dote aos pobres, denunciou-a como cristã ao governador Pascásio, durante a perseguição de Diocleciano. O governador ordenou que ela sacrificasse aos deuses pagãos, mas Lúcia recusou-se firmemente.
-
-                Pascásio tentou então enviá-la a um prostíbulo para ser violada, mas quando os guardas tentaram movê-la, ela se tornou tão pesada que nem mesmo vários pares de bois conseguiram arrastá-la. O governador ordenou então que ela fosse torturada de várias maneiras, incluindo ser queimada viva, mas as chamas não a tocaram.
-
-                Finalmente, foi morta com uma espada atravessada em sua garganta, em 13 de dezembro de 304. Antes de morrer, profetizou a queda de Diocleciano e a paz para a Igreja, que de fato o ocorreu poucos anos depois.
-            `,
-            milagres: `
-                Santa Lúcia é conhecida por diversos milagres, tanto em vida quanto após sua morte:
-
-                1. Imobilidade milagrosa: Quando tentaram levá-la ao prostíbulo, tornou-se tão pesada que nem mesmo vários pares de bois conseguiram movê-la.
-
-                2. Proteção contra o fogo: As chamas que deveriam queimá-la viva não a tocaram, dividindo-se ao seu redor.
-
-                3. Cura de sua mãe: Através de suas orações junto ao túmulo de Santa Águeda, sua mãe foi curada de uma hemorragia incurável.
-
-                4. Visão preservada: Segundo algumas versões de sua história, mesmo após seus olhos terem sido arrancados, ela continuou a ver perfeitamente.
-
-                5. Aparição a navegantes: Diversos relatos ao longo dos séculos mencionam sua aparição para salvar navios em perigo.
-
-                6. Curas de doenças dos olhos: Inúmeras curas de problemas oculares são atribuídas à sua intercessão.
-            `,
-            reliquias: `
-                As relíquias de Santa Lúcia têm uma história de peregrinação através dos séculos:
-
-                1. Inicialmente, seu corpo foi sepultado em Siracusa, onde permaneceu por cerca de 400 anos.
-
-                2. No século VIII, o general bizantino Jorge Maniaces levou suas relíquias para Constantinopla para protegê-las dos sarracenos.
-
-                3. Durante a Quarta Cruzada (1204), os venezianos tomaram suas relíquias e as transferiram para Veneza, onde foram depositadas na igreja de São Jerônimo.
-
-                4. Em 1279, suas relíquias foram transferidas para a igreja de Santa Lúcia em Veneza, que foi demolida no século XIX para dar lugar à estação ferroviária que leva seu nome.
-
-                5. Atualmente, o corpo de Santa Lúcia repousa na igreja de São Jerônimo em Veneza, exceto por algumas relíquias que foram devolvidas a Siracusa em 2004.
-
-                6. Fragmentos de suas relíquias estão presentes em várias igrejas ao redor do mundo, especialmente em igrejas dedicadas a ela.
-            `,
-            devocao: `
-                Santa Lúcia é uma das santas mais populares e veneradas da cristandade. Sua festa litúrgica é celebrada em 13 de dezembro.
-
-                É invocada como padroeira de:
-                - Pessoas com problemas nos olhos
-                - Cegos e deficientes visuais
-                - Escritores, costureiras e vidraceiros
-                - Cidade de Siracusa
-                - Contra doenças epidêmicas
-
-                Na iconografia cristã, Santa Lúcia é geralmente representada:
-                - Como uma jovem vestida de branco
-                - Carregando uma bandeja com seus olhos
-                - Com uma palma do martírio
-                - Com uma espada atravessando seu pescoço
-                - Às vezes, com uma lâmpada ou tocha (seu nome significa "luz")
-
-                Tradições populares:
-                - Na Escandinávia, especialmente na Suécia, sua festa é celebrada com procissões onde uma jovem usa uma coroa de velas
-                - Em várias partes da Itália, não se come farinha no dia de sua festa
-                - Sua festa coincide com o solstício de inverno no antigo calendário juliano, associando-a à luz
-                - Em muitos países, é costume fazer doces especiais em sua honra
-
-                Sua devoção é particularmente forte em:
-                - Itália, especialmente Siracusa e Veneza
-                - Suécia e outros países escandinavos
-                - Filipinas e outros países asiáticos
-                - América Latina
-            `
-        }
+            biografia: "Santa Lúcia nasceu em Siracusa, Sicília, por volta de 283 d.C., de família nobre. Consagrou-se a Deus, rejeitando o casamento. Denunciada como cristã, foi martirizada em 13 de dezembro de 304 d.C., aos 21 anos, durante a perseguição de Diocleciano, tendo os olhos arrancados ou apunhalada.",
+            milagres: "Curou a mãe de uma hemorragia com uma oração, resistiu ao fogo durante o martírio, previu o fim da perseguição, fez seus olhos reaparecerem em visões e apareceu após a morte para curar um cego em Siracusa.",
+            reliquias: "Enterrada em Siracusa, suas relíquias estão em Veneza, na Igreja de São Jeremias. Fragmentos de seus olhos são venerados por cura da cegueira e proteção espiritual.",
+            devocao: "Celebrada em 13 de dezembro, Lúcia é padroeira dos cegos e oftalmologistas. Sua festa inclui procissões com luzes e bênçãos dos olhos. Em arte, é mostrada com olhos em um prato, e os fiéis a invocam por visão e pureza."
+        },
+        isDisplayed: true,
+        data_devocao: "13 de dezembro"
     },
     {
-        name: "São Basílio",
-        description: "Bispo e doutor da Igreja, conhecido por sua caridade e defesa da fé.",
-        isDisplayed: true,
+        name: "São Tomé, apóstolo",
+        description: "Apóstolo de Jesus, conhecido por sua dúvida e missão na Índia.",
         additionalInfo: {
-            biografia: `
-                São Basílio Magno nasceu em Cesareia da Capadócia (atual Turquia) por volta do ano 330, em uma família de santos. Seus pais eram São Basílio, o Velho, e Santa Emília. Entre seus irmãos estavam São Gregório de Nissa, São Pedro de Sebaste e Santa Macrina, a Jovem.
-
-                Recebeu uma excelente educação em Cesareia, Constantinopla e Atenas, onde conheceu São Gregório Nazianzeno, com quem desenvolveu uma profunda amizade. Após concluir seus estudos, tornou-se professor de retórica, mas logo sentiu o chamado para uma vida mais profunda.
-
-                Influenciado por sua irmã Macrina, abandonou sua carreira promissora e viajou pelo Egito, Síria e Mesopotâmia para estudar a vida monástica. Ao retornar, distribuiu seus bens aos pobres e fundou um mosteiro às margens do rio Íris, estabelecendo as bases do monasticismo oriental.
-
-                Em 364, foi ordenado sacerdote e, em 370, tornou-se Bispo de Cesareia. Como bispo, destacou-se por sua defesa da fé contra o arianismo, sua caridade extraordinária e sua habilidade administrativa. Construiu um complexo de instituições de caridade conhecido como "Basilíada", que incluía hospital, hospedaria e escola.
-
-                São Basílio faleceu em 1º de janeiro de 379, aos 49 anos, esgotado por suas austeridades e trabalhos. É considerado um dos maiores Padres da Igreja e um dos quatro grandes doutores da Igreja Oriental.
-            `,
-            milagres: `
-                São Basílio é conhecido por diversos milagres e intervenções divinas:
-
-                1. O milagre do pão: Durante uma fome, multiplicou milagrosamente o pão para alimentar a população necessitada.
-
-                2. Vitória sobre Juliano: Através de suas orações, obteve a proteção divina contra o imperador Juliano, o Apóstata, que ameaçava destruir Cesareia.
-
-                3. Cura de enfermos: Realizou numerosas curas na Basilíada, o complexo hospitalar que fundou.
-
-                4. Aparição da Virgem Maria: Recebeu uma visão da Virgem Maria acompanhada por São Mercúrio, que prometeu a derrota do imperador Juliano.
-
-                5. Conversão de judeus: Através de um debate milagroso, converteu um grupo de judeus ao demonstrar a verdade da fé cristã.
-
-                6. Dom da profecia: Previu diversos acontecimentos, incluindo a morte do imperador Valente, que perseguia os cristãos.
-            `,
-            reliquias: `
-                As relíquias de São Basílio têm uma história de grande veneração:
-
-                1. Seu corpo foi inicialmente sepultado na catedral de Cesareia, onde multidões acorriam para venerá-lo.
-
-                2. Durante as invasões muçulmanas, parte de suas relíquias foi transferida para Constantinopla para proteção.
-
-                3. Atualmente, suas relíquias estão distribuídas em vários lugares:
-                   - Parte significativa está na Basílica de São Basílio em Bruxelas
-                   - Fragmentos importantes estão no Monte Atos, Grécia
-                   - Algumas relíquias estão em Roma, na Basílica de Santa Maria Maior
-
-                4. A veneração de suas relíquias é particularmente forte nas Igrejas Orientais, onde é considerado um dos maiores santos.
-            `,
-            devocao: `
-                São Basílio é um dos santos mais venerados tanto na Igreja Oriental quanto Ocidental:
-
-                Sua festa litúrgica é celebrada em:
-                - 2 de janeiro na Igreja Católica Romana
-                - 1º de janeiro na Igreja Ortodoxa
-                - 30 de janeiro nas Igrejas Orientais Católicas
-
-                É invocado como patrono de:
-                - Monges e vida monástica
-                - Hospitais e enfermeiros
-                - Reformadores da Igreja
-                - Educação e estudos
-                - Rússia e Grécia
-
-                Na iconografia cristã, São Basílio é representado como:
-                - Bispo com vestes episcopais orientais
-                - Segurando um livro (suas obras teológicas)
-                - Com uma pomba (símbolo do Espírito Santo)
-                - Às vezes, com uma colmeia (símbolo de sabedoria)
-
-                Sua influência permanece através:
-                - Da Regra de São Basílio, fundamental para o monasticismo oriental
-                - Da Divina Liturgia de São Basílio, usada em ocasiões especiais nas Igrejas Orientais
-                - De suas obras teológicas sobre o Espírito Santo e a vida monástica
-                - Do modelo de caridade organizada que estabeleceu com a Basilíada
-            `
-        }
+            biografia: "São Tomé nasceu na Galileia no século I a.C. Apóstolo de Jesus, famoso por duvidar da Ressurreição até tocar as chagas (João 20:24-29). Pregou na Pérsia e Índia, sendo martirizado em Mylapore, Índia, por volta de 72 d.C., aos cerca de 70 anos, perfurado por lanças.",
+            milagres: "Fez uma cruz flutuar para converter indianos, curou um rei cego ao batizá-lo, previu seu martírio em visões, ressuscitou um menino afogado e apareceu após a morte para guiar missionários na Índia.",
+            reliquias: "Enterrado em Mylapore, suas relíquias estão na Basílica de São Tomé, Chennai, Índia, e em Ortona, Itália. Fragmentos de ossos são venerados por fé renovada e cura de dúvidas espirituais.",
+            devocao: "Celebrado em 21 de dezembro, Tomé é padroeiro dos arquitetos e da Índia. Sua festa inclui orações por fé e missas missionárias. Em arte, é mostrado com uma lança, e os fiéis o invocam por convicção e evangelização."
+        },
+        isDisplayed: true,
+        data_devocao: "21 de dezembro"
     },
     {
-        name: "São Nicásio",
-        description: "Bispo e mártir, decapitado enquanto orava durante uma invasão.",
-        isDisplayed: true,
+        name: "A Natividade do Senhor",
+        description: "Festa do nascimento de Jesus Cristo, Salvador da humanidade.",
         additionalInfo: {
-            biografia: `
-                São Nicásio nasceu na Gália (atual França) no final do século IV. Foi eleito bispo de Reims por volta do ano 400, sucedendo a São Severus. Durante seu episcopado, dedicou-se à evangelização da região e à construção de uma grande igreja dedicada à Virgem Maria, que seria a precursora da atual Catedral de Reims.
-
-                Era conhecido por sua santidade, zelo apostólico e caridade para com os pobres. Em uma época de grandes turbulências, quando os bárbaros invadiam o Império Romano, Nicásio permaneceu firme em seu posto, recusando-se a abandonar seu rebanho.
-
-                Em 407, quando os vândalos sitiaram Reims, Nicásio previu o martírio que o aguardava. Mesmo assim, continuou a confortar seu povo e a prepará-los espiritualmente para a provação que se aproximava. Quando os invasores finalmente entraram na cidade, encontraram o bispo na porta de sua igreja.
-
-                Nicásio estava recitando o Salmo 119: "Minha alma está prostrada no pó". Quando chegou ao versículo "Adhaesit pavimento anima mea" (Minha alma está prostrada no pó), foi decapitado pelos bárbaros. Segundo a tradição, após sua decapitação, ele terminou o versículo: "Vivifica me secundum verbum tuum" (Dá-me vida segundo a tua palavra).
-
-                Junto com ele foram martirizados sua irmã Eutrópia, o diácono Florêncio e o leitor Jocundo. Santa Eutrópia, vendo que os bárbaros a observavam com luxúria, provocou-os para que também a matassem, preferindo o martírio à desonra.
-            `,
-            milagres: `
-                São Nicásio é conhecido por diversos milagres, tanto em vida quanto após sua morte:
-
-                1. Profecia do martírio: Previu com exatidão a invasão dos vândalos e seu próprio martírio.
-
-                2. Milagre da voz: Segundo a tradição, após ser decapitado, completou milagrosamente o versículo do salmo que estava recitando.
-
-                3. Proteção da cidade: Após seu martírio, tornou-se protetor especial de Reims contra invasões e calamidades.
-
-                4. Curas milagrosas: Diversos relatos de curas foram atribuídos à sua intercessão, especialmente em seu túmulo.
-
-                5. Aparições: Durante a Idade Média, houve relatos de suas aparições protegendo a cidade de Reims durante momentos de perigo.
-
-                6. Conversão dos bárbaros: Segundo algumas fontes, muitos dos invasores se converteram ao cristianismo após testemunharem seu martírio heroico.
-            `,
-            reliquias: `
-                As relíquias de São Nicásio têm uma história significativa:
-
-                1. Inicialmente, seu corpo e o de seus companheiros mártires foram sepultados na igreja de São Agrícola, nos arredores de Reims.
-
-                2. No século V, São Remígio transferiu suas relíquias para a basílica de São Nicásio, especialmente construída em sua honra.
-
-                3. Durante a Idade Média, suas relíquias foram objeto de grande veneração e peregrinação:
-                   - A basílica que abrigava suas relíquias tornou-se um importante centro de peregrinação
-                   - Diversos milagres foram relatados em seu túmulo
-                   - Fragmentos de suas relíquias foram distribuídos para várias igrejas da região
-
-                4. Durante a Revolução Francesa, parte de suas relíquias foi perdida ou destruída, mas alguns fragmentos foram preservados.
-
-                5. Atualmente, suas relíquias são veneradas na Catedral de Reims, onde uma capela é dedicada à sua memória.
-            `,
-            devocao: `
-                São Nicásio é venerado como um dos grandes mártires da Igreja na Gália. Sua festa litúrgica é celebrada em 14 de dezembro.
-
-                É invocado como patrono contra:
-                - Invasões e guerras
-                - Epidemias e doenças contagiosas
-                - Morte súbita
-                - Pesadelos
-
-                São Nicásio é padroeiro de:
-                - Cidade de Reims
-                - Vítimas de invasões
-                - Bispos em tempos de perseguição
-
-                Na iconografia cristã, é geralmente representado:
-                - Como bispo com vestes episcopais
-                - Segurando sua cabeça decepada (cephalophore)
-                - Com a palma do martírio
-                - Às vezes, com sua irmã Santa Eutrópia
-
-                Sua devoção é particularmente forte em:
-                - Reims e região da Champagne
-                - Norte da França
-                - Locais historicamente afetados por invasões
-
-                Tradições e legado:
-                - A Catedral de Reims, onde foi martirizado, tornou-se local de coroação dos reis da França
-                - Seu exemplo de coragem e fidelidade inspirou muitos durante as invasões posteriores
-                - É considerado um dos grandes defensores da fé na história da Igreja na França
-                - Sua história é frequentemente citada como exemplo de fidelidade pastoral em tempos de crise
-            `
-        }
-    },
-    {
-        name: "São Tomé Apóstolo",
-        description: "Apóstolo que duvidou, pregou na Índia e foi martirizado.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Tomé, também conhecido como Dídimo (que significa "gêmeo"), foi um dos doze apóstolos de Jesus Cristo. Embora os Evangelhos não mencionem sua origem, acredita-se que era judeu da Galileia. É mais conhecido pelo episódio em que duvidou da ressurreição de Jesus, exigindo ver e tocar suas chagas para crer.
-
-                Após Pentecostes, segundo antigas tradições, Tomé evangelizou primeiro na Síria e Pérsia, chegando até a Índia por volta do ano 52 d.C. Na Índia, pregou inicialmente em Kerala, onde converteu muitas famílias brâmanes e fundou as chamadas "Sete Igrejas e Meia".
-
-                De acordo com a tradição indiana, Tomé chegou ao porto de Muziris (atual Kodungallur) e estabeleceu comunidades cristãs ao longo da costa Malabar. Posteriormente, viajou para a costa leste, chegando a Mylapore (atual Chennai), onde converteu muitas pessoas, incluindo o rei local.
-
-                Sua pregação provocou a ira dos sacerdotes brâmanes, que temiam perder sua influência. Segundo a tradição, foi martirizado em 3 de julho do ano 72, no Monte São Tomé, em Mylapore. Foi morto com uma lança enquanto orava diante de uma cruz que ele mesmo havia esculpido na rocha.
-
-                Antes de sua morte, profetizou que estrangeiros viriam de longe para continuar seu trabalho de evangelização, o que os cristãos indianos interpretaram como cumprido com a chegada dos portugueses no século XVI.
-            `,
-            milagres: `
-                São Tomé realizou diversos milagres, tanto durante sua vida quanto após sua morte:
-
-                1. O milagre do palácio: Segundo os Atos de Tomé, foi contratado por um rei indiano para construir um palácio, mas usou o dinheiro para ajudar os pobres. Quando questionado, revelou que havia construído um palácio no céu através de suas obras de caridade.
-
-                2. Cura do filho do rei: Em Mylapore, curou o filho do rei local, levando à conversão de muitas pessoas.
-
-                3. A água da construção: Durante a construção de uma igreja, fez brotar água de uma rocha para os trabalhadores sedentos.
-
-                4. O toque nas chagas: Ao tocar as chagas de Cristo ressuscitado, foi curado de sua incredulidade e proclamou "Meu Senhor e meu Deus!", uma das mais profundas confissões de fé no Novo Testamento.
-
-                5. A coluna de fogo: No momento de seu martírio, testemunhas relataram ter visto uma coluna de fogo sobre seu corpo.
-
-                6. Terra milagrosa: A terra do local de seu martírio, quando misturada com água, era conhecida por ter propriedades curativas.
-            `,
-            reliquias: `
-                As relíquias de São Tomé têm uma história complexa e fascinante:
-
-                1. Sepultamento inicial: Após seu martírio em Mylapore, seu corpo foi enterrado na igreja que ele havia fundado, hoje conhecida como Basílica de São Tomé.
-
-                2. Transferência para Edessa: No século III, suas relíquias foram transferidas para Edessa (atual Urfa, Turquia), onde foram muito veneradas.
-
-                3. Transferência para Ortona: Em 1258, suas relíquias foram levadas para Ortona, Itália, para protegê-las da invasão muçulmana. Atualmente, a maior parte de seus restos mortais está na Basílica de São Tomé em Ortona.
-
-                4. Relíquias na Índia:
-                   - A lança que o matou está preservada na igreja do Monte São Tomé
-                   - Um osso do dedo (aquele que tocou as chagas de Cristo) está na igreja de Kokkamangalam
-                   - Fragmentos de seus ossos estão em várias igrejas da Índia
-
-                5. Outras relíquias:
-                   - A cruz que ele esculpiu ainda existe no Monte São Tomé
-                   - Seu túmulo original em Mylapore ainda é local de peregrinação
-                   - Várias igrejas ao redor do mundo possuem pequenos fragmentos de suas relíquias
-            `,
-            devocao: `
-                São Tomé é venerado como apóstolo e mártir em todas as tradições cristãs. Sua festa litúrgica é celebrada em:
-
-                - 3 de julho na Igreja Católica (anteriormente 21 de dezembro)
-                - 6 de outubro nas Igrejas Ortodoxas
-                - 3 de julho na Igreja Síria Malabar
-                - 18 de dezembro na Igreja Anglicana
-
-                É invocado como patrono de:
-                - Índia e Paquistão
-                - Arquitetos e construtores
-                - Carpinteiros e pedreiros
-                - Geômetras e agrimensores
-                - Pessoas com dúvidas na fé
-                - Teólogos e estudiosos
-
-                Na iconografia cristã, é representado:
-                - Com uma lança (instrumento de seu martírio)
-                - Com um esquadro de carpinteiro
-                - Tocando as chagas de Cristo
-                - Às vezes, construindo o palácio celestial
-
-                Sua devoção é particularmente forte em:
-                - Índia, especialmente em Kerala e Tamil Nadu
-                - Itália, principalmente em Ortona
-                - Portugal e suas antigas colônias
-                - Comunidades cristãs sírias
-
-                Tradições e legado:
-                - Os cristãos de São Tomé na Índia traçam sua origem até seu apostolado
-                - O "Caminho de São Tomé" na Índia é uma importante rota de peregrinação
-                - Sua história inspira reflexões sobre fé e dúvida na vida cristã
-                - É considerado o padroeiro dos que buscam certezas na fé
-            `
-        }
-    },
-    {
-        name: "Santa Anastácia",
-        description: "Mártir que curou doentes e confortou cristãos presos.",
+            biografia: "A Natividade celebra o nascimento de Jesus em Belém, por volta de 4-6 a.C., filho de Maria e José, conforme os Evangelhos (Lucas 2:1-20, Mateus 1:18-25). Filho de Deus encarnado, viveu até cerca de 33 d.C., quando foi crucificado e ressuscitou, marcando a salvação cristã.",
+            milagres: "Nasceu de uma virgem, anjos anunciaram seu nascimento aos pastores, uma estrela guiou os magos, curou enfermos desde a infância (apócrifos) e transformou a história com sua vinda.",
+            reliquias: "Relíquias associadas incluem o presépio em Santa Maria Maior, Roma, e fragmentos da manjedoura. São venerados por paz e redenção espiritual.",
+            devocao: "Celebrada em 25 de dezembro, é a principal festa cristã, com missas da meia-noite e presépios. Os fiéis a celebram como 'Natal', pedindo amor e salvação, com hinos como 'Noite Feliz'."
+        },
         isDisplayed: true,
         data_devocao: "25 de dezembro"
     },
     {
-        name: "Santa Eugênia",
-        description: "Virgem que se disfarçou de homem para viver como monge, martirizada.",
-        isDisplayed: true,
+        name: "Santa Anastácia",
+        description: "Mártir romana, conhecida por sua caridade em prisões.",
         additionalInfo: {
-            biografia: `
-                Santa Eugênia nasceu em Roma no século III, filha de Filipe, governador do Egito, e de Cláudia, uma nobre romana. Recebeu excelente educação e era conhecida tanto por sua beleza quanto por sua inteligência, sendo versada em filosofia e literatura.
-
-                Aos quinze anos, após ler escritos cristãos, especialmente as cartas de São Paulo, converteu-se secretamente ao cristianismo. Para evitar um casamento arranjado e poder dedicar-se inteiramente a Deus, cortou os cabelos, vestiu-se como homem e, acompanhada por dois servos cristãos, Proto e Jacinto, fugiu de casa.
-
-                Apresentando-se como "Eugênio", foi aceita em um mosteiro masculino nos arredores de Alexandria, onde sua piedade e sabedoria logo a destacaram. Após a morte do abade, foi escolhida para sucedê-lo, sem que ninguém soubesse sua verdadeira identidade.
-
-                Sua identidade foi revelada quando uma mulher rica chamada Melância, que havia sido curada por suas orações, apaixonou-se por ela pensando ser um homem. Ao ser rejeitada, Melância acusou "Eugênio" de assédio. Durante o julgamento, presidido por seu próprio pai (que não a reconheceu), Eugênia revelou sua verdadeira identidade.
-
-                Este evento levou à conversão de seus pais e de muitos outros. Quando seu pai se tornou cristão e foi eleito bispo, foi martirizado por sua fé. Eugênia, sua mãe e seus servos retornaram a Roma, onde continuaram a pregar o cristianismo. Durante a perseguição de Valeriano, foi presa e submetida a várias torturas. Finalmente, foi decapitada em 25 de dezembro de 258.
-            `,
-            milagres: `
-                Santa Eugênia realizou diversos milagres durante sua vida e após sua morte:
-
-                1. Dom da cura: Curou Melância de uma grave enfermidade através de suas orações, embora este milagre tenha posteriormente levado à sua revelação.
-
-                2. Proteção divina: Durante sua vida como "monge", várias vezes foi protegida milagrosamente de ser descoberta.
-
-                3. Conversões: Sua revelação e testemunho levaram à conversão de sua família inteira e de muitos pagãos.
-
-                4. Sobrevivência a torturas: Durante seu martírio, sobreviveu milagrosamente a várias tentativas de execução:
-                   - Foi jogada no Tibre com uma pedra amarrada ao pescoço, mas não se afogou
-                   - Foi colocada em um forno ardente, mas as chamas não a tocaram
-                   - Foi lançada em uma masmorra escura, onde uma luz celestial a iluminou
-
-                5. Aparições: Apareceu a sua mãe após o martírio, prometendo que ela também receberia a coroa do martírio.
-
-                6. Curas póstumas: Diversos milagres de cura foram relatados em seu túmulo.
-            `,
-            reliquias: `
-                As relíquias de Santa Eugênia têm uma história significativa:
-
-                1. Sepultamento inicial: Seu corpo foi sepultado na Via Latina, em Roma, onde sua mãe Cláudia construiu um cemitério cristão.
-
-                2. Transferência: No século VI, suas relíquias foram transferidas para a Basílica dos Santos Apóstolos em Roma.
-
-                3. Distribuição:
-                   - A maior parte de suas relíquias permanece na Basílica dos Santos Apóstolos
-                   - Alguns fragmentos foram distribuídos para outras igrejas em Roma
-                   - Relíquias menores estão presentes em várias igrejas da Europa
-
-                4. Veneração especial:
-                   - Seu túmulo original na Via Latina foi um importante local de peregrinação
-                   - Uma igreja foi construída sobre o local de seu martírio
-                   - Suas relíquias são especialmente veneradas no período natalino, devido à data de seu martírio
-            `,
-            devocao: `
-                Santa Eugênia é venerada como virgem e mártir. Sua festa litúrgica é celebrada em:
-
-                - 25 de dezembro na Igreja Católica (embora frequentemente transferida devido ao Natal)
-                - 24 de dezembro em algumas tradições locais
-                - 6 de janeiro na Igreja Ortodoxa
-
-                É invocada como padroeira de:
-                - Convertidos ao cristianismo
-                - Mulheres que vivem em situações difíceis
-                - Pessoas que lutam contra calúnias
-                - Vítimas de falsas acusações
-
-                Na iconografia cristã, é representada:
-                - Como uma jovem nobre romana
-                - Vestida com hábito monástico masculino
-                - Com a palma do martírio
-                - Às vezes, com uma espada (instrumento de seu martírio)
-                - Com seus servos Proto e Jacinto
-
-                Sua devoção é particularmente forte em:
-                - Roma, especialmente na Basílica dos Santos Apóstolos
-                - Alexandria, Egito, onde viveu como monge
-                - Comunidades monásticas femininas
-
-                Tradições especiais:
-                - É considerada um exemplo de coragem e determinação na busca da vida religiosa
-                - Sua história inspirou várias obras literárias medievais
-                - É frequentemente citada em discussões sobre vocação religiosa feminina
-                - Sua festa coincide com o Natal, simbolizando o nascimento para a vida eterna através do martírio
-            `
-        }
+            biografia: "Santa Anastácia nasceu em Roma por volta de 275 d.C., de família nobre cristã. Após ficar viúva, dedicou-se a ajudar prisioneiros cristãos. Foi martirizada em 25 de dezembro de 304 d.C., aos cerca de 29 anos, queimada viva na Ilíria durante a perseguição de Diocleciano.",
+            milagres: "Curou um prisioneiro cego com uma oração, resistiu ao fogo por horas pregando, previu sua morte em visões, libertou almas de prisões espirituais e apareceu após a morte para confortar mártires.",
+            reliquias: "Enterrada na Ilíria, suas relíquias estão em Roma, na Igreja de Santa Anastácia. Fragmentos de ossos são venerados por libertação e cura de dores.",
+            devocao: "Celebrada em 25 de dezembro, Anastácia é padroeira dos sofredores e viúvas. Sua festa coincide com o Natal, com orações por prisioneiros. Em arte, é mostrada com uma palma, e os fiéis a invocam por consolo."
+        },
+        isDisplayed: true,
+        data_devocao: "25 de dezembro"
     },
     {
-        name: "Santo Estêvão Protomártir",
-        description: "Primeiro mártir cristão, apedrejado por pregar o Evangelho.",
-        isDisplayed: true,
+        name: "Santo Estêvão, mártir",
+        description: "Primeiro mártir cristão, diácono e pregador.",
         additionalInfo: {
-            biografia: `
-                Santo Estêvão (em grego, Stephanos, que significa "coroa") foi um dos sete primeiros diáconos escolhidos pelos apóstolos para ajudar no serviço da Igreja primitiva em Jerusalém, conforme relatado no livro dos Atos dos Apóstolos. Era um judeu helenista, ou seja, de cultura grega, conhecido por sua profunda fé e sabedoria.
-
-                Como diácono, além de servir às mesas e cuidar das viúvas, Estêvão destacou-se pela pregação eloquente do Evangelho. O livro dos Atos relata que ele era "cheio de graça e poder, realizava grandes prodígios e sinais entre o povo" (At 6,8).
-                Sua pregação provocou forte oposição entre alguns grupos judeus, especialmente os membros da sinagoga dos Libertos. Não conseguindo vencê-lo em debates, pois "não podiam resistir à sabedoria e ao Espírito com que falava" (At 6,10), seus opositores subornaram falsas testemunhas para acusá-lo de blasfêmia contra Moisés e contra Deus.
-
-                Levado ao Sinédrio (tribunal judaico), Estêvão fez um longo discurso recontando a história da salvação e denunciando a infidelidade dos líderes judeus. Durante seu discurso, teve uma visão de Jesus à direita de Deus. Ao declarar esta visão, seus opositores, enfurecidos, o arrastaram para fora da cidade e o apedrejaram.
-
-                Antes de morrer, seguindo o exemplo de Jesus, Estêvão orou pelos seus perseguidores, dizendo: "Senhor, não lhes imputes este pecado" (At 7,60). Entre os presentes estava Saulo (futuro São Paulo), que aprovava sua execução. Estêvão tornou-se assim o primeiro mártir (protomártir) da Igreja, no ano 34 ou 35 d.C.
-            `,
-            milagres: `
-                Santo Estêvão realizou diversos milagres, tanto em vida quanto após sua morte:
-
-                1. Sinais e prodígios: O livro dos Atos menciona que realizava "grandes prodígios e sinais entre o povo" durante seu ministério.
-
-                2. Visão celestial: Durante seu julgamento, teve uma visão de Jesus à direita de Deus Pai, sendo o primeiro mártir a ter tal visão.
-
-                3. Rosto angelical: Durante seu discurso no Sinédrio, seu rosto tornou-se "como o rosto de um anjo" (At 6,15).
-
-                4. Descoberta milagrosa das relíquias: Em 415, o padre Luciano teve uma visão que revelou o local onde estavam seus restos mortais.
-
-                5. Curas e conversões: Numerosos milagres foram relatados após a descoberta de suas relíquias, incluindo:
-                   - Cura de doentes
-                   - Libertação de possessos
-                   - Conversão de judeus e pagãos
-
-                6. Proteção contra tempestades: Diversos relatos atribuem a ele a proteção contra tempestades e granizo.
-            `,
-            reliquias: `
-                As relíquias de Santo Estêvão têm uma história notável:
-
-                1. Sepultamento inicial: Após seu martírio, foi sepultado por "homens piedosos" nos arredores de Jerusalém.
-
-                2. Descoberta das relíquias: Em 415, o padre Luciano, de Kafar Gamala, teve uma visão que revelou o local do sepultamento. As relíquias foram encontradas junto com as de Gamaliel (mestre de São Paulo), Nicodemos e Abibas.
-
-                3. Transferências:
-                   - Parte das relíquias foi levada para a igreja do Monte Sião em Jerusalém
-                   - Outra parte foi transferida para Constantinopla
-                   - Relíquias significativas foram enviadas para Roma, onde estão na Basílica de São Lourenço Fora dos Muros
-
-                4. Distribuição:
-                   - Fragmentos de suas relíquias estão presentes em numerosas igrejas pelo mundo
-                   - Algumas pedras usadas em seu martírio são preservadas em relicários
-                   - A terra do local de seu martírio foi distribuída como relíquia
-
-                5. Locais de veneração:
-                   - Igreja de Santo Estêvão em Jerusalém, construída no local tradicional do martírio
-                   - Basílica de São Lourenço Fora dos Muros em Roma
-                   - Catedral de Bourges, França, que possui um importante relicário
-            `,
-            devocao: `
-                Santo Estêvão é venerado como protomártir (primeiro mártir) da Igreja. Sua festa litúrgica é celebrada em:
-
-                - 26 de dezembro na Igreja Católica e Anglicana
-                - 27 de dezembro nas Igrejas Orientais
-                - 3 de agosto (descoberta das relíquias)
-
-                É invocado como patrono de:
-                - Diáconos
-                - Pedreiros e canteiros
-                - Cavalos e cocheiros
-                - Contra dores de cabeça
-                - Proteção contra granizo e tempestades
-
-                Na iconografia cristã, é representado:
-                - Como um jovem diácono com dalmática
-                - Com pedras sobre a cabeça ou nas mãos
-                - Com a palma do martírio
-                - Às vezes, com um livro do Evangelho
-                - Em cenas de seu apedrejamento
-
-                Sua devoção é particularmente forte em:
-                - Jerusalém, no local de seu martírio
-                - Roma, onde suas relíquias são veneradas
-                - Hungria, que o considera seu primeiro padroeiro
-                - França, especialmente em Bourges
-
-                Tradições especiais:
-                - Na Idade Média, era costume benzer aveia no dia de sua festa
-                - Em algumas regiões, é tradição dar esmolas aos pobres em sua honra
-                - Seu dia é conhecido como "Dia da Caixa" em países anglófonos
-                - Muitas catedrais medievais têm vitrais narrando sua história
-            `
-        }
+            biografia: "Santo Estêvão, nascido em Jerusalém no século I d.C., foi um dos sete primeiros diáconos (Atos 6:5). Pregou com ousadia, sendo apedrejado até a morte por volta de 36 d.C., aos cerca de 30 anos, por ordem do Sinédrio, tornando-se o primeiro mártir cristão (Atos 7:54-60).",
+            milagres: "Curou enfermos enquanto pregava, teve uma visão de Jesus antes de morrer, fez pedras brilharem durante o apedrejamento, converteu Saulo (Paulo) indiretamente e apareceu após a morte para revelar suas relíquias.",
+            reliquias: "Enterrado perto de Jerusalém, suas relíquias foram descobertas em 415 d.C. e estão na Basílica de São Lourenço Fora dos Muros, Roma. São veneradas por coragem e cura de perseguições.",
+            devocao: "Celebrado em 26 de dezembro, Estêvão é padroeiro dos diáconos e pedreiros. Sua festa inclui bênçãos de pedras e orações por fortaleza."
+        },
+        isDisplayed: true,
+        data_devocao: "26 de dezembro"
     },
     {
-        name: "São João Evangelista",
-        description: "Apóstolo amado, escreveu o Evangelho e sobreviveu a um caldeirão de óleo.",
+        name: "São João, apóstolo",
+        description: "Apóstolo e evangelista, discípulo amado de Jesus.",
+        additionalInfo: {
+            biografia: "São João, nascido na Galileia no século I a.C., foi pescador e um dos primeiros chamados por Jesus (Mateus 4:21). Autor do quarto Evangelho, das Epístolas e do Apocalipse, cuidou de Maria após a crucificação. Morreu de causas naturais em Éfeso por volta de 100 d.C., aos cerca de 90 anos.",
+            milagres: "Sobreviveu a óleo fervente em Roma, transformou água em vinho em visões, previu o futuro no Apocalipse, ressuscitou um morto em Éfeso e apareceu após a morte para guiar cristãos perseguidos.",
+            reliquias: "Enterrado em Éfeso, suas relíquias estão na Basílica de São João, hoje em ruínas. Fragmentos em Roma são venerados por sabedoria e cura espiritual.",
+            devocao: "Celebrado em 27 de dezembro, João é padroeiro dos teólogos e escritores. Sua festa inclui leituras do Evangelho e orações por amor. Em arte, é mostrado com uma águia, e os fiéis o invocam por discernimento."
+        },
         isDisplayed: true,
         data_devocao: "27 de dezembro"
     },
     {
-        name: "Santos Inocentes",
-        description: "Crianças massacradas por Herodes na tentativa de matar Jesus.",
+        name: "Os inocentes",
+        description: "Crianças martirizadas por Herodes em Belém.",
+        additionalInfo: {
+            biografia: "Os Santos Inocentes foram bebês mortos por ordem de Herodes, o Grande, por volta de 4-6 a.C., em Belém, na tentativa de eliminar o Messias (Mateus 2:16-18). Eram crianças com menos de dois anos, consideradas os primeiros mártires cristãos, sem idade exata definida para morte individual.",
+            milagres: "Anjos protegeram suas almas ao morrerem, suas mortes anunciaram a vinda de Cristo, curaram mães em visões, previram a salvação em sonhos proféticos e aparecem como coro celestial em relatos místicos.",
+            reliquias: "Enterrados em Belém, relíquias simbólicas estão na Basílica de São Paulo Fora dos Muros, Roma. Ossos de crianças são venerados por proteção infantil e cura de mães.",
+            devocao: "Celebrados em 28 de dezembro, são padroeiros das crianças e dos injustiçados. A festa inclui missas por inocentes e orações por proteção. Em arte, são mostrados com coroas, e os fiéis os invocam por pureza."
+        },
         isDisplayed: true,
         data_devocao: "28 de dezembro"
     },
     {
-        name: "São Tomé de Cantuária",
-        description: "Arcebispo assassinado na catedral por defender a Igreja.",
+        name: "São Tomás de Canterbury",
+        description: "Arcebispo e mártir, defensor da Igreja contra o rei.",
+        additionalInfo: {
+            biografia: "São Tomás Becket nasceu em Londres, Inglaterra, em 1118. Chanceler do rei Henrique II, tornou-se arcebispo de Canterbury em 1162. Oposto ao rei por direitos eclesiásticos, foi assassinado em 29 de dezembro de 1170, aos 52 anos, por cavaleiros na catedral de Canterbury.",
+            milagres: "Curou um cego com seu sangue após o martírio, previu sua morte em visões, fez sinos tocarem sozinhos em sua morte, protegeu Canterbury de invasões e apareceu para reconciliar Henrique II.",
+            reliquias: "Enterrado na Catedral de Canterbury, suas relíquias foram destruídas em 1538, mas fragmentos sobrevivem em Roma. São veneradas por justiça e cura de conflitos.",
+            devocao: "Celebrado em 29 de dezembro, Tomás é padroeiro do clero e da Inglaterra. Sua festa inclui orações por coragem e missas em catedrais. Em arte, é mostrado com uma espada, e os fiéis o invocam por resistência."
+        },
         isDisplayed: true,
         data_devocao: "29 de dezembro"
     },
     {
         name: "São Silvestre",
-        description: "Papa que batizou Constantino e consolidou a Igreja no Império Romano.",
+        description: "Papa durante o reinado de Constantino, consolidou a Igreja.",
+        additionalInfo: {
+            biografia: "São Silvestre I nasceu em Roma por volta de 270 d.C. Papa de 314 a 335 d.C., presidiu a Igreja durante a conversão de Constantino e o Concílio de Niceia (325). Morreu em 31 de dezembro de 335 d.C., aos cerca de 65 anos, de causas naturais, sendo enterrado em Roma.",
+            milagres: "Converteu Constantino em visão, curou um leproso ao batizá-lo, derrotou um dragão em lenda, previu a paz da Igreja e apareceu após a morte para abençoar Roma.",
+            reliquias: "Enterrado nas Catacumbas de Priscila, suas relíquias estão na Igreja de São Silvestre in Capite, Roma. Fragmentos são venerados por estabilidade e cura espiritual.",
+            devocao: "Celebrado em 31 de dezembro, Silvestre é padroeiro dos papas e da paz eclesiástica. Sua festa coincide com o Ano Novo, com missas de ação de graças. Em arte, é mostrado com um touro, e os fiéis o invocam por renovação."
+        },
         isDisplayed: true,
         data_devocao: "31 de dezembro"
     },
     {
-        name: "São João Batista",
-        description: "Precursor de Jesus Cristo, batizou o Messias e foi martirizado por Herodes.",
-        isDisplayed: true,
-        data_devocao: "24 de junho"
-    },
-    {
-        name: "Santos Inocentes",
-        description: "Crianças massacradas por Herodes na tentativa de matar Jesus.",
-        isDisplayed: true,
+        name: "A circuncisão do Senhor",
+        description: "Festa da circuncisão de Jesus, marco de sua humanidade.",
         additionalInfo: {
-            biografia: `
-                Os Santos Inocentes foram as crianças de Belém e arredores, com idade de dois anos ou menos, que foram massacradas por ordem do rei Herodes, o Grande. Este episódio é narrado no Evangelho de Mateus (2,16-18).
-
-                Após o nascimento de Jesus, os Magos do Oriente visitaram Herodes em Jerusalém perguntando pelo "rei dos judeus que acabara de nascer". Herodes, temendo pela perda de seu trono, pediu que os Magos lhe informassem o local exato onde encontrariam o menino. Contudo, avisados em sonho, os Magos não retornaram a Herodes.
-
-                Furioso e determinado a eliminar qualquer ameaça ao seu poder, Herodes ordenou a morte de todos os meninos com menos de dois anos em Belém e vizinhanças, conforme o tempo indicado pelos Magos sobre o aparecimento da estrela. Este massacre cumpriu a profecia de Jeremias: "Ouviu-se uma voz em Ramá, lamentação e grande pranto: Raquel chorando seus filhos, e não querendo ser consolada, porque já não existem".
-
-                Segundo a tradição, José, avisado por um anjo, fugiu com Maria e Jesus para o Egito, salvando assim o menino da matança. O número exato de crianças mortas é desconhecido, mas estima-se entre 6 e 20, considerando o tamanho da população de Belém na época.
-
-                Os Santos Inocentes são considerados os primeiros mártires cristãos, pois morreram em lugar de Cristo, embora não tivessem consciência disso. São venerados como santos desde os primeiros séculos do cristianismo.
-            `,
-            milagres: `
-                Os milagres associados aos Santos Inocentes incluem:
-
-                1. Milagres de proteção: São invocados para a proteção de crianças contra doenças, perigos e morte prematura.
-
-                2. Curas milagrosas: Muitas curas de crianças são atribuídas à intercessão dos Santos Inocentes, especialmente em casos de doenças infantis graves.
-
-                3. Fenômenos sobrenaturais: Em diversos locais onde suas relíquias são veneradas, relatam-se fenômenos como luzes inexplicáveis, sons celestiais e perfumes sobrenaturais.
-
-                4. Milagres póstumos: Segundo tradições medievais, os corpos dos Santos Inocentes permaneceram incorruptos por muito tempo, e de seus túmulos emanava um óleo milagroso com propriedades curativas.
-
-                5. Proteção contra injustiças: São invocados como protetores contra perseguições injustas e violência contra os inocentes.
-            `,
-            reliquias: `
-                As relíquias dos Santos Inocentes têm uma história complexa:
-
-                1. Basílica de São Paulo Fora dos Muros (Roma): Conserva relíquias de vários Santos Inocentes.
-
-                2. Catedral de Santa Maria (Milão): Possui relíquias significativas dos Santos Inocentes.
-
-                3. Basílica de Saint-Denis (França): Abriga relíquias trazidas da Terra Santa durante as Cruzadas.
-
-                4. Igreja de Saint-Séverin (Paris): Conserva relíquias dos Santos Inocentes.
-
-                5. Mosteiro de São Simeão (Jerusalém): Tradicionalmente considerado o local onde alguns dos corpos foram inicialmente sepultados.
-
-                6. Catedral de Colônia (Alemanha): Possui relíquias dos Santos Inocentes junto com as dos Reis Magos.
-
-                7. Basílica da Natividade (Belém): Uma gruta próxima é venerada como local de sepultamento de algumas das crianças.
-
-                Durante a Idade Média, muitas igrejas na Europa afirmavam possuir relíquias dos Santos Inocentes, o que levou a uma proliferação de locais de veneração. Embora a autenticidade de muitas dessas relíquias seja questionável do ponto de vista histórico, elas continuam sendo objetos de devoção.
-            `,
-            devocao: `
-                A devoção aos Santos Inocentes é antiga e significativa no cristianismo:
-
-                Festa litúrgica:
-                - 28 de dezembro na Igreja Católica, Anglicana e Luterana
-                - 29 de dezembro nas Igrejas Orientais
-
-                São patronos de:
-                - Crianças, especialmente as que sofrem
-                - Crianças abandonadas e órfãos
-                - Vítimas de abuso e violência
-                - Crianças não nascidas
-
-                Tradições e costumes:
-                - Na Idade Média, o Dia dos Santos Inocentes era marcado por inversão de papéis, com crianças assumindo funções de adultos
-                - Em países hispânicos, é equivalente ao "Dia da Mentira" ou "Dia dos Bobos"
-                - Em algumas regiões, é costume visitar cemitérios infantis e decorar túmulos de crianças
-                - Procissões com crianças vestidas de branco são realizadas em algumas localidades
-
-                Iconografia:
-                - Representados como bebês com auréolas
-                - Frequentemente mostrados sendo mortos por soldados
-                - Em pinturas medievais, aparecem sendo recebidos por Cristo no céu
-                - Às vezes representados com palmas do martírio
-
-                A devoção aos Santos Inocentes permanece relevante como símbolo da proteção divina às crianças e como lembrança do valor da vida inocente. São frequentemente invocados em orações pela proteção de crianças em perigo e contra a violência infantil.
-            `
-        }
-    },
-    {
-        name: "São Marcelo de Paris",
-        description: "Bispo de Paris que derrotou um dragão e libertou a cidade de uma terrível ameaça.",
+            biografia: "A Circuncisão celebra o ritual judaico realizado em Jesus oito dias após seu nascimento, por volta de 4-6 a.C., em Belém (Lucas 2:21). Filho de Maria e José, foi circuncidado como sinal da aliança com Deus, vivendo até sua crucificação em 33 d.C.",
+            milagres: "Curou um enfermo no dia da circuncisão (apócrifo), anjos cantaram em sua honra, previu sua missão em visões infantis, abençoou os presentes no ritual e apareceu como menino em sonhos salvíficos.",
+            reliquias: "Relíquias simbólicas, como o prepúcio, estão em Calcata, Itália (contestadas). São veneradas por humildade e cura de males físicos.",
+            devocao: "Celebrada em 1 de janeiro, marca o Nome de Jesus. A festa inclui bênçãos e orações por obediência. Os fiéis a celebram como início do ano cristão, pedindo santidade."
+        },
         isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Marcelo (também conhecido como Marcellus ou Marcel) nasceu em Paris no século IV, em uma família humilde. Apesar de suas origens modestas, destacou-se por sua extraordinária piedade, pureza de coração, modéstia e caridade desde jovem.
-
-                Sua vida espiritual era tão intensa que parecia, segundo seus biógrafos, "desapegado tanto do mundo quanto da carne". Seu progresso nos estudos sagrados e sua conduta exemplar chamaram a atenção do bispo Prudêncio de Paris, que o ordenou leitor da igreja ainda jovem.
-
-                Posteriormente, foi promovido ao sacerdócio e, após a morte de Prudêncio, foi unanimemente escolhido como Bispo de Paris. Aceitou o cargo com humildade e temor, consciente da grande responsabilidade que assumia. Como bispo, foi incansável em suas funções pastorais, sempre vigilante e dedicado ao bem-estar espiritual de seu rebanho.
-
-                São Marcelo governou a diocese de Paris durante um período de transição entre os séculos IV e V, quando o Império Romano enfrentava crises e o cristianismo se consolidava na Gália. Seu episcopado foi marcado por uma profunda preocupação com os pobres e marginalizados, além de um intenso trabalho de evangelização.
-
-                Faleceu no início do século V, provavelmente por volta do ano 436, no dia 1º de novembro, data em que é comemorado no Martirológio Romano. Foi sepultado nos arredores de Paris, em uma vila que posteriormente se tornou um subúrbio da cidade, chamado de Saint-Marceau.
-            `,
-            milagres: `
-                São Marcelo é conhecido por diversos milagres, sendo o mais famoso deles a derrota de um dragão:
-
-                1. O milagre do dragão: Segundo a tradição, um terrível dragão (ou serpente) aterrorizava Paris, habitando o túmulo de uma mulher adúltera de família nobre. São Marcelo confrontou o monstro, golpeou-o três vezes na cabeça com seu báculo pastoral e, amarrando sua estola no pescoço da criatura, conduziu-a para fora da cidade por quatro milhas antes de ordenar que desaparecesse em regiões desertas ou se afogasse no mar. Este episódio é interpretado simbolicamente como a vitória do cristianismo sobre o paganismo ou sobre o mal.
-
-                2. Transformação de água em vinho: Semelhante ao milagre de Jesus nas Bodas de Caná, São Marcelo teria transformado água do rio Sena em vinho durante uma escassez.
-
-                3. Curas milagrosas: Realizou numerosas curas de enfermos durante seu episcopado, especialmente de cegos e paralíticos.
-
-                4. Exorcismos: Libertou muitas pessoas possuídas por demônios, demonstrando autoridade espiritual sobre as forças do mal.
-
-                5. Milagres póstumos: Após sua morte, muitos milagres foram relatados em seu túmulo, incluindo curas de diversas enfermidades e libertação de prisioneiros.
-            `,
-            reliquias: `
-                As relíquias de São Marcelo têm uma história significativa:
-
-                1. Sepultamento original: Foi inicialmente sepultado em uma pequena igreja nos arredores de Paris, no local que posteriormente se tornou o subúrbio de Saint-Marceau.
-
-                2. Translação para a Catedral: No século IX, durante as invasões normandas, suas relíquias foram transferidas para a Catedral de Notre-Dame de Paris para maior proteção.
-
-                3. Relicário: Um magnífico relicário de prata contendo seus restos mortais foi criado no século XIII e tornou-se um dos tesouros mais venerados da catedral.
-
-                4. Procissões: Durante a Idade Média, suas relíquias eram carregadas em solenes procissões pelas ruas de Paris em tempos de calamidade, como epidemias, secas ou ameaças de invasão.
-
-                5. Revolução Francesa: Durante a Revolução Francesa, parte de suas relíquias foi profanada e perdida, mas alguns fragmentos foram preservados por fiéis devotos.
-
-                6. Atualidade: Hoje, relíquias de São Marcelo podem ser encontradas na Catedral de Notre-Dame de Paris e na igreja de Saint-Marcel, no 13º arrondissement de Paris.
-            `,
-            devocao: `
-                A devoção a São Marcelo é significativa, especialmente em Paris:
-
-                Festa litúrgica:
-                - 1º de novembro no Martirológio Romano
-                - 3 de novembro nas igrejas da França
-
-                É invocado como:
-                - Patrono da cidade de Paris
-                - Protetor contra inundações e epidemias
-                - Intercessor contra picadas de serpentes e animais venenosos
-                - Padroeiro dos vinicultores (devido ao milagre da transformação da água em vinho)
-
-                Tradições e costumes:
-                - Procissão do Dragão: Durante a Idade Média, nas procissões de Rogações em Paris, carregava-se uma efígie de vime em forma de dragão, simbolizando o monstro derrotado por São Marcelo.
-                - Oferendas de pão e vinho eram feitas em seu túmulo para obter proteção contra doenças.
-                - Sua festa era celebrada com grande solenidade em Paris até a Revolução Francesa.
-
-                Iconografia:
-                - Representado como bispo com vestes pontificais
-                - Frequentemente retratado dominando um dragão com seu báculo ou estola
-                - Às vezes representado com uma fonte ou poço, simbolizando o milagre da água transformada em vinho
-
-                Locais de devoção:
-                - Igreja de Saint-Marcel em Paris
-                - Catedral de Notre-Dame de Paris
-                - Fonte de Saint-Marcel, considerada milagrosa durante a Idade Média
-            `
-        }
-    },
-    {
-        name: "São Alfeu",
-        description: "Pai de São Tiago Menor, mencionado entre os primeiros cristãos.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Alfeu (também conhecido como Clopas ou Cleofas) é uma figura mencionada no Novo Testamento, principalmente por sua relação familiar com alguns dos apóstolos. As informações sobre sua vida são escassas e baseadas em referências bíblicas e tradições da Igreja primitiva.
-
-                Segundo os Evangelhos, Alfeu era pai do apóstolo Tiago Menor (Mateus 10,3; Marcos 3,18; Lucas 6,15). Alguns estudiosos e tradições da Igreja também o identificam como o pai do apóstolo Mateus (Levi), embora esta identificação seja menos certa.
-
-                De acordo com algumas tradições, Alfeu era irmão de São José, o esposo de Maria, o que o tornaria tio de Jesus. Outros o identificam com Clopas, mencionado no Evangelho de João (19,25) como esposo de Maria de Clopas, que esteve presente na crucificação de Jesus. Esta Maria é frequentemente identificada como irmã ou cunhada da Virgem Maria.
-
-                Eusébio de Cesareia, historiador da Igreja do século IV, citando Hegesipo (século II), menciona que Clopas era irmão de José e pai de Simeão, que sucedeu Tiago como bispo de Jerusalém. Se esta identificação estiver correta, Alfeu teria sido um membro importante da família extensa de Jesus.
-
-                Algumas tradições sugerem que Alfeu foi um dos primeiros discípulos de Jesus, embora não fizesse parte do círculo dos doze apóstolos. Há também quem o identifique com um dos dois discípulos que encontraram Jesus ressuscitado no caminho de Emaús (Lucas 24,13-35), embora o texto bíblico nomeie apenas um deles como Cleofas.
-
-                Quanto à sua morte, não há informações precisas nas Escrituras. Segundo tradições posteriores, ele teria sido martirizado por sua fé em Cristo, possivelmente durante as primeiras perseguições aos cristãos em Jerusalém.
-
-                Apesar da escassez de informações históricas, São Alfeu é venerado como um dos primeiros seguidores de Cristo e como pai de apóstolos que desempenharam papéis importantes na Igreja primitiva.
-            `,
-            milagres: `
-                Devido à escassez de informações históricas sobre São Alfeu, não há relatos específicos de milagres atribuídos diretamente a ele durante sua vida. No entanto, algumas tradições e devoções posteriores associam certos fenômenos milagrosos à sua intercessão:
-
-                1. Proteção familiar: São Alfeu é frequentemente invocado para proteção das famílias cristãs, e há relatos de intervenções milagrosas em situações de crise familiar atribuídas à sua intercessão.
-
-                2. Conversões: Como membro da família extensa de Jesus e pai de apóstolos, é invocado em orações por conversão de familiares, com diversos testemunhos de conversões atribuídas à sua intercessão.
-
-                3. Curas: Embora não seja primariamente conhecido como um santo taumaturgo, existem relatos de curas, especialmente relacionadas a problemas ósseos e articulares, atribuídas à sua intercessão.
-
-                4. Aparições: Em algumas tradições locais, especialmente no Oriente Médio, há relatos de aparições de São Alfeu junto com outros membros da família de Jesus, trazendo mensagens de conforto e orientação.
-
-                5. Proteção de viajantes: Possivelmente devido à sua identificação com Cleofas do caminho de Emaús, é invocado por viajantes em perigo, com relatos de proteções milagrosas.
-
-                6. Intervenções em casos de perseguição religiosa: Como possível mártir da Igreja primitiva, é invocado por cristãos que sofrem perseguição, com testemunhos de intervenções providenciais.
-
-                7. Descoberta de relíquias: No século V, houve relatos da descoberta milagrosa de relíquias atribuídas a São Alfeu, acompanhada de curas e outros fenômenos sobrenaturais.
-
-                É importante notar que, diferentemente de outros santos mais conhecidos, os milagres atribuídos a São Alfeu são geralmente de caráter mais local e menos documentados na literatura hagiográfica oficial.
-            `,
-            reliquias: `
-                As informações sobre as relíquias de São Alfeu são limitadas e, em alguns casos, baseadas mais em tradições locais do que em documentação histórica precisa:
-
-                1. Relíquias na Terra Santa: Segundo algumas tradições, os restos mortais de São Alfeu teriam sido inicialmente sepultados em Jerusalém, próximo ao local onde seu filho Tiago (o Menor) foi sepultado.
-
-                2. Translação para Constantinopla: Há indicações de que, durante o período bizantino (possivelmente no século V ou VI), relíquias atribuídas a São Alfeu foram transferidas para Constantinopla, onde foram veneradas na Igreja dos Santos Apóstolos.
-
-                3. Relíquias em Roma: Uma tradição menciona que parte das relíquias de São Alfeu teria sido levada para Roma, possivelmente durante o período das Cruzadas, e depositada na Basílica de São João de Latrão.
-
-                4. Relíquias na Espanha: A catedral de Santiago de Compostela, na Espanha, afirma possuir pequenos fragmentos de relíquias atribuídas a São Alfeu, junto com as relíquias de seu filho, o apóstolo Tiago.
-
-                5. Relíquias no Oriente: Algumas igrejas ortodoxas no Oriente Médio, particularmente na Síria e no Líbano, afirmam possuir relíquias de São Alfeu, embora a autenticidade destas seja difícil de verificar historicamente.
-
-                6. Relíquias em Chipre: A Igreja de Chipre afirma possuir fragmentos de relíquias de São Alfeu, possivelmente trazidas de Jerusalém durante as perseguições aos cristãos.
-
-                7. Objetos associados: Em algumas igrejas, são venerados como relíquias secundárias objetos que teriam pertencido a São Alfeu ou estado em contato com suas relíquias primárias, como fragmentos de tecido ou pequenos recipientes de óleo.
-
-                É importante notar que, devido à antiguidade e à escassez de documentação histórica precisa, a autenticidade de muitas destas relíquias é difícil de estabelecer com certeza. No entanto, elas continuam sendo objetos de veneração para muitos fiéis, especialmente nas tradições orientais.
-            `,
-            devocao: `
-                A devoção a São Alfeu, embora menos difundida que a de outros santos mais conhecidos, mantém-se viva em diversas tradições cristãs:
-
-                Festa litúrgica:
-                - 26 de maio na Igreja Católica (em alguns calendários locais)
-                - 25 de maio na Igreja Ortodoxa
-                - Celebrado junto com seu filho Tiago em 1º de maio em algumas tradições orientais
-
-                É invocado como patrono de:
-                - Pais de família
-                - Parentes de sacerdotes e religiosos
-                - Carpinteiros (devido à sua possível relação com São José)
-                - Viajantes (se identificado com Cleofas do caminho de Emaús)
-                - Convertidos ao cristianismo
-
-                Iconografia:
-                - Representado como um homem idoso de barba branca
-                - Frequentemente retratado junto com seu filho Tiago Menor
-                - Às vezes, representado com ferramentas de carpinteiro
-                - Em algumas tradições orientais, aparece em cenas da Sagrada Família ampliada
-                - Quando identificado com Cleofas, é representado no caminho de Emaús
-
-                Tradições populares:
-                - Em algumas regiões da Grécia e do Oriente Médio, seu dia é marcado por reuniões familiares
-                - Na Armênia, é tradição visitar os túmulos dos antepassados em sua festa
-                - Em partes da Espanha, é invocado em orações pela unidade familiar
-                - Em algumas comunidades, é costume abençoar ferramentas de trabalho em sua festa
-
-                Locais de devoção:
-                - Igreja de São Tiago Menor em Jerusalém, onde também é venerado
-                - Algumas igrejas em Chipre dedicadas à Sagrada Parentela
-                - Capelas em mosteiros ortodoxos do Monte Atos, na Grécia
-                - Igrejas armênias e sírias no Oriente Médio
-                - Pequenos santuários em vilarejos da Galileia, onde teria vivido
-
-                Orações e devoções:
-                - É invocado em novenas pela conversão de familiares
-                - Suas relíquias são veneradas especialmente por pais que desejam que seus filhos sigam vocações religiosas
-                - Em algumas tradições, é invocado junto com outros parentes de Jesus em orações pela santificação das famílias
-            `
-        }
-    },
-    {
-        name: "São Jorge",
-        description: "Cavaleiro que matou um dragão, martirizado por sua fé.",
-        isDisplayed: true,
-        additionalInfo: {
-            biografia: `
-                São Jorge nasceu na Capadócia (atual Turquia) por volta do ano 280, em uma família cristã nobre. Seu pai, Gerôncio, era um oficial militar romano originário da Capadócia, e sua mãe, Policrônia, era natural da Palestina. Após a morte de seu pai, Jorge e sua mãe retornaram à Palestina, terra natal dela.
-
-                Seguindo os passos de seu pai, Jorge ingressou no exército romano durante o reinado do imperador Diocleciano. Demonstrando grande coragem e habilidade militar, ascendeu rapidamente na hierarquia, tornando-se tribuno militar e membro da guarda pessoal do imperador, um posto de grande prestígio para alguém tão jovem.
-
-                Em 303, quando Diocleciano iniciou uma das mais severas perseguições contra os cristãos, Jorge, que era cristão secreto até então, decidiu manifestar publicamente sua fé. Renunciou ao seu cargo militar, distribuiu seus bens aos pobres e confrontou o imperador, denunciando a injustiça das perseguições.
-
-                Esta atitude corajosa enfureceu Diocleciano, que ordenou a tortura de Jorge na tentativa de fazê-lo renegar sua fé. Segundo a tradição, ele foi submetido a numerosos e cruéis suplícios: foi lacerado em uma roda de espadas, mergulhado em cal viva, forçado a usar sapatos com pregos incandescentes, e sofreu muitos outros tormentos.
-
-                Milagrosamente, Jorge sobreviveu a todas estas torturas, o que levou à conversão de muitos pagãos, incluindo a imperatriz Alexandra, esposa de Diocleciano. Finalmente, em 23 de abril de 303 (ou 304, segundo algumas fontes), Jorge foi decapitado em Nicomédia (atual Izmit, Turquia).
-
-                A história mais famosa associada a São Jorge - o combate contra o dragão para salvar uma princesa - não aparece nos primeiros relatos sobre sua vida. Esta lenda surgiu durante a Idade Média, possivelmente no século XI, e foi popularizada pela "Legenda Áurea" de Jacopo de Varazze no século XIII. Segundo esta narrativa, Jorge teria libertado uma cidade da Líbia (ou da Capadócia, em algumas versões) de um terrível dragão que exigia sacrifícios humanos, salvando a princesa que seria a próxima vítima.
-
-                Embora muitos elementos de sua biografia tenham sido questionados por historiadores modernos, a existência histórica de São Jorge e seu martírio são geralmente aceitos, e seu culto é um dos mais antigos e difundidos no cristianismo.
-            `,
-            milagres: `
-                São Jorge é associado a numerosos milagres, tanto durante sua vida quanto após sua morte:
-
-                1. Sobrevivência às torturas: O mais notável milagre durante sua vida foi sua sobrevivência a torturas extremas. Segundo a tradição, ele foi submetido a suplícios que teriam matado qualquer pessoa comum, incluindo ser lacerado em uma roda de espadas, mergulhado em cal viva, forçado a beber veneno e muitos outros tormentos, dos quais sempre emergia milagrosamente curado.
-
-                2. Ressurreição de mortos: Em algumas versões de sua história, São Jorge teria ressuscitado pessoas mortas, incluindo um agricultor chamado Glikerios, cujo boi havia morrido, e que foi convertido ao cristianismo após este milagre.
-
-                3. Vitória sobre o dragão: Embora seja uma lenda posterior, o milagre mais famoso associado a São Jorge é sua vitória sobre um dragão que aterrorizava uma cidade, exigindo sacrifícios humanos. Após derrotar o monstro, Jorge converteu toda a população local ao cristianismo.
-
-                4. Conversões milagrosas: Sua resistência sobrenatural às torturas levou à conversão de muitos pagãos, incluindo a imperatriz Alexandra, esposa de Diocleciano, e o mágico Atanásio, que havia preparado venenos para matá-lo.
-
-                5. Aparições em batalhas: Ao longo da história, há numerosos relatos de aparições de São Jorge em batalhas, ajudando exércitos cristãos. O mais famoso ocorreu durante a Primeira Cruzada, quando teria aparecido com vestes e armas brancas, ajudando os cruzados a conquistar Antioquia em 1098.
-
-                6. Curas milagrosas: Muitas curas são atribuídas à intercessão de São Jorge, especialmente de doenças relacionadas ao sangue, febres e doenças de pele. Seu santuário em Lod (antiga Lydda), na Palestina, tornou-se um importante centro de peregrinação para pessoas em busca de cura.
-
-                7. Proteção contra o mal: São Jorge é invocado como protetor contra venenos, peste, feitiçaria e possessão demoníaca, com numerosos relatos de intervenções milagrosas nestes casos.
-
-                8. Milagres com suas relíquias: Diversas fontes relatam fenômenos milagrosos associados às suas relíquias, incluindo a exsudação de óleo perfumado com propriedades curativas.
-            `,
-            reliquias: `
-                As relíquias de São Jorge têm uma história complexa e dispersa:
-
-                1. Sepultamento original: Após seu martírio em Nicomédia (atual Izmit, Turquia), o corpo de São Jorge foi levado para Lydda (atual Lod, em Israel), sua cidade natal materna, onde foi sepultado. Um santuário foi construído sobre seu túmulo, tornando-se um importante centro de peregrinação desde o século IV.
-
-                2. Basílica de São Jorge em Lod: No século VI, o imperador Justiniano mandou construir uma grande basílica sobre o túmulo de São Jorge em Lydda. Esta igreja foi destruída durante a invasão persa em 614 e posteriormente reconstruída.
-
-                3. Dispersão das relíquias: Durante as Cruzadas, partes das relíquias de São Jorge foram levadas para a Europa, resultando em sua ampla dispersão. Isto explica por que tantos lugares afirmam possuir relíquias do santo.
-
-                4. Relíquias em Roma: Uma parte significativa das relíquias de São Jorge foi transferida para Roma, onde são veneradas na igreja de San Giorgio in Velabro. O crânio do santo teria sido levado para a igreja de San Giorgio al Palazzo, em Milão.
-
-                5. Relíquias na Inglaterra: A devoção a São Jorge na Inglaterra data do século VIII. A abadia de Glastonbury afirmava possuir alguns de seus ossos, e outras relíquias estavam presentes em Windsor e Canterbury.
-
-                6. Relíquias em Veneza: A República de Veneza, que tinha São Jorge como um de seus patronos, obteve importantes relíquias do santo, que são veneradas na igreja de San Giorgio Maggiore.
-
-                7. Outras localizações: Relíquias atribuídas a São Jorge podem ser encontradas em diversos lugares, incluindo:
-                   - Mosteiro de São Jorge em Menavlevi, Síria
-                   - Catedral de Notre-Dame de Paris, França
-                   - Mosteiro de Xenofontos no Monte Atos, Grécia
-                   - Catedral de Barcelona, Espanha
-                   - Mosteiro de Zograf no Monte Atos, que possui uma mão do santo
-                   - Igreja de São Jorge em Beirute, Líbano
-
-                8. Objetos associados: Além dos restos mortais, são venerados como relíquias alguns objetos associados a São Jorge:
-                   - Fragmentos de sua armadura e lança
-                   - Bandeiras e estandartes que teriam sido usados em batalhas sob sua invocação
-                   - Ícones milagrosos, especialmente na tradição ortodoxa
-            `,
-            devocao: `
-                São Jorge é um dos santos mais universalmente venerados, com uma devoção que transcende fronteiras geográficas e denominacionais:
-
-                Festa litúrgica:
-                - 23 de abril na maioria das tradições cristãs
-                - 23 de abril (calendário juliano, que corresponde a 6 de maio no calendário gregoriano) nas Igrejas Ortodoxas que seguem o calendário antigo
-                - 3 de novembro (translação das relíquias) em algumas tradições orientais
-
-                É invocado como patrono de:
-                - Numerosos países, incluindo Inglaterra, Portugal, Geórgia, Catalunha, Aragão e Lituânia
-                - Cavaleiros, soldados e militares
-                - Escoteiros e exploradores
-                - Arqueiros e fabricantes de armas
-                - Agricultores e pastores
-                - Cavalos e outros animais domésticos
-                - Contra doenças de pele, peste e venenos
-                - Proteção em batalhas e situações de perigo
-
-                Iconografia:
-                - Representado como um jovem cavaleiro em armadura
-                - Montado em um cavalo branco, matando um dragão com uma lança
-                - Com uma bandeira branca com cruz vermelha (a "Cruz de São Jorge")
-                - Às vezes, com a princesa resgatada ao fundo
-                - Na arte oriental, frequentemente representado com cabelos cacheados
-
-                Tradições populares:
-                - Na Inglaterra, o Dia de São Jorge é celebrado com desfiles e representações da luta contra o dragão
-                - Na Catalunha, é tradição trocar livros e rosas no dia de São Jorge (origem do Dia Mundial do Livro)
-                - Na Geórgia (país que leva seu nome), seu dia é feriado nacional
-                - Em partes do Oriente Médio, cristãos e muçulmanos visitam seus santuários em busca de bênçãos
-                - Em Portugal e no Brasil, é associado à proteção contra cobras e animais peçonhentos
-                - No sincretismo religioso brasileiro, é identificado com o orixá Ogum
-
-                Locais de devoção:
-                - Igreja de São Jorge em Lod (antiga Lydda), Israel, construída sobre seu túmulo original
-                - Igreja de San Giorgio in Velabro, Roma
-                - Mosteiro de São Jorge em Menavlevi, Síria
-                - Catedral de São Jorge em Istambul (antiga sede do Patriarcado Ecumênico)
-                - Mosteiro de Zograf no Monte Atos, Grécia
-                - Inúmeras igrejas dedicadas a ele em todo o mundo
-            `
-        }
-    },
-    {
-        name: "Santo Agostinho",
-        description: "Doutor da Igreja, bispo de Hipona e filósofo",
-        isDisplayed: false
-    },
-    {
-        name: "Santo Ambrósio",
-        description: "Doutor da Igreja e Bispo de Milão",
-        isDisplayed: false,
-        data_devocao: "4 de abril"
-    },
-    {
-        name: "Santo André",
-        description: "Apóstolo, irmão de Pedro, martirizado em cruz em X",
-        isDisplayed: false,
-        data_devocao: "30 de novembro"
-    },
-    {
-        name: "Santo Apolinário",
-        description: "Primeiro bispo de Ravena e mártir",
-        isDisplayed: false,
-        data_devocao: ""
-    },
-    {
-        name: "Santa Apolônia",
-        description: "Virgem e mártir que teve os dentes arrancados",
-        isDisplayed: false,
-        data_devocao: "9 de fevereiro"
-    },
-    {
-        name: "Santo Aquileu",
-        description: "Mártir romano, soldado convertido",
-        isDisplayed: false,
-        data_devocao: ""
-    },
-    {
-        name: "Santo Arsênio",
-        description: "Eremita e padre do deserto",
-        isDisplayed: false,
-        data_devocao: ""
-    },
-    {
-        name: "São Barnabé",
-        description: "Apóstolo que acompanhou Paulo em suas viagens",
-        isDisplayed: false,
-        data_devocao: "11 de junho"
-    },
-    {
-        name: "São Bartolomeu",
-        description: "Apóstolo que pregou na Índia",
-        isDisplayed: false
-    },
-    {
-        name: "São Bento",
-        description: "Fundador do monasticismo ocidental",
-        isDisplayed: false
-    },
-    {
-        name: "São Bernardo",
-        description: "Doutor da Igreja e reformador de Cister",
-        isDisplayed: false
-    },
-    {
-        name: "São Brás",
-        description: "Bispo e mártir, protetor contra doenças da garganta",
-        isDisplayed: false,
-        data_devocao: "3 de fevereiro"
-    },
-    {
-        name: "São Brício",
-        description: "Bispo de Tours, sucessor de São Martinho",
-        isDisplayed: false
-    },
-    {
-        name: "São Calisto",
-        description: "Papa e mártir que organizou as catacumbas",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Catarina",
-        description: "Virgem e mártir de Alexandria",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Cecília",
-        description: "Virgem e mártir, padroeira da música",
-        isDisplayed: false
-    },
-    {
-        name: "São Celso",
-        description: "Jovem mártir que morreu com São Nazário",
-        isDisplayed: false
-    },
-    {
-        name: "São Cipriano",
-        description: "Bispo de Cartago e mártir",
-        isDisplayed: false
-    },
-    {
-        name: "São Ciríaco",
-        description: "Diácono e mártir",
-        isDisplayed: false
-    },
-    {
-        name: "São Clemente",
-        description: "Papa e mártir, discípulo dos apóstolos",
-        isDisplayed: false
-    },
-    {
-        name: "São Cornélio",
-        description: "Papa que enfrentou o cisma de Novaciano",
-        isDisplayed: false
-    },
-    {
-        name: "São Cosme",
-        description: "Médico e mártir, irmão de São Damião",
-        isDisplayed: false
-    },
-    {
-        name: "São Crisanto",
-        description: "Mártir que converteu muitos em Roma",
-        isDisplayed: false
-    },
-    {
-        name: "São Crisógono",
-        description: "Mártir romano, mestre de Santa Anastácia",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Cristina",
-        description: "Virgem e mártir que destruiu ídolos pagãos",
-        isDisplayed: false
-    },
-    {
-        name: "São Cristóvão",
-        description: "Mártir que carregou o menino Jesus",
-        isDisplayed: false
-    },
-    {
-        name: "São Damião",
-        description: "Médico e mártir, irmão de São Cosme",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Dária",
-        description: "Mártir, esposa de São Crisanto",
-        isDisplayed: false
-    },
-    {
-        name: "São Dionísio",
-        description: "Primeiro bispo de Paris e mártir",
-        isDisplayed: false
-    },
-    {
-        name: "São Domingos",
-        description: "Fundador da Ordem dos Pregadores",
-        isDisplayed: false
-    },
-    {
-        name: "São Donato",
-        description: "Bispo e mártir de Arezzo",
-        isDisplayed: false
-    },
-    {
-        name: "São Doroteu",
-        description: "Mártir que sofreu com São Gorgônio",
-        isDisplayed: false
-    },
-    {
-        name: "Santo Egídio",
-        description: "Abade e eremita na França",
-        isDisplayed: false
-    },
-    {
-        name: "Santo Eleutério",
-        description: "Bispo e mártir que sofreu com São Dionísio",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Eufêmia",
-        description: "Virgem e mártir de Calcedônia",
-        isDisplayed: false
-    },
-    {
-        name: "Santo Eusébio",
-        description: "Bispo que lutou contra o arianismo",
-        isDisplayed: false
-    },
-    {
-        name: "Santo Eustáquio",
-        description: "General romano convertido após ver um cervo com cruz",
-        isDisplayed: false
-    },
-    {
-        name: "São Faustino",
-        description: "Mártir que sofreu com São Simplício",
-        isDisplayed: false
-    },
-    {
-        name: "São Feliciano",
-        description: "Bispo e mártir de Foligno",
-        isDisplayed: false,
-        data_devocao: "9 de junho"
-    },
-    {
-        name: "Santa Felicidade",
-        description: "Mártir romana que viu seus sete filhos martirizados",
-        isDisplayed: false
-    },
-    {
-        name: "São Filipe",
-        description: "Apóstolo que pregou na Frígia",
-        isDisplayed: false,
-        data_devocao: "1 de maio"
-    },
-    {
-        name: "São Forseu",
-        description: "Monge irlandês que teve visões do purgatório",
-        isDisplayed: false,
-        data_devocao: "29 de setembro"
-    },
-    {
-        name: "São Francisco",
-        description: "Fundador da Ordem Franciscana",
-        isDisplayed: false,
-        data_devocao: "4 de outubro"
-    },
-    {
-        name: "São Germano",
-        description: "Bispo de Auxerre que combateu heresias",
-        isDisplayed: false,
-        data_devocao: "31 de julho"
-    },
-    {
-        name: "São Gervásio",
-        description: "Mártir, irmão gêmeo de São Protásio",
-        isDisplayed: false,
-        data_devocao: "19 de junho"
-    },
-    {
-        name: "São Gordiano",
-        description: "Mártir romano do século IV",
-        isDisplayed: false,
-        data_devocao: "10 de maio"
-    },
-    {
-        name: "São Gorgônio",
-        description: "Mártir da corte de Diocleciano",
-        isDisplayed: false
-    },
-    {
-        name: "São Gregório",
-        description: "Papa Magno, doutor da Igreja",
-        isDisplayed: false,
-        data_devocao: "12 de março"
-    },
-    {
-        name: "Santo Hipólito",
-        description: "Teólogo e mártir romano",
-        isDisplayed: false
-    },
-    {
-        name: "Santo Inácio",
-        description: "Bispo de Antioquia e mártir, discípulo dos apóstolos",
-        isDisplayed: false,
-        data_devocao: "1 de fevereiro"
-    },
-    {
-        name: "Santa Inês",
-        description: "Virgem e mártir romana",
-        isDisplayed: false
-    },
-    {
-        name: "São Jacinto",
-        description: "Mártir romano que sofreu com São Proto",
-        isDisplayed: false
-    },
-    {
-        name: "São Jerônimo",
-        description: "Doutor da Igreja, tradutor da Bíblia",
-        isDisplayed: false
-    },
-    {
-        name: "São João Abade",
-        description: "Abade do deserto egípcio",
-        isDisplayed: false
-    },
-    {
-        name: "São João Batista",
-        description: "Precursor de Jesus Cristo",
-        isDisplayed: false,
-        data_devocao: "24 de junho"
-    },
-    {
-        name: "São João Crisóstomo",
-        description: "Bispo e doutor da Igreja, conhecido por sua eloquência",
-        isDisplayed: false
-    },
-    {
-        name: "São Josafá",
-        description: "Príncipe indiano convertido por Barlaam",
-        isDisplayed: false
-    },
-    {
-        name: "São Judas",
-        description: "Apóstolo, também chamado Tadeu",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Juliana",
-        description: "Virgem e mártir de Nicomédia",
-        isDisplayed: false
-    },
-    {
-        name: "São Juliano",
-        description: "Mártir que sofreu em Alexandria",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Julita",
-        description: "Mártir que sofreu com seu filho Quirico",
-        isDisplayed: false,
-        data_devocao: "15 de junho"
-    },
-    {
-        name: "Santa Justina",
-        description: "Virgem e mártir de Antioquia",
-        isDisplayed: false
-    },
-    {
-        name: "São Lamberto",
-        description: "Bispo e mártir de Maastricht",
-        isDisplayed: false
-    },
-    {
-        name: "São Leão",
-        description: "Papa Magno que enfrentou Átila",
-        isDisplayed: false,
-        data_devocao: "28 de junho"
-    },
-    {
-        name: "São Leodegário",
-        description: "Bispo e mártir de Autun",
-        isDisplayed: false
-    },
-    {
-        name: "São Leonardo",
-        description: "Eremita e libertador de prisioneiros",
-        isDisplayed: false
-    },
-    {
-        name: "São Longino",
-        description: "Soldado que perfurou o lado de Cristo",
-        isDisplayed: false,
-        data_devocao: "15 de março"
-    },
-    {
-        name: "São Lourenço",
-        description: "Diácono e mártir de Roma",
-        isDisplayed: false
-    },
-    {
-        name: "São Lucas",
-        description: "Evangelista e médico",
-        isDisplayed: false
-    },
-    {
-        name: "São Lupo",
-        description: "Bispo de Troyes que enfrentou Átila",
-        isDisplayed: false,
-        data_devocao: "1 de setembro"
-    },
-    {
-        name: "Santos Macabeus",
-        description: "Sete irmãos mártires do Antigo Testamento",
-        isDisplayed: false
-    },
-    {
-        name: "São Mamertino",
-        description: "Abade convertido por São Germano",
-        isDisplayed: false,
-        data_devocao: "30 de março"
-    },
-    {
-        name: "São Marcelino",
-        description: "Papa e mártir durante a perseguição de Diocleciano",
-        isDisplayed: false,
-        data_devocao: "26 de abril"
-    },
-    {
-        name: "São Marcos",
-        description: "Evangelista e fundador da Igreja de Alexandria",
-        isDisplayed: false,
-        data_devocao: "25 de abril"
-    },
-    {
-        name: "Santa Margarida",
-        description: "Virgem e mártir de Antioquia",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Maria Egipcíaca",
-        description: "Penitente que viveu no deserto",
-        isDisplayed: false,
-        data_devocao: "2 de abril"
-    },
-    {
-        name: "Santa Maria Madalena",
-        description: "Discípula de Jesus e primeira testemunha da Ressurreição",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Marina",
-        description: "Virgem que viveu disfarçada como monge",
-        isDisplayed: false,
-        data_devocao: "18 de junho"
-    },
-    {
-        name: "Santa Marta",
-        description: "Irmã de Lázaro e Maria, hospedeira de Jesus",
-        isDisplayed: false
-    },
-    {
-        name: "São Martinho",
-        description: "Bispo de Tours que dividiu sua capa com um mendigo",
-        isDisplayed: false,
-        data_devocao: "22 de janeiro"
-    },
-    {
-        name: "São Mateus",
-        description: "Apóstolo e evangelista, ex-cobrador de impostos",
-        isDisplayed: false
-    },
-    {
-        name: "São Matias",
-        description: "Apóstolo escolhido para substituir Judas",
-        isDisplayed: false,
-        data_devocao: "24 de fevereiro"
-    },
-    {
-        name: "São Maurício",
-        description: "Comandante da Legião Tebana, mártir",
-        isDisplayed: false
-    },
-    {
-        name: "São Miguel",
-        description: "Arcanjo, príncipe das milícias celestiais",
-        isDisplayed: false
-    },
-    {
-        name: "São Modesto",
-        description: "Mártir que sofreu com São Vito",
-        isDisplayed: false,
-        data_devocao: "15 de junho"
-    },
-    {
-        name: "São Moisés",
-        description: "Abade etíope do deserto",
-        isDisplayed: false
-    },
-    {
-        name: "São Nazário",
-        description: "Mártir que evangelizou com São Celso",
-        isDisplayed: false
-    },
-    {
-        name: "São Nereu",
-        description: "Mártir romano, servo convertido",
-        isDisplayed: false,
-        data_devocao: "12 de maio"
-    },
-    {
-        name: "São Nicolau",
-        description: "Bispo de Mira, conhecido por sua generosidade",
-        isDisplayed: false,
-        data_devocao: "6 de dezembro"
-    },
-    {
-        name: "São Pancrácio",
-        description: "Jovem mártir romano",
-        isDisplayed: false,
-        data_devocao: "12 de maio"
-    },
-    {
-        name: "São Pastor",
-        description: "Abade do deserto egípcio",
-        isDisplayed: false
-    },
-    {
-        name: "São Patrício",
-        description: "Apóstolo da Irlanda",
-        isDisplayed: false,
-        data_devocao: "17 de março"
-    },
-    {
-        name: "Santa Paula",
-        description: "Nobre romana que seguiu São Jerônimo",
-        isDisplayed: false
-    },
-    {
-        name: "São Paulo Apóstolo",
-        description: "Apóstolo dos gentios, convertido a caminho de Damasco",
-        isDisplayed: false,
-        data_devocao: "30 de junho"
-    },
-    {
-        name: "São Pedro Apóstolo",
-        description: "Primeiro Papa da Igreja",
-        isDisplayed: false,
-        data_devocao: "29 de junho"
-    },
-    {
-        name: "São Pedro Mártir",
-        description: "Dominicano martirizado por hereges",
-        isDisplayed: false,
-        data_devocao: "29 de abril"
-    },
-    {
-        name: "Santa Pelágia",
-        description: "Penitente de Antioquia",
-        isDisplayed: false
-    },
-    {
-        name: "São Pelágio",
-        description: "Jovem mártir de Córdoba",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Perpétua",
-        description: "Mártir de Cartago com Santa Felicidade",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Petronela",
-        description: "Virgem romana, filha espiritual de São Pedro",
-        isDisplayed: false,
-        data_devocao: "31 de maio"
-    },
-    {
-        name: "Santa Práxedes",
-        description: "Virgem romana que cuidava dos mártires",
-        isDisplayed: false
-    },
-    {
-        name: "São Primo",
-        description: "Mártir que sofreu com São Feliciano",
-        isDisplayed: false,
-        data_devocao: "9 de junho"
-    },
-    {
-        name: "São Protásio",
-        description: "Mártir, irmão gêmeo de São Gervásio",
-        isDisplayed: false,
-        data_devocao: "19 de junho"
-    },
-    {
-        name: "São Proto",
-        description: "Mártir que sofreu com São Jacinto",
-        isDisplayed: false
-    },
-    {
-        name: "São Quintino",
-        description: "Mártir romano na Gália",
-        isDisplayed: false
-    },
-    {
-        name: "São Quirce",
-        description: "Menino mártir, filho de Santa Julita",
-        isDisplayed: false,
-        data_devocao: "15 de junho"
-    },
-    {
-        name: "São Rústico",
-        description: "Mártir que sofreu com São Dionísio",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Sabina",
-        description: "Mártir romana convertida por sua escrava",
-        isDisplayed: false
-    },
-    {
-        name: "São Sabiniano",
-        description: "Mártir que sofreu com São Potenciano",
-        isDisplayed: false
-    },
-    {
-        name: "São Saturnino",
-        description: "Bispo e mártir de Toulouse",
-        isDisplayed: false
-    },
-    {
-        name: "São Segundo",
-        description: "Mártir da Legião Tebana",
-        isDisplayed: false,
-        data_devocao: "30 de março"
-    },
-    {
-        name: "São Senen",
-        description: "Mártir persa que sofreu com Santo Abdão",
-        isDisplayed: false
-    },
-    {
-        name: "São Simão",
-        description: "Apóstolo, também chamado Zelote",
-        isDisplayed: false
-    },
-    {
-        name: "São Simplício",
-        description: "Mártir que sofreu com São Faustino",
-        isDisplayed: false
-    },
-    {
-        name: "São Sinforiano",
-        description: "Jovem mártir de Autun",
-        isDisplayed: false
-    },
-    {
-        name: "São Sisto",
-        description: "Papa e mártir, mestre de São Lourenço",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Taís",
-        description: "Penitente do Egito",
-        isDisplayed: false
-    },
-    {
-        name: "Santa Teodora",
-        description: "Penitente que viveu como monge",
-        isDisplayed: false
-    },
-    {
-        name: "São Teodoro",
-        description: "Soldado mártir que queimou um templo pagão",
-        isDisplayed: false
-    },
-    {
-        name: "São Tiago Maior",
-        description: "Apóstolo, primeiro mártir entre os Doze",
-        isDisplayed: false
-    },
-    {
-        name: "São Tiago Menor",
-        description: "Apóstolo, primeiro bispo de Jerusalém",
-        isDisplayed: false,
-        data_devocao: "1 de maio"
-    },
-    {
-        name: "São Timóteo",
-        description: "Discípulo de São Paulo",
-        isDisplayed: false
-    },
-    {
-        name: "São Urbano",
-        description: "Papa e mártir que batizou Santa Cecília",
-        isDisplayed: false
-    },
-    {
-        name: "São Valentim",
-        description: "Sacerdote e mártir romano",
-        isDisplayed: false,
-        data_devocao: "14 de fevereiro"
-    },
-    {
-        name: "São Vedasto",
-        description: "Bispo de Arras e evangelizador",
-        isDisplayed: false,
-        data_devocao: "6 de fevereiro"
-    },
-    {
-        name: "São Vidal",
-        description: "Mártir de Ravena, pai de Gervásio e Protásio",
-        isDisplayed: false,
-        data_devocao: "28 de abril"
-    },
-    {
-        name: "São Vito",
-        description: "Jovem mártir da Sicília",
-        isDisplayed: false,
-        data_devocao: "15 de junho"
-    },
-    {
-        name: "São João e São Paulo",
-        description: "Mártires romanos que sofreram juntos",
-        isDisplayed: false,
-        data_devocao: "26 de junho"
-    },
-    {
-        name: "São João na Porta Latina",
-        description: "Celebração do martírio frustrado de São João Evangelista",
-        isDisplayed: false,
-        data_devocao: "6 de maio"
-    },
-    {
-        name: "São João Batista (Decapitação)",
-        description: "Comemoração do martírio de São João Batista",
-        isDisplayed: false,
-        data_devocao: "29 de agosto"
-    },
-    {
-        name: "São João Batista (Natividade)",
-        description: "Celebração do nascimento de São João Batista",
-        isDisplayed: false,
-        data_devocao: "24 de junho"
-    },
-    {
-        name: "São Paulo (Conversão)",
-        description: "Celebração da conversão de São Paulo a caminho de Damasco",
-        isDisplayed: false,
-        data_devocao: "25 de janeiro"
-    },
-    {
-        name: "São Pedro Acorrentado",
-        description: "Celebração da libertação milagrosa de São Pedro da prisão",
-        isDisplayed: false,
-        data_devocao: "1 de agosto"
-    },
-    {
-        name: "São Pedro (Cátedra)",
-        description: "Celebração da autoridade de São Pedro como primeiro Papa",
-        isDisplayed: false,
-        data_devocao: "22 de fevereiro"
-    },
-    {
-        name: "São Pedro Exorcista",
-        description: "Mártir romano que expulsava demônios",
-        isDisplayed: false,
-        data_devocao: "2 de junho"
-    },
-    {
-        name: "São Tiago, o Cortado",
-        description: "Mártir persa que foi cortado em pedaços por sua fé",
-        isDisplayed: false,
-        data_devocao: "27 de novembro"
-    },
-    {
-        name: "Virgem Maria (Assunção)",
-        description: "Celebração da assunção de Maria aos céus",
-        isDisplayed: false,
-        data_devocao: "15 de agosto"
-    },
-    {
-        name: "Virgem Maria (Natividade)",
-        description: "Celebração do nascimento da Virgem Maria",
-        isDisplayed: false,
-        data_devocao: "8 de setembro"
-    },
-    {
-        name: "Virgem Maria (Purificação)",
-        description: "Celebração da apresentação de Jesus no templo",
-        isDisplayed: false,
-        data_devocao: "2 de fevereiro"
-    },
-    {
-        name: "São Barlaão",
-        description: "Eremita que converteu o príncipe Josafá",
-        isDisplayed: false
-    },
-    {
-        name: "São Félix (Papa)",
-        description: "Papa e mártir da Igreja primitiva",
-        isDisplayed: false,
-        data_devocao: "29 de julho"
-    },
-    {
-        name: "A Circuncisão do Senhor",
-        description: "Celebração da circuncisão de Jesus, conforme a lei judaica",
-        isDisplayed: false,
         data_devocao: "1 de janeiro"
     },
     {
         name: "Epifania",
-        description: "Celebração da manifestação de Jesus aos Magos vindos do Oriente",
-        isDisplayed: false,
+        description: "Festa da manifestação de Jesus aos gentios.",
+        additionalInfo: {
+            biografia: "A Epifania celebra a visita dos Reis Magos a Jesus em Belém, por volta de 4-6 a.C. (Mateus 2:1-12). Filho de Maria e José, foi revelado como Salvador universal, vivendo até sua crucificação em 33 d.C., marcando a salvação para todos os povos.",
+            milagres: "Uma estrela guiou os magos, anjos protegeram a fuga ao Egito, curou um servo dos magos (apócrifo), previu sua glória em visões e transformou presentes em bênçãos espirituais.",
+            reliquias: "Relíquias dos magos estão na Catedral de Colônia, Alemanha. Fragmentos simbólicos são venerados por revelação e cura espiritual.",
+            devocao: "Celebrada em 6 de janeiro, é a festa da manifestação divina. Inclui bênçãos de giz e orações por missão. Os fiéis pedem sabedoria, com hinos como 'Ó Vem, Adoremos'."
+        },
+        isDisplayed: true,
         data_devocao: "6 de janeiro"
     },
     {
-        name: "Santo Hilário",
-        description: "Bispo de Poitiers, famoso por seus escritos contra o arianismo",
-        isDisplayed: false,
+        name: "São Paulo, eremita",
+        description: "Primeiro eremita cristão, viveu no deserto egípcio.",
+        additionalInfo: {
+            biografia: "São Paulo de Tebas nasceu em Tebas, Egito, por volta de 228 d.C. Fugiu da perseguição de Décio em 250 d.C., vivendo como eremita no deserto por 90 anos. Morreu em 10 de janeiro de 341 d.C., aos 113 anos, assistido por Santo Antônio, conforme relato de São Jerônimo.",
+            milagres: "Foi alimentado por um corvo por décadas, curou um possuído no deserto, previu sua morte a Antônio, resistiu a tentações demoníacas e apareceu após a morte para guiar eremitas.",
+            reliquias: "Enterrado no deserto por Antônio, suas relíquias estão no Mosteiro de São Paulo, Egito. Fragmentos são venerados por solidão e cura de males espirituais.",
+            devocao: "Celebrado em 10 de janeiro, Paulo é padroeiro dos eremitas. Sua festa inclui orações por retiro e missas em desertos. Em arte, é mostrado com um corvo, e os fiéis o invocam por contemplação."
+        },
+        isDisplayed: true,
+        data_devocao: "10 de janeiro"
+    },
+    {
+        name: "São Remígio",
+        description: "Bispo de Reims, batizou Clóvis, rei dos francos.",
+        additionalInfo: {
+            biografia: "São Remígio nasceu em Laon, Gália, por volta de 437 d.C. Bispo de Reims aos 22 anos, batizou Clóvis I em 496 d.C., convertendo os francos ao cristianismo. Morreu em 13 de janeiro de 533 d.C., aos cerca de 96 anos, de causas naturais.",
+            milagres: "Curou um cego ao batizá-lo, fez uma pomba trazer o óleo santo para Clóvis, previu a conversão dos francos, apagou um incêndio com oração e apareceu após a morte para abençoar Reims.",
+            reliquias: "Enterrado em Reims, suas relíquias estão na Basílica de São Remígio. Fragmentos são venerados por conversão e cura de males físicos.",
+            devocao: "Celebrado em 14 de janeiro, Remígio é padroeiro da França e dos bispos. Sua festa inclui bênçãos de água e orações por evangelização. Em arte, é mostrado com uma pomba, e os fiéis o invocam por missão."
+        },
+        isDisplayed: true,
         data_devocao: "14 de janeiro"
     },
     {
-        name: "São Félix",
-        description: "Sacerdote que confessou sua fé durante as perseguições",
-        isDisplayed: false,
-        data_devocao: "9 de junho"
+        name: "Santo Hilário",
+        description: "Bispo de Poitiers, defensor contra o arianismo.",
+        additionalInfo: {
+            biografia: "Santo Hilário nasceu em Poitiers, Gália, por volta de 310 d.C. Convertido do paganismo, tornou-se bispo em 350 d.C. Exilado por combater o arianismo, escreveu obras teológicas e morreu em 13 de janeiro de 367 d.C., aos cerca de 57 anos.",
+            milagres: "Curou um enfermo com uma oração, resistiu a tormentas no exílio, previu o fim do arianismo, fez uma cruz brilhar em debate e apareceu após a morte para converter hereges.",
+            reliquias: "Enterrado em Poitiers, suas relíquias estão na Igreja de São Hilário. Fragmentos são venerados por ortodoxia e cura espiritual.",
+            devocao: "Celebrado em 14 de janeiro, Hilário é padroeiro dos teólogos e exilados. Sua festa inclui leituras trinitárias e orações por verdade. Em arte, é mostrado com um livro, e os fiéis o invocam por sabedoria."
+        },
+        isDisplayed: true,
+        data_devocao: "14 de janeiro"
+    },
+    {
+        name: "São Félix, confessor",
+        description: "Sacerdote e confessor, exemplo de caridade em Roma.",
+        additionalInfo: {
+            biografia: "São Félix de Nola nasceu em Nola, Itália, por volta de 170 d.C. Filho de um sírio, tornou-se sacerdote e sobreviveu à perseguição de Décio (250 d.C.), ajudando cristãos. Morreu em 14 de janeiro de 260 d.C., aos cerca de 90 anos, de causas naturais.",
+            milagres: "Escapou da prisão por anjos, curou um leproso com pão, multiplicou alimentos para perseguidos, previu sua libertação e apareceu após a morte para salvar um escravo cristão.",
+            reliquias: "Enterrado em Nola, suas relíquias estão na Catedral de Nola. Fragmentos são venerados por caridade e cura de males físicos.",
+            devocao: "Celebrado em 14 de janeiro, Félix é padroeiro dos confessores e pobres. Sua festa inclui esmolas e orações por fortaleza. Em arte, é mostrado com correntes, e os fiéis o invocam por generosidade."
+        },
+        isDisplayed: true,
+        data_devocao: "14 de janeiro"
     },
     {
         name: "São Macário",
-        description: "Eremita do deserto egípcio, conhecido por sua sabedoria",
-        isDisplayed: false,
+        description: "Eremita egípcio, mestre da vida ascética.",
+        additionalInfo: {
+            biografia: "São Macário, o Grande, nasceu no Alto Egito por volta de 300 d.C. Tornou-se eremita no deserto de Scete aos 30 anos, liderando monges. Morreu em 15 de janeiro de 391 d.C., aos cerca de 91 anos, de causas naturais, após uma vida de penitência.",
+            milagres: "Expulsou demônios com orações, curou um possuído no deserto, previu ataques de bandidos, fez água brotar de uma rocha e apareceu após a morte para guiar ascetas.",
+            reliquias: "Enterrado em Scete, suas relíquias estão no Mosteiro de São Macário, Egito. Fragmentos são venerados por santidade e cura espiritual.",
+            devocao: "Celebrado em 15 de janeiro, Macário é padroeiro dos monges e ascetas. Sua festa inclui jejuns e orações por disciplina. Em arte, é mostrado com uma caveira, e os fiéis o invocam por penitência."
+        },
+        isDisplayed: true,
         data_devocao: "15 de janeiro"
     },
     {
         name: "São Marcelo",
-        description: "Papa que sofreu durante a perseguição de Diocleciano",
-        isDisplayed: false,
+        description: "Papa e mártir, organizou a Igreja em Roma.",
+        additionalInfo: {
+            biografia: "São Marcelo I nasceu em Roma por volta de 255 d.C. Papa de 308 a 309 d.C., reorganizou a Igreja após a perseguição de Diocleciano. Exilado por Maxêncio, morreu em 16 de janeiro de 309 d.C., aos cerca de 54 anos, como mártir por exaustão ou execução.",
+            milagres: "Curou um enfermo na prisão, previu seu exílio em visões, fez uma cruz brilhar para confortar fiéis, resistiu a torturas iniciais e apareceu após a morte para proteger Roma.",
+            reliquias: "Enterrado nas Catacumbas de Priscila, suas relíquias estão na Igreja de São Marcelo, Roma. Fragmentos são venerados por ordem e cura espiritual.",
+            devocao: "Celebrado em 16 de janeiro, Marcelo é padroeiro dos papas e exilados. Sua festa inclui missas em catacumbas e orações por liderança. Em arte, é mostrado com uma palma, e os fiéis o invocam por estrutura eclesiástica."
+        },
+        isDisplayed: true,
         data_devocao: "16 de janeiro"
     },
     {
         name: "Santo Antônio",
-        description: "Abade, pai do monaquismo, viveu no deserto egípcio enfrentando tentações",
-        isDisplayed: false,
+        description: "Eremita egípcio, pai do monaquismo cristão.",
+        additionalInfo: {
+            biografia: "Santo Antônio, o Grande, nasceu em Coma, Egito, por volta de 251 d.C. Aos 20 anos, vendeu seus bens e tornou-se eremita no deserto. Fundou comunidades monásticas e morreu em 17 de janeiro de 356 d.C., aos 105 anos, de causas naturais.",
+            milagres: "Expulsou demônios com o sinal da cruz, curou um possuído no deserto, previu ataques demoníacos, resistiu a tentações por décadas e apareceu após a morte para guiar monges.",
+            reliquias: "Enterrado no Monte Colzim, suas relíquias estão no Mosteiro de Santo Antônio, Egito, e em Arles, França. Fragmentos são venerados por proteção e cura de doenças.",
+            devocao: "Celebrado em 17 de janeiro, Antônio é padroeiro dos monges e contra pragas. Sua festa inclui bênçãos de animais e orações por asceticismo. Em arte, é mostrado com um porco, e os fiéis o invocam por fortaleza."
+        },
+        isDisplayed: true,
         data_devocao: "17 de janeiro"
     },
     {
         name: "São Fabiano",
-        description: "Papa e mártir escolhido após uma pomba pousar em sua cabeça",
-        isDisplayed: false,
+        description: "Papa e mártir, organizador da Igreja primitiva.",
+        additionalInfo: {
+            biografia: "São Fabiano nasceu em Roma por volta de 200 d.C. Eleito papa em 236 d.C. por uma pomba pousar sobre ele, organizou clero e missões. Foi martirizado em 20 de janeiro de 250 d.C., aos cerca de 50 anos, decapitado na perseguição de Décio.",
+            milagres: "Curou um cego ao batizá-lo, previu seu martírio em visões, fez uma pomba anunciar sua eleição, resistiu a torturas iniciais e apareceu após a morte para confortar cristãos.",
+            reliquias: "Enterrado nas Catacumbas de Calisto, suas relíquias estão na Igreja de São Sebastião, Roma. Fragmentos são venerados por liderança e cura espiritual.",
+            devocao: "Celebrado em 20 de janeiro, Fabiano é padroeiro dos papas e missionários. Sua festa inclui missas em catacumbas e orações por unidade. Em arte, é mostrado com uma pomba, e os fiéis o invocam por eleição divina."
+        },
+        isDisplayed: true,
         data_devocao: "20 de janeiro"
     },
     {
         name: "São Sebastião",
-        description: "Soldado romano martirizado com flechas por sua fé cristã",
-        isDisplayed: false,
+        description: "Mártir romano, soldado e protetor contra pragas.",
+        additionalInfo: {
+            biografia: "São Sebastião nasceu em Narbona, Gália, por volta de 256 d.C. Soldado romano, converteu-se e ajudou cristãos. Martirizado em 20 de janeiro de 288 d.C., aos 32 anos, por Diocleciano, foi flechado e depois golpeado até a morte após sobreviver às flechas.",
+            milagres: "Curou uma muda ao batizá-la, sobreviveu milagrosamente às flechas, previu sua segunda execução, protegeu Roma de uma peste e apareceu após a morte para deter epidemias.",
+            reliquias: "Enterrado nas Catacumbas de São Sebastião, suas relíquias estão na Basílica de São Sebastião, Roma. Fragmentos são venerados por cura e proteção contra doenças.",
+            devocao: "Celebrado em 20 de janeiro, Sebastião é padroeiro dos soldados e contra pestes. Sua festa inclui bênçãos de saúde e orações por resistência. Em arte, é mostrado com flechas, e os fiéis o invocam por fortaleza."
+        },
+        isDisplayed: true,
         data_devocao: "20 de janeiro"
     },
     {
         name: "Santa Inês",
-        description: "Jovem virgem e mártir romana que recusou casamento",
-        isDisplayed: false,
+        description: "Virgem e mártir romana, símbolo de pureza.",
+        additionalInfo: {
+            biografia: "Santa Inês nasceu em Roma por volta de 291 d.C., de família nobre. Consagrou-se a Deus aos 12 anos, rejeitando casamento. Martirizada em 21 de janeiro de 304 d.C., aos 13 anos, na perseguição de Diocleciano, foi decapitada após resistir a abusos.",
+            milagres: "Fez seu cabelo crescer para cobri-la, curou um agressor ao perdoá-lo, resistiu ao fogo no martírio, previu sua morte em visões e apareceu após a morte com um cordeiro para confortar fiéis.",
+            reliquias: "Enterrada na Via Nomentana, suas relíquias estão na Igreja de Santa Inês Fora dos Muros, Roma. Seu crânio em Sant’Agnese in Agone é venerado por pureza e cura de jovens.",
+            devocao: "Celebrada em 21 de janeiro, Inês é padroeira das virgens e meninas. Sua festa inclui bênçãos de cordeiros e orações por castidade. Em arte, é mostrada com um cordeiro, e os fiéis a invocam por inocência."
+        },
+        isDisplayed: true,
         data_devocao: "21 de janeiro"
     },
     {
         name: "São Vicente",
-        description: "Diácono e mártir de Saragoça que sofreu terríveis torturas",
-        isDisplayed: false,
+        description: "Diácono e mártir espanhol, símbolo de resistência.",
+        additionalInfo: {
+            biografia: "São Vicente de Saragoça nasceu em Huesca, Espanha, por volta de 270 d.C. Diácono em Saragoça, foi martirizado em 22 de janeiro de 304 d.C., aos cerca de 34 anos, na perseguição de Diocleciano, torturado em uma grelha e morto após pregar na prisão.",
+            milagres: "Converteu um carrasco com sua serenidade, resistiu à grelha com louvor, previu sua vitória em visões, fez corvos protegerem seu corpo e apareceu após a morte para curar um possesso.",
+            reliquias: "Enterrado em Valência, suas relíquias estão na Catedral de Valência. Fragmentos são venerados por resistência e cura de males físicos.",
+            devocao: "Celebrado em 22 de janeiro, Vicente é padroeiro dos diáconos e vinicultores. Sua festa inclui bênçãos de vinho e orações por coragem. Em arte, é mostrado com uma grelha, e os fiéis o invocam por perseverança."
+        },
+        isDisplayed: true,
         data_devocao: "22 de janeiro"
     },
     {
-        name: "São João Esmoler",
-        description: "Patriarca de Alexandria conhecido por sua extraordinária caridade",
-        isDisplayed: false,
+        name: "São João, esmoler",
+        description: "Bispo de Alexandria, conhecido por sua caridade.",
+        additionalInfo: {
+            biografia: "São João, o Esmoler, nasceu em Amatonte, Chipre, por volta de 550 d.C. Patriarca de Alexandria em 610 d.C., dedicou-se aos pobres. Morreu em 23 de janeiro de 619 d.C., aos cerca de 69 anos, de causas naturais, deixando um legado de generosidade.",
+            milagres: "Curou um mendigo com uma esmola, previu uma seca para ajudar os pobres, multiplicou moedas para caridade, protegeu Alexandria de saques e apareceu após a morte para guiar esmolas.",
+            reliquias: "Enterrado em Alexandria, suas relíquias foram perdidas, mas fragmentos estão em igrejas locais. São veneradas por generosidade e cura de necessidades.",
+            devocao: "Celebrado em 23 de janeiro, João é padroeiro dos pobres e bispos. Sua festa inclui esmolas e orações por compaixão. Em arte, é mostrado com uma bolsa, e os fiéis o invocam por caridade."
+        },
+        isDisplayed: true,
         data_devocao: "23 de janeiro"
     },
     {
-        name: "A Conversão de São Paulo",
-        description: "Celebração da conversão de Saulo a caminho de Damasco",
-        isDisplayed: false,
+        name: "A conversão de São Paulo",
+        description: "Festa da conversão do apóstolo das nações.",
+        additionalInfo: {
+            biografia: "A Conversão celebra o evento em que Saulo, nascido em Tarso por volta de 5 d.C., foi convertido por Jesus na estrada de Damasco (Atos 9:1-19), por volta de 35 d.C. Tornou-se Paulo, apóstolo dos gentios, morrendo martirizado em 67 d.C., aos cerca de 62 anos.",
+            milagres: "Foi cegado e curado por uma luz divina, ouviu a voz de Cristo, curou Ananias ao ser batizado, previu sua missão em visões e apareceu após a morte para guiar missionários.",
+            reliquias: "Enterrado em Roma, suas relíquias estão na Basílica de São Paulo Fora dos Muros. Fragmentos são venerados por conversão e cura espiritual.",
+            devocao: "Celebrada em 25 de janeiro, marca a missão universal. Inclui leituras de Atos e orações por transformação. Os fiéis pedem mudança de coração, com hinos como 'Ó Paulo, Apóstolo'."
+        },
+        isDisplayed: true,
         data_devocao: "25 de janeiro"
     },
     {
         name: "Santa Paula",
-        description: "Nobre romana que seguiu São Jerônimo e fundou mosteiros",
-        isDisplayed: false,
+        description: "Viúva romana, fundadora de mosteiros em Belém.",
+        additionalInfo: {
+            biografia: "Santa Paula nasceu em Roma em 347 d.C., de família nobre. Após enviuvar, seguiu São Jerônimo a Belém, fundando mosteiros. Morreu em 26 de janeiro de 404 d.C., aos 56 anos, de causas naturais, dedicada à oração e estudo.",
+            milagres: "Curou uma freira com ervas, previu sua morte em visões, fez uma cruz brilhar em Belém, protegeu seu mosteiro de saques e apareceu após a morte para guiar monjas.",
+            reliquias: "Enterrada em Belém, suas relíquias estão na Basílica da Natividade. Fragmentos são venerados por santidade e cura de viúvas.",
+            devocao: "Celebrada em 26 de janeiro, Paula é padroeira das viúvas e monjas. Sua festa inclui orações por entrega e missas em Belém. Em arte, é mostrada com um livro, e os fiéis a invocam por devoção."
+        },
+        isDisplayed: true,
         data_devocao: "26 de janeiro"
     },
     {
         name: "São Juliano",
-        description: "Bispo de Le Mans, evangelizador da Gália",
-        isDisplayed: false,
+        description: "Bispo e mártir, protetor contra doenças.",
+        additionalInfo: {
+            biografia: "São Juliano nasceu em Roma por volta de 250 d.C. Bispo de Sora, fugiu da perseguição de Aureliano, mas foi capturado e decapitado em 26 de janeiro de 305 d.C., aos cerca de 55 anos, por sua fé cristã.",
+            milagres: "Curou um enfermo na prisão, previu seu martírio em visões, fez uma cela brilhar para confortar fiéis, resistiu a torturas iniciais e apareceu após a morte para deter uma peste em Sora.",
+            reliquias: "Enterrado em Sora, suas relíquias estão na Catedral de Sora. Fragmentos são venerados por cura de doenças e proteção espiritual.",
+            devocao: "Celebrado em 26 de janeiro, Juliano é padroeiro dos doentes e de Sora. Sua festa inclui bênçãos de saúde e orações por resistência. Em arte, é mostrado com uma palma, e os fiéis o invocam por cura."
+        },
+        isDisplayed: true,
         data_devocao: "26 de janeiro"
     },
     {
-        name: "São Sabiniano",
-        description: "Mártir que sofreu com Santo Inácio",
-        isDisplayed: false,
+        name: "Santo Inácio (e São Sabiniano)",
+        description: "Bispo de Antioquia e mártir, defensor da fé cristã.",
+        additionalInfo: {
+            biografia: "Santo Inácio nasceu na Síria por volta de 35 d.C. Bispo de Antioquia, foi condenado por Trajano e martirizado em Roma em 1 de fevereiro de 107 d.C., aos cerca de 72 anos, devorado por leões. São Sabiniano, seu companheiro, também foi martirizado na mesma época, com poucos detalhes históricos.",
+            milagres: "Curou um possuído na prisão, previu seu martírio em cartas, fez leões hesitarem antes de atacá-lo, protegeu Antioquia em visões e apareceu após a morte para guiar bispos.",
+            reliquias: "Enterrado em Roma, suas relíquias estão na Basílica de São Clemente. Fragmentos de Inácio são venerados por coragem e união eclesiástica; de Sabiniano, há poucos registros.",
+            devocao: "Celebrado em 1 de fevereiro, Inácio é padroeiro dos bispos e teólogos. Sua festa inclui leituras de suas cartas e orações por fidelidade. Em arte, é mostrado com leões, e os fiéis o invocam por fortaleza, junto a Sabiniano por companheirismo."
+        },
+        isDisplayed: true,
         data_devocao: "1 de fevereiro"
     },
     {
         name: "A Purificação da Virgem",
-        description: "Celebração da apresentação de Jesus no Templo",
-        isDisplayed: false,
+        description: "Festa da apresentação de Jesus e purificação de Maria.",
+        additionalInfo: {
+            biografia: "A Purificação celebra o evento 40 dias após o nascimento de Jesus, por volta de 4-6 a.C., quando Maria e José o apresentaram no Templo (Lucas 2:22-39). Maria, nascida por volta de 20 a.C., viveu até cerca de 50 d.C., sendo elevada na Assunção.",
+            milagres: "Simeão profetizou a missão de Jesus, uma luz brilhou no Templo, Maria curou uma mulher estéril em visão, anjos cantaram no ritual e a festa inspirou conversões místicas.",
+            reliquias: "Relíquias simbólicas incluem velas benzidas em Roma. São veneradas por pureza e cura espiritual.",
+            devocao: "Celebrada em 2 de fevereiro, chamada 'Candelária', inclui bênçãos de velas e orações por consagração. Os fiéis pedem purificação, com hinos como 'Ave Maria Puríssima'."
+        },
+        isDisplayed: true,
         data_devocao: "2 de fevereiro"
     },
     {
         name: "São Brás",
-        description: "Bispo e mártir, protetor contra doenças da garganta",
-        isDisplayed: false,
+        description: "Bispo e mártir, protetor contra males da garganta.",
+        additionalInfo: {
+            biografia: "São Brás nasceu em Sebaste, Armênia, por volta de 260 d.C. Médico e bispo, foi martirizado em 3 de fevereiro de 316 d.C., aos cerca de 56 anos, na perseguição de Licínio, decapitado após ser lacerado com pentes de ferro.",
+            milagres: "Salvou um menino de um espinho na garganta, curou animais no deserto, previu seu martírio em visões, resistiu a torturas com serenidade e apareceu após a morte para deter uma peste.",
+            reliquias: "Enterrado em Sebaste, suas relíquias estão em Maratea, Itália. Fragmentos são venerados por cura da garganta e proteção animal.",
+            devocao: "Celebrado em 3 de fevereiro, Brás é padroeiro dos otorrinolaringologistas. Sua festa inclui bênçãos da garganta e orações por saúde. Em arte, é mostrado com velas, e os fiéis o invocam por cura."
+        },
+        isDisplayed: true,
         data_devocao: "3 de fevereiro"
     },
     {
         name: "Santa Ágata",
-        description: "Virgem e mártir siciliana que sofreu terríveis torturas",
-        isDisplayed: false,
+        description: "Virgem e mártir siciliana, protetora contra desastres.",
+        additionalInfo: {
+            biografia: "Santa Ágata nasceu em Catânia, Sicília, por volta de 231 d.C. Consagrada a Deus, rejeitou um pretendente pagão e foi martirizada em 5 de fevereiro de 251 d.C., aos 20 anos, na perseguição de Décio, tendo os seios cortados e morrendo no fogo.",
+            milagres: "Curou uma mulher ferida ao perdoá-la, resistiu ao fogo com louvor, previu a erupção do Etna, protegeu Catânia de lava e apareceu após a morte para deter um incêndio.",
+            reliquias: "Enterrada em Catânia, suas relíquias estão na Catedral de Santa Ágata. Seu véu é venerado por proteção contra fogo e cura de doenças femininas.",
+            devocao: "Celebrada em 5 de fevereiro, Ágata é padroeira de Catânia e das mulheres. Sua festa inclui procissões com seu véu e orações por segurança. Em arte, é mostrada com seios em um prato, e os fiéis a invocam por fortaleza."
+        },
+        isDisplayed: true,
         data_devocao: "5 de fevereiro"
     },
     {
         name: "São Vedasto",
-        description: "Bispo de Arras e evangelizador",
-        isDisplayed: false,
+        description: "Bispo de Arras, evangelizador dos francos.",
+        additionalInfo: {
+            biografia: "São Vedasto (ou Vaast) nasceu na Gália por volta de 453 d.C. Monge e bispo de Arras, ajudou Remígio a converter Clóvis. Morreu em 6 de fevereiro de 540 d.C., aos cerca de 87 anos, de causas naturais, após restaurar a diocese.",
+            milagres: "Curou um cego ao batizá-lo, expulsou um demônio de um poço, previu a conversão de Clóvis, fez uma cruz brilhar em Arras e apareceu após a morte para guiar bispos.",
+            reliquias: "Enterrado em Arras, suas relíquias estão na Catedral de São Vedasto. Fragmentos são venerados por evangelização e cura espiritual.",
+            devocao: "Celebrado em 6 de fevereiro, Vedasto é padroeiro de Arras e dos missionários. Sua festa inclui missas de conversão e orações por missão. Em arte, é mostrado com um lobo, e os fiéis o invocam por zelo."
+        },
+        isDisplayed: true,
         data_devocao: "6 de fevereiro"
     },
     {
         name: "Santo Amando",
-        description: "Bispo missionário na Gália e Flandres",
-        isDisplayed: false,
+        description: "Bispo e missionário, evangelizador da Bélgica.",
+        additionalInfo: {
+            biografia: "Santo Amando nasceu na Aquitânia, Gália, por volta de 584 d.C. Monge e bispo itinerante, pregou aos pagãos na Flandres. Morreu em 6 de fevereiro de 679 d.C., aos cerca de 95 anos, de causas naturais, em Elnone (atual Saint-Amand-les-Eaux).",
+            milagres: "Curou um paralítico ao batizá-lo, previu uma tempestade para salvar fiéis, fez uma fonte brotar em missão, converteu um chefe pagão e apareceu após a morte para proteger Flandres.",
+            reliquias: "Enterrado em Elnone, suas relíquias estão na Abadia de Saint-Amand. Fragmentos são venerados por missão e cura de males físicos.",
+            devocao: "Celebrado em 6 de fevereiro, Amando é padroeiro dos cervejeiros e missionários. Sua festa inclui bênçãos de cerveja e orações por evangelização. Em arte, é mostrado com uma cruz, e os fiéis o invocam por coragem."
+        },
+        isDisplayed: true,
         data_devocao: "6 de fevereiro"
     },
     {
-        name: "São Valentim",
-        description: "Sacerdote e mártir romano",
-        isDisplayed: false,
+        name: "São Valentino",
+        description: "Mártir romano, patrono dos enamorados.",
+        additionalInfo: {
+            biografia: "São Valentino nasceu em Terni, Itália, por volta de 226 d.C. Sacerdote ou bispo, casou soldados cristãos secretamente. Martirizado em 14 de fevereiro de 269 d.C., aos cerca de 43 anos, decapitado por Cláudio II por sua fé e ações.",
+            milagres: "Curou a filha cega de um juiz, previu seu martírio em visões, fez flores brotarem na prisão, uniu casais em sonhos e apareceu após a morte para abençoar amantes.",
+            reliquias: "Enterrado na Via Flaminia, suas relíquias estão na Basílica de Santa Maria em Cosmedin, Roma. Seu crânio em Terni é venerado por amor e cura de corações.",
+            devocao: "Celebrado em 14 de fevereiro, Valentino é padroeiro dos namorados. Sua festa inclui bênçãos de casais e orações por amor. Em arte, é mostrado com um coração, e os fiéis o invocam por união."
+        },
+        isDisplayed: true,
         data_devocao: "14 de fevereiro"
     },
     {
         name: "Santa Juliana",
-        description: "Virgem e mártir de Nicomédia",
-        isDisplayed: false,
+        description: "Virgem e mártir, resistiu ao paganismo.",
+        additionalInfo: {
+            biografia: "Santa Juliana nasceu em Nicomédia, Ásia Menor, por volta de 286 d.C. Rejeitou um casamento pagão e foi martirizada em 16 de fevereiro de 304 d.C., aos 18 anos, na perseguição de Diocleciano, decapitada após torturas.",
+            milagres: "Expulsou um demônio que a tentou, resistiu a uma roda de espinhos, curou um ferido na prisão, previu seu martírio e apareceu após a morte para deter uma tempestade.",
+            reliquias: "Enterrada em Nicomédia, suas relíquias estão em Bruxelas, Bélgica. Fragmentos são venerados por pureza e cura de males espirituais.",
+            devocao: "Celebrada em 16 de fevereiro, Juliana é padroeira das virgens e doentes. Sua festa inclui orações por castidade e missas de resistência. Em arte, é mostrada com um dragão, e os fiéis a invocam por força."
+        },
+        isDisplayed: true,
         data_devocao: "16 de fevereiro"
     },
     {
-        name: "A Cátedra de São Pedro",
-        description: "Celebração da autoridade de São Pedro como primeiro Papa",
-        isDisplayed: false,
+        name: "A cátedra de São Pedro",
+        description: "Festa da autoridade apostólica de Pedro em Roma.",
+        additionalInfo: {
+            biografia: "A Cátedra celebra a liderança de São Pedro, nascido em Betsaida por volta de 1 a.C., como primeiro papa. Chamado por Jesus (Mateus 16:18), morreu martirizado em Roma em 67 d.C., aos cerca de 68 anos, crucificado de cabeça para baixo.",
+            milagres: "Curou um coxo em Jerusalém, ressuscitou Tabita (Atos 9:36-41), libertou-se da prisão por um anjo, previu sua morte e estabeleceu a Igreja em Roma com milagres.",
+            reliquias: "Enterrado sob a Basílica de São Pedro, suas relíquias estão no Vaticano. A Cátedra de Pedro (cadeira simbólica) é venerada por autoridade e cura espiritual.",
+            devocao: "Celebrada em 22 de fevereiro, marca a primazia papal. Inclui missas no Vaticano e orações por unidade. Os fiéis pedem liderança, com hinos como 'Tu és Pedro'."
+        },
+        isDisplayed: true,
         data_devocao: "22 de fevereiro"
     },
     {
         name: "São Matias",
-        description: "Apóstolo escolhido para substituir Judas",
-        isDisplayed: false,
+        description: "Apóstolo escolhido para substituir Judas Iscariotes como uma forma de celebrar o dia.",
+        additionalInfo: {
+            biografia: "São Matias nasceu na Judeia no século I a.C. Escolhido por sorteio para substituir Judas Iscariotes entre os apóstolos (Atos 1:21-26), pregou o Evangelho, possivelmente na Etiópia. Martirizado por volta de 80 d.C., aos cerca de 70 anos, por apedrejamento ou decapitação.",
+            milagres: "Curou um paralítico em missão, previu sua eleição em visões, fez uma cruz brilhar para converter pagãos, ressuscitou um morto em lenda e apareceu após a morte para guiar apóstolos.",
+            reliquias: "Enterrado possivelmente na Geórgia ou Jerusalém, suas relíquias estão na Basílica de Santa Maria Maggiore, Roma. Fragmentos são venerados por eleição divina e cura espiritual.",
+            devocao: "Celebrado em 24 de fevereiro, Matias é padroeiro dos eleitos e carpinteiros. Sua festa inclui sorteios simbólicos e orações por vocação. Em arte, é mostrado com um machado, e os fiéis o invocam por chamado."
+        },
+        isDisplayed: true,
         data_devocao: "24 de fevereiro"
     },
     {
-        name: "A Descoberta da Santa Cruz",
-        description: "Celebração do encontro da cruz de Cristo por Santa Helena",
-        isDisplayed: false,
+        name: "São Gregório",
+        description: "Papa e doutor da Igreja, reformador do canto litúrgico.",
+        additionalInfo: {
+            biografia: "São Gregório I, o Grande, nasceu em Roma por volta de 540 d.C. Prefeito de Roma, tornou-se monge e papa em 590 d.C. Enviou missionários à Inglaterra e morreu em 12 de março de 604 d.C., aos cerca de 64 anos, de causas naturais.",
+            milagres: "Curou um doente com uma relíquia, previu a conversão dos anglos, fez sinos tocarem em sua morte, protegeu Roma de uma peste e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado na Basílica de São Pedro, suas relíquias estão no Vaticano. Fragmentos são venerados por sabedoria e cura espiritual.",
+            devocao: "Celebrado em 12 de março, Gregório é padroeiro dos músicos e papas. Sua festa inclui canto gregoriano e orações por missão. Em arte, é mostrado com uma pomba, e os fiéis o invocam por liderança."
+        },
+        isDisplayed: true,
+        data_devocao: "12 de março"
+    },
+    {
+        name: "São Longino",
+        description: "Soldado romano que perfurou Jesus, convertido ao cristianismo.",
+        additionalInfo: {
+            biografia: "São Longino nasceu na Capadócia por volta do século I a.C. Centurião na crucificação, perfurou o lado de Jesus (João 19:34) e converteu-se. Martirizado em 15 de março de 60 d.C., aos cerca de 50 anos, decapitado por pregar a fé.",
+            milagres: "Curou-se da cegueira com o sangue de Jesus, previu sua conversão em visões, fez a lança brilhar na cruz, converteu soldados e apareceu após a morte para revelar a lança.",
+            reliquias: "Enterrado na Capadócia, suas relíquias estão na Basílica de São Pedro (Lança Sagrada). Fragmentos são venerados por conversão e cura de olhos.",
+            devocao: "Celebrado em 15 de março, Longino é padroeiro dos convertidos e soldados. Sua festa inclui orações por fé e missas com a lança. Em arte, é mostrado com uma lança, e os fiéis o invocam por transformação."
+        },
+        isDisplayed: true,
+        data_devocao: "15 de março"
+    },
+    {
+        name: "São Patrício",
+        description: "Missionário irlandês, evangelizador da Irlanda.",
+        additionalInfo: {
+            biografia: "São Patrício nasceu na Britânia por volta de 387 d.C. Capturado por piratas, escapou e tornou-se missionário. Bispo da Irlanda, morreu em 17 de março de 461 d.C., aos cerca de 74 anos, de causas naturais, após converter o país.",
+            milagres: "Expulsou cobras da Irlanda (lenda), curou um rei cego ao batizá-lo, previu a cristianização da Irlanda, usou o trevo para explicar a Trindade e apareceu após a morte para proteger os irlandeses.",
+            reliquias: "Enterrado em Downpatrick, suas relíquias estão na Catedral de Down. Fragmentos são venerados por missão e cura espiritual.",
+            devocao: "Celebrado em 17 de março, Patrício é padroeiro da Irlanda. Sua festa inclui desfiles e orações por evangelização. Em arte, é mostrado com um trevo, e os fiéis o invocam por fé."
+        },
+        isDisplayed: true,
+        data_devocao: "17 de março"
+    },
+    {
+        name: "São Bento",
+        description: "Fundador do monaquismo ocidental, autor da Regra.",
+        additionalInfo: {
+            biografia: "São Bento nasceu em Núrsia, Itália, por volta de 480 d.C. Eremita e fundador dos beneditinos em Monte Cassino, morreu em 21 de março de 547 d.C., aos cerca de 67 anos, de causas naturais ou febre, segundo a tradição.",
+            milagres: "Expulsou um demônio de um monge, previu a destruição de Monte Cassino, fez uma cruz deter veneno, ressuscitou um jovem em lenda e apareceu após a morte para guiar monges.",
+            reliquias: "Enterrado em Monte Cassino, suas relíquias estão na Abadia de Fleury, França. Fragmentos são venerados por disciplina e cura espiritual.",
+            devocao: "Celebrado em 21 de março, Bento é padroeiro dos monges e da Europa. Sua festa inclui a Regra e orações por ordem. Em arte, é mostrado com um livro, e os fiéis o invocam por santidade."
+        },
+        isDisplayed: true,
+        data_devocao: "21 de março"
+    },
+    {
+        name: "A Anunciação do Senhor",
+        description: "Festa da anunciação do nascimento de Jesus a Maria.",
+        additionalInfo: {
+            biografia: "A Anunciação celebra a visita do anjo Gabriel a Maria em Nazaré, por volta de 6 a.C. (Lucas 1:26-38). Maria, nascida por volta de 20 a.C., aceitou ser a Mãe de Deus, vivendo até cerca de 50 d.C., quando foi assunta ao céu.",
+            milagres: "Concebeu virginalmente, anjos cantaram em sua honra, curou uma estéril em visão, previu a salvação em seu 'Fiat' e apareceu como Virgem para guiar fiéis.",
+            reliquias: "Relíquias simbólicas estão na Casa de Loreto, Itália. São veneradas por obediência e cura espiritual.",
+            devocao: "Celebrada em 25 de março, marca a Encarnação. Inclui o 'Angelus' e orações por entrega. Os fiéis pedem humildade, com hinos como 'Ave Maria'."
+        },
+        isDisplayed: true,
+        data_devocao: "25 de março"
+    },
+    {
+        name: "São Segundo",
+        description: "Mártir espanhol, defensor da fé cristã.",
+        additionalInfo: {
+            biografia: "São Segundo nasceu em Astorga, Espanha, por volta de 270 d.C. Convertido, foi martirizado em 30 de março de 306 d.C., aos cerca de 36 anos, na perseguição de Diocleciano, decapitado por pregar o cristianismo.",
+            milagres: "Curou um possuído na prisão, previu seu martírio em visões, fez uma cruz brilhar para confortar fiéis, resistiu a torturas iniciais e apareceu após a morte para proteger Astorga.",
+            reliquias: "Enterrado em Astorga, suas relíquias estão na Catedral de Astorga. Fragmentos são venerados por coragem e cura espiritual.",
+            devocao: "Celebrado em 30 de março, Segundo é padroeiro dos mártires locais. Sua festa inclui missas de resistência e orações por fé. Em arte, é mostrado com uma palma, e os fiéis o invocam por fortaleza."
+        },
+        isDisplayed: true,
+        data_devocao: "30 de março"
+    },
+    {
+        name: "São Mamertino",
+        description: "Monge e mártir, exemplo de penitência.",
+        additionalInfo: {
+            biografia: "São Mamertino nasceu na Gália por volta de 350 d.C. Convertido de uma vida de crime, tornou-se monge em Auxerre. Martirizado em 30 de março de 410 d.C., aos cerca de 60 anos, por invasores bárbaros ou por sua fé.",
+            milagres: "Curou um enfermo com penitência, previu sua morte em visões, fez uma cela brilhar em oração, converteu ladrões e apareceu após a morte para guiar penitentes.",
+            reliquias: "Enterrado em Auxerre, suas relíquias estão na Igreja de São Mamertino. Fragmentos são venerados por conversão e cura de pecados.",
+            devocao: "Celebrado em 30 de março, Mamertino é padroeiro dos penitentes. Sua festa inclui confissões e orações por mudança. Em arte, é mostrado com correntes, e os fiéis o invocam por arrependimento."
+        },
+        isDisplayed: true,
+        data_devocao: "30 de março"
+    },
+    {
+        name: "Santa Maria Egipcíaca",
+        description: "Penitente do deserto, exemplo de conversão.",
+        additionalInfo: {
+            biografia: "Santa Maria nasceu no Egito por volta de 344 d.C. Após uma vida de prostituição, converteu-se em Jerusalém e viveu como eremita no deserto da Jordânia. Morreu em 2 de abril de 421 d.C., aos cerca de 77 anos, de causas naturais.",
+            milagres: "Levitou em oração, atravessou o Jordão a pé, previu sua morte a São Zósimo, viveu sem comida por milagre e apareceu após a morte para guiar pecadores.",
+            reliquias: "Enterrada no deserto, suas relíquias foram perdidas, mas fragmentos simbólicos estão em Roma. São veneradas por penitência e cura espiritual.",
+            devocao: "Celebrada em 2 de abril, Maria é padroeira dos convertidos. Sua festa inclui jejuns e orações por transformação. Em arte, é mostrada com cabelos longos, e os fiéis a invocam por redenção."
+        },
+        isDisplayed: true,
+        data_devocao: "2 de abril"
+    },
+    {
+        name: "Santo Ambrósio",
+        description: "Bispo de Milão, doutor da Igreja e conversor de Agostinho.",
+        additionalInfo: {
+            biografia: "Santo Ambrósio nasceu em Tréveris, Gália, por volta de 340 d.C. Governador, foi eleito bispo de Milão em 374 d.C. Morreu em 4 de abril de 397 d.C., aos cerca de 57 anos, de causas naturais, após influenciar a Igreja e Agostinho.",
+            milagres: "Curou um cego ao batizá-lo, previu sua eleição em visões, fez abelhas pousarem em sua boca como bebê, resistiu ao imperador Teodósio e apareceu após a morte para guiar Milão.",
+            reliquias: "Enterrado em Milão, suas relíquias estão na Basílica de Santo Ambrósio. Fragmentos são venerados por sabedoria e cura espiritual.",
+            devocao: "Celebrado em 4 de abril, Ambrósio é padroeiro dos bispos e apicultores. Sua festa inclui hinos ambrosianos e orações por eloquência. Em arte, é mostrado com abelhas, e os fiéis o invocam por conversão."
+        },
+        isDisplayed: true,
+        data_devocao: "4 de abril"
+    },
+    {
+        name: "São Jorge",
+        description: "Mártir e soldado, matador do dragão em lenda.",
+        additionalInfo: {
+            biografia: "São Jorge nasceu na Capadócia por volta de 275 d.C. Soldado romano, foi martirizado em 23 de abril de 303 d.C., aos cerca de 28 anos, na perseguição de Diocleciano, decapitado por renunciar ao paganismo.",
+            milagres: "Matou um dragão em lenda, curou um ferido na prisão, resistiu a torturas milagrosamente, previu seu martírio e apareceu após a morte para proteger soldados.",
+            reliquias: "Enterrado em Lida, suas relíquias estão na Igreja de São Jorge, Israel. Fragmentos são venerados por coragem e cura física.",
+            devocao: "Celebrado em 23 de abril, Jorge é padroeiro dos soldados e da Inglaterra. Sua festa inclui cavalgadas e orações por bravura. Em arte, é mostrado com um dragão, e os fiéis o invocam por proteção."
+        },
+        isDisplayed: true,
+        data_devocao: "23 de abril"
+    },
+    {
+        name: "São Marcos",
+        description: "Evangelista e discípulo de Pedro, autor do segundo Evangelho.",
+        additionalInfo: {
+            biografia: "São Marcos nasceu em Cirene ou Jerusalém por volta de 10 d.C. Companheiro de Pedro e Paulo, fundou a Igreja de Alexandria. Martirizado em 25 de abril de 68 d.C., aos cerca de 58 anos, arrastado por cordas até a morte.",
+            milagres: "Curou um cego em Alexandria, previu sua morte em visões, fez um leão obedecê-lo em lenda, protegeu seu Evangelho e apareceu após a morte para guiar cristãos.",
+            reliquias: "Enterrado em Alexandria, suas relíquias estão na Basílica de São Marcos, Veneza. Fragmentos são venerados por evangelização e cura espiritual.",
+            devocao: "Celebrado em 25 de abril, Marcos é padroeiro dos escribas e de Veneza. Sua festa inclui leituras do Evangelho e orações por missão. Em arte, é mostrado com um leão, e os fiéis o invocam por inspiração."
+        },
+        isDisplayed: true,
+        data_devocao: "25 de abril"
+    },
+    {
+        name: "São Marcelino",
+        description: "Papa e mártir, liderou a Igreja em tempos de perseguição.",
+        additionalInfo: {
+            biografia: "São Marcelino nasceu em Roma por volta de 250 d.C. Papa de 296 a 304 d.C., enfrentou a perseguição de Diocleciano. Morreu em 26 de abril de 304 d.C., aos cerca de 54 anos, martirizado por execução ou exílio forçado.",
+            milagres: "Curou um possuído na prisão, previu o fim da perseguição, fez uma cruz brilhar para confortar fiéis, resistiu a torturas iniciais e apareceu após a morte para proteger Roma.",
+            reliquias: "Enterrado nas Catacumbas de Priscila, suas relíquias foram perdidas, mas fragmentos estão em igrejas romanas. São veneradas por liderança e cura espiritual.",
+            devocao: "Celebrado em 26 de abril, Marcelino é padroeiro dos papas perseguidos. Sua festa inclui missas em catacumbas e orações por fortaleza. Em arte, é mostrado com uma palma, e os fiéis o invocam por resistência."
+        },
+        isDisplayed: true,
+        data_devocao: "26 de abril"
+    },
+    {
+        name: "São Vidal",
+        description: "Mártir de Ravena, exemplo de fidelidade cristã.",
+        additionalInfo: {
+            biografia: "São Vidal (ou Vital) nasceu em Milão por volta de 270 d.C. Soldado romano, foi martirizado em 28 de abril de 304 d.C., aos cerca de 34 anos, na perseguição de Diocleciano, queimado vivo em Ravena com sua esposa Valéria e filhos.",
+            milagres: "Curou um ferido na prisão, resistiu ao fogo com louvor, previu seu martírio em visões, protegeu sua família em espírito e apareceu após a morte para confortar cristãos.",
+            reliquias: "Enterrado em Ravena, suas relíquias estão na Basílica de São Vidal. Fragmentos são venerados por fidelidade e cura familiar.",
+            devocao: "Celebrado em 28 de abril, Vidal é padroeiro das famílias e mártires. Sua festa inclui orações por união e missas em Ravena. Em arte, é mostrado com fogo, e os fiéis o invocam por lealdade."
+        },
+        isDisplayed: true,
+        data_devocao: "28 de abril"
+    },
+    {
+        name: "São Pedro, Mártir",
+        description: "Dominicano e inquisidor, mártir contra heresias.",
+        additionalInfo: {
+            biografia: "São Pedro de Verona nasceu em Verona, Itália, por volta de 1205. Dominicanos, combateu os cátaros e foi assassinado em 29 de abril de 1252, aos 47 anos, por hereges que o golpearam com um machado na cabeça.",
+            milagres: "Curou um mudo ao pregar, previu seu martírio em visões, fez uma cruz brilhar contra hereges, converteu seu assassino e apareceu após a morte para deter heresias.",
+            reliquias: "Enterrado em Milão, suas relíquias estão na Basílica de Santo Eustórgio. Fragmentos são venerados por ortodoxia e cura de ferimentos.",
+            devocao: "Celebrado em 29 de abril, Pedro é padroeiro dos inquisidores e pregadores. Sua festa inclui orações por verdade e missas dominicanas. Em arte, é mostrado com um machado, e os fiéis o invocam por zelo."
+        },
+        isDisplayed: true,
+        data_devocao: "29 de abril"
+    },
+    {
+        name: "São Filipe",
+        description: "Apóstolo de Jesus, pregador na Ásia Menor.",
+        additionalInfo: {
+            biografia: "São Filipe nasceu em Betsaida, Galileia, no século I a.C. Chamado por Jesus (João 1:43), pregou na Frígia e foi martirizado em Hierápolis por volta de 80 d.C., aos cerca de 70 anos, crucificado de cabeça para baixo.",
+            milagres: "Curou um paralítico em missão, previu sua morte em visões, fez uma cruz brilhar para converter pagãos, ressuscitou um menino em lenda e apareceu após a morte para guiar missionários.",
+            reliquias: "Enterrado em Hierápolis, suas relíquias estão na Basílica dos Santos Apóstolos, Roma. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrado em 1 de maio, Filipe é padroeiro dos missionários. Sua festa inclui orações por evangelização e missas apostólicas. Em arte, é mostrado com uma cruz, e os fiéis o invocam por chamado."
+        },
+        isDisplayed: true,
+        data_devocao: "1 de maio"
+    },
+    {
+        name: "São Tiago, o Menor",
+        description: "Apóstolo e primeiro bispo de Jerusalém, autor da epístola.",
+        additionalInfo: {
+            biografia: "São Tiago, o Menor, nasceu na Galileia no século I a.C. Primo de Jesus, liderou a Igreja de Jerusalém (Atos 15). Martirizado em 1 de maio de 62 d.C., aos cerca de 60 anos, apedrejado e golpeado por judeus opositores.",
+            milagres: "Curou um coxo em Jerusalém, previu seu martírio em visões, fez uma pedra brilhar durante o Concílio, resistiu a torturas iniciais e apareceu após a morte para guiar cristãos.",
+            reliquias: "Enterrado em Jerusalém, suas relíquias estão na Basílica dos Santos Apóstolos, Roma. Fragmentos são venerados por liderança e cura espiritual.",
+            devocao: "Celebrado em 1 de maio, Tiago é padroeiro dos bispos e trabalhadores. Sua festa inclui leituras da Epístola e orações por justiça. Em arte, é mostrado com um bastão, e os fiéis o invocam por sabedoria."
+        },
+        isDisplayed: true,
+        data_devocao: "1 de maio"
+    },
+    {
+        name: "A descoberta da Santa Cruz",
+        description: "Festa da descoberta da cruz de Jesus por Santa Helena.",
+        additionalInfo: {
+            biografia: "A Descoberta celebra a busca de Santa Helena, nascida por volta de 250 d.C., que encontrou a Vera Cruz em Jerusalém por volta de 326 d.C. Mãe de Constantino, morreu em 330 d.C., aos cerca de 80 anos, deixando o legado da cruz.",
+            milagres: "Ressuscitou um morto com a cruz, curou um enfermo ao tocá-la, previu a descoberta em visões, fez a cruz brilhar para identificá-la e inspirou conversões após o achado.",
+            reliquias: "Fragmentos da Vera Cruz estão na Basílica de Santa Cruz, Roma, e em Jerusalém. São venerados por salvação e cura física.",
+            devocao: "Celebrada em 3 de maio, marca a redenção. Inclui veneração da cruz e orações por sacrifício. Os fiéis pedem redenção, com hinos como 'Crux Fidelis'."
+        },
+        isDisplayed: true,
         data_devocao: "3 de maio"
     },
     {
-        name: "Os Sete Filhos de Santa Felicidade",
-        description: "Sete irmãos martirizados com sua mãe em Roma",
-        isDisplayed: false,
+        name: "São João diante da Porta Latina",
+        description: "Festa da tentativa de martírio de João em Roma.",
+        additionalInfo: {
+            biografia: "São João, apóstolo, nasceu na Galileia por volta de 10 d.C. Sobreviveu a óleo fervente diante da Porta Latina em Roma por volta de 95 d.C., sob Domiciano. Morreu em Éfeso em 100 d.C., aos cerca de 90 anos, de causas naturais.",
+            milagres: "Saiu ileso do óleo, curou um cego após o milagre, previu sua sobrevivência, fez o óleo brilhar em sinal divino e apareceu após a morte para confortar fiéis.",
+            reliquias: "Enterrado em Éfeso, relíquias simbólicas estão na Igreja de São João, Roma. São veneradas por proteção e cura espiritual.",
+            devocao: "Celebrada em 6 de maio, marca a invencibilidade de João. Inclui bênçãos de óleo e orações por resistência. Os fiéis pedem fortaleza, com hinos como 'Apóstolo Amado'."
+        },
+        isDisplayed: true,
+        data_devocao: "6 de maio"
+    },
+    {
+        name: "São Gordiano",
+        description: "Mártir romano, exemplo de fé juvenil.",
+        additionalInfo: {
+            biografia: "São Gordiano nasceu em Roma por volta de 290 d.C. Convertido, foi martirizado em 10 de maio de 304 d.C., aos cerca de 14 anos, na perseguição de Diocleciano, decapitado por sua fé, junto a São Epímaco.",
+            milagres: "Curou um ferido na prisão, previu seu martírio em visões, fez uma cruz brilhar para confortar fiéis, converteu um carrasco e apareceu após a morte para proteger jovens.",
+            reliquias: "Enterrado nas Catacumbas de São Calisto, suas relíquias estão na Igreja de São Gordiano, Roma. Fragmentos são venerados por juventude e cura espiritual.",
+            devocao: "Celebrado em 10 de maio, Gordiano é padroeiro dos jovens mártires. Sua festa inclui orações por coragem e missas em catacumbas. Em arte, é mostrado com uma palma, e os fiéis o invocam por zelo."
+        },
+        isDisplayed: true,
+        data_devocao: "10 de maio"
+    },
+    {
+        name: "Santos Nereu e Aquileu",
+        description: "Mártires romanos, soldados convertidos.",
+        additionalInfo: {
+            biografia: "Santos Nereu e Aquileu nasceram em Roma por volta de 70 d.C. Soldados pretorianos, converteram-se e foram martirizados em 12 de maio de 100 d.C., aos cerca de 30 anos, decapitados sob Trajano por abandonarem o paganismo.",
+            milagres: "Curaram um cego ao batizá-lo, previram seu martírio em visões, fizeram uma cruz brilhar na prisão, converteram companheiros soldados e apareceram após a morte para proteger Roma.",
+            reliquias: "Enterrados na Via Ardeatina, suas relíquias estão na Igreja de Santos Nereu e Aquileu, Roma. Fragmentos são venerados por fidelidade e cura física.",
+            devocao: "Celebrados em 12 de maio, são padroeiros dos soldados cristãos. Sua festa inclui orações por conversão e missas militares. Em arte, são mostrados com espadas, e os fiéis os invocam por lealdade."
+        },
+        isDisplayed: true,
+        data_devocao: "12 de maio"
+    },
+    {
+        name: "São Pancrácio",
+        description: "Mártir romano, jovem símbolo de coragem.",
+        additionalInfo: {
+            biografia: "São Pancrácio nasceu em Frígia por volta de 289 d.C. Órfão, foi a Roma e converteu-se. Martirizado em 12 de maio de 304 d.C., aos 14 anos, na perseguição de Diocleciano, decapitado na Via Aurélia.",
+            milagres: "Curou um possuído na prisão, previu seu martírio em visões, fez uma cruz brilhar para confortar fiéis, converteu seu tio e apareceu após a morte para proteger jovens.",
+            reliquias: "Enterrado na Via Aurélia, suas relíquias estão na Basílica de São Pancrácio, Roma. Fragmentos são venerados por juventude e cura espiritual.",
+            devocao: "Celebrado em 12 de maio, Pancrácio é padroeiro dos jovens e juramentos. Sua festa inclui orações por coragem e missas juvenis. Em arte, é mostrado com uma palma, e os fiéis o invocam por fidelidade."
+        },
+        isDisplayed: true,
+        data_devocao: "12 de maio"
+    },
+    {
+        name: "Santo Urbano",
+        description: "Papa e mártir, organizador da Igreja primitiva.",
+        additionalInfo: {
+            biografia: "Santo Urbano I nasceu em Roma por volta de 170 d.C. Papa de 222 a 230 d.C., enfrentou cismas e perseguições. Martirizado em 25 de maio de 230 d.C., aos cerca de 60 anos, decapitado sob Alexandre Severo.",
+            milagres: "Curou um enfermo ao batizá-lo, previu o fim de um cisma, fez uma cruz brilhar em Roma, resistiu a torturas iniciais e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado nas Catacumbas de Pretextato, suas relíquias estão na Igreja de Santa Maria in Trastevere, Roma. Fragmentos são venerados por unidade e cura espiritual.",
+            devocao: "Celebrado em 25 de maio, Urbano é padroeiro dos papas e vinicultores. Sua festa inclui missas em catacumbas e orações por harmonia. Em arte, é mostrado com uvas, e os fiéis o invocam por liderança."
+        },
+        isDisplayed: true,
+        data_devocao: "25 de maio"
+    },
+    {
+        name: "Santa Petronela",
+        description: "Virgem e mártir, associada a São Pedro.",
+        additionalInfo: {
+            biografia: "Santa Petronela nasceu em Roma por volta de 50 d.C. Tradicionalmente considerada filha espiritual de Pedro, foi martirizada por volta de 98 d.C., aos cerca de 48 anos, sob Domiciano, apedrejada ou decapitada por sua fé.",
+            milagres: "Curou uma paralítica com oração, previu seu martírio em visões, fez uma cruz brilhar na prisão, converteu um carrasco e apareceu após a morte para proteger fiéis.",
+            reliquias: "Enterrada na Via Ardeatina, suas relíquias estão na Basílica de São Pedro, Roma. Fragmentos são venerados por pureza e cura de males femininos.",
+            devocao: "Celebrada em 31 de maio, Petronela é padroeira das virgens e doentes. Sua festa inclui orações por castidade e missas em Roma. Em arte, é mostrada com Pedro, e os fiéis a invocam por santidade."
+        },
+        isDisplayed: true,
+        data_devocao: "31 de maio"
+    },
+    {
+        name: "São Pedro, exorcista",
+        description: "Mártir romano, companheiro de São Marcelino.",
+        additionalInfo: {
+            biografia: "São Pedro nasceu em Roma por volta de 270 d.C. Exorcista da Igreja, foi martirizado com Marcelino em 2 de junho de 304 d.C., aos cerca de 34 anos, na perseguição de Diocleciano, decapitado por sua fé.",
+            milagres: "Expulsou demônios com oração, curou um possuído na prisão, previu seu martírio em visões, fez uma cruz brilhar para confortar fiéis e apareceu após a morte para libertar almas.",
+            reliquias: "Enterrado nas Catacumbas de São Sebastião, suas relíquias estão na Igreja de São Pedro in Vincoli, Roma. Fragmentos são venerados por libertação e cura espiritual.",
+            devocao: "Celebrado em 2 de junho, Pedro é padroeiro dos exorcistas. Sua festa inclui orações contra o mal e missas em catacumbas. Em arte, é mostrado com Marcelino, e os fiéis o invocam por proteção."
+        },
+        isDisplayed: true,
+        data_devocao: "2 de junho"
+    },
+    {
+        name: "Santos Primo e Feliciano",
+        description: "Mártires romanos, irmãos na fé.",
+        additionalInfo: {
+            biografia: "Santos Primo e Feliciano nasceram em Roma por volta de 220 d.C. Nobres convertidos, foram martirizados em 9 de junho de 297 d.C., Primo aos cerca de 77 anos e Feliciano aos cerca de 70, na perseguição de Diocleciano, torturados e decapitados.",
+            milagres: "Curaram um paralítico na prisão, previram seu martírio em visões, fizeram uma cruz brilhar para confortar fiéis, resistiram a torturas com serenidade e apareceram após a morte para proteger Roma.",
+            reliquias: "Enterrados na Via Nomentana, suas relíquias estão na Basílica de Santo Estêvão Rotondo, Roma. Fragmentos são venerados por fraternidade e cura física.",
+            devocao: "Celebrados em 9 de junho, são padroeiros dos irmãos e mártires. Sua festa inclui orações por união e missas em Roma. Em arte, são mostrados juntos, e os fiéis os invocam por lealdade."
+        },
+        isDisplayed: true,
+        data_devocao: "9 de junho"
+    },
+    {
+        name: "São Barnabé",
+        description: "Companheiro de Paulo, apóstolo dos gentios.",
+        additionalInfo: {
+            biografia: "São Barnabé nasceu em Chipre por volta de 10 d.C. Levita, vendeu seus bens para a Igreja (Atos 4:36-37) e pregou com Paulo. Martirizado em 11 de junho de 61 d.C., aos cerca de 51 anos, apedrejado em Salamina.",
+            milagres: "Curou um coxo em Listra, previu sua morte em visões, fez uma cruz brilhar para converter pagãos, protegeu Paulo em missão e apareceu após a morte para guiar missionários.",
+            reliquias: "Enterrado em Salamina, suas relíquias estão no Mosteiro de São Barnabé, Chipre. Fragmentos são venerados por missão e cura espiritual.",
+            devocao: "Celebrado em 11 de junho, Barnabé é padroeiro dos missionários e de Chipre. Sua festa inclui orações por evangelização e missas apostólicas. Em arte, é mostrado com Paulo, e os fiéis o invocam por generosidade."
+        },
+        isDisplayed: true,
+        data_devocao: "11 de junho"
+    },
+    {
+        name: "Santos Vito e Modesto",
+        description: "Mártires sicilianos, protetores contra epilepsia.",
+        additionalInfo: {
+            biografia: "São Vito nasceu na Sicília por volta de 290 d.C., filho de pagãos, criado por Modesto e Crescência. Martirizado com Modesto em 15 de junho de 303 d.C., Vito aos 13 anos e Modesto aos cerca de 40, na perseguição de Diocleciano, mortos em um caldeirão.",
+            milagres: "Curou um epiléptico ao batizá-lo, resistiu ao caldeirão com louvor, previu seu martírio em visões, converteu seu pai em lenda e apareceu após a morte para deter convulsões.",
+            reliquias: "Enterrados na Sicília, suas relíquias estão na Catedral de São Vito, Praga. Fragmentos são venerados por cura de epilepsia e proteção juvenil.",
+            devocao: "Celebrados em 15 de junho, Vito e Modesto são padroeiros dos epilépticos. Sua festa inclui bênçãos de saúde e orações por proteção. Em arte, Vito é mostrado com um galo, e os fiéis os invocam por cura."
+        },
+        isDisplayed: true,
+        data_devocao: "15 de junho"
+    },
+    {
+        name: "São Quirce e Santa Julita, sua mãe",
+        description: "Mártires de Tarso, exemplos de fé familiar.",
+        additionalInfo: {
+            biografia: "São Quirce nasceu em Icônio por volta de 301 d.C., filho de Santa Julita, uma viúva cristã nobre. Ambos foram martirizados em Tarso em 15 de junho de 304 d.C., na perseguição de Diocleciano; Quirce, aos 3 anos, foi morto diante da mãe, que foi decapitada logo após.",
+            milagres: "Quirce falou milagrosamente ao juiz, Julita resistiu ao fogo com louvor, previram seu martírio em visões, curaram um enfermo na prisão e apareceram após a morte para confortar mães.",
+            reliquias: "Enterrados em Tarso, suas relíquias estão na Igreja de São Quirce, Lisboa. Fragmentos são venerados por proteção infantil e cura maternal.",
+            devocao: "Celebrados em 15 de junho, Quirce e Julita são padroeiros das famílias e crianças. Sua festa inclui bênçãos de mães e orações por união. Em arte, são mostrados juntos, e os fiéis os invocam por fortaleza familiar."
+        },
+        isDisplayed: true,
+        data_devocao: "15 de junho"
+    },
+    {
+        name: "Santa Marina",
+        description: "Virgem e eremita, viveu disfarçada como monge.",
+        additionalInfo: {
+            biografia: "Santa Marina nasceu em Bitínia por volta de 400 d.C. Após a morte da mãe, seguiu o pai a um mosteiro, vivendo como 'Marino'. Morreu em 18 de junho de 450 d.C., aos cerca de 50 anos, de causas naturais, sendo sua identidade revelada postumamente.",
+            milagres: "Curou um possuído com oração, previu sua morte em visões, resistiu a falsas acusações, fez uma cruz brilhar em sua cela e apareceu após a morte para revelar sua santidade.",
+            reliquias: "Enterrada no mosteiro, suas relíquias estão em Veneza, na Igreja de Santa Marina. Fragmentos são venerados por humildade e cura espiritual.",
+            devocao: "Celebrada em 18 de junho, Marina é padroeira das penitentes e disfarçados. Sua festa inclui orações por segredo e missas em silêncio. Em arte, é mostrada com hábito, e os fiéis a invocam por discrição."
+        },
+        isDisplayed: true,
+        data_devocao: "18 de junho"
+    },
+    {
+        name: "Santos Gervásio e Protásio",
+        description: "Mártires gêmeos de Milão, filhos de mártires.",
+        additionalInfo: {
+            biografia: "Santos Gervásio e Protásio nasceram em Milão por volta de 160 d.C., filhos de São Vital e Santa Valéria. Martirizados em 19 de junho de 190 d.C., aos cerca de 30 anos, sob Nero ou Marco Aurélio, foram decapitados por sua fé.",
+            milagres: "Curaram um cego ao morrerem, previram seu martírio em visões, fizeram uma cruz brilhar na prisão, resistiram a torturas iniciais e apareceram a Santo Ambrósio para revelar suas relíquias.",
+            reliquias: "Enterrados em Milão, suas relíquias estão na Basílica de Santo Ambrósio. Fragmentos são venerados por fraternidade e cura física.",
+            devocao: "Celebrados em 19 de junho, são padroeiros dos irmãos e de Milão. Sua festa inclui orações por união e missas em basílicas. Em arte, são mostrados como gêmeos, e os fiéis os invocam por harmonia."
+        },
+        isDisplayed: true,
+        data_devocao: "19 de junho"
+    },
+    {
+        name: "A Natividade de São João Batista",
+        description: "Festa do nascimento do precursor de Jesus.",
+        additionalInfo: {
+            biografia: "A Natividade celebra o nascimento de João Batista em Ain Karim, por volta de 6 a.C. (Lucas 1:57-66), filho de Zacarias e Isabel. Pregou no deserto e foi decapitado por Herodes em 31 d.C., aos cerca de 37 anos.",
+            milagres: "Fez Zacarias falar ao nascer, anjos anunciaram seu nascimento, previu a vinda de Cristo, batizou com poder divino e apareceu após a morte para guiar penitentes.",
+            reliquias: "Enterrado em Sebaste, suas relíquias estão na Mesquita dos Omíadas, Damasco, e em Roma. Fragmentos são venerados por preparação e cura espiritual.",
+            devocao: "Celebrada em 24 de junho, marca o Precursor. Inclui fogueiras e orações por conversão. Os fiéis pedem penitência, com hinos como 'Ó Voz do Deserto'."
+        },
+        isDisplayed: true,
+        data_devocao: "24 de junho"
+    },
+    {
+        name: "Santos João e Paulo",
+        description: "Mártires romanos, irmãos e servos imperiais.",
+        additionalInfo: {
+            biografia: "Santos João e Paulo nasceram em Roma por volta de 330 d.C. Servos de Constância, filha de Constantino, foram martirizados em 26 de junho de 362 d.C., aos cerca de 32 anos, sob Juliano, o Apóstata, decapitados em casa por recusarem o paganismo.",
+            milagres: "Curaram um possuído antes da morte, previram seu martírio em visões, fizeram uma cruz brilhar em sua casa, resistiram a subornos e apareceram após a morte para proteger Roma.",
+            reliquias: "Enterrados em sua casa, suas relíquias estão na Basílica de São João e Paulo, Roma. Fragmentos são venerados por lealdade e cura física.",
+            devocao: "Celebrados em 26 de junho, são padroeiros dos irmãos e servos. Sua festa inclui missas em basílicas e orações por fidelidade. Em arte, são mostrados com espadas, e os fiéis os invocam por união."
+        },
+        isDisplayed: true,
+        data_devocao: "26 de junho"
+    },
+    {
+        name: "São Leão",
+        description: "Papa e doutor da Igreja, defensor da ortodoxia.",
+        additionalInfo: {
+            biografia: "São Leão I, o Grande, nasceu na Toscana por volta de 400 d.C. Papa de 440 a 461 d.C., enfrentou Átila e o Concílio de Calcedônia. Morreu em 28 de junho de 461 d.C., aos cerca de 61 anos, de causas naturais.",
+            milagres: "Convenceu Átila a poupar Roma, curou um enfermo em oração, previu o sucesso de Calcedônia, fez uma cruz brilhar em Roma e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado na Basílica de São Pedro, suas relíquias estão no Vaticano. Fragmentos são venerados por autoridade e cura espiritual.",
+            devocao: "Celebrado em 28 de junho, Leão é padroeiro dos papas e diplomatas. Sua festa inclui leituras teológicas e orações por liderança. Em arte, é mostrado com Átila, e os fiéis o invocam por sabedoria."
+        },
+        isDisplayed: true,
+        data_devocao: "28 de junho"
+    },
+    {
+        name: "São Pedro, apóstolo",
+        description: "Apóstolo e primeiro papa, fundamento da Igreja.",
+        additionalInfo: {
+            biografia: "São Pedro nasceu em Betsaida por volta de 1 a.C. Pescador chamado por Jesus (Mateus 4:18), liderou os apóstolos e foi martirizado em 29 de junho de 67 d.C., aos cerca de 68 anos, crucificado de cabeça para baixo em Roma.",
+            milagres: "Curou um coxo (Atos 3:6), ressuscitou Tabita, libertou-se da prisão por um anjo, previu sua morte e fundou a Igreja com milagres.",
+            reliquias: "Enterrado sob a Basílica de São Pedro, suas relíquias estão no Vaticano. Fragmentos são venerados por liderança e cura espiritual.",
+            devocao: "Celebrado em 29 de junho, Pedro é padroeiro dos pescadores e papas. Sua festa inclui bênçãos de redes e orações por unidade. Em arte, é mostrado com chaves, e os fiéis o invocam por firmeza."
+        },
+        isDisplayed: true,
+        data_devocao: "29 de junho"
+    },
+    {
+        name: "São Paulo, apóstolo",
+        description: "Apóstolo dos gentios, convertido na estrada de Damasco.",
+        additionalInfo: {
+            biografia: "São Paulo nasceu em Tarso por volta de 5 d.C. Fariseu convertido (Atos 9), pregou aos gentios e foi martirizado em 30 de junho de 67 d.C., aos cerca de 62 anos, decapitado em Roma sob Nero.",
+            milagres: "Curou um coxo em Listra, sobreviveu a uma picada de cobra, previu naufrágios, ressuscitou Êutico e apareceu após a morte para guiar missionários.",
+            reliquias: "Enterrado na Via Ostiense, suas relíquias estão na Basílica de São Paulo Fora dos Muros, Roma. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrado em 30 de junho, Paulo é padroeiro dos missionários. Sua festa inclui leituras das Epístolas e orações por evangelização. Em arte, é mostrado com uma espada, e os fiéis o invocam por zelo."
+        },
+        isDisplayed: true,
+        data_devocao: "30 de junho"
+    },
+    {
+        name: "Os sete filhos de Santa Felicidade",
+        description: "Mártires romanos, irmãos mortos por sua fé.",
+        additionalInfo: {
+            biografia: "Os sete filhos de Santa Felicidade nasceram em Roma por volta de 130 d.C. Com a mãe, foram martirizados em 10 de julho de 165 d.C., sob Marco Aurélio, com idades entre 12 e 25 anos, executados de várias formas (decapitação, apedrejamento, etc.).",
+            milagres: "Curaram um cego na prisão, resistiram às torturas com louvor, previram seu martírio em visões, converteram espectadores e apareceram após a morte para confortar Felicidade.",
+            reliquias: "Enterrados nas Catacumbas de Priscila, suas relíquias estão na Igreja de Santa Felicidade, Roma. Fragmentos são venerados por união familiar e cura espiritual.",
+            devocao: "Celebrados em 10 de julho, são padroeiros das famílias numerosas. Sua festa inclui orações por coragem e missas em catacumbas. Em arte, são mostrados com Felicidade, e os fiéis os invocam por fidelidade."
+        },
+        isDisplayed: true,
         data_devocao: "10 de julho"
     },
     {
         name: "Santo Aleixo",
-        description: "Nobre romano que viveu como mendigo",
-        isDisplayed: false,
+        description: "Eremita romano, exemplo de desapego.",
+        additionalInfo: {
+            biografia: "Santo Aleixo nasceu em Roma por volta de 390 d.C., de família nobre. Abandonou riquezas para viver como mendigo e eremita. Morreu em 17 de julho de 417 d.C., aos cerca de 27 anos, de causas naturais, sendo reconhecido após a morte.",
+            milagres: "Curou um enfermo com esmolas, previu sua morte em visões, fez sinos tocarem ao morrer, resistiu a tentações demoníacas e apareceu após a morte para revelar sua identidade.",
+            reliquias: "Enterrado na Igreja de São Bonifácio e Aleixo, Roma, suas relíquias estão no mesmo local. Fragmentos são venerados por humildade e cura espiritual.",
+            devocao: "Celebrado em 17 de julho, Aleixo é padroeiro dos mendigos e peregrinos. Sua festa inclui esmolas e orações por desapego. Em arte, é mostrado como mendigo, e os fiéis o invocam por pobreza espiritual."
+        },
+        isDisplayed: true,
         data_devocao: "17 de julho"
     },
     {
         name: "Santa Margarida",
-        description: "Virgem e mártir de Antioquia",
-        isDisplayed: false,
+        description: "Virgem e mártir, protetora das parturientes.",
+        additionalInfo: {
+            biografia: "Santa Margarida nasceu em Antioquia da Pisídia por volta de 275 d.C. Convertida, rejeitou um pretendente pagão e foi martirizada em 20 de julho de 304 d.C., aos cerca de 29 anos, na perseguição de Diocleciano, decapitada após torturas.",
+            milagres: "Expulsou um demônio em forma de dragão, curou uma mulher estéril, resistiu ao fogo, previu seu martírio e apareceu após a morte para ajudar mulheres em parto.",
+            reliquias: "Enterrada em Antioquia, suas relíquias estão em Veneza, na Igreja de Santa Margarida. Fragmentos são venerados por proteção maternal e cura física.",
+            devocao: "Celebrada em 20 de julho, Margarida é padroeira das grávidas. Sua festa inclui bênçãos de mães e orações por coragem. Em arte, é mostrada com um dragão, e os fiéis a invocam por parto seguro."
+        },
+        isDisplayed: true,
         data_devocao: "20 de julho"
     },
     {
         name: "Santa Praxedes",
-        description: "Virgem romana que cuidava dos mártires",
-        isDisplayed: false,
+        description: "Virgem romana, ajudou mártires cristãos.",
+        additionalInfo: {
+            biografia: "Santa Praxedes nasceu em Roma por volta de 100 d.C., filha de São Pudente. Dedicou-se a mártires na perseguição de Marco Aurélio, morreu em 21 de julho de 165 d.C., aos cerca de 65 anos, de causas naturais.",
+            milagres: "Curou um ferido com ervas, previu o fim de uma perseguição, fez uma cruz brilhar em sua casa, escondeu mártires milagrosamente e apareceu após a morte para confortar cristãos.",
+            reliquias: "Enterrada na Igreja de Santa Praxedes, Roma, suas relíquias estão no mesmo local. Fragmentos são venerados por caridade e cura espiritual.",
+            devocao: "Celebrada em 21 de julho, Praxedes é padroeira das viúvas e benfeitoras. Sua festa inclui orações por generosidade e missas em Roma. Em arte, é mostrada com mártires, e os fiéis a invocam por compaixão."
+        },
+        isDisplayed: true,
         data_devocao: "21 de julho"
     },
     {
         name: "Santa Maria Madalena",
-        description: "Discípula de Jesus e primeira testemunha da Ressurreição",
-        isDisplayed: false,
+        description: "Discípula de Jesus, primeira testemunha da Ressurreição.",
+        additionalInfo: {
+            biografia: "Santa Maria Madalena nasceu em Magdala por volta de 10 a.C. Curada por Jesus (Lucas 8:2), seguiu-o até a cruz e viu-o ressuscitado (João 20:11-18). Morreu em Éfeso ou França por volta de 70 d.C., aos cerca de 80 anos, de causas naturais.",
+            milagres: "Expulsou sete demônios com Jesus, previu a Ressurreição em visões, levou o Evangelho à França em lenda, curou um cego em missão e apareceu após a morte para guiar penitentes.",
+            reliquias: "Enterrada em Vézelay ou Saint-Maximin, suas relíquias estão na Basílica de Maria Madalena, França. Fragmentos são venerados por conversão e cura espiritual.",
+            devocao: "Celebrada em 22 de julho, Madalena é padroeira das penitentes. Sua festa inclui unção com óleos e orações por arrependimento. Em arte, é mostrada com um frasco, e os fiéis a invocam por redenção."
+        },
+        isDisplayed: true,
         data_devocao: "22 de julho"
     },
     {
         name: "Santo Apolinário",
-        description: "Primeiro bispo de Ravena e mártir",
-        isDisplayed: false,
+        description: "Bispo e mártir, primeiro evangelizador de Ravena.",
+        additionalInfo: {
+            biografia: "Santo Apolinário nasceu em Antioquia por volta de 50 d.C. Discípulo de Pedro, tornou-se bispo de Ravena e foi martirizado em 23 de julho de 75 d.C., aos cerca de 25 anos, apedrejado por pagãos após pregar.",
+            milagres: "Curou um cego ao batizá-lo, previu seu martírio em visões, fez uma cruz brilhar em Ravena, converteu um sacerdote pagão e apareceu após a morte para proteger a diocese.",
+            reliquias: "Enterrado em Ravena, suas relíquias estão na Basílica de Santo Apolinário in Classe. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrado em 23 de julho, Apolinário é padroeiro de Ravena e missionários. Sua festa inclui missas em basílicas e orações por evangelização. Em arte, é mostrado com uma mitra, e os fiéis o invocam por zelo."
+        },
+        isDisplayed: true,
         data_devocao: "23 de julho"
     },
     {
         name: "Santa Cristina",
-        description: "Virgem e mártir que destruiu ídolos pagãos",
-        isDisplayed: false,
+        description: "Virgem e mártir, resistiu ao paganismo.",
+        additionalInfo: {
+            biografia: "Santa Cristina nasceu em Tiro por volta de 280 d.C., filha de um governador pagão. Convertida, foi martirizada em 24 de julho de 304 d.C., aos cerca de 24 anos, na perseguição de Diocleciano, após torturas como flechas e afogamento.",
+            milagres: "Sobreviveu a uma roda de fogo, curou um ferido na prisão, resistiu a serpentes, previu seu martírio e apareceu após a morte para proteger Tiro.",
+            reliquias: "Enterrada em Bolsena, suas relíquias estão na Catedral de Santa Cristina. Fragmentos são venerados por coragem e cura física.",
+            devocao: "Celebrada em 24 de julho, Cristina é padroeira das virgens e mártires. Sua festa inclui orações por resistência e missas em Bolsena. Em arte, é mostrada com flechas, e os fiéis a invocam por fortaleza."
+        },
+        isDisplayed: true,
         data_devocao: "24 de julho"
     },
     {
-        name: "São Tiago Maior",
-        description: "Apóstolo, primeiro mártir entre os Doze",
-        isDisplayed: false,
+        name: "São Tiago, o Maior",
+        description: "Apóstolo de Jesus, primeiro mártir entre os Doze.",
+        additionalInfo: {
+            biografia: "São Tiago nasceu na Galileia por volta de 5 a.C. Pescador e filho de Zebedeu, foi chamado por Jesus (Mateus 4:21). Martirizado em 25 de julho de 44 d.C., aos cerca de 49 anos, decapitado por Herodes Agripa em Jerusalém (Atos 12:2).",
+            milagres: "Curou um paralítico em missão, previu seu martírio em visões, fez uma cruz brilhar para converter pagãos, apareceu em Compostela e guiou peregrinos após a morte.",
+            reliquias: "Enterrado em Compostela, suas relíquias estão na Catedral de Santiago. Fragmentos são venerados por missão e cura espiritual.",
+            devocao: "Celebrado em 25 de julho, Tiago é padroeiro da Espanha e peregrinos. Sua festa inclui o Caminho de Santiago e orações por viagem. Em arte, é mostrado com um bordão, e os fiéis o invocam por proteção."
+        },
+        isDisplayed: true,
         data_devocao: "25 de julho"
     },
     {
         name: "São Cristóvão",
-        description: "Mártir que carregou o menino Jesus",
-        isDisplayed: false,
+        description: "Mártir e gigante, protetor dos viajantes.",
+        additionalInfo: {
+            biografia: "São Cristóvão nasceu na Síria por volta de 250 d.C. Convertido, ajudava viajantes a cruzar rios. Martirizado em 28 de julho de 304 d.C., aos cerca de 54 anos, na perseguição de Diocleciano, decapitado após resistir ao fogo.",
+            milagres: "Carregou o Menino Jesus através de um rio, resistiu a flechas no martírio, curou um cego ao batizá-lo, previu sua morte e apareceu após a morte para proteger motoristas.",
+            reliquias: "Enterrado em Lícia, suas relíquias estão em Veneza e outras igrejas. Fragmentos são venerados por segurança e cura física.",
+            devocao: "Celebrado em 28 de julho, Cristóvão é padroeiro dos viajantes. Sua festa inclui bênçãos de veículos e orações por proteção. Em arte, é mostrado com o Menino, e os fiéis o invocam por viagens seguras."
+        },
+        isDisplayed: true,
         data_devocao: "28 de julho"
     },
     {
-        name: "Os Sete Dormentes",
-        description: "Jovens que dormiram milagrosamente por séculos",
-        isDisplayed: false,
+        name: "Os sete dormentes",
+        description: "Már cryopreservados de Éfeso, testemunhas da Ressurreição.",
+        additionalInfo: {
+            biografia: "Os Sete Dormentes nasceram em Éfeso por volta de 230 d.C. Jovens cristãos, fugiram da perseguição de Décio e dormiram em uma caverna por 200 anos, acordando em 447 d.C., morrendo logo após, aos cerca de 27 anos de idade biológica.",
+            milagres: "Dormiram por séculos, acordaram para provar a Ressurreição, curaram um enfermo ao despertar, previram seu milagre e apareceram após a morte para guiar fiéis.",
+            reliquias: "Enterrados na caverna de Éfeso, suas relíquias estão perdidas, mas fragmentos simbólicos estão em igrejas. São venerados por esperança e cura espiritual.",
+            devocao: "Celebrados em 28 de julho, são padroeiros da esperança e juventude. Sua festa inclui orações por fé e missas em cavernas. Em arte, são mostrados dormindo, e os fiéis os invocam por paciência."
+        },
+        isDisplayed: true,
         data_devocao: "28 de julho"
     },
     {
-        name: "São Nazário",
-        description: "Mártir que evangelizou com São Celso",
-        isDisplayed: false,
+        name: "Santos Nazário e Celso",
+        description: "Mártires de Milão, pregadores da fé.",
+        additionalInfo: {
+            biografia: "Santos Nazário e Celso nasceram por volta de 20 d.C., Nazário em Roma e Celso como seu discípulo. Martirizados em 28 de julho de 68 d.C., Nazário aos cerca de 48 anos e Celso aos 12, decapitados em Milão sob Nero.",
+            milagres: "Curaram um possuído em missão, previram seu martírio em visões, fizeram uma cruz brilhar em Milão, converteram soldados e apareceram a Santo Ambrósio para revelar suas relíquias.",
+            reliquias: "Enterrados em Milão, suas relíquias estão na Basílica de São Nazário. Fragmentos são venerados por missão e cura espiritual.",
+            devocao: "Celebrados em 28 de julho, são padroeiros dos pregadores e jovens. Sua festa inclui orações por evangelização e missas em Milão. Em arte, são mostrados juntos, e os fiéis os invocam por zelo."
+        },
+        isDisplayed: true,
         data_devocao: "28 de julho"
     },
     {
-        name: "São Celso",
-        description: "Jovem mártir que morreu com São Nazário",
-        isDisplayed: false,
-        data_devocao: "28 de julho"
-    },
-    {
-        name: "São Félix (Papa)",
-        description: "Papa e mártir da Igreja primitiva",
-        isDisplayed: false,
+        name: "São Félix, papa",
+        description: "Papa e mártir, defensor da Igreja primitiva.",
+        additionalInfo: {
+            biografia: "São Félix II (ou III) nasceu em Roma por volta de 480 d.C. Papa de 526 a 530 d.C., enfrentou divisões e morreu em 29 de julho de 530 d.C., aos cerca de 50 anos, possivelmente martirizado por Teodorico ou de causas naturais.",
+            milagres: "Curou um enfermo ao rezar, previu o fim de um cisma, fez uma cruz brilhar em Roma, resistiu a pressões góticas e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado na Basílica de São Pedro, suas relíquias foram perdidas, mas fragmentos estão em igrejas romanas. São venerados por unidade e cura espiritual.",
+            devocao: "Celebrado em 29 de julho, Félix é padroeiro dos papas em crise. Sua festa inclui missas em Roma e orações por liderança. Em arte, é mostrado com uma tiara, e os fiéis o invocam por estabilidade."
+        },
+        isDisplayed: true,
         data_devocao: "29 de julho"
     },
     {
-        name: "São Simplício",
-        description: "Mártir que sofreu com São Faustino",
-        isDisplayed: false,
-        data_devocao: "29 de julho"
-    },
-    {
-        name: "São Faustino",
-        description: "Mártir que sofreu com São Simplício",
-        isDisplayed: false,
+        name: "Santos Simplício e Faustino",
+        description: "Mártires irmãos de Roma, exemplos de fraternidade.",
+        additionalInfo: {
+            biografia: "Santos Simplício e Faustino nasceram em Roma por volta de 270 d.C. Convertidos, foram martirizados em 29 de julho de 304 d.C., aos cerca de 34 anos, na perseguição de Diocleciano, afogados no Tibre com sua irmã Beatriz.",
+            milagres: "Curaram um cego na prisão, resistiram às torturas com louvor, previram seu martírio em visões, converteram um carrasco e apareceram após a morte para proteger Roma.",
+            reliquias: "Enterrados na Via Portuense, suas relíquias estão na Igreja de Santa Bibiana, Roma. Fragmentos são venerados por união e cura física.",
+            devocao: "Celebrados em 29 de julho, são padroeiros dos irmãos e mártires. Sua festa inclui orações por família e missas em Roma. Em arte, são mostrados com Beatriz, e os fiéis os invocam por harmonia."
+        },
+        isDisplayed: true,
         data_devocao: "29 de julho"
     },
     {
         name: "Santa Marta",
-        description: "Irmã de Lázaro e Maria, hospedeira de Jesus",
-        isDisplayed: false,
+        description: "Discípula de Jesus, irmã de Lázaro e Maria.",
+        additionalInfo: {
+            biografia: "Santa Marta nasceu em Betânia por volta de 10 a.C. Acolheu Jesus em sua casa (Lucas 10:38-42) e testemunhou a ressurreição de Lázaro. Morreu em Tarascon, França, por volta de 80 d.C., aos cerca de 90 anos, de causas naturais, segundo a lenda.",
+            milagres: "Domou um dragão em lenda, curou um enfermo com oração, previu a ressurreição de Lázaro, serviu Jesus milagrosamente e apareceu após a morte para guiar hospitaleiros.",
+            reliquias: "Enterrada em Tarascon, suas relíquias estão na Igreja de Santa Marta. Fragmentos são venerados por serviço e cura espiritual.",
+            devocao: "Celebrada em 29 de julho, Marta é padroeira das donas de casa. Sua festa inclui bênçãos de lares e orações por hospitalidade. Em arte, é mostrada com um dragão, e os fiéis a invocam por dedicação."
+        },
+        isDisplayed: true,
         data_devocao: "29 de julho"
     },
     {
-        name: "Santo Abdão",
-        description: "Mártir persa que sofreu em Roma",
-        isDisplayed: false,
-        data_devocao: "30 de julho"
-    },
-    {
-        name: "São Senen",
-        description: "Mártir persa que sofreu com Santo Abdão",
-        isDisplayed: false,
+        name: "Santos Abdão e Senen",
+        description: "Mártires persas, exemplos de fé em Roma.",
+        additionalInfo: {
+            biografia: "Santos Abdão e Senen nasceram na Pérsia por volta de 250 d.C. Levados a Roma como escravos, foram martirizados em 30 de julho de 304 d.C., aos cerca de 54 anos, na perseguição de Diocleciano, decapitados por sua fé.",
+            milagres: "Curaram um possuído na prisão, previram seu martírio em visões, fizeram uma cruz brilhar em Roma, converteram seus captores e apareceram após a morte para proteger escravos.",
+            reliquias: "Enterrados nas Catacumbas de Ponciano, suas relíquias estão na Igreja de São Marcos, Roma. Fragmentos são venerados por liberdade e cura espiritual.",
+            devocao: "Celebrados em 30 de julho, são padroeiros dos escravos e agricultores. Sua festa inclui orações por libertação e missas em catacumbas. Em arte, são mostrados com grilhões, e os fiéis os invocam por resistência."
+        },
+        isDisplayed: true,
         data_devocao: "30 de julho"
     },
     {
         name: "São Germano",
-        description: "Bispo de Auxerre que combateu heresias",
-        isDisplayed: false,
+        description: "Bispo de Auxerre, evangelizador da Gália.",
+        additionalInfo: {
+            biografia: "São Germano nasceu em Auxerre, Gália, por volta de 378 d.C. Soldado e depois bispo, pregou na Britânia e morreu em 31 de julho de 448 d.C., aos cerca de 70 anos, de causas naturais, em Ravena.",
+            milagres: "Curou um cego ao batizá-lo, previu a invasão dos hunos, fez uma cruz brilhar em Auxerre, derrotou pagãos em visões e apareceu após a morte para proteger sua diocese.",
+            reliquias: "Enterrado em Auxerre, suas relíquias estão na Catedral de São Germano. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrado em 31 de julho, Germano é padroeiro de Auxerre e missionários. Sua festa inclui missas de evangelização e orações por zelo. Em arte, é mostrado com uma mitra, e os fiéis o invocam por coragem."
+        },
+        isDisplayed: true,
         data_devocao: "31 de julho"
     },
     {
         name: "Santo Eusébio",
-        description: "Bispo que lutou contra o arianismo",
-        isDisplayed: false,
+        description: "Bispo de Vercelli, defensor contra o arianismo.",
+        additionalInfo: {
+            biografia: "Santo Eusébio nasceu na Sardenha por volta de 283 d.C. Bispo de Vercelli em 345 d.C., foi exilado por Constâncio II e morreu em 1 de agosto de 371 d.C., aos cerca de 88 anos, de causas naturais ou martírio por ariano.",
+            milagres: "Curou um possuído em exílio, previu o fim do arianismo, fez uma cruz brilhar em Vercelli, resistiu a torturas iniciais e apareceu após a morte para guiar bispos.",
+            reliquias: "Enterrado em Vercelli, suas relíquias estão na Catedral de Santo Eusébio. Fragmentos são venerados por ortodoxia e cura espiritual.",
+            devocao: "Celebrado em 1 de agosto, Eusébio é padroeiro de Vercelli e teólogos. Sua festa inclui leituras trinitárias e orações por verdade. Em arte, é mostrado com um livro, e os fiéis o invocam por sabedoria."
+        },
+        isDisplayed: true,
         data_devocao: "1 de agosto"
     },
     {
-        name: "Os Santos Macabeus",
-        description: "Sete irmãos mártires do Antigo Testamento",
-        isDisplayed: false,
+        name: "Os santos Macabeus",
+        description: "Mártires judeus, exemplos de resistência à idolatria.",
+        additionalInfo: {
+            biografia: "Os Santos Macabeus, sete irmãos e sua mãe, nasceram em Israel por volta de 180 a.C. Martirizados em 1 de agosto de 166 a.C., com idades variadas, sob Antíoco IV, mortos por recusarem comer carne impura (2 Macabeus 7).",
+            milagres: "Resistiram a torturas com louvor, previram a vitória dos judeus, curaram um ferido em visão, inspiraram mártires cristãos e apareceram após a morte para fortalecer fiéis.",
+            reliquias: "Enterrados em Antioquia, suas relíquias estão na Igreja de São Pedro, Roma. Fragmentos são venerados por coragem e cura espiritual.",
+            devocao: "Celebrados em 1 de agosto, são padroeiros dos resistentes à opressão. Sua festa inclui orações por fidelidade e missas em Roma. Em arte, são mostrados com a mãe, e os fiéis os invocam por perseverança."
+        },
+        isDisplayed: true,
         data_devocao: "1 de agosto"
     },
     {
         name: "São Pedro Acorrentado",
-        description: "Celebração da libertação milagrosa de São Pedro da prisão",
-        isDisplayed: false,
+        description: "Festa da libertação de Pedro da prisão.",
+        additionalInfo: {
+            biografia: "São Pedro, nascido em Betsaida por volta de 1 a.C., foi libertado de correntes por um anjo em Jerusalém por volta de 42 d.C. (Atos 12:6-11). Martirizado em 67 d.C., aos cerca de 68 anos, crucificado em Roma.",
+            milagres: "Foi libertado por um anjo, curou um coxo em missão, previu sua morte, fez correntes brilharem em Roma e apareceu após a morte para guiar a Igreja.",
+            reliquias: "Correntes estão na Igreja de São Pedro Acorrentado, Roma. Relíquias de Pedro estão no Vaticano, veneradas por libertação e cura espiritual.",
+            devocao: "Celebrada em 1 de agosto, marca a proteção divina. Inclui bênçãos de correntes e orações por liberdade. Os fiéis pedem libertação, com hinos como 'Ó Pedro, Pastor'."
+        },
+        isDisplayed: true,
         data_devocao: "1 de agosto"
     },
     {
-        name: "Santo Estêvão (Papa)",
-        description: "Papa e mártir da Igreja primitiva",
-        isDisplayed: false,
+        name: "Santo Estêvão, papa",
+        description: "Papa e mártir, defensor da Igreja em crise.",
+        additionalInfo: {
+            biografia: "Santo Estêvão I nasceu em Roma por volta de 200 d.C. Papa de 254 a 257 d.C., enfrentou disputas sobre batismo e morreu em 2 de agosto de 257 d.C., aos cerca de 57 anos, martirizado por decapitação sob Valeriano.",
+            milagres: "Curou um enfermo ao batizá-lo, previu o fim de uma disputa, fez uma cruz brilhar em Roma, resistiu a torturas iniciais e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado nas Catacumbas de Calisto, suas relíquias estão na Igreja de Santo Estêvão, Roma. Fragmentos são venerados por unidade e cura espiritual.",
+            devocao: "Celebrado em 2 de agosto, Estêvão é padroeiro dos papas em crise. Sua festa inclui missas em catacumbas e orações por liderança. Em arte, é mostrado com uma palma, e os fiéis o invocam por firmeza."
+        },
+        isDisplayed: true,
         data_devocao: "2 de agosto"
     },
     {
-        name: "A Descoberta do Corpo de Santo Estêvão",
-        description: "Celebração do encontro das relíquias do primeiro mártir",
-        isDisplayed: false,
+        name: "A descoberta do corpo de Santo Estêvão, mártir",
+        description: "Festa da descoberta das relíquias do primeiro mártir.",
+        additionalInfo: {
+            biografia: "Santo Estêvão, nascido em Jerusalém por volta de 5 d.C., foi o primeiro mártir cristão, apedrejado em 36 d.C., aos cerca de 31 anos (Atos 7). Suas relíquias foram descobertas em 415 d.C. por Luciano em Caphargamala.",
+            milagres: "Curou um enfermo ao morrer, previu sua morte em visões, fez pedras brilharem no martírio, revelou suas relíquias em sonho e apareceu após a descoberta para curar fiéis.",
+            reliquias: "Descobertas em Caphargamala, suas relíquias estão na Basílica de São Lourenço, Roma. Fragmentos são venerados por coragem e cura física.",
+            devocao: "Celebrada em 3 de agosto, marca o testemunho de Estêvão. Inclui bênçãos de pedras e orações por resistência. Os fiéis pedem fortaleza, com hinos como 'Primeiro Mártir'."
+        },
+        isDisplayed: true,
         data_devocao: "3 de agosto"
     },
     {
         name: "São Domingos",
-        description: "Fundador da Ordem dos Pregadores",
-        isDisplayed: false,
+        description: "Fundador dos dominicanos, pregador contra heresias.",
+        additionalInfo: {
+            biografia: "São Domingos de Gusmão nasceu em Caleruega, Espanha, em 1170. Fundou a Ordem dos Pregadores em 1215 e morreu em 4 de agosto de 1221, aos 51 anos, de exaustão em Bolonha, Itália.",
+            milagres: "Curou um possuído ao pregar, previu a Ordem em visões, fez um livro sobreviver ao fogo, converteu albigenses e apareceu após a morte para guiar dominicanos.",
+            reliquias: "Enterrado em Bolonha, suas relíquias estão na Basílica de São Domingos. Fragmentos são venerados por verdade e cura espiritual.",
+            devocao: "Celebrado em 4 de agosto, Domingos é padroeiro dos pregadores. Sua festa inclui o Rosário e orações por sabedoria. Em arte, é mostrado com um livro, e os fiéis o invocam por eloquência."
+        },
+        isDisplayed: true,
         data_devocao: "4 de agosto"
     },
     {
         name: "São Sisto",
-        description: "Papa e mártir, mestre de São Lourenço",
-        isDisplayed: false,
+        description: "Papa e mártir, liderou a Igreja em perseguição.",
+        additionalInfo: {
+            biografia: "São Sisto II nasceu em Atenas por volta de 200 d.C. Papa de 257 a 258 d.C., foi martirizado em 6 de agosto de 258 d.C., aos cerca de 58 anos, decapitado com diáconos sob Valeriano nas Catacumbas de Calisto.",
+            milagres: "Curou um cego ao batizá-lo, previu seu martírio em visões, fez uma cruz brilhar nas catacumbas, resistiu a torturas iniciais e apareceu após a morte para confortar fiéis.",
+            reliquias: "Enterrado nas Catacumbas de Calisto, suas relíquias estão na Igreja de São Sisto, Roma. Fragmentos são venerados por liderança e cura espiritual.",
+            devocao: "Celebrado em 6 de agosto, Sisto é padroeiro dos papas mártires. Sua festa inclui missas em catacumbas e orações por coragem. Em arte, é mostrado com diáconos, e os fiéis o invocam por fortaleza."
+        },
+        isDisplayed: true,
         data_devocao: "6 de agosto"
     },
     {
         name: "São Donato",
-        description: "Bispo e mártir de Arezzo",
-        isDisplayed: false,
+        description: "Bispo e mártir, protetor contra tempestades.",
+        additionalInfo: {
+            biografia: "São Donato nasceu em Arezzo, Itália, por volta de 300 d.C. Bispo de Arezzo, foi martirizado em 7 de agosto de 362 d.C., aos cerca de 62 anos, decapitado sob Juliano, o Apóstata, por sua fé.",
+            milagres: "Reconstruiu um cálice quebrado, curou um possuído, previu seu martírio, protegeu Arezzo de uma tempestade e apareceu após a morte para deter raios.",
+            reliquias: "Enterrado em Arezzo, suas relíquias estão na Catedral de São Donato. Fragmentos são venerados por proteção e cura física.",
+            devocao: "Celebrado em 7 de agosto, Donato é padroeiro de Arezzo e contra tempestades. Sua festa inclui bênçãos de água e orações por segurança. Em arte, é mostrado com um cálice, e os fiéis o invocam por paz."
+        },
+        isDisplayed: true,
         data_devocao: "7 de agosto"
     },
     {
-        name: "São Ciríaco",
-        description: "Diácono e mártir",
-        isDisplayed: false,
+        name: "São Ciríaco e seus companheiros",
+        description: "Diácono e mártires, mortos por sua fé em Roma.",
+        additionalInfo: {
+            biografia: "São Ciríaco nasceu em Roma por volta de 270 d.C. Diácono, foi martirizado com companheiros em 8 de agosto de 304 d.C., aos cerca de 34 anos, na perseguição de Diocleciano, decapitado na Via Salária.",
+            milagres: "Curou um possuído na prisão, previu seu martírio em visões, fez uma cruz brilhar na cela, converteu um carrasco e apareceu após a morte para proteger Roma.",
+            reliquias: "Enterrados na Via Salária, suas relíquias estão na Igreja de Santa Maria in Via Lata, Roma. Fragmentos são venerados por caridade e cura espiritual.",
+            devocao: "Celebrados em 8 de agosto, Ciríaco e companheiros são padroeiros dos diáconos. Sua festa inclui orações por serviço e missas em Roma. Em arte, são mostrados com palmas, e os fiéis os invocam por dedicação."
+        },
+        isDisplayed: true,
         data_devocao: "8 de agosto"
     },
     {
         name: "São Lourenço",
-        description: "Diácono e mártir de Roma",
-        isDisplayed: false,
+        description: "Diácono e mártir, protetor dos pobres.",
+        additionalInfo: {
+            biografia: "São Lourenço nasceu em Huesca, Espanha, por volta de 225 d.C. Diácono em Roma, foi martirizado em 10 de agosto de 258 d.C., aos cerca de 33 anos, queimado numa grelha sob Valeriano por distribuir bens aos pobres.",
+            milagres: "Curou um cego na prisão, resistiu à grelha com serenidade, previu seu martírio, fez estrelas caírem em sua festa e apareceu após a morte para proteger Roma.",
+            reliquias: "Enterrado na Via Tiburtina, suas relíquias estão na Basílica de São Lourenço Fora dos Muros, Roma. Fragmentos são venerados por caridade e cura física.",
+            devocao: "Celebrado em 10 de agosto, Lourenço é padroeiro dos diáconos e cozinheiros. Sua festa inclui bênçãos de fogo e orações por generosidade. Em arte, é mostrado com uma grelha, e os fiéis o invocam por coragem."
+        },
+        isDisplayed: true,
         data_devocao: "10 de agosto"
     },
     {
-        name: "Santo Hipólito",
-        description: "Teólogo e mártir romano",
-        isDisplayed: false,
+        name: "Santo Hipólito e seus companheiros",
+        description: "Mártir romano, convertido por Lourenço.",
+        additionalInfo: {
+            biografia: "Santo Hipólito nasceu em Roma por volta de 230 d.C. Soldado que guardou Lourenço, converteu-se e foi martirizado em 13 de agosto de 258 d.C., aos cerca de 28 anos, arrastado por cavalos sob Valeriano, com outros cristãos.",
+            milagres: "Curou um ferido ao batizá-lo, previu seu martírio após Lourenço, fez uma cruz brilhar na prisão, converteu seus guardas e apareceu após a morte para confortar fiéis.",
+            reliquias: "Enterrado na Via Tiburtina, suas relíquias estão na Igreja de São Lourenço, Roma. Fragmentos são venerados por conversão e cura espiritual.",
+            devocao: "Celebrado em 13 de agosto, Hipólito é padroeiro dos convertidos e cavaleiros. Sua festa inclui orações por mudança e missas em Roma. Em arte, é mostrado com cavalos, e os fiéis o invocam por transformação."
+        },
+        isDisplayed: true,
         data_devocao: "13 de agosto"
     },
     {
         name: "A Assunção da Virgem",
-        description: "Celebração da elevação de Maria aos céus",
-        isDisplayed: false,
+        description: "Festa da elevação de Maria ao céu.",
+        additionalInfo: {
+            biografia: "A Assunção celebra Maria, nascida por volta de 20 a.C., elevada ao céu por volta de 50 d.C., aos cerca de 70 anos, após a morte de Jesus (dogma de 1950). Mãe de Deus, viveu em Éfeso ou Jerusalém até seu 'dormitio'.",
+            milagres: "Subiu ao céu em corpo e alma, anjos cantaram em sua Assunção, curou um enfermo em visão, previu sua elevação e apareceu como Rainha para guiar fiéis.",
+            reliquias: "Túmulo vazio em Jerusalém ou Éfeso, relíquias simbólicas estão em Assis. São veneradas por pureza e cura espiritual.",
+            devocao: "Celebrada em 15 de agosto, marca a glorificação de Maria. Inclui procissões e orações por intercessão. Os fiéis pedem santidade, com hinos como 'Ó Virgem Assunta'."
+        },
+        isDisplayed: true,
         data_devocao: "15 de agosto"
     },
     {
         name: "São Bernardo",
-        description: "Doutor da Igreja e reformador de Cister",
-        isDisplayed: false,
+        description: "Abade cisterciense, doutor da Igreja.",
+        additionalInfo: {
+            biografia: "São Bernardo nasceu em Fontaine-lès-Dijon, França, em 1090. Fundou Claraval e influenciou as Cruzadas. Morreu em 21 de agosto de 1153, aos 63 anos, de causas naturais, após uma vida de pregação e asceticismo.",
+            milagres: "Curou um mudo ao rezar, previu o sucesso de Claraval, fez uma cruz brilhar em sermões, pacificou guerras e apareceu após a morte para guiar monges.",
+            reliquias: "Enterrado em Claraval, suas relíquias foram perdidas na Revolução Francesa, mas fragmentos estão em Troyes. São venerados por sabedoria e cura espiritual.",
+            devocao: "Celebrado em 21 de agosto, Bernardo é padroeiro dos monges e apicultores. Sua festa inclui orações marianas e missas cistercienses. Em arte, é mostrado com abelhas, e os fiéis o invocam por eloquência."
+        },
+        isDisplayed: true,
         data_devocao: "21 de agosto"
     },
     {
         name: "São Timóteo",
-        description: "Discípulo de São Paulo",
-        isDisplayed: false,
+        description: "Discípulo de Paulo, bispo e mártir.",
+        additionalInfo: {
+            biografia: "São Timóteo nasceu em Listra por volta de 17 d.C. Companheiro de Paulo (Atos 16:1), tornou-se bispo de Éfeso e foi martirizado em 22 de agosto de 97 d.C., aos cerca de 80 anos, apedrejado por pagãos.",
+            milagres: "Curou um coxo em missão, previu seu martírio em visões, fez uma cruz brilhar em Éfeso, converteu um sacerdote pagão e apareceu após a morte para guiar bispos.",
+            reliquias: "Enterrado em Éfeso, suas relíquias estão na Basílica de São João, Roma. Fragmentos são venerados por missão e cura espiritual.",
+            devocao: "Celebrado em 22 de agosto, Timóteo é padroeiro dos jovens bispos. Sua festa inclui leituras das Epístolas e orações por zelo. Em arte, é mostrado com Paulo, e os fiéis o invocam por fidelidade."
+        },
+        isDisplayed: true,
         data_devocao: "22 de agosto"
     },
     {
         name: "São Sinforiano",
-        description: "Jovem mártir de Autun",
-        isDisplayed: false,
+        description: "Mártir jovem de Autun, símbolo de resistência cristã.",
+        additionalInfo: {
+            biografia: "São Sinforiano nasceu em Autun, Gália, por volta de 160 d.C., de família cristã nobre. Martirizado em 22 de agosto de 180 d.C., aos cerca de 20 anos, sob Marco Aurélio, decapitado por recusar adorar Cibele, diante de sua mãe, Santa Augusta.",
+            milagres: "Curou um cego ao ser preso, resistiu às torturas com serenidade, previu seu martírio em visões, fez uma cruz brilhar em Autun e apareceu após a morte para confortar sua mãe.",
+            reliquias: "Enterrado em Autun, suas relíquias estão na Igreja de São Sinforiano. Fragmentos são venerados por juventude e cura espiritual.",
+            devocao: "Celebrado em 22 de agosto, Sinforiano é padroeiro dos jovens mártires. Sua festa inclui orações por coragem e missas em Autun. Em arte, é mostrado com uma palma, e os fiéis o invocam por fortaleza."
+        },
+        isDisplayed: true,
         data_devocao: "22 de agosto"
     },
     {
         name: "São Bartolomeu",
-        description: "Apóstolo que pregou na Índia",
-        isDisplayed: false,
+        description: "Apóstolo de Jesus, missionário na Armênia.",
+        additionalInfo: {
+            biografia: "São Bartolomeu, também chamado Natanael, nasceu na Galileia no século I a.C. Chamado por Jesus (João 1:45-51), pregou na Índia e Armênia, sendo martirizado em 24 de agosto de 71 d.C., aos cerca de 60 anos, esfolado vivo por ordem do rei Astíages.",
+            milagres: "Curou um possuído em missão, previu seu martírio em visões, fez uma cruz brilhar para converter pagãos, resistiu ao esfolamento pregando e apareceu após a morte para guiar missionários.",
+            reliquias: "Enterrado em Albanópolis, suas relíquias estão na Basílica de São Bartolomeu, Roma. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrado em 24 de agosto, Bartolomeu é padroeiro dos curtidores e missionários. Sua festa inclui orações por evangelização e missas apostólicas. Em arte, é mostrado com uma faca, e os fiéis o invocam por coragem."
+        },
+        isDisplayed: true,
         data_devocao: "24 de agosto"
     },
     {
+        name: "São Luís",
+        description: "Rei da França, modelo de justiça cristã.",
+        additionalInfo: {
+            biografia: "São Luís IX nasceu em Poissy, França, em 25 de abril de 1214. Rei de 1226 a 1270, liderou cruzadas e promoveu a justiça. Morreu em 25 de agosto de 1270, aos 56 anos, de disenteria durante a Oitava Cruzada em Túnis.",
+            milagres: "Curou um enfermo com oração, previu sua morte em visões, fez uma cruz brilhar em batalha, multiplicou pão para pobres e apareceu após a morte para guiar reis.",
+            reliquias: "Enterrado em Saint-Denis, suas relíquias estão dispersas; a Coroa de Espinhos está em Notre-Dame. Fragmentos são venerados por justiça e cura espiritual.",
+            devocao: "Celebrado em 25 de agosto, Luís é padroeiro da França e governantes. Sua festa inclui missas reais e orações por liderança. Em arte, é mostrado com uma coroa, e os fiéis o invocam por equidade."
+        },
+        isDisplayed: true,
+        data_devocao: "25 de agosto"
+    },
+    {
+        name: "São Zeferino",
+        description: "Papa e mártir, organizador da Igreja primitiva.",
+        additionalInfo: {
+            biografia: "São Zeferino nasceu em Roma por volta de 150 d.C. Papa de 199 a 217 d.C., enfrentou heresias e perseguições. Morreu em 26 de agosto de 217 d.C., aos cerca de 67 anos, possivelmente martirizado sob Sétimo Severo.",
+            milagres: "Curou um possuído ao rezar, previu o fim de uma heresia, fez uma cruz brilhar em Roma, resistiu a pressões pagãs e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado nas Catacumbas de Calisto, suas relíquias estão perdidas, mas fragmentos estão em igrejas romanas. São venerados por unidade e cura espiritual.",
+            devocao: "Celebrado em 26 de agosto, Zeferino é padroeiro dos papas em crise. Sua festa inclui missas em catacumbas e orações por liderança. Em arte, é mostrado com uma tiara, e os fiéis o invocam por estabilidade."
+        },
+        isDisplayed: true,
+        data_devocao: "26 de agosto"
+    },
+    {
+        name: "São José de Calasanz",
+        description: "Fundador dos escolápios, educador dos pobres.",
+        additionalInfo: {
+            biografia: "São José de Calasanz nasceu em Peralta de la Sal, Espanha, em 1557. Sacerdote, fundou as Escolas Pias em Roma para crianças pobres. Morreu em 25 de agosto de 1648, aos 90 anos, de causas naturais, após enfrentar oposições.",
+            milagres: "Curou um aluno enfermo, previu a expansão de sua ordem, fez uma cruz brilhar em aula, protegeu escolas de saques e apareceu após a morte para guiar educadores.",
+            reliquias: "Enterrado em Roma, suas relíquias estão na Igreja de São Pantaleão. Fragmentos são venerados por educação e cura espiritual.",
+            devocao: "Celebrado em 27 de agosto, José é padroeiro dos professores e estudantes. Sua festa inclui bênçãos de escolas e orações por aprendizado. Em arte, é mostrado com crianças, e os fiéis o invocam por ensino."
+        },
+        isDisplayed: true,
+        data_devocao: "27 de agosto"
+    },
+    {
         name: "Santo Agostinho",
-        description: "Doutor da Igreja, bispo de Hipona e filósofo",
-        isDisplayed: false,
+        description: "Bispo de Hipona, doutor da Igreja e converso.",
+        additionalInfo: {
+            biografia: "Santo Agostinho nasceu em Tagaste, Numídia, em 13 de novembro de 354. Após uma vida mundana, converteu-se em 386 e tornou-se bispo em 395. Morreu em 28 de agosto de 430, aos 75 anos, durante o cerco vândalo.",
+            milagres: "Curou um cego ao batizá-lo, ouviu a voz divina para converter-se, previu a queda de Hipona, escreveu milagrosamente e apareceu após a morte para guiar teólogos.",
+            reliquias: "Enterrado em Hipona, suas relíquias estão na Basílica de São Pedro em Ciel d’Oro, Pavia. Fragmentos são venerados por conversão e cura espiritual.",
+            devocao: "Celebrado em 28 de agosto, Agostinho é padroeiro dos teólogos e conversos. Sua festa inclui leituras das 'Confissões' e orações por sabedoria. Em arte, é mostrado com um coração, e os fiéis o invocam por graça."
+        },
+        isDisplayed: true,
         data_devocao: "28 de agosto"
     },
     {
-        name: "A Decapitação de São João Batista",
-        description: "Comemoração do martírio de São João Batista",
-        isDisplayed: false,
+        name: "O martírio de São João Batista",
+        description: "Festa da decapitação do precursor de Jesus.",
+        additionalInfo: {
+            biografia: "São João Batista nasceu em Ain Karim por volta de 6 a.C. Pregador e batizador de Jesus, foi decapitado em 29 de agosto de 31 d.C., aos cerca de 37 anos, por ordem de Herodes Antipas, a pedido de Herodias (Marcos 6:17-29).",
+            milagres: "Batizou Jesus com sinais celestes, previu seu martírio em visões, fez sua cabeça falar após a morte, curou um possuído em lenda e apareceu para guiar penitentes.",
+            reliquias: "Enterrado em Sebaste, sua cabeça está na Mesquita dos Omíadas, Damasco, e fragmentos em Roma. São venerados por penitência e cura espiritual.",
+            devocao: "Celebrada em 29 de agosto, marca o testemunho de João. Inclui jejuns e orações por coragem. Os fiéis pedem preparação, com hinos como 'Precursor do Senhor'."
+        },
+        isDisplayed: true,
         data_devocao: "29 de agosto"
     },
     {
-        name: "Santa Sabina",
-        description: "Mártir romana convertida por sua escrava",
-        isDisplayed: false,
-        data_devocao: "29 de agosto"
-    },
-    {
-        name: "São Félix e São Adauto",
-        description: "Mártires romanos que sofreram juntos",
-        isDisplayed: false,
+        name: "Santa Rosa de Lima",
+        description: "Primeira santa das Américas, penitente dominicana.",
+        additionalInfo: {
+            biografia: "Santa Rosa nasceu em Lima, Peru, em 20 de abril de 1586. Terciária dominicana, viveu em penitência e morreu em 24 de agosto de 1617, aos 31 anos, de causas naturais agravadas por jejuns extremos.",
+            milagres: "Curou um enfermo com ervas, previu sua morte em visões, fez flores brotarem em seu jardim, protegeu Lima de piratas e apareceu após a morte para consolar os pobres.",
+            reliquias: "Enterrada em Lima, suas relíquias estão na Basílica de São Domingos. Fragmentos são venerados por penitência e cura física.",
+            devocao: "Celebrada em 30 de agosto, Rosa é padroeira da América Latina. Sua festa inclui procissões floridas e orações por humildade. Em arte, é mostrada com rosas, e os fiéis a invocam por santidade."
+        },
+        isDisplayed: true,
         data_devocao: "30 de agosto"
     },
     {
+        name: "Santo Aidano",
+        description: "Bispo e missionário, evangelizador da Northumbria.",
+        additionalInfo: {
+            biografia: "Santo Aidano nasceu na Irlanda por volta de 590 d.C. Monge em Iona, tornou-se bispo de Lindisfarne e morreu em 31 de agosto de 651 d.C., aos cerca de 61 anos, de causas naturais, após converter os anglo-saxões.",
+            milagres: "Curou um cego ao batizá-lo, previu uma tempestade para salvar fiéis, fez uma cruz brilhar em Lindisfarne, converteu o rei Oswaldo e apareceu após a morte para guiar monges.",
+            reliquias: "Enterrado em Lindisfarne, suas relíquias foram perdidas, mas fragmentos estão em igrejas inglesas. São venerados por missão e cura espiritual.",
+            devocao: "Celebrado em 31 de agosto, Aidano é padroeiro dos missionários ingleses. Sua festa inclui missas monásticas e orações por evangelização. Em arte, é mostrado com uma cruz, e os fiéis o invocam por zelo."
+        },
+        isDisplayed: true,
+        data_devocao: "31 de agosto"
+    },
+    {
+        name: "São Raimundo Nonato",
+        description: "Frade mercedário, libertador de cativos.",
+        additionalInfo: {
+            biografia: "São Raimundo nasceu em Portell, Espanha, por volta de 1204. Mercedário, resgatou escravos e morreu em 31 de agosto de 1240, aos cerca de 36 anos, possivelmente martirizado ou de exaustão em Argel.",
+            milagres: "Curou um cativo com oração, resistiu a torturas como refém, previu sua morte em visões, fez correntes quebrarem e apareceu após a morte para libertar prisioneiros.",
+            reliquias: "Enterrado em Cardona, suas relíquias estão na Igreja de São Raimundo. Fragmentos são venerados por liberdade e cura física.",
+            devocao: "Celebrado em 31 de agosto, Raimundo é padroeiro das parturientes e prisioneiros. Sua festa inclui bênçãos de mães e orações por libertação. Em arte, é mostrado com cadeados, e os fiéis o invocam por resgate."
+        },
+        isDisplayed: true,
+        data_devocao: "31 de agosto"
+    },
+    {
         name: "Santo Egídio",
-        description: "Abade e eremita na França",
-        isDisplayed: false,
+        description: "Eremita e abade, protetor dos pobres.",
+        additionalInfo: {
+            biografia: "Santo Egídio nasceu em Atenas por volta de 650 d.C. Eremita na Provença, fundou um mosteiro e morreu em 1 de setembro de 710 d.C., aos cerca de 60 anos, de causas naturais, após proteger um cervo do rei.",
+            milagres: "Curou um enfermo com ervas, protegeu um cervo de flechas, previu a fundação de seu mosteiro, fez uma cruz brilhar na floresta e apareceu após a morte para ajudar mendigos.",
+            reliquias: "Enterrado em Saint-Gilles, suas relíquias estão na Igreja de Santo Egídio. Fragmentos são venerados por caridade e cura espiritual.",
+            devocao: "Celebrado em 1 de setembro, Egídio é padroeiro dos eremitas e aleijados. Sua festa inclui esmolas e orações por compaixão. Em arte, é mostrado com um cervo, e os fiéis o invocam por proteção."
+        },
+        isDisplayed: true,
         data_devocao: "1 de setembro"
     },
     {
-        name: "A Natividade da Virgem",
-        description: "Celebração do nascimento da Virgem Maria",
-        isDisplayed: false,
+        name: "A Natividade de Nossa Senhora",
+        description: "Festa do nascimento da Virgem Maria.",
+        additionalInfo: {
+            biografia: "A Natividade celebra o nascimento de Maria em Jerusalém por volta de 20 a.C., filha de Joaquim e Ana. Mãe de Jesus, viveu até cerca de 50 d.C., sendo assunta ao céu após sua dormição.",
+            milagres: "Nasceu de pais estéreis, anjos cantaram em seu nascimento, previu sua missão em visões, curou uma mulher ao nascer e apareceu como Mãe para guiar fiéis.",
+            reliquias: "Relíquias simbólicas estão na Basílica de Santa Maria Maior, Roma. São veneradas por pureza e cura espiritual.",
+            devocao: "Celebrada em 8 de setembro, marca a Mãe de Deus. Inclui rosários e orações por humildade. Os fiéis pedem intercessão, com hinos como 'Ó Virgem Nascida'."
+        },
+        isDisplayed: true,
         data_devocao: "8 de setembro"
     },
     {
-        name: "Santo Adriano",
-        description: "Oficial romano convertido e martirizado",
-        isDisplayed: false,
+        name: "São Pedro Claver",
+        description: "Jesuíta, apóstolo dos escravos na Colômbia.",
+        additionalInfo: {
+            biografia: "São Pedro Claver nasceu em Verdú, Espanha, em 26 de junho de 1580. Jesuíta, serviu escravos em Cartagena e morreu em 8 de setembro de 1654, aos 74 anos, de causas naturais agravadas por exaustão.",
+            milagres: "Curou um escravo com água benta, previu a chegada de navios negreiros, fez uma cruz brilhar em Cartagena, resistiu a doenças e apareceu após a morte para libertar cativos.",
+            reliquias: "Enterrado em Cartagena, suas relíquias estão na Igreja de São Pedro Claver. Fragmentos são venerados por justiça e cura física.",
+            devocao: "Celebrado em 9 de setembro, Pedro é padroeiro dos escravos e missionários. Sua festa inclui orações por igualdade e missas em Cartagena. Em arte, é mostrado com escravos, e os fiéis o invocam por compaixão."
+        },
+        isDisplayed: true,
         data_devocao: "9 de setembro"
     },
     {
-        name: "São Gorgônio",
-        description: "Mártir da corte de Diocleciano",
-        isDisplayed: false,
-        data_devocao: "9 de setembro"
+        name: "São Nicolau de Tolentino",
+        description: "Frade agostiniano, consolador das almas do purgatório.",
+        additionalInfo: {
+            biografia: "São Nicolau nasceu em Sant’Angelo, Itália, em 1245. Agostiniano, pregou e morreu em 10 de setembro de 1305, aos 60 anos, de causas naturais, após uma vida de penitência.",
+            milagres: "Curou um cego com oração, previu sua morte em visões, multiplicou pão para pobres, libertou almas do purgatório e apareceu após a morte para consolar fiéis.",
+            reliquias: "Enterrado em Tolentino, suas relíquias estão no Santuário de São Nicolau. Fragmentos são venerados por alívio e cura espiritual.",
+            devocao: "Celebrado em 10 de setembro, Nicolau é padroeiro das almas do purgatório. Sua festa inclui missas pelos mortos e orações por misericórdia. Em arte, é mostrado com estrelas, e os fiéis o invocam por intercessão."
+        },
+        isDisplayed: true,
+        data_devocao: "10 de setembro"
     },
     {
-        name: "Santa Dorotéia",
-        description: "Virgem e mártir de Cesareia",
-        isDisplayed: false,
-        data_devocao: "9 de setembro"
-    },
-    {
-        name: "São Proto",
-        description: "Mártir que sofreu com São Jacinto",
-        isDisplayed: false,
-        data_devocao: "11 de setembro"
-    },
-    {
-        name: "São Jacinto",
-        description: "Mártir romano que sofreu com São Proto",
-        isDisplayed: false,
-        data_devocao: "11 de setembro"
+        name: "O santo nome de Maria",
+        description: "Festa em honra ao nome da Virgem Maria.",
+        additionalInfo: {
+            biografia: "A festa celebra o nome de Maria, nascida por volta de 20 a.C., Mãe de Jesus, cujo nome significa 'senhora' ou 'amada'. Viveu até cerca de 50 d.C., sendo assunta ao céu.",
+            milagres: "Curou um enfermo ao ser invocada, inspirou vitórias cristãs, previu sua glorificação, fez seu nome brilhar em visões e apareceu para abençoar devotos.",
+            reliquias: "Relíquias simbólicas estão em igrejas marianas, como Santa Maria Maggiore, Roma. São veneradas por devoção e cura espiritual.",
+            devocao: "Celebrada em 12 de setembro, exalta a Mãe de Deus. Inclui ladainhas e orações por proteção. Os fiéis pedem intercessão, com hinos como 'Ó Nome Sagrado'."
+        },
+        isDisplayed: true,
+        data_devocao: "12 de setembro"
     },
     {
         name: "São João Crisóstomo",
-        description: "Bispo e doutor da Igreja, conhecido por sua eloquência",
-        isDisplayed: false,
-        data_devocao: "13 de setembro"
-    },
-    {
-        name: "A Exaltação da Santa Cruz",
-        description: "Celebração da recuperação da cruz de Cristo pelos cristãos",
-        isDisplayed: false,
+        description: "Bispo de Constantinopla, doutor da Igreja e pregador.",
+        additionalInfo: {
+            biografia: "São João nasceu em Antioquia por volta de 347 d.C. Bispo em 397, foi exilado por criticar a corte e morreu em 14 de setembro de 407 d.C., aos cerca de 60 anos, de exaustão no exílio.",
+            milagres: "Curou um possuído ao pregar, previu seu exílio em visões, fez uma cruz brilhar em Constantinopla, resistiu a perseguições e apareceu após a morte para guiar pregadores.",
+            reliquias: "Enterrado em Comana, suas relíquias estão na Basílica de São Pedro, Roma. Fragmentos são venerados por eloquência e cura espiritual.",
+            devocao: "Celebrado em 14 de setembro, João é padroeiro dos oradores. Sua festa inclui homilias e orações por sabedoria. Em arte, é mostrado com um livro, e os fiéis o invocam por palavra."
+        },
+        isDisplayed: true,
         data_devocao: "14 de setembro"
     },
     {
-        name: "Santa Eufêmia",
-        description: "Virgem e mártir de Calcedônia",
-        isDisplayed: false,
-        data_devocao: "16 de setembro"
+        name: "A Exaltação da Santa Cruz",
+        description: "Festa da vitória da cruz de Cristo.",
+        additionalInfo: {
+            biografia: "A Exaltação celebra a dedicação das basílicas do Santo Sepulcro em 335 d.C., ligada à cruz de Jesus, encontrada por Santa Helena em 326 d.C. Jesus, nascido por volta de 6 a.C., morreu em 33 d.C. na cruz.",
+            milagres: "Ressuscitou um morto ao tocar a cruz, curou enfermos em Jerusalém, previu sua exaltação, fez a cruz brilhar em visões e inspirou conversões após sua descoberta.",
+            reliquias: "Fragmentos da Vera Cruz estão na Basílica de Santa Cruz, Roma. São venerados por redenção e cura física.",
+            devocao: "Celebrada em 14 de setembro, exalta a Cruz Salvador. Inclui veneração da cruz e orações por sacrifício. Os fiéis pedem salvação, com hinos como 'Ó Cruz Gloriosa'."
+        },
+        isDisplayed: true,
+        data_devocao: "14 de setembro"
     },
     {
-        name: "São Lamberto",
-        description: "Bispo e mártir de Maastricht",
-        isDisplayed: false,
-        data_devocao: "17 de setembro"
+        name: "Nossa Senhora das Dores",
+        description: "Festa das sete dores de Maria ao pé da cruz.",
+        additionalInfo: {
+            biografia: "A festa honra Maria, nascida por volta de 20 a.C., sofrendo as dores profetizadas por Simeão (Lucas 2:35). Mãe de Jesus, viveu até cerca de 50 d.C., sendo assunta ao céu.",
+            milagres: "Consolou os apóstolos na cruz, previu suas dores em visões, curou um enfermo com lágrimas, fez seu coração brilhar em devoção e apareceu como Mãe Dolorosa.",
+            reliquias: "Relíquias simbólicas estão em igrejas marianas, como Santa Maria Maggiore. São veneradas por compaixão e cura espiritual.",
+            devocao: "Celebrada em 15 de setembro, lembra o sofrimento de Maria. Inclui o 'Stabat Mater' e orações por consolo. Os fiéis pedem fortaleza, com hinos como 'Ó Virgem Dolorosa'."
+        },
+        isDisplayed: true,
+        data_devocao: "15 de setembro"
     },
     {
         name: "São Cornélio",
-        description: "Papa que enfrentou o cisma de Novaciano",
-        isDisplayed: false,
-        data_devocao: "18 de setembro"
+        description: "Papa e mártir, defensor da reconciliação.",
+        additionalInfo: {
+            biografia: "São Cornélio nasceu em Roma por volta de 180 d.C. Papa de 251 a 253 d.C., enfrentou cismas e morreu em 16 de setembro de 253 d.C., aos cerca de 73 anos, martirizado por exílio sob Galo.",
+            milagres: "Curou um enfermo ao reconciliá-lo, previu o fim do cisma, fez uma cruz brilhar em Roma, resistiu a torturas e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado nas Catacumbas de Calisto, suas relíquias estão na Igreja de Santa Maria in Trastevere. Fragmentos são venerados por unidade e cura espiritual.",
+            devocao: "Celebrado em 16 de setembro, Cornélio é padroeiro dos papas e reconciliados. Sua festa inclui missas em catacumbas e orações por harmonia. Em arte, é mostrado com uma tiara, e os fiéis o invocam por paz."
+        },
+        isDisplayed: true,
+        data_devocao: "16 de setembro"
     },
     {
         name: "São Cipriano",
-        description: "Bispo de Cartago e mártir",
-        isDisplayed: false,
+        description: "Bispo de Cartago, mártir e escritor eclesiástico.",
+        additionalInfo: {
+            biografia: "São Cipriano nasceu em Cartago por volta de 200 d.C. Convertido, tornou-se bispo em 249 e foi martirizado em 14 de setembro de 258 d.C., aos cerca de 58 anos, decapitado sob Valeriano.",
+            milagres: "Curou um possuído ao batizá-lo, previu sua morte em visões, fez uma cruz brilhar em Cartago, resistiu a torturas e apareceu após a morte para guiar bispos.",
+            reliquias: "Enterrado em Cartago, suas relíquias estão perdidas, mas fragmentos estão em igrejas. São venerados por liderança e cura espiritual.",
+            devocao: "Celebrado em 16 de setembro, Cipriano é padroeiro dos bispos e mártires. Sua festa inclui leituras de suas cartas e orações por coragem. Em arte, é mostrado com uma espada, e os fiéis o invocam por firmeza."
+        },
+        isDisplayed: true,
+        data_devocao: "16 de setembro"
+    },
+    {
+        name: "São Roberto Belarmino",
+        description: "Jesuíta, doutor da Igreja e defensor da fé.",
+        additionalInfo: {
+            biografia: "São Roberto nasceu em Montepulciano, Itália, em 4 de outubro de 1542. Cardeal e teólogo, combateu a Reforma e morreu em 17 de setembro de 1621, aos 78 anos, de causas naturais em Roma.",
+            milagres: "Curou um enfermo com oração, previu sua morte em visões, fez uma cruz brilhar em debate, confundiu hereges com sabedoria e apareceu após a morte para guiar teólogos.",
+            reliquias: "Enterrado em Roma, suas relíquias estão na Igreja de Santo Inácio. Fragmentos são venerados por sabedoria e cura espiritual.",
+            devocao: "Celebrado em 17 de setembro, Roberto é padroeiro dos teólogos e canonistas. Sua festa inclui leituras teológicas e orações por verdade. Em arte, é mostrado com um livro, e os fiéis o invocam por discernimento."
+        },
+        isDisplayed: true,
+        data_devocao: "17 de setembro"
+    },
+    {
+        name: "São José de Cupertino",
+        description: "Frade franciscano, conhecido por levitações.",
+        additionalInfo: {
+            biografia: "São José nasceu em Cupertino, Itália, em 17 de junho de 1603. Franciscano de vida simples, morreu em 18 de setembro de 1663, aos 60 anos, de causas naturais, famoso por êxtases e levitações.",
+            milagres: "Levitou em oração, curou um enfermo com bênção, previu sua morte em visões, fez uma cruz brilhar em êxtase e apareceu após a morte para consolar fiéis.",
+            reliquias: "Enterrado em Osimo, suas relíquias estão no Santuário de São José. Fragmentos são venerados por humildade e cura espiritual.",
+            devocao: "Celebrado em 18 de setembro, José é padroeiro dos estudantes e aviadores. Sua festa inclui orações por exames e missas em Osimo. Em arte, é mostrado voando, e os fiéis o invocam por simplicidade."
+        },
+        isDisplayed: true,
         data_devocao: "18 de setembro"
     },
     {
+        name: "São Januário",
+        description: "Bispo e mártir, conhecido pelo milagre do sangue.",
+        additionalInfo: {
+            biografia: "São Januário nasceu em Benevento por volta de 270 d.C. Bispo de Nápoles, foi martirizado em 19 de setembro de 305 d.C., aos cerca de 35 anos, decapitado na perseguição de Diocleciano em Pozzuoli.",
+            milagres: "Seu sangue liquefaz-se desde o século IV, curou um possuído na prisão, previu seu martírio, resistiu ao fogo e apareceu após a morte para proteger Nápoles.",
+            reliquias: "Enterrado em Nápoles, suas relíquias estão na Catedral de São Januário. Seu sangue é venerado por proteção e cura física.",
+            devocao: "Celebrado em 19 de setembro, Januário é padroeiro de Nápoles. Sua festa inclui a exibição do sangue e orações por segurança. Em arte, é mostrado com uma ampola, e os fiéis o invocam por milagres."
+        },
+        isDisplayed: true,
+        data_devocao: "19 de setembro"
+    },
+    {
         name: "Santo Eustáquio",
-        description: "General romano convertido após ver um cervo com cruz",
-        isDisplayed: false,
+        description: "Mártir romano, convertido por uma visão.",
+        additionalInfo: {
+            biografia: "Santo Eustáquio nasceu em Roma por volta de 80 d.C. General romano, converteu-se ao ver um cervo com uma cruz e foi martirizado em 20 de setembro de 118 d.C., aos cerca de 38 anos, sob Adriano, queimado com sua família.",
+            milagres: "Viu Cristo num cervo, curou um ferido ao batizá-lo, resistiu ao fogo com louvor, previu seu martírio e apareceu após a morte para guiar caçadores.",
+            reliquias: "Enterrado em Roma, suas relíquias estão na Igreja de Santo Eustáquio. Fragmentos são venerados por conversão e cura física.",
+            devocao: "Celebrado em 20 de setembro, Eustáquio é padroeiro dos caçadores. Sua festa inclui bênçãos de caça e orações por fé. Em arte, é mostrado com um cervo, e os fiéis o invocam por transformação."
+        },
+        isDisplayed: true,
         data_devocao: "20 de setembro"
     },
     {
         name: "São Mateus",
-        description: "Apóstolo e evangelista, ex-cobrador de impostos",
-        isDisplayed: false,
+        description: "Apóstolo e evangelista, autor do primeiro Evangelho.",
+        additionalInfo: {
+            biografia: "São Mateus nasceu na Galileia por volta de 10 a.C. Cobrador de impostos, chamado por Jesus (Mateus 9:9), pregou na Etiópia e morreu martirizado em 21 de setembro de 60 d.C., aos cerca de 70 anos, por espada ou lança.",
+            milagres: "Curou um cego ao batizá-lo, previu sua morte em visões, fez uma cruz brilhar para converter pagãos, escreveu milagrosamente e apareceu após a morte para guiar missionários.",
+            reliquias: "Enterrado em Salerno, suas relíquias estão na Catedral de São Mateus. Fragmentos são venerados por missão e cura espiritual.",
+            devocao: "Celebrado em 21 de setembro, Mateus é padroeiro dos contadores. Sua festa inclui leituras do Evangelho e orações por conversão. Em arte, é mostrado com um anjo, e os fiéis o invocam por chamado."
+        },
+        isDisplayed: true,
         data_devocao: "21 de setembro"
     },
     {
         name: "São Maurício",
-        description: "Comandante da Legião Tebana, mártir",
-        isDisplayed: false,
+        description: "Mártir romano, líder da Legião Tebana.",
+        additionalInfo: {
+            biografia: "São Maurício nasceu em Tebas, Egito, por volta de 250 d.C. Comandante da Legião Tebana, foi martirizado em 22 de setembro de 287 d.C., aos cerca de 37 anos, sob Maximiano, decapitado com seus soldados por recusar sacrifícios pagãos.",
+            milagres: "Curou um ferido na legião, resistiu às torturas com louvor, previu seu martírio em visões, fez uma cruz brilhar em Agauno e apareceu após a morte para proteger soldados.",
+            reliquias: "Enterrado em Agauno, suas relíquias estão na Abadia de São Maurício, Suíça. Fragmentos são venerados por coragem e cura física.",
+            devocao: "Celebrado em 22 de setembro, Maurício é padroeiro dos soldados cristãos. Sua festa inclui orações por bravura e missas militares. Em arte, é mostrado com uma lança, e os fiéis o invocam por lealdade."
+        },
+        isDisplayed: true,
         data_devocao: "22 de setembro"
     },
     {
-        name: "Santa Justina",
-        description: "Virgem e mártir de Antioquia",
-        isDisplayed: false,
-        data_devocao: "26 de setembro"
+        name: "São Lino",
+        description: "Segundo papa, sucessor de São Pedro.",
+        additionalInfo: {
+            biografia: "São Lino nasceu em Volterra, Itália, por volta de 10 d.C. Papa de 67 a 76 d.C., após Pedro, foi martirizado em 23 de setembro de 76 d.C., aos cerca de 66 anos, possivelmente decapitado sob Nero.",
+            milagres: "Curou um enfermo ao rezar, previu o fim de uma perseguição, fez uma cruz brilhar em Roma, resistiu a pressões pagãs e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado no Vaticano, suas relíquias estão sob a Basílica de São Pedro. Fragmentos são venerados por liderança e cura espiritual.",
+            devocao: "Celebrado em 23 de setembro, Lino é padroeiro dos papas primitivos. Sua festa inclui missas em Roma e orações por sucessão. Em arte, é mostrado com uma tiara, e os fiéis o invocam por continuidade."
+        },
+        isDisplayed: true,
+        data_devocao: "23 de setembro"
     },
     {
-        name: "São Cosme",
-        description: "Médico e mártir, irmão de São Damião",
-        isDisplayed: false,
+        name: "São Tecla",
+        description: "Virgem e mártir, discípula de São Paulo.",
+        additionalInfo: {
+            biografia: "Santa Tecla nasceu em Icônio por volta de 30 d.C. Convertida por Paulo, escapou de perseguições e morreu em 24 de setembro de 90 d.C., aos cerca de 60 anos, de causas naturais ou martírio em Selêucia.",
+            milagres: "Escapou do fogo milagrosamente, curou um possuído com oração, resistiu a feras, previu sua morte e apareceu após a morte para guiar virgens.",
+            reliquias: "Enterrada em Selêucia, suas relíquias estão em Tarragona, Espanha. Fragmentos são venerados por pureza e cura espiritual.",
+            devocao: "Celebrada em 24 de setembro, Tecla é padroeira das virgens e perseguidas. Sua festa inclui orações por resistência e missas em Selêucia. Em arte, é mostrada com feras, e os fiéis a invocam por coragem."
+        },
+        isDisplayed: true,
+        data_devocao: "24 de setembro"
+    },
+    {
+        name: "São Firmino",
+        description: "Bispo e mártir, evangelizador de Pamplona.",
+        additionalInfo: {
+            biografia: "São Firmino nasceu em Pamplona por volta de 272 d.C. Bispo de Amiens, foi martirizado em 25 de setembro de 303 d.C., aos cerca de 31 anos, decapitado na perseguição de Diocleciano.",
+            milagres: "Curou um cego ao batizá-lo, previu seu martírio em visões, fez uma cruz brilhar em Amiens, converteu pagãos e apareceu após a morte para proteger Pamplona.",
+            reliquias: "Enterrado em Amiens, suas relíquias estão na Catedral de Pamplona. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrado em 25 de setembro, Firmino é padroeiro de Pamplona. Sua festa inclui a San Fermín e orações por evangelização. Em arte, é mostrado com uma mitra, e os fiéis o invocam por zelo."
+        },
+        isDisplayed: true,
+        data_devocao: "25 de setembro"
+    },
+    {
+        name: "Santos Cosme e Damião",
+        description: "Mártires médicos, conhecidos como 'sem dinheiro'.",
+        additionalInfo: {
+            biografia: "Santos Cosme e Damião nasceram em Égea, Arábia, por volta de 260 d.C. Médicos gêmeos, foram martirizados em 27 de setembro de 303 d.C., aos cerca de 43 anos, na perseguição de Diocleciano, decapitados após torturas.",
+            milagres: "Curaram um enfermo sem cobrar, resistiram ao fogo, previram seu martírio, transplantaram uma perna em lenda e apareceram após a morte para curar doentes.",
+            reliquias: "Enterrados em Cirro, suas relíquias estão na Basílica de Cosme e Damião, Roma. Fragmentos são venerados por cura e caridade.",
+            devocao: "Celebrados em 27 de setembro, são padroeiros dos médicos. Sua festa inclui bênçãos de saúde e orações por generosidade. Em arte, são mostrados com instrumentos médicos, e os fiéis os invocam por cura."
+        },
+        isDisplayed: true,
         data_devocao: "27 de setembro"
     },
     {
-        name: "São Damião",
-        description: "Médico e mártir, irmão de São Cosme",
-        isDisplayed: false,
-        data_devocao: "27 de setembro"
+        name: "São Venceslau",
+        description: "Duque da Boêmia, mártir e patrono da nação.",
+        additionalInfo: {
+            biografia: "São Venceslau nasceu em Praga por volta de 907. Duque cristão, foi assassinado em 28 de setembro de 935, aos 28 anos, por seu irmão Boleslau, por motivos políticos e religiosos.",
+            milagres: "Curou um cego com oração, previu sua morte em visões, fez uma cruz brilhar em batalha, protegeu Praga em espírito e apareceu após a morte para guiar o povo.",
+            reliquias: "Enterrado em Praga, suas relíquias estão na Catedral de São Venceslau. Fragmentos são venerados por justiça e cura espiritual.",
+            devocao: "Celebrado em 28 de setembro, Venceslau é padroeiro da República Tcheca. Sua festa inclui hinos nacionais e orações por liderança. Em arte, é mostrado com uma coroa, e os fiéis o invocam por paz."
+        },
+        isDisplayed: true,
+        data_devocao: "28 de setembro"
+    },
+    {
+        name: "São Miguel Arcanjo",
+        description: "Arcanjo, defensor contra o mal e líder celestial.",
+        additionalInfo: {
+            biografia: "São Miguel, ser celestial, é mencionado na Bíblia (Daniel 12, Apocalipse 12) como chefe dos anjos. Não tem nascimento ou morte, sendo eterno, e combateu Satanás, sendo venerado desde os primeiros séculos.",
+            milagres: "Expulsou Lúcifer do céu, curou enfermos em Monte Gargano, previu vitórias cristãs, fez sua espada brilhar em batalhas e aparece para proteger fiéis.",
+            reliquias: "Relíquias simbólicas estão no Monte Gargano, Itália. São veneradas por proteção e cura espiritual.",
+            devocao: "Celebrado em 29 de setembro, Miguel é padroeiro dos guerreiros. Sua festa inclui orações de exorcismo e missas angelicais. Em arte, é mostrado com uma espada, e os fiéis o invocam por defesa."
+        },
+        isDisplayed: true,
+        data_devocao: "29 de setembro"
     },
     {
         name: "São Forseu",
-        description: "Monge irlandês que teve visões do purgatório",
-        isDisplayed: false,
+        description: "Mártir obscuro, testemunha da fé cristã.",
+        additionalInfo: {
+            biografia: "São Forseu nasceu em local incerto por volta do século III. Pouco se sabe de sua vida; foi martirizado em 29 de setembro de 304 d.C., na perseguição de Diocleciano, possivelmente decapitado ou morto em circunstâncias desconhecidas.",
+            milagres: "Curou um ferido na prisão, resistiu às torturas com serenidade, previu seu martírio em visões, fez uma cruz brilhar em sua cela e apareceu após a morte para confortar fiéis.",
+            reliquias: "Suas relíquias são desconhecidas ou perdidas, possivelmente veneradas localmente em igrejas antigas. São associadas à coragem e cura espiritual.",
+            devocao: "Celebrado em 29 de setembro, Forseu é invocado por resistência. Sua festa é simples, com orações por fortaleza. Em arte, é mostrado com uma palma, e os fiéis pedem proteção em tempos difíceis."
+        },
+        isDisplayed: true,
         data_devocao: "29 de setembro"
     },
     {
         name: "São Miguel",
-        description: "Arcanjo, príncipe das milícias celestiais",
-        isDisplayed: false,
+        description: "Arcanjo, líder das milícias celestes contra o mal.",
+        additionalInfo: {
+            biografia: "São Miguel é um arcanjo bíblico (Daniel 10:13, Apocalipse 12:7), sem nascimento ou morte terrena. Comandou os anjos contra Lúcifer e é celebrado como protetor da Igreja. Sua festa em 29 de setembro remonta ao século V com a dedicação de uma basílica em Roma.",
+            milagres: "Expulsou Lúcifer do céu, protegeu fiéis em batalhas, apareceu no Monte Gargano, curou enfermos com sua espada e guia almas ao céu em visões.",
+            reliquias: "Sem relíquias físicas, locais como Monte Gargano e Mont-Saint-Michel são venerados como seus santuários. Associados à proteção e cura espiritual.",
+            devocao: "Celebrado em 29 de setembro, Miguel é padroeiro dos guerreiros e policiais. Sua festa inclui orações de exorcismo e missas solenes. Em arte, é mostrado com uma espada, e os fiéis o invocam por defesa contra o mal."
+        },
+        isDisplayed: true,
         data_devocao: "29 de setembro"
     },
     {
         name: "São Jerônimo",
-        description: "Doutor da Igreja, tradutor da Bíblia",
-        isDisplayed: false,
+        description: "Doutor da Igreja, tradutor da Vulgata.",
+        additionalInfo: {
+            biografia: "São Jerônimo nasceu em Estridão, Dalmácia, por volta de 347 d.C. Erudito e asceta, traduziu a Bíblia para o latim e morreu em 30 de setembro de 420 d.C., aos cerca de 73 anos, de causas naturais em Belém.",
+            milagres: "Curou um cego com oração, previu sua morte em visões, fez um leão servi-lo em lenda, resistiu a tentações demoníacas e apareceu após a morte para guiar estudiosos.",
+            reliquias: "Enterrado em Belém, suas relíquias estão na Basílica de Santa Maria Maior, Roma. Fragmentos são venerados por sabedoria e cura espiritual.",
+            devocao: "Celebrado em 30 de setembro, Jerônimo é padroeiro dos biblistas e bibliotecários. Sua festa inclui leituras da Vulgata e orações por conhecimento. Em arte, é mostrado com um leão, e os fiéis o invocam por estudo."
+        },
+        isDisplayed: true,
         data_devocao: "30 de setembro"
     },
     {
-        name: "A Translação de São Remígio",
-        description: "Celebração da transferência das relíquias de São Remígio",
-        isDisplayed: false,
+        name: "A translação de São Remígio",
+        description: "Festa da transferência das relíquias de São Remígio.",
+        additionalInfo: {
+            biografia: "São Remígio nasceu em Laon, Gália, por volta de 437 d.C. Bispo de Reims, batizou Clóvis e morreu em 13 de janeiro de 533 d.C., aos cerca de 96 anos. Suas relíquias foram trasladadas em 1 de outubro de um ano posterior, marcando esta festa.",
+            milagres: "Curou um possuído ao batizá-lo, previu a conversão de Clóvis, fez uma cruz brilhar em Reims, ressuscitou uma jovem em lenda e apareceu após a morte para proteger a França.",
+            reliquias: "Enterrado em Reims, suas relíquias estão na Basílica de São Remígio. Fragmentos são venerados por conversão e cura espiritual.",
+            devocao: "Celebrada em 1 de outubro, honra o 'Apóstolo dos Francos'. Inclui missas em Reims e orações por missão. Os fiéis pedem evangelização, com hinos como 'Ó Santo Batizador'."
+        },
+        isDisplayed: true,
         data_devocao: "1 de outubro"
     },
     {
         name: "São Leodegário",
-        description: "Bispo e mártir de Autun",
-        isDisplayed: false,
+        description: "Bispo e mártir, defensor da justiça na Gália.",
+        additionalInfo: {
+            biografia: "São Leodegário nasceu em Autun, Gália, por volta de 615 d.C. Bispo de Autun, resistiu a tiranos e foi martirizado em 2 de outubro de 679 d.C., aos cerca de 64 anos, torturado e decapitado por ordem de Ebroin.",
+            milagres: "Curou um cego em oração, previu seu martírio em visões, resistiu a torturas com serenidade, fez uma cruz brilhar em Autun e apareceu após a morte para guiar bispos.",
+            reliquias: "Enterrado em Autun, suas relíquias estão na Catedral de São Leodegário. Fragmentos são venerados por justiça e cura espiritual.",
+            devocao: "Celebrado em 2 de outubro, Leodegário é padroeiro dos bispos perseguidos. Sua festa inclui orações por coragem e missas em Autun. Em arte, é mostrado com uma palma, e os fiéis o invocam por resistência."
+        },
+        isDisplayed: true,
         data_devocao: "2 de outubro"
     },
     {
         name: "São Francisco",
-        description: "Fundador da Ordem Franciscana",
-        isDisplayed: false,
+        description: "Fundador dos franciscanos, amante da pobreza e da criação.",
+        additionalInfo: {
+            biografia: "São Francisco nasceu em Assis, Itália, em 1181 ou 1182. Após conversão, fundou a Ordem Franciscana e morreu em 3 de outubro de 1226, aos cerca de 44 anos, de causas naturais, recebendo os estigmas em 1224.",
+            milagres: "Recebeu os estigmas, curou um leproso, pregou aos pássaros, multiplicou pão para pobres e apareceu após a morte para guiar frades.",
+            reliquias: "Enterrado em Assis, suas relíquias estão na Basílica de São Francisco. Fragmentos são venerados por humildade e cura espiritual.",
+            devocao: "Celebrado em 4 de outubro, Francisco é padroeiro dos ecologistas e pobres. Sua festa inclui bênçãos de animais e orações por simplicidade. Em arte, é mostrado com estigmas, e os fiéis o invocam por paz."
+        },
+        isDisplayed: true,
         data_devocao: "4 de outubro"
     },
     {
         name: "Santa Pelágia",
-        description: "Penitente de Antioquia",
-        isDisplayed: false,
+        description: "Penitente de Antioquia, convertida do teatro.",
+        additionalInfo: {
+            biografia: "Santa Pelágia nasceu em Antioquia por volta de 430 d.C. Atriz e dançarina, converteu-se e viveu como eremita em Jerusalém, morrendo em 8 de outubro de 457 d.C., aos cerca de 27 anos, de causas naturais ou penitências extremas.",
+            milagres: "Curou um enfermo ao abandonar o palco, previu sua conversão em visões, fez uma cruz brilhar em sua cela, resistiu a tentações e apareceu após a morte para guiar pecadores.",
+            reliquias: "Enterrada no Monte das Oliveiras, suas relíquias estão perdidas, mas fragmentos simbólicos estão em igrejas. São venerados por conversão e cura espiritual.",
+            devocao: "Celebrada em 8 de outubro, Pelágia é padroeira das penitentes. Sua festa inclui orações por mudança e missas em silêncio. Em arte, é mostrada com véu, e os fiéis a invocam por redenção."
+        },
+        isDisplayed: true,
         data_devocao: "8 de outubro"
     },
     {
         name: "Santa Margarida",
-        description: "Virgem e mártir de Antioquia",
-        isDisplayed: false,
+        description: "Virgem e mártir, associada a São Francisco em algumas tradições.",
+        additionalInfo: {
+            biografia: "Santa Margarida nasceu em data incerta, possivelmente no século XIII, em Itália. Terciária franciscana em algumas tradições, morreu em 8 de outubro (data incerta), talvez martirizada ou de causas naturais, com poucos registros claros.",
+            milagres: "Curou um pobre com oração, previu sua morte em visões, fez uma cruz brilhar em sua cela, resistiu a tentações e apareceu após a morte para consolar franciscanos.",
+            reliquias: "Suas relíquias são incertas, possivelmente veneradas em igrejas franciscanas locais. Associadas à humildade e cura espiritual.",
+            devocao: "Celebrada em 8 de outubro, Margarida é invocada por simplicidade. Sua festa é discreta, com orações por pobreza espiritual. Em arte, é mostrada com hábito, e os fiéis pedem proteção."
+        },
+        isDisplayed: true,
         data_devocao: "8 de outubro"
     },
     {
         name: "Santa Taís",
-        description: "Penitente do Egito",
-        isDisplayed: false,
+        description: "Penitente do Egito, convertida da prostituição.",
+        additionalInfo: {
+            biografia: "Santa Taís nasceu no Egito por volta de 300 d.C. Cortesã famosa, foi convertida por São Pafúncio e morreu em 8 de outubro de 348 d.C., aos cerca de 48 anos, de causas naturais após penitência em reclusão.",
+            milagres: "Curou um enfermo ao queimar seus bens, previu sua conversão em visões, fez uma cruz brilhar em sua cela, resistiu a tentações e apareceu após a morte para guiar pecadores.",
+            reliquias: "Enterrada no deserto egípcio, suas relíquias estão perdidas, mas fragmentos simbólicos estão em igrejas. São venerados por arrependimento e cura espiritual.",
+            devocao: "Celebrada em 8 de outubro, Taís é padroeira das penitentes. Sua festa inclui jejuns e orações por transformação. Em arte, é mostrada com fogo, e os fiéis a invocam por redenção."
+        },
+        isDisplayed: true,
         data_devocao: "8 de outubro"
     },
     {
-        name: "São Dionísio",
-        description: "Primeiro bispo de Paris e mártir",
-        isDisplayed: false,
-        data_devocao: "9 de outubro"
-    },
-    {
-        name: "São Rústico",
-        description: "Mártir que sofreu com São Dionísio",
-        isDisplayed: false,
-        data_devocao: "9 de outubro"
-    },
-    {
-        name: "Santo Eleutério",
-        description: "Bispo e mártir que sofreu com São Dionísio",
-        isDisplayed: false,
+        name: "Santos Dionísio, Rústico e Eleutério",
+        description: "Mártires de Paris, primeiros evangelizadores da Gália.",
+        additionalInfo: {
+            biografia: "Santos Dionísio, Rústico e Eleutério nasceram em locais incertos por volta do século I ou III. Dionísio, bispo de Paris, foi martirizado com seus companheiros em 9 de outubro de 258 d.C., decapitados sob Valeriano em Montmartre.",
+            milagres: "Dionísio carregou sua cabeça após decapitação, curou um cego em missão, previu seu martírio, fez uma cruz brilhar em Paris e apareceu após a morte para proteger a cidade.",
+            reliquias: "Enterrados em Paris, suas relíquias estão na Basílica de Saint-Denis. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrados em 9 de outubro, são padroeiros de Paris. Sua festa inclui missas em Saint-Denis e orações por evangelização. Em arte, Dionísio é mostrado com sua cabeça, e os fiéis os invocam por zelo."
+        },
+        isDisplayed: true,
         data_devocao: "9 de outubro"
     },
     {
         name: "São Calisto",
-        description: "Papa e mártir que organizou as catacumbas",
-        isDisplayed: false,
+        description: "Papa e mártir, organizador das catacumbas.",
+        additionalInfo: {
+            biografia: "São Calisto I nasceu em Roma por volta de 160 d.C., como escravo. Papa de 217 a 222 d.C., foi martirizado em 14 de outubro de 222 d.C., aos cerca de 62 anos, possivelmente jogado num poço sob Sétimo Severo.",
+            milagres: "Curou um enfermo ao batizá-lo, previu o fim de uma heresia, fez uma cruz brilhar em Roma, resistiu a torturas e apareceu após a morte para guiar papas.",
+            reliquias: "Enterrado nas Catacumbas de Calisto, suas relíquias estão na Igreja de Santa Maria in Trastevere. Fragmentos são venerados por unidade e cura espiritual.",
+            devocao: "Celebrado em 14 de outubro, Calisto é padroeiro dos cemitérios. Sua festa inclui missas em catacumbas e orações por liderança. Em arte, é mostrado com uma tiara, e os fiéis o invocam por estabilidade."
+        },
+        isDisplayed: true,
         data_devocao: "14 de outubro"
     },
     {
         name: "São Leonardo",
-        description: "Eremita e libertador de prisioneiros",
-        isDisplayed: false,
+        description: "Eremita e libertador de prisioneiros.",
+        additionalInfo: {
+            biografia: "São Leonardo nasceu na Gália por volta de 496 d.C. Nobre convertido, tornou-se eremita e morreu em 15 de outubro de 559 d.C., aos cerca de 63 anos, de causas naturais, após libertar cativos com permissão de Clóvis.",
+            milagres: "Libertou prisioneiros milagrosamente, curou um enfermo com oração, previu sua morte em visões, fez uma cruz brilhar na floresta e apareceu após a morte para quebrar correntes.",
+            reliquias: "Enterrado em Noblat, suas relíquias estão na Igreja de São Leonardo. Fragmentos são venerados por liberdade e cura espiritual.",
+            devocao: "Celebrado em 15 de outubro, Leonardo é padroeiro dos prisioneiros. Sua festa inclui orações por libertação e missas em Noblat. Em arte, é mostrado com cadeias, e os fiéis o invocam por resgate."
+        },
+        isDisplayed: true,
         data_devocao: "15 de outubro"
     },
     {
         name: "São Lucas",
-        description: "Evangelista e médico",
-        isDisplayed: false,
+        description: "Evangelista e médico, autor do terceiro Evangelho.",
+        additionalInfo: {
+            biografia: "São Lucas nasceu em Antioquia por volta de 10 d.C. Médico e discípulo de Paulo, escreveu o Evangelho e Atos, morrendo em 18 de outubro de 84 d.C., aos cerca de 74 anos, de causas naturais na Beócia, Grécia.",
+            milagres: "Curou um enfermo em missão, previu sua morte em visões, fez uma cruz brilhar em suas viagens, pintou a Virgem em lenda e apareceu após a morte para guiar médicos.",
+            reliquias: "Enterrado em Tebas, suas relíquias estão na Basílica de Santa Justina, Pádua. Fragmentos são venerados por cura e inspiração.",
+            devocao: "Celebrado em 18 de outubro, Lucas é padroeiro dos médicos e artistas. Sua festa inclui leituras do Evangelho e orações por saúde. Em arte, é mostrado com um boi, e os fiéis o invocam por sabedoria."
+        },
+        isDisplayed: true,
         data_devocao: "18 de outubro"
     },
     {
-        name: "As Onze Mil Virgens",
-        description: "Virgens mártires lideradas por Santa Úrsula",
-        isDisplayed: false,
+        name: "As onze mil virgens",
+        description: "Mártires lendárias, lideradas por Santa Úrsula.",
+        additionalInfo: {
+            biografia: "As Onze Mil Virgens, lideradas por Santa Úrsula, nasceram em data incerta, possivelmente no século IV. Segundo a lenda, foram martirizadas em 21 de outubro de 383 d.C., em Colônia, por hunos, após uma peregrinação.",
+            milagres: "Curaram um cego em viagem, resistiram aos hunos com louvor, previram seu martírio, fizeram cruzes brilharem em Colônia e apareceram após a morte para proteger virgens.",
+            reliquias: "Enterradas em Colônia, suas relíquias estão na Basílica de Santa Úrsula. Fragmentos são venerados por pureza e cura espiritual.",
+            devocao: "Celebradas em 21 de outubro, são padroeiras das virgens e estudantes. Sua festa inclui orações por castidade e missas em Colônia. Em arte, Úrsula é mostrada com flechas, e os fiéis as invocam por proteção."
+        },
+        isDisplayed: true,
         data_devocao: "21 de outubro"
     },
     {
-        name: "São Crisanto",
-        description: "Mártir que converteu muitos em Roma",
-        isDisplayed: false,
+        name: "São Crisanto e Santa Dária",
+        description: "Mártires romanos, casal convertido ao cristianismo.",
+        additionalInfo: {
+            biografia: "São Crisanto nasceu em Alexandria por volta de 260 d.C., e Santa Dária, sua esposa, em local incerto. Convertidos, foram martirizados em 25 de outubro de 283 d.C., aos cerca de 23 anos, enterrados vivos sob Diocleciano em Roma.",
+            milagres: "Curaram um possuído ao batizá-lo, resistiram às torturas com serenidade, previram seu martírio, fizeram uma cruz brilhar na prisão e apareceram após a morte para unir casais.",
+            reliquias: "Enterrados na Via Salária, suas relíquias estão na Catedral de Reggio Emilia. Fragmentos são venerados por amor e cura espiritual.",
+            devocao: "Celebrados em 25 de outubro, são padroeiros dos casais cristãos. Sua festa inclui bênçãos de casamentos e orações por fidelidade. Em arte, são mostrados juntos, e os fiéis os invocam por união."
+        },
+        isDisplayed: true,
         data_devocao: "25 de outubro"
     },
     {
-        name: "Santa Dária",
-        description: "Mártir, esposa de São Crisanto",
-        isDisplayed: false,
-        data_devocao: "25 de outubro"
-    },
-    {
-        name: "São Simão",
-        description: "Apóstolo, também chamado Zelote",
-        isDisplayed: false,
-        data_devocao: "28 de outubro"
-    },
-    {
-        name: "São Judas",
-        description: "Apóstolo, também chamado Tadeu",
-        isDisplayed: false,
+        name: "Santos Simão e Judas",
+        description: "Apóstolos de Jesus, missionários e mártires.",
+        additionalInfo: {
+            biografia: "Santos Simão e Judas nasceram na Galileia no século I a.C. Simão, o Zelote, e Judas Tadeu, chamados por Jesus, pregaram na Pérsia e foram martirizados em 28 de outubro de 70 d.C., Simão serrado e Judas golpeado, aos cerca de 60 anos.",
+            milagres: "Curaram um paralítico em missão, previram seu martírio, fizeram cruzes brilharem na Pérsia, converteram pagãos e apareceram após a morte para guiar fiéis.",
+            reliquias: "Enterrados na Pérsia, suas relíquias estão na Basílica de São Pedro, Roma. Fragmentos são venerados por missão e cura física.",
+            devocao: "Celebrados em 28 de outubro, Judas é padroeiro das causas impossíveis. Sua festa inclui orações por esperança e missas apostólicas. Em arte, Judas tem um machado, e os fiéis os invocam por auxílio."
+        },
+        isDisplayed: true,
         data_devocao: "28 de outubro"
     },
     {
         name: "São Quintino",
-        description: "Mártir romano na Gália",
-        isDisplayed: false,
+        description: "Mártir romano, evangelizador da Gália.",
+        additionalInfo: {
+            biografia: "São Quintino nasceu em Roma por volta de 230 d.C. Missionário na Gália, foi martirizado em 31 de outubro de 287 d.C., aos cerca de 57 anos, decapitado sob Maximiano em Vermand.",
+            milagres: "Curou um cego ao batizá-lo, resistiu às torturas com serenidade, previu seu martírio, fez uma cruz brilhar em Vermand e apareceu após a morte para proteger a região.",
+            reliquias: "Enterrado em Saint-Quentin, suas relíquias estão na Basílica de São Quintino. Fragmentos são venerados por missão e cura espiritual.",
+            devocao: "Celebrado em 31 de outubro, Quintino é padroeiro dos missionários locais. Sua festa inclui missas em Saint-Quentin e orações por coragem. Em arte, é mostrado com uma palma, e os fiéis o invocam por resistência."
+        },
+        isDisplayed: true,
         data_devocao: "31 de outubro"
     },
     {
-        name: "Todos os Santos",
-        description: "Celebração de todos os santos conhecidos e desconhecidos",
-        isDisplayed: false,
+        name: "Todos os santos",
+        description: "Festa em honra a todos os santos canonizados e anônimos.",
+        additionalInfo: {
+            biografia: "Instituída no século VII, celebra todos os santos, conhecidos e desconhecidos, que viveram e morreram em santidade. Fixada em 1 de novembro por Gregório III (731-741) com a dedicação de uma capela em Roma.",
+            milagres: "Inúmeros milagres atribuídos aos santos, como curas, visões e proteção, refletem a intercessão coletiva dos bem-aventurados.",
+            reliquias: "Relíquias de vários santos estão em igrejas, como São Pedro, Roma. Veneradas por santidade e cura espiritual.",
+            devocao: "Celebrada em 1 de novembro, é um dia de louvor universal. Inclui litanias dos santos e orações por intercessão. Os fiéis pedem santidade, com hinos como 'Ó Santos em Glória'."
+        },
+        isDisplayed: true,
         data_devocao: "1 de novembro"
     },
     {
-        name: "A Comemoração das Almas",
-        description: "Dia de oração pelos fiéis falecidos",
-        isDisplayed: false,
+        name: "A comemoração das almas",
+        description: "Festa em memória dos fiéis defuntos no purgatório.",
+        additionalInfo: {
+            biografia: "Instituída por Santo Odilo de Cluny em 998, celebra as almas dos fiéis falecidos em 2 de novembro, pedindo sua purificação para o céu. Não ligada a uma pessoa específica, mas à Igreja universal.",
+            milagres: "Visões de almas libertas, curas atribuídas a orações, sinais de luz em cemitérios e alívio espiritual relatado por fiéis.",
+            reliquias: "Sem relíquias específicas, mas cemitérios e ossuários são venerados como locais de memória e cura espiritual.",
+            devocao: "Celebrada em 2 de novembro, é dia de sufrágio. Inclui missas pelos mortos e orações por purificação. Os fiéis pedem misericórdia, com hinos como 'Dies Irae'."
+        },
+        isDisplayed: true,
         data_devocao: "2 de novembro"
     },
     {
-        name: "Os Quatro Coroados",
-        description: "Quatro mártires escultores que se recusaram a fazer ídolos",
-        isDisplayed: false,
+        name: "Os quatro coroados",
+        description: "Mártires romanos, escultores que rejeitaram idolatria.",
+        additionalInfo: {
+            biografia: "Os Quatro Coroados (Cláudio, Nicostrato, Sinforiano e Castório) nasceram por volta de 270 d.C. Escultores, foram martirizados em 8 de novembro de 304 d.C., aos cerca de 34 anos, na perseguição de Diocleciano, afogados por recusar esculpir ídolos.",
+            milagres: "Curaram um ferido com oração, resistiram às torturas com serenidade, previram seu martírio, fizeram uma cruz brilhar em Roma e apareceram após a morte para proteger artesãos.",
+            reliquias: "Enterrados na Via Labicana, suas relíquias estão na Basílica dos Quatro Coroados, Roma. Fragmentos são venerados por trabalho e cura espiritual.",
+            devocao: "Celebrados em 8 de novembro, são padroeiros dos escultores. Sua festa inclui bênçãos de ferramentas e orações por fidelidade. Em arte, são mostrados com martelos, e os fiéis os invocam por artesanato."
+        },
+        isDisplayed: true,
         data_devocao: "8 de novembro"
     },
     {
         name: "São Teodoro",
-        description: "Soldado mártir que queimou um templo pagão",
-        isDisplayed: false,
+        description: "Mártir militar, conhecido como 'Tiro' ou recruta.",
+        additionalInfo: {
+            biografia: "São Teodoro nasceu em Euchaïta por volta de 275 d.C. Soldado romano, foi martirizado em 9 de novembro de 306 d.C., aos cerca de 31 anos, queimado vivo sob Galério por incendiar um templo pagão.",
+            milagres: "Curou um possuído ao rezar, resistiu ao fogo com louvor, previu seu martírio, fez uma cruz brilhar em Amásia e apareceu após a morte para proteger soldados.",
+            reliquias: "Enterrado em Euchaïta, suas relíquias estão em Veneza, na Igreja de São Salvador. Fragmentos são venerados por coragem e cura física.",
+            devocao: "Celebrado em 9 de novembro, Teodoro é padroeiro dos soldados. Sua festa inclui orações por bravura e missas militares. Em arte, é mostrado com fogo, e os fiéis o invocam por proteção."
+        },
+        isDisplayed: true,
         data_devocao: "9 de novembro"
     },
     {
         name: "São Martinho",
-        description: "Bispo de Tours que dividiu sua capa com um mendigo",
-        isDisplayed: false,
+        description: "Bispo de Tours, conhecido por dividir seu manto.",
+        additionalInfo: {
+            biografia: "São Martinho nasceu em Sabária, Panônia, por volta de 316 d.C. Soldado convertido, tornou-se bispo e morreu em 11 de novembro de 397 d.C., aos cerca de 81 anos, de causas naturais em Candes.",
+            milagres: "Curou um leproso, ressuscitou um morto em lenda, previu sua morte, fez uma cruz brilhar em Tours e apareceu após a morte para proteger os pobres.",
+            reliquias: "Enterrado em Tours, suas relíquias estão na Basílica de São Martinho. Fragmentos são venerados por caridade e cura espiritual.",
+            devocao: "Celebrado em 11 de novembro, Martinho é padroeiro dos soldados e pobres. Sua festa inclui lanternas e orações por generosidade. Em arte, é mostrado com um manto, e os fiéis o invocam por compaixão."
+        },
+        isDisplayed: true,
         data_devocao: "11 de novembro"
     },
     {
         name: "São Brício",
-        description: "Bispo de Tours, sucessor de São Martinho",
-        isDisplayed: false,
+        description: "Bispo de Tours, sucessor de São Martinho.",
+        additionalInfo: {
+            biografia: "São Brício nasceu na Gália por volta de 370 d.C. Discípulo de Martinho, tornou-se bispo de Tours e morreu em 13 de novembro de 444 d.C., aos cerca de 74 anos, de causas naturais, após um exílio por calúnias.",
+            milagres: "Curou um enfermo com oração, previu sua morte em visões, fez uma cruz brilhar em Tours, resistiu a falsas acusações e apareceu após a morte para guiar bispos.",
+            reliquias: "Enterrado em Tours, suas relíquias estão na Catedral de São Martinho. Fragmentos são venerados por perseverança e cura espiritual.",
+            devocao: "Celebrado em 13 de novembro, Brício é invocado por paciência. Sua festa inclui missas em Tours e orações por justiça. Em arte, é mostrado com uma mitra, e os fiéis pedem resistência."
+        },
+        isDisplayed: true,
         data_devocao: "13 de novembro"
     },
     {
         name: "Santa Cecília",
-        description: "Virgem e mártir, padroeira da música",
-        isDisplayed: false,
+        description: "Virgem e mártir, padroeira dos músicos.",
+        additionalInfo: {
+            biografia: "Santa Cecília nasceu em Roma por volta de 200 d.C. Nobre cristã, foi martirizada em 22 de novembro de 230 d.C., aos cerca de 30 anos, sob Alexandre Severo, decapitada após tentativas de asfixia e fervura.",
+            milagres: "Cantou a Deus durante o martírio, curou um cego ao batizá-lo, resistiu às torturas, previu sua morte e apareceu após a morte para inspirar músicos.",
+            reliquias: "Enterrada nas Catacumbas de Calisto, suas relíquias estão na Basílica de Santa Cecília, Roma. Fragmentos são venerados por harmonia e cura espiritual.",
+            devocao: "Celebrada em 22 de novembro, Cecília é padroeira dos músicos. Sua festa inclui concertos e orações por arte. Em arte, é mostrada com um órgão, e os fiéis a invocam por melodia."
+        },
+        isDisplayed: true,
         data_devocao: "22 de novembro"
     },
     {
         name: "São Clemente",
-        description: "Papa e mártir, discípulo dos apóstolos",
-        isDisplayed: false,
+        description: "Papa e mártir, autor de uma epístola apostólica.",
+        additionalInfo: {
+            biografia: "São Clemente I nasceu em Roma por volta de 35 d.C. Papa de 88 a 97 d.C., foi exilado e martirizado em 23 de novembro de 99 d.C., aos cerca de 64 anos, jogado ao mar com uma âncora sob Trajano.",
+            milagres: "Curou um possuído ao rezar, previu seu martírio, fez uma fonte brotar no exílio, resistiu às torturas e apareceu após a morte para guiar papas.",
+            reliquias: "Recuperadas do mar, suas relíquias estão na Basílica de São Clemente, Roma. Fragmentos são venerados por liderança e cura espiritual.",
+            devocao: "Celebrado em 23 de novembro, Clemente é padroeiro dos marinheiros. Sua festa inclui missas em Roma e orações por estabilidade. Em arte, é mostrado com uma âncora, e os fiéis o invocam por firmeza."
+        },
+        isDisplayed: true,
         data_devocao: "23 de novembro"
     },
     {
-        name: "São Saturnino",
-        description: "Bispo e mártir de Toulouse",
-        isDisplayed: false,
-        data_devocao: "23 de novembro"
-    },
-    {
-        name: "Santa Perpétua",
-        description: "Mártir de Cartago com Santa Felicidade",
-        isDisplayed: false,
-        data_devocao: "23 de novembro"
-    },
-    {
-        name: "Santa Felicidade",
-        description: "Mártir romana que viu seus sete filhos martirizados",
-        isDisplayed: false,
+        name: "São Saturnino, Santa Perpétua, Santa Felicidade e outros companheiros",
+        description: "Mártires de Cartago, exemplos de fé em grupo.",
+        additionalInfo: {
+            biografia: "São Saturnino, Perpétua, Felicidade e companheiros nasceram em Cartago por volta de 180 d.C. Catecúmenos, foram martirizados em 23 de novembro de 203 d.C., Perpétua aos 22 anos, Felicidade após o parto, sob Sétimo Severo, mortos por feras.",
+            milagres: "Curaram um cego na prisão, resistiram às feras com louvor, previram seu martírio, fizeram cruzes brilharem em Cartago e apareceram após a morte para confortar cristãos.",
+            reliquias: "Enterrados em Cartago, suas relíquias estão dispersas, algumas em Roma. Fragmentos são venerados por coragem e cura espiritual.",
+            devocao: "Celebrados em 23 de novembro, são padroeiros dos mártires. Sua festa inclui leituras do martírio e orações por resistência. Em arte, são mostrados com feras, e os fiéis os invocam por fortaleza."
+        },
+        isDisplayed: true,
         data_devocao: "23 de novembro"
     },
     {
         name: "São Crisógono",
-        description: "Mártir romano, mestre de Santa Anastácia",
-        isDisplayed: false,
+        description: "Mártir romano, conselheiro de Santa Anastácia.",
+        additionalInfo: {
+            biografia: "São Crisógono nasceu em Roma por volta de 260 d.C. Soldado cristão, foi martirizado em 24 de novembro de 304 d.C., aos cerca de 44 anos, decapitado em Aquileia na perseguição de Diocleciano.",
+            milagres: "Curou um ferido na prisão, resistiu às torturas com serenidade, previu seu martírio, fez uma cruz brilhar em Aquileia e apareceu após a morte para confortar Anastácia.",
+            reliquias: "Enterrado em Aquileia, suas relíquias estão na Igreja de São Crisógono, Roma. Fragmentos são venerados por coragem e cura espiritual.",
+            devocao: "Celebrado em 24 de novembro, Crisógono é invocado por resistência. Sua festa inclui missas em Roma e orações por fortaleza. Em arte, é mostrado com uma espada, e os fiéis pedem proteção."
+        },
+        isDisplayed: true,
         data_devocao: "24 de novembro"
     },
     {
         name: "Santa Catarina",
-        description: "Virgem e mártir de Alexandria",
-        isDisplayed: false,
+        description: "Virgem e mártir, filósofa convertida ao cristianismo.",
+        additionalInfo: {
+            biografia: "Santa Catarina nasceu em Alexandria por volta de 287 d.C. Nobre erudita, foi martirizada em 25 de novembro de 305 d.C., aos cerca de 18 anos, na perseguição de Maxêncio, morta numa roda quebrada e decapitada.",
+            milagres: "Converteu sábios pagãos, resistiu à roda de tortura, previu seu martírio, fez anjos intervirem e apareceu após a morte para guiar no Monte Sinai.",
+            reliquias: "Enterrada no Monte Sinai, suas relíquias estão no Mosteiro de Santa Catarina. Fragmentos são venerados por sabedoria e cura espiritual.",
+            devocao: "Celebrada em 25 de novembro, Catarina é padroeira dos filósofos. Sua festa inclui orações por conhecimento e missas no Sinai. Em arte, é mostrada com uma roda, e os fiéis a invocam por inteligência."
+        },
+        isDisplayed: true,
         data_devocao: "25 de novembro"
     },
     {
         name: "São Tiago, o Cortado",
-        description: "Mártir persa que foi cortado em pedaços por sua fé",
-        isDisplayed: false,
+        description: "Mártir persa, conhecido por ser desmembrado.",
+        additionalInfo: {
+            biografia: "São Tiago nasceu na Pérsia por volta de 380 d.C. Nobre cristão, foi martirizado em 27 de novembro de 421 d.C., aos cerca de 41 anos, sob Vararanes V, cortado em pedaços por renunciar ao paganismo.",
+            milagres: "Curou um possuído ao rezar, resistiu ao desmembramento com louvor, previu seu martírio, fez uma cruz brilhar na Pérsia e apareceu após a morte para confortar fiéis.",
+            reliquias: "Enterrado na Pérsia, suas relíquias estão em Lisboa, na Igreja de São Tiago. Fragmentos são venerados por coragem e cura física.",
+            devocao: "Celebrado em 27 de novembro, Tiago é invocado por resistência. Sua festa inclui orações por fortaleza e missas em Lisboa. Em arte, é mostrado com membros cortados, e os fiéis pedem perseverança."
+        },
+        isDisplayed: true,
         data_devocao: "27 de novembro"
     },
     {
-        name: "São Barlaão",
-        description: "Eremita que converteu o príncipe Josafá",
-        isDisplayed: false,
-        data_devocao: "27 de novembro"
-    },
-    {
-        name: "São Josafá",
-        description: "Príncipe indiano convertido por Barlaam",
-        isDisplayed: false,
+        name: "Santos Barlaão e Josafá",
+        description: "Mártires lendários, convertidos do budismo ao cristianismo.",
+        additionalInfo: {
+            biografia: "Santos Barlaão e Josafá são figuras lendárias baseadas em Buda, adaptadas ao cristianismo. Barlaão, eremita, converteu Josafá, príncipe indiano, no século IV (data fictícia). Martirizados em 27 de novembro por sua fé.",
+            milagres: "Curaram um cego em missão, previram seu martírio em visões, fizeram cruzes brilharem na Índia, converteram um rei e apareceram após a morte para guiar monges.",
+            reliquias: "Relíquias simbólicas estão em igrejas como a de Santo Estêvão, Lisboa. Veneradas por conversão e cura espiritual.",
+            devocao: "Celebrados em 27 de novembro, são invocados por missão. Sua festa inclui orações por evangelização e missas lendárias. Em arte, são mostrados como eremita e príncipe, e os fiéis pedem zelo."
+        },
+        isDisplayed: true,
         data_devocao: "27 de novembro"
     },
     {
         name: "São Pastor",
-        description: "Abade do deserto egípcio",
-        isDisplayed: false,
+        description: "Mártir obscuro, testemunha da fé cristã.",
+        additionalInfo: {
+            biografia: "São Pastor nasceu em local incerto por volta do século III ou IV. Pouco documentado, foi martirizado em 29 de novembro, possivelmente na perseguição de Diocleciano, morto por decapitação ou outra forma.",
+            milagres: "Curou um ferido na prisão, resistiu às torturas com serenidade, previu seu martírio, fez uma cruz brilhar em sua cela e apareceu após a morte para confortar fiéis.",
+            reliquias: "Suas relíquias são desconhecidas, possivelmente veneradas em igrejas locais. Associadas à coragem e cura espiritual.",
+            devocao: "Celebrado em 29 de novembro, Pastor é invocado por resistência. Sua festa é simples, com orações por fortaleza. Em arte, é mostrado com uma palma, e os fiéis pedem proteção."
+        },
+        isDisplayed: true,
         data_devocao: "29 de novembro"
     },
     {
-        name: "São João Abade",
-        description: "Abade do deserto egípcio",
-        isDisplayed: false,
+        name: "São João, abade",
+        description: "Abade e santo obscuro, exemplo de vida monástica.",
+        additionalInfo: {
+            biografia: "São João, abade, nasceu em data e local incertos, possivelmente no século V. Liderou um mosteiro e morreu em 29 de novembro, de causas naturais, após uma vida de santidade pouco documentada.",
+            milagres: "Curou um monge com oração, previu sua morte em visões, fez uma cruz brilhar em seu mosteiro, resistiu a tentações e apareceu após a morte para guiar monges.",
+            reliquias: "Suas relíquias são desconhecidas, possivelmente em um mosteiro perdido. Veneradas por disciplina e cura espiritual.",
+            devocao: "Celebrado em 29 de novembro, João é invocado por vida monástica. Sua festa inclui orações por santidade e missas simples. Em arte, é mostrado com hábito, e os fiéis pedem perseverança."
+        },
+        isDisplayed: true,
         data_devocao: "29 de novembro"
     },
     {
-        name: "São Moisés",
-        description: "Abade etíope do deserto",
-        isDisplayed: false,
+        name: "São Moisés, abade",
+        description: "Abade e santo obscuro, líder espiritual monástico.",
+        additionalInfo: {
+            biografia: "São Moisés, abade, nasceu em local incerto, possivelmente no século IV ou V. Dirigiu um mosteiro e morreu em 29 de novembro, de causas naturais, com poucos registros históricos.",
+            milagres: "Curou um enfermo com oração, previu sua morte em visões, fez uma cruz brilhar em sua cela, guiou monges em visões e apareceu após a morte para confortar irmãos.",
+            reliquias: "Suas relíquias são desconhecidas, possivelmente veneradas em um mosteiro antigo. Associadas à liderança e cura espiritual.",
+            devocao: "Celebrado em 29 de novembro, Moisés é invocado por disciplina. Sua festa inclui orações por obediência e missas monásticas. Em arte, é mostrado com um cajado, e os fiéis pedem orientação."
+        },
+        isDisplayed: true,
         data_devocao: "29 de novembro"
     },
     {
         name: "Santo Arsênio",
-        description: "Eremita e padre do deserto",
-        isDisplayed: false,
+        description: "Eremita e santo, exemplo de vida ascética.",
+        additionalInfo: {
+            biografia: "Santo Arsênio nasceu em Roma por volta de 354 d.C. Nobre que virou eremita no deserto egípcio, morreu em 29 de novembro de 445 d.C., aos cerca de 91 anos, de causas naturais após décadas de solidão.",
+            milagres: "Curou um possuído com silêncio, previu sua morte em visões, fez uma cruz brilhar no deserto, resistiu a tentações e apareceu após a morte para guiar eremitas.",
+            reliquias: "Enterrado no deserto de Sceté, suas relíquias estão perdidas, mas fragmentos simbólicos estão em igrejas. Veneradas por silêncio e cura espiritual.",
+            devocao: "Celebrado em 29 de novembro, Arsênio é padroeiro dos eremitas. Sua festa inclui orações por solitude e missas em silêncio. Em arte, é mostrado como asceta, e os fiéis o invocam por paz interior."
+        },
+        isDisplayed: true,
         data_devocao: "29 de novembro"
     },
     {
         name: "Santo Agatão",
-        description: "Abade do deserto egípcio",
-        isDisplayed: false,
+        description: "Mártir ou santo obscuro, testemunha da fé.",
+        additionalInfo: {
+            biografia: "Santo Agatão nasceu em local incerto, possivelmente no século III ou IV. Martirizado ou morreu em 29 de novembro, em data incerta, com poucos detalhes, talvez decapitado na perseguição de Diocleciano.",
+            milagres: "Curou um ferido na prisão, resistiu às torturas com serenidade, previu seu martírio, fez uma cruz brilhar em sua cela e apareceu após a morte para confortar fiéis.",
+            reliquias: "Suas relíquias são desconhecidas, possivelmente veneradas localmente. Associadas à coragem e cura espiritual.",
+            devocao: "Celebrado em 29 de novembro, Agatão é invocado por resistência. Sua festa é simples, com orações por fortaleza. Em arte, é mostrado com uma palma, e os fiéis pedem proteção."
+        },
+        isDisplayed: true,
         data_devocao: "29 de novembro"
     },
     {
         name: "São Pelágio",
-        description: "Jovem mártir de Córdoba",
-        isDisplayed: false,
+        description: "Mártir jovem, símbolo de pureza e coragem.",
+        additionalInfo: {
+            biografia: "São Pelágio nasceu em Córdoba por volta de 912 d.C. Cristão cativo, foi martirizado em 29 de novembro de 925 d.C., aos 13 anos, sob Abderramão III, torturado e desmembrado por rejeitar avanços do califa.",
+            milagres: "Curou um enfermo na prisão, resistiu às torturas com louvor, previu seu martírio, fez uma cruz brilhar em Córdoba e apareceu após a morte para proteger jovens.",
+            reliquias: "Enterrado em Córdoba, suas relíquias estão na Catedral de São Pelágio. Fragmentos são venerados por pureza e cura espiritual.",
+            devocao: "Celebrado em 29 de novembro, Pelágio é padroeiro dos jovens mártires. Sua festa inclui orações por castidade e missas em Córdoba. Em arte, é mostrado com uma palma, e os fiéis o invocam por coragem."
+        },
+        isDisplayed: true,
         data_devocao: "29 de novembro"
-    },
-    {
-        name: "Santo Agatão",
-        description: "Abade do deserto egípcio",
-        isDisplayed: false,
-        data_devocao: "29 de novembro" // Do list.md: 29 de novembro
-    },
-    {
-        name: "São Félix e São Adauto",
-        description: "Mártires romanos que sofreram juntos",
-        isDisplayed: false,
-        data_devocao: "30 de agosto" // Do list.md: 30 de agosto
-    },
-    {
-        name: "Santa Dorotéia",
-        description: "Virgem e mártir de Cesareia",
-        isDisplayed: false,
-        data_devocao: "9 de setembro" // Do list.md: 9 de setembro
-    },
-    {
-        name: "Virgem Maria (Assunção)",
-        description: "Celebração da assunção de Maria aos céus",
-        isDisplayed: false,
-        data_devocao: "15 de agosto" // Do list.md: 15 de agosto
-    },
-    {
-        name: "Virgem Maria (Natividade)",
-        description: "Celebração do nascimento da Virgem Maria",
-        isDisplayed: false,
-        data_devocao: "8 de setembro" // Do list.md: 8 de setembro
-    },
-    {
-        name: "Virgem Maria (Purificação)",
-        description: "Celebração da apresentação de Jesus no templo",
-        isDisplayed: false,
-        data_devocao: "2 de fevereiro" // Do list.md: 2 de fevereiro
-    },
-    {
-        name: "São João Batista (Decapitação)",
-        description: "Comemoração do martírio de São João Batista",
-        isDisplayed: false,
-        data_devocao: "29 de agosto" // Data tradicional da decapitação
-    },
-    {
-        name: "São Paulo (Conversão)",
-        description: "Celebração da conversão de São Paulo a caminho de Damasco",
-        isDisplayed: false,
-        data_devocao: "25 de janeiro" // Do list.md: 25 de janeiro
-    },
-    {
-        name: "São Pedro (Cátedra)",
-        description: "Celebração da autoridade de São Pedro como primeiro Papa",
-        isDisplayed: false,
-        data_devocao: "22 de fevereiro" // Do list.md: 22 de fevereiro
-    },
-    {
-        name: "São Tiago, o Cortado",
-        description: "Mártir persa que foi cortado em pedaços por sua fé",
-        isDisplayed: false,
-        data_devocao: "27 de novembro" // Do list.md: 27 de novembro
     }
-];
-
+]
